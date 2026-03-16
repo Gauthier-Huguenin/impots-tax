@@ -60,7 +60,7 @@ All fiscal data is centralized in `docs/tax-data-2025.md`. Claude Code MUST refe
 
 ## Tech Stack
 
-- **Framework**: Next.js 16 (App Router) + React 19 + TypeScript (strict mode)
+- **Framework**: Next.js 16.1.x (App Router, stable) + React 19 + TypeScript (strict mode)
 - **Styling**: Tailwind CSS 4 with dark theme by default (dashboard aesthetic)
 - **i18n**: next-intl 4.x — locales: `['fr', 'en']`, defaultLocale: `'fr'`, localePrefix: `'as-needed'`, localeDetection: `false`
 - **URL routing**: French has no prefix (default), English is prefixed with `/en/`. Slugs are shared across languages (English slugs): `/income-tax`, `/corporate-tax`, `/flat-tax`, `/vat`, `/fuel-tax`, `/behavioral-tax`, `/salary-contributions`, `/welfare-system`, `/comparison`, `/indicators`, `/suggest`, `/donate`. No translated URLs.
