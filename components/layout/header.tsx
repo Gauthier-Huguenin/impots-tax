@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { TAX_DATA_YEAR } from "@/lib/tax-data";
@@ -24,11 +25,15 @@ export function Header() {
   return (
     <header className="border-b border-gray-800 bg-panel px-4 py-3">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-        {/* Left: Title with alert triangle */}
+        {/* Left: Logo + Title */}
         <div className="flex items-center gap-3">
-          <span className="text-2xl" role="img" aria-label="alert">
-            ⚠
-          </span>
+          <Image
+            src="/logo.svg"
+            alt="impots.tax"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <h1 className="font-display text-lg font-bold uppercase tracking-widest text-danger sm:text-xl md:text-2xl">
             {t("title")}
           </h1>
