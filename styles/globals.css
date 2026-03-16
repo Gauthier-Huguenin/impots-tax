@@ -3,11 +3,87 @@
 @theme {
   --color-background: #0a0c10;
   --color-panel: #0f1218;
+  --color-panel-light: #161b24;
   --color-danger: #ff2d2d;
   --color-warning: #ffb020;
   --color-info: #00d4ff;
   --color-favorable: #00ff88;
+  --color-tricolore-blue: #002395;
+  --color-tricolore-red: #ed2939;
 
-  --font-mono: "JetBrains Mono", "Share Tech Mono", monospace;
-  --font-display: "Oswald", sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", "Share Tech Mono", monospace;
+  --font-display: var(--font-display), "Oswald", sans-serif;
+}
+
+/* Pulsing dot animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Pulsing border for critical panels */
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(255, 45, 45, 0.4); }
+  50% { border-color: rgba(255, 45, 45, 0.8); }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+/* Scanlines overlay */
+@keyframes scanlines {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  animation: scanlines 0.5s linear infinite;
+  z-index: 1;
+}
+
+/* Ticker scroll */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 60s linear infinite;
+}
+
+/* Flow animation for the journey bar */
+@keyframes flow-right {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animate-flow {
+  background-size: 200% 100%;
+  animation: flow-right 3s linear infinite;
+}
+
+/* Glow pulse for extraction rate */
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(255, 45, 45, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(255, 45, 45, 0.9); }
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
 }
