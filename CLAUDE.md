@@ -119,7 +119,7 @@ lib/
   url.ts                  # Server-side locale-aware URL helper (localePath)
   config.ts               # siteConfig (url, domain, social links)
 messages/                 # fr.json, en.json (translation files)
-middleware.ts             # next-intl locale middleware
+proxy.ts                  # next-intl locale proxy (Next.js 16 convention, replaces middleware.ts)
 styles/globals.css        # Tailwind directives + custom animations (scanlines, pulses, ticker scroll)
 tailwind.config.ts        # Custom theme (dashboard color palette)
 next.config.ts            # Next.js config (standalone output, next-intl plugin)
@@ -162,7 +162,7 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 - Server components: `const t = await getTranslations({ locale, namespace: 'ns' })`
 - Client components: `const t = useTranslations('ns')`
 - Rich text: `t.rich('key', { strong: (chunks) => <strong>{chunks}</strong> })`
-- **i18n routing**: `lib/i18n/routing.ts` is the single source of truth for locale config (`locales`, `defaultLocale`, `localePrefix`). Both `middleware.ts` and `lib/navigation.ts` import from it. Never duplicate these values.
+- **i18n routing**: `lib/i18n/routing.ts` is the single source of truth for locale config (`locales`, `defaultLocale`, `localePrefix`). Both `proxy.ts` and `lib/navigation.ts` import from it. Never duplicate these values.
 - **localeDetection is OFF**: The middleware does NOT auto-detect locale from `Accept-Language` headers. This is intentional — with `localePrefix: 'as-needed'`, unprefixed URLs (FR) would be wrongly redirected to `/en/` for English browsers. Language is controlled only by URL prefix and the LanguageSwitcher.
 - **Links (client components)**: Use `Link` from `@/lib/navigation` (locale-aware). Never use `next/link` with manual `/${locale}/` prefix — it breaks `localePrefix: 'as-needed'`.
 - **Links (server components)**: Use `localePath()` from `lib/url.ts` to build locale-prefixed paths with `next/link`.
