@@ -19,6 +19,7 @@ import { HighwayTolls } from "@/components/dashboard/highway-tolls";
 import { RailwayTolls } from "@/components/dashboard/railway-tolls";
 import { Timeline } from "@/components/dashboard/timeline";
 import { Ticker } from "@/components/dashboard/ticker";
+import { Footer } from "@/components/layout/footer";
 
 export default function HomePage() {
   return (
@@ -75,6 +76,9 @@ export default function HomePage() {
 
       {/* Ticker */}
       <Ticker />
+
+      {/* Footer */}
+      <Footer />
 
       {/* Tricolore stripe — bottom */}
       <div className="flex h-1">

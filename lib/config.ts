@@ -3,5 +3,6 @@ export const siteConfig = {
   domain: "impots.tax",
   social: {
     github: "https://github.com/gauthier-huguenin/impots-tax",
+    x: "https://x.com/leploutos",
   },
 } as const;
