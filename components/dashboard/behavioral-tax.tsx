@@ -1,0 +1,87 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/lib/navigation";
+import {
+  TOBACCO_BREAKDOWN,
+  TOBACCO_PACK_PRICE,
+  TOBACCO_TAX_PERCENT,
+} from "@/lib/tax-data";
+
+const TOBACCO_COLORS: Record<string, string> = {
+  accise: "bg-danger",
+  vat: "bg-warning",
+  retailer: "bg-gray-500",
+  manufacturer: "bg-gray-600",
+};
+
+export function BehavioralTax() {
+  const t = useTranslations("behavioralTax");
+
+  return (
+    <Link href="/behavioral-tax" className="group block">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
+          {t("title")}
+        </h2>
+        <p className="mb-1 mt-1 font-mono text-[10px] text-gray-600">
+          {t("subtitle")}
+        </p>
+        <p className="mb-3 font-mono text-xs text-gray-400">
+          {t("packPrice", { price: TOBACCO_PACK_PRICE })}
+        </p>
+
+        {/* Tax percentage header */}
+        <p className="mb-2 text-center font-mono text-2xl font-bold text-danger animate-glow">
+          ~{TOBACCO_TAX_PERCENT}%{" "}
+          <span className="text-sm text-gray-400">{t("totalTaxes")}</span>
+        </p>
+
+        {/* Stacked bar */}
+        <div className="mb-3 flex h-6 overflow-hidden rounded-sm">
+          {TOBACCO_BREAKDOWN.map((item) => (
+            <div
+              key={item.key}
+              className={`${TOBACCO_COLORS[item.key]} flex items-center justify-center text-[8px] font-bold text-white/80`}
+              style={{ width: `${item.percent}%` }}
+            >
+              {item.percent >= 10 ? `${item.percent}%` : ""}
+            </div>
+          ))}
+        </div>
+
+        {/* Legend */}
+        <div className="space-y-1">
+          {TOBACCO_BREAKDOWN.map((item) => (
+            <div key={item.key} className="flex items-center justify-between font-mono text-[10px]">
+              <div className="flex items-center gap-1.5">
+                <span
+                  className={`inline-block h-2 w-2 rounded-sm ${TOBACCO_COLORS[item.key]}`}
+                />
+                <span className={item.isTax ? "text-gray-300" : "text-gray-500"}>
+                  {t(item.key as "accise")}
+                </span>
+              </div>
+              <span className={item.isTax ? "text-danger" : "text-gray-500"}>
+                {item.amount.toFixed(2)} € ({item.percent}%)
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-3 font-mono text-[10px] text-warning">
+          {t("priceEvolution")}
+        </p>
+
+        <div className="mt-2 flex items-center justify-between">
+          <span className="font-mono text-[10px] text-gray-600">
+            {t("source")}
+          </span>
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+            {t("details")}
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+}
