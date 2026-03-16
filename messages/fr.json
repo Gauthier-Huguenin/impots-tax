@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "impots.tax — Centre de Commandement Fiscal",
+    "description": "Tableau de bord satirique des impôts et taxes en France. Données réelles, présentation dramatique."
+  },
+  "header": {
+    "title": "impots.tax",
+    "subtitle": "Centre de Commandement Fiscal"
+  },
+  "home": {
+    "title": "impots.tax"
+  },
+  "footer": {
+    "disclaimer": "Données issues de sources officielles (OCDE, INSEE, URSSAF, DGFiP, Loi de finances). Présentation satirique.",
+    "copyright": "© {year} impots.tax"
+  }
+}

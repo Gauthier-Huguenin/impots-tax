@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "impots.tax — Fiscal Command Center",
+    "description": "Satirical dashboard of French taxes and levies. Real data, dramatic presentation."
+  },
+  "header": {
+    "title": "impots.tax",
+    "subtitle": "Fiscal Command Center"
+  },
+  "home": {
+    "title": "impots.tax"
+  },
+  "footer": {
+    "disclaimer": "Data from official sources (OECD, INSEE, URSSAF, DGFiP, Loi de finances). Satirical presentation.",
+    "copyright": "© {year} impots.tax"
+  }
+}
