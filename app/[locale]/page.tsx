@@ -11,6 +11,12 @@ import { BehavioralTax } from "@/components/dashboard/behavioral-tax";
 import { WelfareSystem } from "@/components/dashboard/welfare-system";
 import { OECDComparison } from "@/components/dashboard/oecd-comparison";
 import { MacroIndicators } from "@/components/dashboard/macro-indicators";
+import { PropertyTax } from "@/components/dashboard/property-tax";
+import { RentalTax } from "@/components/dashboard/rental-tax";
+import { InheritanceTax } from "@/components/dashboard/inheritance-tax";
+import { CapitalGains } from "@/components/dashboard/capital-gains";
+import { HighwayTolls } from "@/components/dashboard/highway-tolls";
+import { RailwayTolls } from "@/components/dashboard/railway-tolls";
 import { Timeline } from "@/components/dashboard/timeline";
 import { Ticker } from "@/components/dashboard/ticker";
 
@@ -48,6 +54,13 @@ export default function HomePage() {
             <BehavioralTax />
             <WelfareSystem />
             <MacroIndicators />
+
+            <PropertyTax />
+            <RentalTax />
+            <InheritanceTax />
+            <CapitalGains />
+            <HighwayTolls />
+            <RailwayTolls />
 
             <div className="md:col-span-2">
               <OECDComparison />
