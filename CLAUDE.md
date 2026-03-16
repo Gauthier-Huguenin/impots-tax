@@ -43,10 +43,25 @@ This is the largest, most visual panel. It's what hooks people in.
    - Chômage / ARE (unemployment insurance)
    - AME (healthcare for undocumented immigrants, ~1.2B€ budget)
 
+### Property & Real Estate Modules
+
+9. **Taxe foncière** — Property tax: calculation, rates by city, €55B revenue, +30% in 10 years
+10. **LMNP & Airbnb** — Furnished rental tax regime, loi Le Meur, micro-BIC changes, depreciation reintegration
+
+### Wealth Transfer Modules
+
+11. **Succession & Donation** — Inheritance tax (5% to 45% direct line, 60% non-relatives), assurance-vie, €16.6B revenue
+12. **Plus-values hors PEA** — Capital gains on foreign stocks (S&P 500), CTO vs PEA comparison, flat tax 30→31.4%
+
+### Infrastructure Tax Modules
+
+13. **Péages autoroutiers** — Highway tolls: €11.9B revenue, €4.4B profits, concession system, end dates 2031-2036
+14. **Péages ferroviaires** — Railway tolls: >€7B revenue, 40% of TGV ticket price, +4%/year increases
+
 ### Auxiliary Modules
 
-9. **Comparaison internationale** — OECD tax-to-GDP rankings, France vs major economies
-10. **Indicateurs macro** — Public debt/GDP, spending/GDP, deficit, key figures
+15. **Comparaison internationale** — OECD tax-to-GDP rankings, France vs major economies
+16. **Indicateurs macro** — Public debt/GDP, spending/GDP, deficit, key figures
 
 ### Site Structure
 
@@ -63,7 +78,7 @@ All fiscal data is centralized in `docs/tax-data-2025.md`. Claude Code MUST refe
 - **Framework**: Next.js 16.1.x (App Router, stable) + React 19 + TypeScript (strict mode)
 - **Styling**: Tailwind CSS 4 with dark theme by default (dashboard aesthetic)
 - **i18n**: next-intl 4.x — locales: `['fr', 'en']`, defaultLocale: `'fr'`, localePrefix: `'as-needed'`, localeDetection: `false`
-- **URL routing**: French has no prefix (default), English is prefixed with `/en/`. Slugs are shared across languages (English slugs): `/income-tax`, `/corporate-tax`, `/flat-tax`, `/vat`, `/fuel-tax`, `/behavioral-tax`, `/salary-contributions`, `/welfare-system`, `/comparison`, `/indicators`, `/suggest`, `/donate`. No translated URLs.
+- **URL routing**: French has no prefix (default), English is prefixed with `/en/`. Slugs are shared across languages (English slugs): `/income-tax`, `/corporate-tax`, `/flat-tax`, `/vat`, `/fuel-tax`, `/behavioral-tax`, `/salary-contributions`, `/welfare-system`, `/property-tax`, `/rental-tax`, `/inheritance-tax`, `/capital-gains`, `/highway-tolls`, `/railway-tolls`, `/comparison`, `/indicators`, `/suggest`, `/donate`. No translated URLs.
 - **Package manager**: npm
 - **Node.js**: 22 LTS (Docker base image: `node:22-alpine`)
 
@@ -88,7 +103,7 @@ app/
   [locale]/               # i18n dynamic segment
     layout.tsx            # Locale layout with NextIntlClientProvider
     page.tsx              # Main dashboard page (hero + panels)
-    [module-slug]/        # Detail pages: income-tax, corporate-tax, flat-tax, vat, fuel-tax, behavioral-tax, salary-contributions, welfare-system
+    [module-slug]/        # Detail pages: income-tax, corporate-tax, flat-tax, vat, fuel-tax, behavioral-tax, salary-contributions, welfare-system, property-tax, rental-tax, inheritance-tax, capital-gains, highway-tolls, railway-tolls
       page.tsx
     comparison/           # International comparison detail page
       page.tsx
@@ -158,7 +173,7 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 
 - Translation files: `messages/fr.json` and `messages/en.json`
 - **Always add keys in BOTH language files** when creating/modifying translations.
-- Namespaces: `metadata`, `header`, `threatLevel`, `journeyOf100`, `taxBrackets`, `corporateTax`, `flatTax`, `socialContributions`, `salaryCost`, `keyIndicators`, `oecdComparison`, `tva`, `fuelTax`, `behavioralTax`, `welfareSystem`, `timeline`, `ticker`, `suggest`, `donate`, `footer`
+- Namespaces: `metadata`, `header`, `threatLevel`, `journeyOf100`, `taxBrackets`, `corporateTax`, `flatTax`, `socialContributions`, `salaryCost`, `keyIndicators`, `oecdComparison`, `tva`, `fuelTax`, `behavioralTax`, `welfareSystem`, `propertyTax`, `rentalTax`, `inheritanceTax`, `capitalGains`, `highwayTolls`, `railwayTolls`, `timeline`, `ticker`, `suggest`, `donate`, `footer`
 - Server components: `const t = await getTranslations({ locale, namespace: 'ns' })`
 - Client components: `const t = useTranslations('ns')`
 - Rich text: `t.rich('key', { strong: (chunks) => <strong>{chunks}</strong> })`

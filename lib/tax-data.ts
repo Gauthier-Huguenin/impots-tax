@@ -236,6 +236,158 @@ export const MACRO_INDICATORS = {
 // ─── Section 10: Historical timeline ────────────────────────
 // Source: docs/tax-data-2025.md §10
 
+// ─── Section 11: Property tax (Taxe foncière) ───────────────
+// Source: DGFiP Statistiques n°34 (mai 2025), impots.gouv.fr, IFRAP
+
+export const PROPERTY_TAX = {
+  totalRevenue: 55.3, // Mds€ — recettes totales 2024
+  avgPerTaxpayer: 1082, // € — montant moyen par contribuable 2024
+  taxpayerCount: 33_000_000, // 33 millions de contribuables
+  avgHouse: 1090, // € — montant moyen maison 2025
+  avgApartment: 865, // € — montant moyen appartement 2025
+  increase10Years: 30, // % — hausse cumulée en 10 ans
+};
+
+export const PROPERTY_TAX_REVALUATION = [
+  { year: 2023, rate: 7.1 },
+  { year: 2024, rate: 3.9 },
+  { year: 2025, rate: 1.7 },
+  { year: 2026, rate: 0.8 }, // suspendue par le PM
+];
+
+export const PROPERTY_TAX_RATES = [
+  { key: "paris", rate: 20.5 },
+  { key: "lyon", rate: 32.44 },
+  { key: "marseille", rate: 47.13 },
+  { key: "toulouse", rate: 48.55 },
+  { key: "amiens", rate: 56.05 },
+  { key: "angers", rate: 56.42 },
+  { key: "grenoble", rate: 67.92 },
+];
+
+// ─── Section 12: LMNP & Airbnb (Loi Le Meur) ───────────────
+// Source: Loi n°2024-1039, LF 2025 & 2026, jedeclaremonmeuble.com
+
+export const LMNP_MICRO_BIC = [
+  { key: "unclassifiedTourism", ceiling: 15000, allowance: 30, before: "77 700 € / 50%" },
+  { key: "classifiedTourism", ceiling: 77700, allowance: 50, before: "77 700 € / 71%" },
+  { key: "longTerm", ceiling: 77700, allowance: 50, before: "Inchangé" },
+];
+
+export const AIRBNB_STATS = {
+  activeListings: 1_310_000, // /mois en France — source: Welkeys 2024-2025
+  parisListings: 87_000, // ~84-90k
+  avgAnnualIncome: 11200, // €/an par hôte
+  avgNightlyRate: 118, // €/nuit
+  growth2021to2023: 30, // % de croissance des annonces
+};
+
+// ─── Section 13: Inheritance & gift tax ──────────────────────
+// Source: Service-Public.fr, art. 777 CGI, OECD
+
+export interface InheritanceBracket {
+  min: number;
+  max: number | null;
+  rate: number;
+}
+
+export const INHERITANCE_BRACKETS: InheritanceBracket[] = [
+  { min: 0, max: 8072, rate: 5 },
+  { min: 8072, max: 12109, rate: 10 },
+  { min: 12109, max: 15932, rate: 15 },
+  { min: 15932, max: 552324, rate: 20 },
+  { min: 552324, max: 902838, rate: 30 },
+  { min: 902838, max: 1805677, rate: 40 },
+  { min: 1805677, max: null, rate: 45 },
+];
+
+export const INHERITANCE_DATA = {
+  childAllowance: 100_000, // € par parent par enfant
+  renewalPeriod: 15, // ans
+  siblingRate1: 35, // % jusqu'à 24 430 €
+  siblingRate2: 45, // % au-delà
+  nonRelativeRate: 60, // % taux unique
+  totalRevenue: 18.5, // Mds€ DMTG 2023
+  successionsTaxed: 15, // % des successions effectivement taxées
+  medianInheritance: 70_000, // € — héritage médian
+  avgInheritance: 230_000, // € — héritage moyen
+  lifeInsuranceAllowance: 152_500, // € par bénéficiaire (avant 70 ans)
+};
+
+// ─── Section 14: Highway tolls ───────────────────────────────
+// Source: ART, Sénat (rapport Maurey), Public Sénat, L'Argus
+
+export const HIGHWAY_TOLLS = {
+  networkLength: 9300, // km d'autoroutes à péage
+  totalRevenue: 11.9, // Mds€ de péages 2023
+  totalProfits: 4.4, // Mds€ bénéfices nets 2023 (record)
+  dividendsPaid: 4.1, // Mds€ versés aux actionnaires
+  stateShare: 42, // % des recettes revenant à l'État
+  avgIncrease2026: 0.86, // % hausse moyenne 1er février 2026
+};
+
+export const HIGHWAY_ROUTES = [
+  { key: "parisLyon", toll: 41.85 },
+  { key: "parisMarseille", toll: 68.38 },
+  { key: "parisBordeaux", toll: 46.60 },
+];
+
+export const HIGHWAY_CONCESSIONS = [
+  { key: "sanef", group: "Abertis", endDate: "12/2031" },
+  { key: "cofiroute", group: "Vinci", endDate: "06/2034" },
+  { key: "aprr", group: "Eiffage", endDate: "11/2035" },
+  { key: "asf", group: "Vinci", endDate: "04/2036" },
+];
+
+// ─── Section 15: Railway tolls ───────────────────────────────
+// Source: SNCF Réseau, ART, economiematin.fr
+
+export const RAILWAY_TOLLS = {
+  totalRevenue: 7, // Mds€ recettes péages 2024
+  tgvShare: 40, // % du prix d'un billet TGV = péage réseau
+  terShare: 15, // % du prix d'un billet TER = péage réseau
+  annualIncrease: 4.1, // % hausse péages 2026
+  vatDomestic: 10, // % TVA transport intérieur
+  groupRevenue: 43, // Mds€ CA groupe SNCF 2024
+};
+
+// ─── Section 16: Capital gains outside PEA (S&P 500) ────────
+// Source: Service-Public.fr, Ramify.fr, convention France-USA
+
+export const CAPITAL_GAINS_CTO = {
+  flatTax2025: { ir: 12.8, social: 17.2, total: 30 },
+  flatTax2026: { ir: 12.8, social: 18.6, total: 31.4 },
+};
+
+export const CAPITAL_GAINS_PEA = {
+  ir: 0, // exonéré après 5 ans
+  social2025: 17.2,
+  social2026: 18.6,
+  ceiling: 150_000, // € plafond versements
+};
+
+export const CAPITAL_GAINS_COMPARISON = {
+  initialInvestment: 10000, // €
+  annualReturn: 8, // %
+  years: 10,
+  finalGross: 21589, // €
+  capitalGain: 11589, // €
+  taxCTO2026: 3639, // €
+  netCTO2026: 17950, // €
+  taxPEA2026: 2156, // €
+  netPEA2026: 19433, // €
+  savings: 1483, // € économie PEA vs CTO
+};
+
+export const US_DIVIDEND_TAX = {
+  withholdingRate: 15, // % retenue source USA (convention)
+  frenchCreditRate: 12.8, // % crédit d'impôt FR
+  leakage: 2.2, // % perte sèche (15 - 12.8)
+};
+
+// ─── Section 10: Historical timeline ────────────────────────
+// Source: docs/tax-data-2025.md §10
+
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   { year: 1914, key: "ir1914" },
   { year: 1928, key: "tip1928" },
