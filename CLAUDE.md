@@ -195,6 +195,8 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 | Variable | Required | Purpose |
 |----------|----------|---------|
 | `NEXT_PUBLIC_SITE_URL` | Yes | Base URL (https://impots.tax) |
+| `NEXT_PUBLIC_UMAMI_URL` | No | Umami instance base URL (e.g. https://analytics.example.com) |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No | Umami website ID (UUID) |
 
 ## Important Rules
 
