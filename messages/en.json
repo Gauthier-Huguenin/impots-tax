@@ -4,11 +4,54 @@
     "description": "Satirical dashboard of French taxes and levies. Real data, dramatic presentation."
   },
   "header": {
-    "title": "impots.tax",
-    "subtitle": "Fiscal Command Center"
+    "title": "FRENCH TAX THREAT MONITOR",
+    "monitoring": "MONITORING ACTIVE",
+    "dataYear": "DATA {year}"
   },
-  "home": {
-    "title": "impots.tax"
+  "threatLevel": {
+    "title": "FISCAL THREAT LEVEL",
+    "level1": "LOW",
+    "level2": "ELEVATED",
+    "level3": "CRITICAL",
+    "level4": "SEVERE",
+    "level5": "MAXIMUM",
+    "active": "SEVERE",
+    "description": "Record tax pressure: France #1 OECD — 46.1% of GDP",
+    "source": "Source: OECD Revenue Statistics 2024"
+  },
+  "journeyOf100": {
+    "title": "YOUR EMPLOYER SPENDS €100",
+    "subtitle": "Tracking every euro from employer cost to real purchasing power",
+    "employerCost": "Employer cost",
+    "employerContributions": "Employer contributions",
+    "grossSalary": "Gross salary",
+    "employeeContributions": "Employee contributions",
+    "netBeforeTax": "Net before tax",
+    "incomeTax": "Income tax",
+    "netAfterTax": "Net after tax",
+    "vatOnSpending": "VAT on spending",
+    "realPurchasingPower": "Real purchasing power",
+    "employerPays": "Employer pays",
+    "youReceive": "You receive",
+    "extracted": "Extracted by the State",
+    "extractionRate": "Extraction rate",
+    "source": "Estimate based on median net salary ~€2,400/month, 30% marginal rate",
+    "urssaf": "URSSAF, unemployment, supplementary pension",
+    "csgCrds": "CSG, CRDS, pension, old age",
+    "pasIr": "Withholding tax, 30% marginal rate",
+    "vatAvg": "Weighted average rate ~20%"
+  },
+  "ticker": {
+    "smic": "MIN WAGE NET 2025: {value}",
+    "plafondSS": "SS CEILING: {value}/mo",
+    "tva": "STANDARD VAT: {value}",
+    "csg": "CSG: {value}",
+    "publicDebt": "PUBLIC DEBT: {value}",
+    "debtToGdp": "DEBT/GDP: {value}",
+    "taxToGdp": "TAX/GDP: {value} — #1 OECD",
+    "deficit": "DEFICIT: {value} OF GDP",
+    "flatTax": "FLAT TAX 2026: {value}",
+    "irTop": "TOP MARGINAL RATE: {value}"
   },
   "footer": {
     "disclaimer": "Data from official sources (OECD, INSEE, URSSAF, DGFiP, Loi de finances). Satirical presentation.",

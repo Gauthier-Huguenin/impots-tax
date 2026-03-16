@@ -4,11 +4,54 @@
     "description": "Tableau de bord satirique des impôts et taxes en France. Données réelles, présentation dramatique."
   },
   "header": {
-    "title": "impots.tax",
-    "subtitle": "Centre de Commandement Fiscal"
+    "title": "FRENCH TAX THREAT MONITOR",
+    "monitoring": "SURVEILLANCE ACTIVE",
+    "dataYear": "DONNÉES {year}"
   },
-  "home": {
-    "title": "impots.tax"
+  "threatLevel": {
+    "title": "NIVEAU DE MENACE FISCALE",
+    "level1": "FAIBLE",
+    "level2": "ÉLEVÉ",
+    "level3": "CRITIQUE",
+    "level4": "SÉVÈRE",
+    "level5": "MAXIMUM",
+    "active": "SÉVÈRE",
+    "description": "Pression fiscale record : France №1 OCDE — 46.1% du PIB",
+    "source": "Source : OCDE Revenue Statistics 2024"
+  },
+  "journeyOf100": {
+    "title": "VOTRE EMPLOYEUR DÉPENSE 100 €",
+    "subtitle": "Parcours de chaque euro, du coût employeur au pouvoir d'achat réel",
+    "employerCost": "Coût employeur",
+    "employerContributions": "Cotisations employeur",
+    "grossSalary": "Salaire brut",
+    "employeeContributions": "Cotisations salariales",
+    "netBeforeTax": "Net avant IR",
+    "incomeTax": "Impôt sur le revenu",
+    "netAfterTax": "Net après IR",
+    "vatOnSpending": "TVA sur dépenses",
+    "realPurchasingPower": "Pouvoir d'achat réel",
+    "employerPays": "L'employeur débourse",
+    "youReceive": "Vous recevez",
+    "extracted": "Prélevé par l'État",
+    "extractionRate": "Taux d'extraction",
+    "source": "Estimation basée sur salaire médian net ~2 400 €/mois, TMI 30%",
+    "urssaf": "URSSAF, chômage, retraite complémentaire",
+    "csgCrds": "CSG, CRDS, retraite, vieillesse",
+    "pasIr": "Prélèvement à la source, TMI 30%",
+    "vatAvg": "Taux moyen pondéré ~20%"
+  },
+  "ticker": {
+    "smic": "SMIC NET 2025 : {value}",
+    "plafondSS": "PLAFOND SS : {value}/mois",
+    "tva": "TVA NORMALE : {value}",
+    "csg": "CSG : {value}",
+    "publicDebt": "DETTE PUBLIQUE : {value}",
+    "debtToGdp": "DETTE/PIB : {value}",
+    "taxToGdp": "TAXES/PIB : {value} — №1 OCDE",
+    "deficit": "DÉFICIT : {value} DU PIB",
+    "flatTax": "FLAT TAX 2026 : {value}",
+    "irTop": "TMI MAX : {value}"
   },
   "footer": {
     "disclaimer": "Données issues de sources officielles (OCDE, INSEE, URSSAF, DGFiP, Loi de finances). Présentation satirique.",
