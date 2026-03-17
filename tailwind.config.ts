@@ -11,10 +11,12 @@ const config: Config = {
       colors: {
         background: "#0a0c10",
         panel: "#0f1218",
-        danger: "#ff2d2d",
-        warning: "#ffb020",
-        info: "#00d4ff",
-        favorable: "#00ff88",
+        danger: "#ED2939",
+        "tricolore-red": "#ED2939",
+        warning: "#c53848",
+        info: "#e2e8f0",
+        favorable: "#3b82f6",
+        blanc: "#e2e8f0",
       },
       fontFamily: {
         mono: ["JetBrains Mono", "Share Tech Mono", "monospace"],
