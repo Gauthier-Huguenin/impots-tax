@@ -2,9 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/navigation";
-import { OECD_COMPARISON, FRANCE_OECD_DELTA } from "@/lib/tax-data";
+import { OECD_COMPARISON, FRANCE_OECD_DELTA, USSR_COMPARISON } from "@/lib/tax-data";
 
 const MAX_TAX_GDP = 50; // Scale max for bar widths
+const USSR_WIDTH = (USSR_COMPARISON.taxToGdpPeak / MAX_TAX_GDP) * 100;
 
 export function OECDComparison() {
   const t = useTranslations("oecdComparison");
@@ -67,6 +68,27 @@ export function OECDComparison() {
             );
           })}
         </div>
+
+        {/* USSR reference line */}
+        <div className="mt-2 flex items-center gap-2 rounded border border-dashed border-warning/40 bg-warning/5 px-1 py-1">
+          <span className="w-24 shrink-0 text-right font-mono text-[10px] font-bold text-warning sm:w-32 sm:text-xs">
+            ☭ {t("ussrLabel")}
+          </span>
+          <div className="flex-1">
+            <div className="h-4 w-full overflow-hidden rounded-sm bg-gray-800/50 sm:h-5">
+              <div
+                className="h-full bg-gradient-to-r from-warning/60 to-warning/30 border-r-2 border-dashed border-warning"
+                style={{ width: `${USSR_WIDTH}%` }}
+              />
+            </div>
+          </div>
+          <span className="w-12 shrink-0 font-mono text-[10px] font-bold text-warning sm:text-xs">
+            ~{USSR_COMPARISON.taxToGdpPeak}%
+          </span>
+        </div>
+        <p className="mt-1 font-mono text-[10px] text-warning/70 italic">
+          {t("ussrNote")}
+        </p>
 
         <p className="mt-3 font-mono text-xs font-bold text-danger">
           {t("franceDelta", { delta: FRANCE_OECD_DELTA })}

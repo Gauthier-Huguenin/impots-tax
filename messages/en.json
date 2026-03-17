@@ -40,7 +40,8 @@
     "urssaf": "URSSAF, unemployment, supplementary pension",
     "csgCrds": "CSG, CRDS, pension, old age",
     "pasIr": "Withholding tax, 30% marginal rate",
-    "vatAvg": "Weighted average rate ~20%"
+    "vatAvg": "Weighted average rate ~20%",
+    "ussrComparison": "French extraction rate ({frRate}%) > estimated Soviet peak (~{ussrRate}%) — but with better croissants"
   },
   "taxBrackets": {
     "title": "INCOME TAX",
@@ -181,6 +182,8 @@
     "switzerland": "Switzerland",
     "mexico": "Mexico",
     "franceDelta": "+{delta} pts above OECD average",
+    "ussrLabel": "USSR (peak)",
+    "ussrNote": "France 46.1% > USSR ~43% — the Republic outperforms the Supreme Soviet",
     "source": "OECD Revenue Statistics 2024",
     "details": "DETAILS ▸"
   },
@@ -218,6 +221,7 @@
     "publicDebt": "PUBLIC DEBT: {value}",
     "debtToGdp": "DEBT/GDP: {value}",
     "taxToGdp": "TAX/GDP: {value} — #1 OECD",
+    "ussrAlert": "☭ ALERT: FRANCE ({value}) > USSR (~43%)",
     "deficit": "DEFICIT: {value} OF GDP",
     "flatTax": "FLAT TAX 2026: {value}",
     "irTop": "TOP MARGINAL RATE: {value}"
@@ -762,6 +766,9 @@
     "fnal": "FNAL (< 50 employees)",
     "autonomy": "Autonomy contribution",
     "totalRow": "ESTIMATED TOTAL",
+    "ussrTitle": "HISTORICAL COMPARISON — USSR",
+    "ussrDesc": "French social contributions (~{frRate}%) exceed the USSR's estimated payroll extraction rate (~{ussrRate}%) by {delta} points. The Soviet Union took less from wages — they had other, less conventional methods of extraction.",
+    "ussrSource": "Sources: IMF, World Bank — Soviet fiscal estimates, 1980-1991",
     "notesTitle": "TACTICAL NOTES",
     "note1": "Health: rises to 13% employer above 2.5× minimum wage",
     "note2": "Family allowances: rise to 5.25% above 3.5× minimum wage",
@@ -889,6 +896,8 @@
     "switzerland": "Switzerland",
     "mexico": "Mexico",
     "franceDelta": "France: +12.6 points above OECD average",
+    "ussrLabel": "USSR (estimated peak 1980-1991)",
+    "ussrNote": "France's tax-to-GDP ratio (46.1%) exceeds the estimated Soviet peak (~43%). France extracts more than the USSR — but with cheese and 5 weeks of vacation.",
     "analysisTitle": "ANALYSIS",
     "analysisP1": "France collects 46.1% of its GDP in taxes and contributions, placing it ahead of Denmark (43.4%) and Belgium (42.9%). The gap with the United States (27.7%) is 18.4 points — nearly double.",
     "analysisP2": "Switzerland, a neighboring country, collects only 27.6% of its GDP. A French person crossing the border literally enters a different fiscal world.",
@@ -908,6 +917,8 @@
     "spendingTitle": "PUBLIC SPENDING",
     "spendingRatio": "~56.5% of GDP (2024 estimate)",
     "spendingNote": "Among the highest ratios in the OECD. More than half of national wealth passes through State coffers.",
+    "ussrSpendingTitle": "USSR COMPARISON",
+    "ussrSpendingNote": "French public spending (56.5% of GDP) exceeds Soviet-era estimates (~50%). France spends proportionally more than the USSR — but without the five-year plan.",
     "deficitTitle": "BUDGET DEFICIT",
     "deficitRatio": "~-5.4% of GDP (2025)",
     "deficitNote": "Despite record tax pressure (46.1% of GDP), the State still spends more than it collects. The deficit is the gap between what the State takes and what it spends — and it spends more.",

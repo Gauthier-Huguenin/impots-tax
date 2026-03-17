@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { JOURNEY_SUMMARY } from "@/lib/tax-data";
+import { JOURNEY_SUMMARY, USSR_COMPARISON } from "@/lib/tax-data";
 
 const SEGMENTS = [
   { key: "employerContributions", amount: 23, color: "bg-tricolore-red" },
@@ -91,6 +91,11 @@ export function JourneyOf100() {
               </p>
             </div>
           </div>
+
+          {/* USSR comparison */}
+          <p className="mt-3 text-center font-mono text-[10px] text-warning/80 sm:text-xs">
+            ☭ {t("ussrComparison", { ussrRate: USSR_COMPARISON.socialContributions, frRate: extractionRate })}
+          </p>
         </div>
       </div>
     </div>

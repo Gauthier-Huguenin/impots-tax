@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
-import { OECD_COMPARISON, FRANCE_OECD_DELTA, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { OECD_COMPARISON, FRANCE_OECD_DELTA, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
@@ -119,6 +119,27 @@ export default async function ComparisonPage({ params }: PageProps) {
               );
             })}
           </div>
+
+          {/* USSR reference */}
+          <div className="mt-4 flex items-center gap-4 rounded border border-dashed border-warning/40 bg-warning/5 p-3">
+            <div className="w-28 shrink-0 font-mono text-sm font-bold text-warning truncate">
+              ☭ {t("ussrLabel")}
+            </div>
+            <div className="flex-1">
+              <div className="h-4 w-full overflow-hidden rounded-full bg-gray-800">
+                <div
+                  className="h-full rounded-full bg-gradient-to-r from-warning/80 to-warning/40 border-r-2 border-dashed border-warning"
+                  style={{ width: `${(USSR_COMPARISON.taxToGdpPeak / maxTaxToGdp) * 100}%` }}
+                />
+              </div>
+            </div>
+            <div className="w-16 shrink-0 text-right font-mono text-sm font-bold text-warning">
+              ~{USSR_COMPARISON.taxToGdpPeak}%
+            </div>
+          </div>
+          <p className="mt-2 font-mono text-xs text-warning/70 italic">
+            {t("ussrNote")}
+          </p>
 
           <p className="mt-4 font-mono text-sm font-bold text-danger">
             {t("franceDelta")}

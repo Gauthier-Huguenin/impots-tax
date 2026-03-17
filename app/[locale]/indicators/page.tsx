@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
-import { MACRO_INDICATORS, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { MACRO_INDICATORS, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
@@ -99,6 +99,31 @@ export default async function IndicatorsPage({ params }: PageProps) {
             </p>
             <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
               {t("spendingNote")}
+            </p>
+          </div>
+
+          {/* USSR spending comparison */}
+          <div className="rounded border border-dashed border-warning/40 bg-warning/5 p-6">
+            <h2 className="mb-4 font-display text-lg font-bold uppercase tracking-wider text-warning">
+              ☭ {t("ussrSpendingTitle")}
+            </h2>
+            <div className="flex items-end gap-4">
+              <div className="text-center">
+                <div className="font-mono text-2xl font-bold text-danger">
+                  {MACRO_INDICATORS.spendingToGdp}%
+                </div>
+                <p className="font-mono text-[10px] text-gray-400">France 2024</p>
+              </div>
+              <div className="font-mono text-lg text-gray-600">&gt;</div>
+              <div className="text-center">
+                <div className="font-mono text-2xl font-bold text-warning">
+                  ~{USSR_COMPARISON.spendingToGdp}%
+                </div>
+                <p className="font-mono text-[10px] text-gray-400">URSS {USSR_COMPARISON.period}</p>
+              </div>
+            </div>
+            <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
+              {t("ussrSpendingNote")}
             </p>
           </div>
 

@@ -11,6 +11,7 @@ const TICKER_ITEMS = [
   { key: "publicDebt", value: TICKER_DATA.publicDebt },
   { key: "debtToGdp", value: TICKER_DATA.debtToGdp },
   { key: "taxToGdp", value: TICKER_DATA.taxToGdp },
+  { key: "ussrAlert", value: TICKER_DATA.taxToGdp },
   { key: "deficit", value: TICKER_DATA.deficit },
   { key: "flatTax", value: TICKER_DATA.flatTax2026 },
   { key: "irTop", value: TICKER_DATA.irTopRate },

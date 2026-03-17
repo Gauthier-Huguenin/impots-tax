@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
-import { SOCIAL_CONTRIBUTIONS, SOCIAL_CONTRIBUTIONS_TOTALS, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { SOCIAL_CONTRIBUTIONS, SOCIAL_CONTRIBUTIONS_TOTALS, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
@@ -165,6 +165,28 @@ export default async function SalaryContributionsPage({ params }: PageProps) {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* USSR comparison callout */}
+        <section className="mb-10 rounded border border-dashed border-warning/40 bg-warning/5 p-6">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">☭</span>
+            <div>
+              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-warning">
+                {t("ussrTitle")}
+              </h3>
+              <p className="mt-2 font-mono text-sm leading-relaxed text-gray-300">
+                {t("ussrDesc", {
+                  frRate: SOCIAL_CONTRIBUTIONS_TOTALS.total,
+                  ussrRate: USSR_COMPARISON.socialContributions,
+                  delta: SOCIAL_CONTRIBUTIONS_TOTALS.total - USSR_COMPARISON.socialContributions,
+                })}
+              </p>
+              <p className="mt-2 font-mono text-[10px] text-gray-600">
+                {t("ussrSource")}
+              </p>
+            </div>
           </div>
         </section>
 

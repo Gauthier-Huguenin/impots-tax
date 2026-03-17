@@ -223,6 +223,20 @@ export const OECD_COMPARISON: OECDCountry[] = [
 
 export const FRANCE_OECD_DELTA = 12.6; // points above OECD average
 
+// ─── USSR historical comparison ─────────────────────────────
+// Sources: NBER Working Papers, IMF retrospectives, World Bank Soviet studies
+// Note: Soviet fiscal data is estimated — no market economy baseline existed.
+// The commonly cited range for total state extraction (taxes + profits + turnover tax)
+// is 40–45% of GDP at peak (1980s). Social contributions extraction ~38-42%.
+
+export const USSR_COMPARISON = {
+  taxToGdpPeak: 43, // % — estimated peak tax-to-GDP, late 1980s
+  socialContributions: 40, // % — estimated total payroll extraction
+  spendingToGdp: 50, // % — estimated public spending/GDP, 1980s
+  period: "1980–1991",
+  source: "IMF, World Bank — Soviet fiscal estimates",
+};
+
 // ─── Section 9: Macro indicators ────────────────────────────
 // Sources: INSEE, Eurostat
 
