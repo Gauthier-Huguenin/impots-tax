@@ -4,6 +4,9 @@ import { localePath } from "@/lib/url";
 import { FLAT_TAX_2025, FLAT_TAX_2026, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
+import { StructuredData } from "@/components/detail/structured-data";
+import { FaqSection } from "@/components/detail/faq-section";
+import type { FaqItem } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -27,8 +30,22 @@ export default async function FlatTaxPage({ params }: PageProps) {
   const td = await getTranslations({ locale, namespace: "detail" });
   const typedLocale = locale as Locale;
 
+  const faqs: FaqItem[] = [
+    { question: t("faqQ1"), answer: t("faqA1") },
+    { question: t("faqQ2"), answer: t("faqA2") },
+    { question: t("faqQ3"), answer: t("faqA3") },
+    { question: t("faqQ4"), answer: t("faqA4") },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <StructuredData
+        locale={typedLocale}
+        pageTitle={t("title")}
+        pagePath="/flat-tax"
+        homeLabel={td("backToDashboard")}
+        faqs={faqs}
+      />
       <div className="flex h-1">
         <div className="flex-1 bg-tricolore-blue" />
         <div className="flex-1 bg-white" />
@@ -160,6 +177,8 @@ export default async function FlatTaxPage({ params }: PageProps) {
             {t("optionDesc")}
           </p>
         </section>
+
+        <FaqSection title={t("faqTitle")} faqs={faqs} />
 
         <footer className="border-t border-gray-800 pt-4">
           <p className="font-mono text-xs text-gray-600">

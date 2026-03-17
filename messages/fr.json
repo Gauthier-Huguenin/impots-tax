@@ -338,7 +338,16 @@
     "ratesNote": "Aucune hausse de taux votée en 2025 dans les communes de plus de 100 000 habitants.",
     "habTaxTitle": "SUPPRESSION DE LA TAXE D'HABITATION",
     "habTaxDesc": "La taxe d'habitation sur les résidences principales a été supprimée au 1er janvier 2023, soit ~18.5 Mds € en moins pour les ménages. Conséquence : la taxe foncière est devenue le seul levier fiscal des communes, et elle ne fait qu'augmenter.",
-    "sourceText": "DGFiP Statistiques n°34 (mai 2025), impots.gouv.fr, IFRAP"
+    "sourceText": "DGFiP Statistiques n°34 (mai 2025), impots.gouv.fr, IFRAP",
+    "faqTitle": "QUESTIONS FRÉQUENTES — TAXE FONCIÈRE",
+    "faqQ1": "Comment est calculée la taxe foncière ?",
+    "faqA1": "La taxe foncière se calcule ainsi : Valeur Locative Cadastrale (VLC) × 50% d'abattement forfaitaire × taux d'imposition communal (fixé par la commune + intercommunalité). La VLC est censée refléter le loyer théorique du bien — sauf qu'elle est basée sur les conditions du marché locatif de… 1970. La révision structurelle prévue pour 2026 a été suspendue par le Premier ministre. On calcule donc un impôt de 2026 sur des bases de 1970.",
+    "faqQ2": "Combien paye-t-on en moyenne de taxe foncière ?",
+    "faqA2": "En 2024, le montant moyen de la taxe foncière est de 1 082 € par contribuable (contre 1 026 € en 2023, soit +5.5% en un an). Pour une maison, comptez en moyenne ~1 090 € (2025), et pour un appartement ~865 €. Au total, la taxe foncière rapporte 55.3 milliards d'euros à l'État et aux collectivités, prélevés sur 33 millions de contribuables.",
+    "faqQ3": "Pourquoi la taxe foncière augmente chaque année ?",
+    "faqA3": "La taxe foncière augmente par deux mécanismes : la revalorisation annuelle des bases cadastrales (coefficient indexé sur l'inflation — +7.1% en 2023, +3.9% en 2024, +1.7% en 2025, +0.8% en 2026) et les hausses de taux votées par les communes. Depuis la suppression de la taxe d'habitation en 2023 (~18.5 Mds € de manque à gagner), la taxe foncière est devenue le seul levier fiscal des communes. Résultat : +30% en 10 ans.",
+    "faqQ4": "Quelles sont les villes où la taxe foncière est la plus élevée ?",
+    "faqA4": "En 2025, les taux communaux (commune + intercommunalité) les plus élevés parmi les grandes villes : Grenoble 67.92%, Angers 56.42%, Amiens 56.05%, Toulouse 48.55%, Marseille 47.13%, Lyon 32.44%. Paris affiche un taux de 20.5%, relativement clément — compensé par des valeurs locatives plus élevées. La moyenne nationale se situe à environ 40.67%."
   },
   "detailRentalTax": {
     "metaTitle": "LMNP & Airbnb — Loi Le Meur, fiscalité meublés | impots.tax",
@@ -403,7 +412,16 @@
     "medianInheritance": "Héritage médian : ~70 000 €",
     "avgInheritance": "Héritage moyen : ~230 000 €",
     "inheritanceShare": "Part de l'héritage dans le patrimoine : ~60%",
-    "sourceText": "Service-Public.fr, CGI art. 777, OECD, DGFiP, France Stratégie"
+    "sourceText": "Service-Public.fr, CGI art. 777, OECD, DGFiP, France Stratégie",
+    "faqTitle": "QUESTIONS FRÉQUENTES — DROITS DE SUCCESSION",
+    "faqQ1": "Quel est le taux des droits de succession en France ?",
+    "faqA1": "En ligne directe (parent → enfant), le barème comporte 7 tranches, de 5% à 45%, après un abattement de 100 000 € par parent par enfant : 5% jusqu'à 8 072 €, 10% de 8 072 € à 12 109 €, 15% de 12 109 € à 15 932 €, 20% de 15 932 € à 552 324 €, 30% de 552 324 € à 902 838 €, 40% de 902 838 € à 1 805 677 €, et 45% au-delà. Pour les tiers et concubins : taux unique de 60% après seulement 1 594 € d'abattement.",
+    "faqQ2": "Combien peut-on transmettre sans payer de droits ?",
+    "faqA2": "Chaque parent peut transmettre 100 000 € par enfant en franchise de droits (tous les 15 ans), auxquels s'ajoutent 31 865 € de don familial de sommes d'argent (art. 790 G CGI, si le donateur a moins de 80 ans). Soit 131 865 € par parent par enfant. Pour un couple avec 2 enfants : 131 865 € × 2 parents × 2 enfants = 527 460 € en franchise totale tous les 15 ans. Cela reste modeste comparé aux 12.5 millions de dollars d'abattement aux États-Unis.",
+    "faqQ3": "Quel pourcentage des successions sont réellement taxées ?",
+    "faqA3": "Seulement environ 15% des successions donnent lieu à un paiement effectif de droits. Les 85% restants tombent sous les seuils d'abattement ou bénéficient d'exonérations (conjoint survivant exonéré, assurance-vie, pacte Dutreil). Paradoxalement, les droits touchent principalement les patrimoines moyens-supérieurs (200K-2M€), tandis que les très gros patrimoines exploitent les dispositifs d'optimisation. Recettes totales : ~16.6 Mds € (2023).",
+    "faqQ4": "Comment fonctionne l'assurance-vie en succession ?",
+    "faqA4": "L'assurance-vie bénéficie d'un régime dérogatoire hors succession civile. Pour les versements effectués avant 70 ans : chaque bénéficiaire dispose d'un abattement de 152 500 €, puis taxation à 20% jusqu'à 852 500 €, et 31.25% au-delà. Pour les versements après 70 ans : un abattement global de 30 500 € (partagé entre tous les bénéficiaires), puis droits de succession classiques — mais les intérêts générés restent exonérés. C'est le principal outil d'optimisation successorale en France."
   },
   "detailCapitalGains": {
     "metaTitle": "Plus-values hors PEA — S&P 500, CTO vs PEA | impots.tax",
@@ -519,7 +537,16 @@
     "cdhrTitle": "NOUVEAUTÉ 2026 : CDHR",
     "cdhrDesc": "La Contribution Différentielle sur les Hauts Revenus (CDHR) garantit un taux d'imposition minimum de 20% pour les foyers les plus aisés. Pour ceux qui pensaient que l'optimisation fiscale était un sport national, l'État vient de changer les règles en cours de match.",
     "indexation": "Indexation 2026 : +0.9% (inflation)",
-    "sourceText": "Loi de finances 2026, Service-Public.fr, economie.gouv.fr"
+    "sourceText": "Loi de finances 2026, Service-Public.fr, economie.gouv.fr",
+    "faqTitle": "QUESTIONS FRÉQUENTES — IMPÔT SUR LE REVENU",
+    "faqQ1": "Quels sont les tranches d'imposition en 2026 ?",
+    "faqA1": "Le barème 2026 (revenus 2025) comporte 5 tranches, indexées de +0.9% sur l'inflation : 0% jusqu'à 11 600 €, 11% de 11 601 € à 29 579 €, 30% de 29 580 € à 84 577 €, 41% de 84 578 € à 181 917 €, et 45% au-delà de 181 917 €. Ces montants s'entendent par part de quotient familial. Source : Loi de finances 2026.",
+    "faqQ2": "Comment fonctionne le quotient familial ?",
+    "faqA2": "Le quotient familial divise le revenu imposable par le nombre de parts du foyer : 1 part par adulte, 0.5 part par enfant (1 part à partir du 3e). L'avantage est plafonné à 1 807 € par demi-part supplémentaire en 2026. Concrètement, un couple avec 2 enfants dispose de 3 parts. Le système reconnaît que les enfants coûtent de l'argent — c'est l'un des rares gestes de clémence du Code général des impôts.",
+    "faqQ3": "Qu'est-ce que la CDHR en 2026 ?",
+    "faqA3": "La Contribution Différentielle sur les Hauts Revenus (CDHR) est une nouveauté 2026 qui garantit un taux d'imposition effectif minimum de 20% pour les foyers les plus aisés. Elle vise les contribuables qui, grâce à l'optimisation fiscale (niches, revenus du capital), parviennent à afficher un taux effectif inférieur à 20% malgré des revenus élevés. L'État a décidé que l'optimisation fiscale avait des limites — les siennes.",
+    "faqQ4": "Quel est le taux d'imposition moyen en France ?",
+    "faqA4": "Le taux marginal d'imposition (TMI) le plus courant est 30%, mais le taux effectif est bien plus bas. Pour un salaire médian net de ~2 190 €/mois, le taux effectif d'IR se situe autour de 7-10%. Seuls les foyers au-delà de ~84 577 € par part atteignent les tranches à 41% et 45%. Au total, l'IR ne représente qu'une fraction du prélèvement total — les cotisations sociales (~52%) sont le vrai poste de ponction."
   },
   "detailCorporateTax": {
     "metaTitle": "Impôt sur les sociétés — IS 2025-2026 | impots.tax",
@@ -569,7 +596,16 @@
     "exceptionDesc": "Certains produits conservent les anciens prélèvements sociaux à 17.2% : assurance-vie, PEL/CEL, PEP. Soit un PFU total de 30%.",
     "optionTitle": "OPTION BARÈME PROGRESSIF",
     "optionDesc": "Il est possible chaque année de choisir le barème progressif au lieu de la Flat Tax (case 2OP de la déclaration). Ce choix est global et irrévocable pour l'année. Avantageux si votre TMI est ≤ 11%. Pour les dividendes, un abattement de 40% est applicable uniquement avec le barème.",
-    "sourceText": "Ramify.fr, Shine.fr, Service-Public.fr, Loi n°2025-1403 (LFSS 2026)"
+    "sourceText": "Ramify.fr, Shine.fr, Service-Public.fr, Loi n°2025-1403 (LFSS 2026)",
+    "faqTitle": "QUESTIONS FRÉQUENTES — FLAT TAX",
+    "faqQ1": "Quel est le taux de la flat tax en 2026 ?",
+    "faqA1": "En 2026, la Flat Tax passe à 31.4%, contre 30% en 2025. La hausse provient de la CSG sur les revenus du capital, relevée de 9.2% à 10.6% (LFSS 2026). Le PFU se décompose désormais en 12.8% d'IR forfaitaire + 18.6% de prélèvements sociaux. Exception : certains produits (assurance-vie, PEL/CEL, PEP) restent à 17.2% de PS, soit un total de 30%.",
+    "faqQ2": "Quand choisir le barème progressif plutôt que la flat tax ?",
+    "faqA2": "L'option barème progressif (case 2OP) est avantageuse si votre tranche marginale d'imposition (TMI) est ≤ 11%, c'est-à-dire un revenu imposable par part inférieur à 29 579 €. Pour les dividendes, le barème donne droit à un abattement de 40% non disponible avec le PFU. Le choix est global et irrévocable pour l'année — choisissez bien, l'État ne fait pas de remboursement.",
+    "faqQ3": "La flat tax s'applique-t-elle aux crypto-monnaies ?",
+    "faqA3": "Oui. Les plus-values sur actifs numériques sont soumises au PFU dès leur conversion en euros (ou en stablecoins adossés à l'euro). Un seuil d'exonération existe : si le total annuel de vos cessions ne dépasse pas 305 €, aucun impôt n'est dû. Au-delà, l'intégralité de la plus-value est taxée à 30% (2025) ou 31.4% (2026). L'option barème progressif est également disponible.",
+    "faqQ4": "Pourquoi la flat tax augmente en 2026 ?",
+    "faqA4": "La loi de financement de la Sécurité sociale 2026 (LFSS, loi n°2025-1403) relève la CSG sur les revenus du capital de 9.2% à 10.6%, soit +1.4 point. Cela porte les prélèvements sociaux de 17.2% à 18.6%, et donc le PFU total de 30% à 31.4%. La part IR (12.8%) reste inchangée. La « Flat Tax » — censée être simple et stable — aura donc augmenté de 4.7% en moins d'une décennie d'existence."
   },
   "detailVat": {
     "metaTitle": "TVA — Taxe sur la Valeur Ajoutée | impots.tax",
@@ -590,7 +626,16 @@
     "historyDesc": "La TVA a été inventée en France en 1954 par Maurice Lauré, inspecteur des finances. Le taux initial était de 16.85%. Aujourd'hui, le taux normal est de 20%. L'État a trouvé que 16.85% n'était pas assez rond — ni assez rentable.",
     "mechanismTitle": "MÉCANISME",
     "mechanismDesc": "La TVA est collectée à chaque étape de la chaîne de production et de distribution. Chaque entreprise ne reverse que la TVA sur sa valeur ajoutée (TVA collectée - TVA déductible). Le consommateur final supporte l'intégralité de la taxe. C'est un impôt sur la consommation, pas sur la production.",
-    "sourceText": "impots.gouv.fr, economie.gouv.fr"
+    "sourceText": "impots.gouv.fr, economie.gouv.fr",
+    "faqTitle": "QUESTIONS FRÉQUENTES — TVA",
+    "faqQ1": "Quels sont les taux de TVA en France en 2025 ?",
+    "faqA1": "La France applique 4 taux de TVA : 20% (taux normal — majorité des biens et services), 10% (taux intermédiaire — restauration, transport, travaux de rénovation, médicaments non remboursables), 5.5% (taux réduit — alimentation, livres, énergie, équipements handicapés, spectacles vivants), et 2.1% (taux super-réduit — presse, médicaments remboursables, redevance TV). Quatre taux pour un seul impôt : c'est la simplicité à la française.",
+    "faqQ2": "Qui a inventé la TVA ?",
+    "faqA2": "La TVA a été inventée en France en 1954 par Maurice Lauré, inspecteur des finances et directeur adjoint de la Direction Générale des Impôts. Le taux initial était de 16.85%. Aujourd'hui adoptée par plus de 170 pays, c'est la plus grande exportation fiscale française — et probablement la seule invention française dont le monde entier aurait préféré se passer.",
+    "faqQ3": "Pourquoi la TVA est-elle considérée comme l'impôt parfait ?",
+    "faqA3": "Du point de vue de l'État, la TVA est un chef-d'œuvre : elle est invisible (intégrée au prix, le consommateur ne la « voit » pas), collectée à chaque étape de la chaîne (fabrication, distribution, vente), quasi-impossible à frauder (chaque maillon vérifie l'autre via le mécanisme de TVA déductible/collectée), et supportée intégralement par le consommateur final. C'est un impôt sur la consommation, pas sur la production — ce qui le rend indolore pour les entreprises et invisible pour les citoyens.",
+    "faqQ4": "Quels produits bénéficient du taux réduit de 5.5% ?",
+    "faqA4": "Le taux réduit de 5.5% s'applique aux produits alimentaires (sauf alcool, confiseries et caviar), aux livres (papier et numériques), à l'énergie (gaz et électricité), aux équipements pour personnes handicapées, et aux spectacles vivants (théâtre, concerts). C'est la reconnaissance par l'État que manger, se chauffer et lire sont des nécessités — une concession rare dans un système qui taxe même les taxes (cf. la TVA sur l'accise carburant)."
   },
   "detailFuelTax": {
     "metaTitle": "Taxes sur le carburant — Accise, TICPE, TVA | impots.tax",
@@ -702,7 +747,16 @@
     "stepVATDesc": "Sur ce qui est dépensé",
     "stepPurchasingPower": "Pouvoir d'achat réel",
     "stepPurchasingPowerDesc": "Ce que 230 € achètent réellement",
-    "sourceText": "URSSAF barème 2025, CAPEB tableau 2025, Cleiss.fr, CCI"
+    "sourceText": "URSSAF barème 2025, CAPEB tableau 2025, Cleiss.fr, CCI",
+    "faqTitle": "QUESTIONS FRÉQUENTES — COTISATIONS SOCIALES",
+    "faqQ1": "Quel est le taux total de cotisations sociales en France ?",
+    "faqA1": "Le taux total de cotisations sociales avoisine 52% du salaire brut : environ 32% à la charge de l'employeur (maladie 7%, vieillesse 10.57%, allocations familiales 3.45%, chômage 4%, AGIRC-ARRCO 4.72%, accident du travail ~2%, etc.) et environ 20% à la charge du salarié (CSG 9.2%, CRDS 0.5%, vieillesse 7.3%, AGIRC-ARRCO 3.15%). Pour un salaire au-delà de 2.5 SMIC, certains taux augmentent encore.",
+    "faqQ2": "Quelle est la différence entre salaire brut et net ?",
+    "faqA2": "Environ 22% du salaire brut est retenu en cotisations salariales avant d'atteindre votre compte. Les principales ponctions : CSG (9.2% sur 98.25% du brut), CRDS (0.5%), vieillesse plafonnée (6.90%), vieillesse déplafonnée (0.40%), et retraite complémentaire AGIRC-ARRCO (3.15%). Un salaire brut de 3 000 € se traduit en ~2 340 € net avant impôt sur le revenu. Le prélèvement à la source retire ensuite l'IR — dernier coup de grâce avant le virement.",
+    "faqQ3": "Combien coûte réellement un salarié à son employeur ?",
+    "faqA3": "Pour chaque 100 € nets versés au salarié, l'employeur débourse environ 230 € (le « super-brut »). Sur ces 230 € : ~54 € partent en cotisations employeur (URSSAF, chômage, retraite complémentaire), ~26 € en cotisations salariales (CSG, CRDS, retraite), ~20 € en impôt sur le revenu (prélèvement à la source). Si le salarié dépense ses 130 € restants, la TVA (~20%) en reprend encore ~22 €. Pouvoir d'achat réel : ~108 €.",
+    "faqQ4": "Qu'est-ce que la CSG et la CRDS ?",
+    "faqA4": "La CSG (Contribution Sociale Généralisée) a été créée en 1991 à un taux « temporaire » de 1.1%. Elle est aujourd'hui à 9.2% — une progression de +736% en 35 ans. La CRDS (Contribution au Remboursement de la Dette Sociale) existe depuis 1996, à 0.5%, pour rembourser la dette de la Sécurité sociale. Trente ans plus tard, elle est toujours là. En France, rien n'est plus permanent qu'un impôt temporaire."
   },
   "detailWelfareSystem": {
     "metaTitle": "Système social français — RSA, AAH, ARE, AME | impots.tax",
