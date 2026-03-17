@@ -1,0 +1,110 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { VAT_RATES, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { FaqSection } from "@/components/detail/faq-section";
+import type { FaqItem } from "@/lib/seo";
+
+const RATE_KEYS = ["rateNormal", "rateIntermediate", "rateReduced", "rateSuperReduced"] as const;
+const RATE_DESC_KEYS = ["rateNormalDesc", "rateIntermediateDesc", "rateReducedDesc", "rateSuperReducedDesc"] as const;
+const RATE_COLORS = [
+  "border-danger/30 bg-danger/5",
+  "border-warning/30 bg-warning/5",
+  "border-blanc/30 bg-blanc/5",
+  "border-favorable/30 bg-favorable/5",
+];
+const RATE_TEXT_COLORS = ["text-danger", "text-warning", "text-blanc", "text-favorable"];
+
+export function VatDetail() {
+  const t = useTranslations("detailVat");
+  const td = useTranslations("detail");
+
+  const faqs: FaqItem[] = [
+    { question: t("faqQ1"), answer: t("faqA1") },
+    { question: t("faqQ2"), answer: t("faqA2") },
+    { question: t("faqQ3"), answer: t("faqA3") },
+    { question: t("faqQ4"), answer: t("faqA4") },
+  ];
+
+  return (
+    <>
+      {/* Header */}
+      <header className="mb-10">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+          {t("title")}
+        </h1>
+        <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
+          {t("subtitle")}
+        </p>
+        <p className="mt-1 font-mono text-xs text-gray-500">
+          {td("dataYear", { year: TAX_DATA_YEAR })}
+        </p>
+      </header>
+
+      {/* Intro */}
+      <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
+        <p className="font-mono text-sm leading-relaxed text-gray-300">
+          {t("intro")}
+        </p>
+      </section>
+
+      {/* VAT rates */}
+      <section className="mb-10">
+        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+          {t("ratesTitle")}
+        </h2>
+        <div className="space-y-4">
+          {VAT_RATES.map((vr, i) => (
+            <div key={vr.key} className={`rounded border p-6 ${RATE_COLORS[i]}`}>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex-1">
+                  <h3 className={`font-display text-lg font-bold uppercase ${RATE_TEXT_COLORS[i]}`}>
+                    {t(RATE_KEYS[i])}
+                  </h3>
+                  <p className="mt-2 font-mono text-sm leading-relaxed text-gray-300">
+                    {t(RATE_DESC_KEYS[i])}
+                  </p>
+                </div>
+                <div className={`font-mono text-4xl font-bold ${RATE_TEXT_COLORS[i]} shrink-0`}>
+                  {vr.rate}%
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* History */}
+      <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+          {t("historyTitle")}
+        </h2>
+        <p className="font-mono text-sm leading-relaxed text-gray-300">
+          {t("historyDesc")}
+        </p>
+      </section>
+
+      {/* Mechanism */}
+      <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+          {t("mechanismTitle")}
+        </h2>
+        <p className="font-mono text-sm leading-relaxed text-gray-300">
+          {t("mechanismDesc")}
+        </p>
+      </section>
+
+      <FaqSection title={t("faqTitle")} faqs={faqs} />
+
+      {/* Source */}
+      <footer className="border-t border-gray-800 pt-4">
+        <p className="font-mono text-xs text-gray-600">
+          {td("source")} : {t("sourceText")}
+        </p>
+        <p className="mt-1 font-mono text-xs text-gray-600">
+          {td("lastUpdated", { date: "Mars 2026" })}
+        </p>
+      </footer>
+    </>
+  );
+}
