@@ -88,3 +88,31 @@
 .animate-glow {
   animation: glow-pulse 2s ease-in-out infinite;
 }
+
+/* Modal animations */
+@keyframes modal-backdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-modal-backdrop {
+  animation: modal-backdrop 200ms ease-out;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-modal-fade-in {
+  animation: modal-fade-in 200ms ease-out;
+}
+
+@keyframes modal-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-modal-slide-up {
+  animation: modal-slide-up 200ms ease-out;
+}

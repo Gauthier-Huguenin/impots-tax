@@ -276,7 +276,10 @@
   "propertyTax": {
     "title": "TAXE FONCIÈRE",
     "subtitle": "Recettes, taux par ville — 2024-2025",
-    "totalRevenue": "{value} Mds €",
+    "totalRevenue": "Mds € de recettes",
+    "avgPerTaxpayer": "€ / contribuable",
+    "increase10Years": "+30% en 10 ans",
+    "cityRates": "TAUX COMMUNAUX",
     "avgAmount": "{value} €/contribuable",
     "increase": "+{value}% en 10 ans",
     "paris": "Paris",

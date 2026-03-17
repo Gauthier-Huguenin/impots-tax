@@ -276,7 +276,10 @@
   "propertyTax": {
     "title": "PROPERTY TAX",
     "subtitle": "Revenue, rates by city — 2024-2025",
-    "totalRevenue": "€{value}B",
+    "totalRevenue": "B€ in revenue",
+    "avgPerTaxpayer": "€ / taxpayer",
+    "increase10Years": "+30% in 10 years",
+    "cityRates": "MUNICIPAL RATES",
     "avgAmount": "€{value}/taxpayer",
     "increase": "+{value}% in 10 years",
     "paris": "Paris",
