@@ -29,10 +29,10 @@ const RATE_DESC_KEYS = ["rateNormalDesc", "rateIntermediateDesc", "rateReducedDe
 const RATE_COLORS = [
   "border-danger/30 bg-danger/5",
   "border-warning/30 bg-warning/5",
-  "border-info/30 bg-info/5",
+  "border-blanc/30 bg-blanc/5",
   "border-favorable/30 bg-favorable/5",
 ];
-const RATE_TEXT_COLORS = ["text-danger", "text-warning", "text-info", "text-favorable"];
+const RATE_TEXT_COLORS = ["text-danger", "text-warning", "text-blanc", "text-favorable"];
 
 export default async function VatPage({ params }: PageProps) {
   const { locale } = await params;

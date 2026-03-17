@@ -43,7 +43,7 @@ export default function OGImage() {
               fontSize: "72px",
               fontWeight: 900,
               letterSpacing: "8px",
-              color: "#ff2d2d",
+              color: "#ED2939",
               textTransform: "uppercase",
             }}
           >
@@ -78,7 +78,7 @@ export default function OGImage() {
                 alignItems: "center",
               }}
             >
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#ff2d2d" }}>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#ED2939" }}>
                 46.1%
               </div>
               <div style={{ fontSize: "14px", color: "#6b7280", marginTop: "4px" }}>
@@ -92,7 +92,7 @@ export default function OGImage() {
                 alignItems: "center",
               }}
             >
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#ffb020" }}>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#c53848" }}>
                 52%
               </div>
               <div style={{ fontSize: "14px", color: "#6b7280", marginTop: "4px" }}>
@@ -106,7 +106,7 @@ export default function OGImage() {
                 alignItems: "center",
               }}
             >
-              <div style={{ fontSize: "48px", fontWeight: 700, color: "#00d4ff" }}>
+              <div style={{ fontSize: "48px", fontWeight: 700, color: "#3b82f6" }}>
                 112%
               </div>
               <div style={{ fontSize: "14px", color: "#6b7280", marginTop: "4px" }}>

@@ -102,7 +102,7 @@ export default async function RentalTaxPage({ params }: PageProps) {
                     <td className="px-4 py-3 text-right text-warning">
                       {row.ceiling.toLocaleString()} €
                     </td>
-                    <td className={`px-4 py-3 text-right ${row.allowance <= 30 ? "text-danger" : "text-info"}`}>
+                    <td className={`px-4 py-3 text-right ${row.allowance <= 30 ? "text-danger" : "text-favorable"}`}>
                       {row.allowance}%
                     </td>
                     <td className="px-4 py-3 text-right text-gray-500">
@@ -159,16 +159,16 @@ export default async function RentalTaxPage({ params }: PageProps) {
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-300">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("activeListings")}
+              <span className="text-blanc">▸</span> {t("activeListings")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("parisListings")}
+              <span className="text-blanc">▸</span> {t("parisListings")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("avgIncome")}
+              <span className="text-blanc">▸</span> {t("avgIncome")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("avgRate")}
+              <span className="text-blanc">▸</span> {t("avgRate")}
             </li>
           </ul>
         </section>

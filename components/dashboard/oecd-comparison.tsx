@@ -11,7 +11,7 @@ export function OECDComparison() {
 
   return (
     <Link href="/comparison" className="group block">
-      <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -32,7 +32,7 @@ export function OECDComparison() {
                     isFrance
                       ? "font-bold text-danger"
                       : isAverage
-                        ? "text-info"
+                        ? "text-blanc"
                         : "text-gray-400"
                   }`}
                 >
@@ -45,7 +45,7 @@ export function OECDComparison() {
                         isFrance
                           ? "bg-gradient-to-r from-danger/90 to-danger/60"
                           : isAverage
-                            ? "border-r-2 border-dashed border-info bg-info/30"
+                            ? "border-r-2 border-dashed border-blanc bg-blanc/20"
                             : "bg-gray-600/50"
                       }`}
                       style={{ width: `${widthPercent}%` }}
@@ -57,7 +57,7 @@ export function OECDComparison() {
                     isFrance
                       ? "text-danger"
                       : isAverage
-                        ? "text-info"
+                        ? "text-blanc"
                         : "text-gray-500"
                   }`}
                 >
@@ -76,7 +76,7 @@ export function OECDComparison() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

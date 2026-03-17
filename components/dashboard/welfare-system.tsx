@@ -9,7 +9,7 @@ export function WelfareSystem() {
 
   return (
     <Link href="/welfare-system" className="group block">
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -20,13 +20,13 @@ export function WelfareSystem() {
         <div className="grid grid-cols-2 gap-2">
           {/* RSA */}
           <div className="rounded border border-gray-800 bg-background/50 p-3">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-info">
+            <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
               {t("rsaTitle")}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
               {t("rsaDesc")}
             </p>
-            <p className="mt-1 font-mono text-lg font-bold text-info">
+            <p className="mt-1 font-mono text-lg font-bold text-favorable">
               {t("rsaAmount", { amount: WELFARE_DATA.rsa.amountSingle.toFixed(2).replace(".", ",") })}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
@@ -36,13 +36,13 @@ export function WelfareSystem() {
 
           {/* AAH */}
           <div className="rounded border border-gray-800 bg-background/50 p-3">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-info">
+            <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
               {t("aahTitle")}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
               {t("aahDesc")}
             </p>
-            <p className="mt-1 font-mono text-lg font-bold text-info">
+            <p className="mt-1 font-mono text-lg font-bold text-favorable">
               {t("aahAmount", { amount: WELFARE_DATA.aah.amountMax.toFixed(2).replace(".", ",") })}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
@@ -90,7 +90,7 @@ export function WelfareSystem() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

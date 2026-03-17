@@ -9,7 +9,7 @@ const FUEL_COLORS: Record<string, string> = {
   distribution: "bg-gray-600",
   accise: "bg-danger",
   vatProduct: "bg-warning",
-  vatAccise: "bg-orange-500",
+  vatAccise: "bg-red-800",
 };
 
 export function FuelTax() {
@@ -17,7 +17,7 @@ export function FuelTax() {
 
   return (
     <Link href="/fuel-tax" className="group block">
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -74,7 +74,7 @@ export function FuelTax() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

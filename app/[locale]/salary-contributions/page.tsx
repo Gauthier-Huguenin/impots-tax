@@ -91,19 +91,19 @@ export default async function SalaryContributionsPage({ params }: PageProps) {
         </section>
 
         {/* Reference data */}
-        <section className="mb-10 rounded border border-info/30 bg-info/5 p-6">
-          <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-info">
+        <section className="mb-10 rounded border border-blanc/30 bg-blanc/5 p-6">
+          <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
             {t("referenceTitle")}
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-300">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("pmss")}
+              <span className="text-blanc">▸</span> {t("pmss")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("pass")}
+              <span className="text-blanc">▸</span> {t("pass")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("smic")}
+              <span className="text-blanc">▸</span> {t("smic")}
             </li>
           </ul>
         </section>
@@ -181,13 +181,13 @@ export default async function SalaryContributionsPage({ params }: PageProps) {
               <span className="text-warning">▸</span> {t("note2")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("note3")}
+              <span className="text-blanc">▸</span> {t("note3")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("note4")}
+              <span className="text-blanc">▸</span> {t("note4")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("note5")}
+              <span className="text-blanc">▸</span> {t("note5")}
             </li>
           </ul>
         </section>

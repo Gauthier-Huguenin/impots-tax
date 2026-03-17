@@ -84,11 +84,11 @@ export default async function CorporateTaxPage({ params }: PageProps) {
           </div>
 
           {/* PME rate */}
-          <div className="rounded border border-favorable/30 bg-favorable/5 p-6">
+          <div className="rounded border border-warning/30 bg-warning/5 p-6">
             <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
               {t("pmeRateTitle")}
             </div>
-            <div className="mt-2 font-mono text-5xl font-bold text-favorable">
+            <div className="mt-2 font-mono text-5xl font-bold text-warning">
               {CORPORATE_TAX.pmeRate}%
             </div>
             <p className="mt-3 font-mono text-xs leading-relaxed text-gray-400">
@@ -104,13 +104,13 @@ export default async function CorporateTaxPage({ params }: PageProps) {
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-favorable">▸</span> {t("pmeCondition1")}
+              <span className="text-blanc">▸</span> {t("pmeCondition1")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-favorable">▸</span> {t("pmeCondition2")}
+              <span className="text-blanc">▸</span> {t("pmeCondition2")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-favorable">▸</span> {t("pmeCondition3")}
+              <span className="text-blanc">▸</span> {t("pmeCondition3")}
             </li>
           </ul>
           <p className="mt-4 font-mono text-xs text-warning">
@@ -155,8 +155,8 @@ export default async function CorporateTaxPage({ params }: PageProps) {
         </section>
 
         {/* Pending */}
-        <section className="mb-10 rounded border border-info/30 bg-info/5 p-6">
-          <h2 className="mb-2 font-display text-lg font-bold uppercase tracking-wider text-info">
+        <section className="mb-10 rounded border border-blanc/30 bg-blanc/5 p-6">
+          <h2 className="mb-2 font-display text-lg font-bold uppercase tracking-wider text-blanc">
             {t("pendingTitle")}
           </h2>
           <p className="font-mono text-sm leading-relaxed text-gray-300">

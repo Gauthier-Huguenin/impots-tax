@@ -15,7 +15,7 @@ export function PropertyTax() {
 
   return (
     <Link href="/property-tax" className="group block">
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -63,7 +63,7 @@ export function PropertyTax() {
               </span>
               <div className="relative h-4 flex-1 overflow-hidden rounded-sm bg-background/50">
                 <div
-                  className={`absolute inset-y-0 left-0 rounded-sm ${city.rate >= 50 ? "bg-danger" : city.rate >= 30 ? "bg-warning" : "bg-info"}`}
+                  className={`absolute inset-y-0 left-0 rounded-sm ${city.rate >= 50 ? "bg-danger" : city.rate >= 30 ? "bg-warning" : "bg-favorable"}`}
                   style={{ width: `${(city.rate / MAX_RATE) * 100}%` }}
                 />
                 <span className="relative z-10 flex h-full items-center pl-1.5 font-mono text-[9px] font-bold text-white/90">
@@ -78,7 +78,7 @@ export function PropertyTax() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

@@ -110,7 +110,7 @@ export default async function InheritanceTaxPage({ params }: PageProps) {
                     <td className="px-4 py-3 text-gray-300">
                       {formatAmount(bracket.min)} € — {bracket.max ? `${formatAmount(bracket.max)} €` : "∞"}
                     </td>
-                    <td className={`px-4 py-3 text-right font-bold ${bracket.rate >= 40 ? "text-danger" : bracket.rate >= 20 ? "text-warning" : "text-info"}`}>
+                    <td className={`px-4 py-3 text-right font-bold ${bracket.rate >= 40 ? "text-danger" : bracket.rate >= 20 ? "text-warning" : "text-favorable"}`}>
                       {bracket.rate}%
                     </td>
                   </tr>
@@ -159,10 +159,10 @@ export default async function InheritanceTaxPage({ params }: PageProps) {
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("lifeInsuranceBefore70")}
+              <span className="text-favorable">▸</span> {t("lifeInsuranceBefore70")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("lifeInsuranceAfter70")}
+              <span className="text-favorable">▸</span> {t("lifeInsuranceAfter70")}
             </li>
           </ul>
         </section>
@@ -214,10 +214,10 @@ export default async function InheritanceTaxPage({ params }: PageProps) {
               <span className="text-danger">▸</span> {t("taxedPercent")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("medianInheritance")}
+              <span className="text-blanc">▸</span> {t("medianInheritance")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("avgInheritance")}
+              <span className="text-blanc">▸</span> {t("avgInheritance")}
             </li>
             <li className="flex items-start gap-2">
               <span className="text-warning">▸</span> {t("inheritanceShare")}

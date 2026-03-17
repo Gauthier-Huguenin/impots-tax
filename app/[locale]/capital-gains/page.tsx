@@ -219,7 +219,7 @@ export default async function CapitalGainsPage({ params }: PageProps) {
               <span className="text-danger">▸</span> US withholding: {US_DIVIDEND_TAX.withholdingRate}%
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> FR credit: {US_DIVIDEND_TAX.frenchCreditRate}%
+              <span className="text-blanc">▸</span> FR credit: {US_DIVIDEND_TAX.frenchCreditRate}%
             </li>
             <li className="flex items-start gap-2">
               <span className="text-danger">▸</span> Leakage: {US_DIVIDEND_TAX.leakage}%

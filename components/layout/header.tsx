@@ -60,6 +60,13 @@ export function Header() {
             </span>
           </div>
 
+          {/* Tricolore micro-stripe */}
+          <div className="hidden items-center gap-0.5 md:flex">
+            <span className="h-3 w-1 rounded-sm bg-tricolore-blue" />
+            <span className="h-3 w-1 rounded-sm bg-blanc" />
+            <span className="h-3 w-1 rounded-sm bg-tricolore-red" />
+          </div>
+
           {/* X / Twitter */}
           <a
             href={siteConfig.social.x}

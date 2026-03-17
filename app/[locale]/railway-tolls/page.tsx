@@ -143,10 +143,10 @@ export default async function RailwayTollsPage({ params }: PageProps) {
               <span className="text-danger">▸</span> {t("totalRevenue")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("regeneration")}
+              <span className="text-blanc">▸</span> {t("regeneration")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("groupRevenue")}
+              <span className="text-blanc">▸</span> {t("groupRevenue")}
             </li>
           </ul>
         </section>
@@ -167,7 +167,7 @@ export default async function RailwayTollsPage({ params }: PageProps) {
               <span className="text-danger">▸</span> {t("increase2026")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("increase2027")}
+              <span className="text-blanc">▸</span> {t("increase2027")}
             </li>
           </ul>
         </section>
@@ -182,7 +182,7 @@ export default async function RailwayTollsPage({ params }: PageProps) {
               <span className="text-warning">▸</span> {t("vatDomestic")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("vatInternational")}
+              <span className="text-blanc">▸</span> {t("vatInternational")}
             </li>
           </ul>
         </section>

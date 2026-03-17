@@ -78,8 +78,8 @@ export default async function WelfareSystemPage({ params }: PageProps) {
         </section>
 
         {/* ── RSA ── */}
-        <section className="mb-10 rounded border border-info/30 bg-[#0f1218] p-6">
-          <h2 className="mb-2 font-display text-2xl font-bold uppercase tracking-wider text-info">
+        <section className="mb-10 rounded border border-favorable/30 bg-[#0f1218] p-6">
+          <h2 className="mb-2 font-display text-2xl font-bold uppercase tracking-wider text-favorable">
             {t("rsaTitle")}
           </h2>
           <p className="mb-6 font-mono text-sm leading-relaxed text-gray-300">
@@ -97,7 +97,7 @@ export default async function WelfareSystemPage({ params }: PageProps) {
                     <td className="px-4 py-3 text-gray-300">
                       {t(row.key)}
                     </td>
-                    <td className="px-4 py-3 text-right font-bold text-info">
+                    <td className="px-4 py-3 text-right font-bold text-favorable">
                       {row.amount}
                     </td>
                   </tr>
@@ -116,7 +116,7 @@ export default async function WelfareSystemPage({ params }: PageProps) {
           </h3>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("rsaBeneficiaries")}
+              <span className="text-favorable">▸</span> {t("rsaBeneficiaries")}
             </li>
             <li className="flex items-start gap-2">
               <span className="text-warning">▸</span> {t("rsaNonTakeUp")}
@@ -252,13 +252,13 @@ export default async function WelfareSystemPage({ params }: PageProps) {
               <span className="text-danger">▸</span> {t("ameBudget")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("ameCostPerCapita")}
+              <span className="text-blanc">▸</span> {t("ameCostPerCapita")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("ameShareHealth")}
+              <span className="text-blanc">▸</span> {t("ameShareHealth")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("ameCoverage")}
+              <span className="text-blanc">▸</span> {t("ameCoverage")}
             </li>
           </ul>
 
@@ -275,7 +275,7 @@ export default async function WelfareSystemPage({ params }: PageProps) {
               <span className="font-mono text-xs text-gray-400">{t("ameCityCare")}</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="h-3 rounded-full bg-info" style={{ width: "12.7%" }} />
+              <div className="h-3 rounded-full bg-blanc" style={{ width: "12.7%" }} />
               <span className="font-mono text-xs text-gray-400">{t("amePharmacy")}</span>
             </div>
           </div>

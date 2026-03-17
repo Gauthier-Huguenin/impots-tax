@@ -24,7 +24,7 @@ export function Timeline() {
                   className={`h-3 w-3 shrink-0 rounded-full border-2 ${
                     isLast
                       ? "border-danger bg-danger animate-pulse-dot"
-                      : "border-info/60 bg-info/20"
+                      : "border-favorable/60 bg-favorable/20"
                   }`}
                 />
                 {!isLast && (
@@ -36,7 +36,7 @@ export function Timeline() {
               <div className={`pb-4 ${isLast ? "pb-0" : ""}`}>
                 <span
                   className={`font-mono text-xs font-bold ${
-                    isLast ? "text-danger" : "text-info"
+                    isLast ? "text-danger" : "text-favorable"
                   }`}
                 >
                   {event.year}

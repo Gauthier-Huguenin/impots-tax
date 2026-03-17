@@ -28,7 +28,7 @@ export function Ticker() {
       <div className="flex animate-ticker whitespace-nowrap py-2">
         {allItems.map((text, i) => (
           <span key={i} className="mx-6 font-mono text-xs text-gray-400">
-            <span className="mr-2 text-danger">■</span>
+            <span className={`mr-2 ${i % 3 === 0 ? "text-favorable" : i % 3 === 1 ? "text-blanc" : "text-danger"}`}>■</span>
             {text}
           </span>
         ))}

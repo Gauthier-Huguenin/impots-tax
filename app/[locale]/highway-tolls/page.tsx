@@ -184,7 +184,7 @@ export default async function HighwayTollsPage({ params }: PageProps) {
 
           <div className="mb-4 h-6 w-full overflow-hidden rounded-full bg-gray-800">
             <div className="inline-block h-full bg-danger" style={{ width: "42%" }} />
-            <div className="inline-block h-full bg-info" style={{ width: "25%" }} />
+            <div className="inline-block h-full bg-favorable" style={{ width: "25%" }} />
             <div className="inline-block h-full bg-warning" style={{ width: "33%" }} />
           </div>
 
@@ -193,7 +193,7 @@ export default async function HighwayTollsPage({ params }: PageProps) {
               <span className="text-danger">▸</span> {t("stateSlice")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("maintenanceSlice")}
+              <span className="text-favorable">▸</span> {t("maintenanceSlice")}
             </li>
             <li className="flex items-start gap-2">
               <span className="text-warning">▸</span> {t("profitSlice")}

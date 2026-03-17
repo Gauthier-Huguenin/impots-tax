@@ -89,7 +89,7 @@ export default async function FlatTaxPage({ params }: PageProps) {
               <tbody>
                 <tr className="border-b border-gray-800">
                   <td className="py-2 text-gray-400">{t("componentIR")}</td>
-                  <td className="py-2 text-right text-info">{FLAT_TAX_2025.ir}%</td>
+                  <td className="py-2 text-right text-blanc">{FLAT_TAX_2025.ir}%</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-2 text-gray-400">{t("componentSocial")}</td>
@@ -97,7 +97,7 @@ export default async function FlatTaxPage({ params }: PageProps) {
                 </tr>
                 <tr>
                   <td className="py-2 font-bold text-gray-200">{t("componentTotal")}</td>
-                  <td className="py-2 text-right text-2xl font-bold text-warning">{FLAT_TAX_2025.total}%</td>
+                  <td className="py-2 text-right text-2xl font-bold text-blanc">{FLAT_TAX_2025.total}%</td>
                 </tr>
               </tbody>
             </table>
@@ -112,7 +112,7 @@ export default async function FlatTaxPage({ params }: PageProps) {
               <tbody>
                 <tr className="border-b border-gray-800">
                   <td className="py-2 text-gray-400">{t("componentIR")}</td>
-                  <td className="py-2 text-right text-info">{FLAT_TAX_2026.ir}%</td>
+                  <td className="py-2 text-right text-blanc">{FLAT_TAX_2026.ir}%</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-2 text-gray-400">{t("componentSocial")}</td>
@@ -144,16 +144,16 @@ export default async function FlatTaxPage({ params }: PageProps) {
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("scopeDividends")}
+              <span className="text-blanc">▸</span> {t("scopeDividends")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("scopeInterest")}
+              <span className="text-blanc">▸</span> {t("scopeInterest")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("scopeCapitalGains")}
+              <span className="text-blanc">▸</span> {t("scopeCapitalGains")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("scopeCrypto")}
+              <span className="text-blanc">▸</span> {t("scopeCrypto")}
             </li>
           </ul>
         </section>
@@ -169,8 +169,8 @@ export default async function FlatTaxPage({ params }: PageProps) {
         </section>
 
         {/* Progressive scale option */}
-        <section className="mb-10 rounded border border-info/30 bg-info/5 p-6">
-          <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-info">
+        <section className="mb-10 rounded border border-blanc/30 bg-blanc/5 p-6">
+          <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
             {t("optionTitle")}
           </h2>
           <p className="font-mono text-sm leading-relaxed text-gray-300">

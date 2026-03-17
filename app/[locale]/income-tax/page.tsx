@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 const BRACKET_COLORS = [
   "text-favorable", // 0%
-  "text-info",      // 11%
+  "text-blanc",     // 11%
   "text-warning",   // 30%
   "text-danger",    // 41%
   "text-danger",    // 45%
@@ -34,7 +34,7 @@ const BRACKET_COLORS = [
 
 const BRACKET_BG = [
   "bg-favorable/10 border-favorable/30",
-  "bg-info/10 border-info/30",
+  "bg-blanc/10 border-blanc/30",
   "bg-warning/10 border-warning/30",
   "bg-danger/10 border-danger/30",
   "bg-danger/10 border-danger/30",
@@ -42,7 +42,7 @@ const BRACKET_BG = [
 
 const BRACKET_BAR = [
   "bg-favorable",
-  "bg-info",
+  "bg-blanc",
   "bg-warning",
   "bg-danger",
   "bg-danger",
@@ -155,13 +155,13 @@ export default async function IncomeTaxPage({ params }: PageProps) {
           </p>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("quotientAdult")}
+              <span className="text-blanc">▸</span> {t("quotientAdult")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("quotientChild")}
+              <span className="text-blanc">▸</span> {t("quotientChild")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("quotientChild3")}
+              <span className="text-blanc">▸</span> {t("quotientChild3")}
             </li>
             <li className="flex items-start gap-2">
               <span className="text-warning">▸</span> {t("quotientCap")}

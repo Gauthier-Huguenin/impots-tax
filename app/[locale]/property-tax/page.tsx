@@ -173,7 +173,7 @@ export default async function PropertyTaxPage({ params }: PageProps) {
                 {PROPERTY_TAX_RATES.map((city) => (
                   <tr key={city.key} className="border-b border-gray-800/50">
                     <td className="px-4 py-3 text-gray-300 capitalize">{city.key}</td>
-                    <td className={`px-4 py-3 text-right ${city.rate >= 50 ? "text-danger" : city.rate >= 30 ? "text-warning" : "text-info"}`}>
+                    <td className={`px-4 py-3 text-right ${city.rate >= 50 ? "text-danger" : city.rate >= 30 ? "text-warning" : "text-favorable"}`}>
                       {city.rate}%
                     </td>
                   </tr>

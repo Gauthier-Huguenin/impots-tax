@@ -126,13 +126,13 @@ export default async function IndicatorsPage({ params }: PageProps) {
           </h2>
           <ul className="space-y-2 font-mono text-sm text-gray-400">
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("smicNet")}
+              <span className="text-blanc">▸</span> {t("smicNet")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("medianSalary")}
+              <span className="text-blanc">▸</span> {t("medianSalary")}
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-info">▸</span> {t("plafondSS")}
+              <span className="text-blanc">▸</span> {t("plafondSS")}
             </li>
           </ul>
         </section>

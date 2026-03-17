@@ -84,7 +84,7 @@ export default async function ComparisonPage({ params }: PageProps) {
                 ? "bg-danger"
                 : isAverage
                   ? "bg-gray-500"
-                  : "bg-info";
+                  : "bg-favorable";
               const textColor = isFrance
                 ? "text-danger"
                 : isAverage

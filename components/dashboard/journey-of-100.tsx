@@ -4,11 +4,11 @@ import { useTranslations } from "next-intl";
 import { JOURNEY_SUMMARY } from "@/lib/tax-data";
 
 const SEGMENTS = [
-  { key: "employerContributions", amount: 23, color: "bg-red-600" },
-  { key: "employeeContributions", amount: 11, color: "bg-red-500/80" },
-  { key: "incomeTax", amount: 9, color: "bg-red-400/70" },
-  { key: "vatOnSpending", amount: 9, color: "bg-red-300/60" },
-  { key: "remaining", amount: 48, color: "bg-favorable/60" },
+  { key: "employerContributions", amount: 23, color: "bg-tricolore-red" },
+  { key: "employeeContributions", amount: 11, color: "bg-red-700/80" },
+  { key: "incomeTax", amount: 9, color: "bg-red-500/70" },
+  { key: "vatOnSpending", amount: 9, color: "bg-red-400/60" },
+  { key: "remaining", amount: 48, color: "bg-favorable/70" },
 ] as const;
 
 export function JourneyOf100() {
@@ -17,11 +17,11 @@ export function JourneyOf100() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4">
-      <div className="relative overflow-hidden rounded border border-info/30 bg-panel p-5 sm:p-6 scanlines">
+      <div className="relative overflow-hidden rounded border border-blanc/20 bg-panel p-5 sm:p-6 scanlines">
         <div className="relative z-10">
           {/* Title */}
           <div className="mb-4 flex items-baseline justify-between gap-4">
-            <h2 className="font-display text-base font-bold uppercase tracking-widest text-info sm:text-lg">
+            <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc sm:text-lg">
               {t("title")}
             </h2>
             <span className="hidden font-mono text-[10px] text-gray-600 sm:inline sm:text-xs">
@@ -68,7 +68,7 @@ export function JourneyOf100() {
               <p className="font-mono text-[10px] uppercase tracking-wide text-gray-500 sm:text-xs">
                 {t("employerPays")}
               </p>
-              <p className="font-mono text-2xl font-bold text-info sm:text-3xl">
+              <p className="font-mono text-2xl font-bold text-blanc sm:text-3xl">
                 {employerCost} €
               </p>
             </div>

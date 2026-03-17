@@ -9,7 +9,7 @@ export function FlatTax() {
 
   return (
     <Link href="/flat-tax" className="group block">
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -23,7 +23,7 @@ export function FlatTax() {
             <p className="font-mono text-[10px] text-gray-500">
               {t("year2025")}
             </p>
-            <p className="font-mono text-2xl font-bold text-info">
+            <p className="font-mono text-2xl font-bold text-blanc">
               {FLAT_TAX_2025.total}%
             </p>
             <div className="mt-2 space-y-0.5 font-mono text-[10px] text-gray-500">
@@ -69,7 +69,7 @@ export function FlatTax() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

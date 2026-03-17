@@ -3,9 +3,9 @@
 import { useTranslations } from "next-intl";
 
 const LEVELS = [
-  { key: "level1", color: "bg-favorable" },
-  { key: "level2", color: "bg-yellow-400" },
-  { key: "level3", color: "bg-warning" },
+  { key: "level1", color: "bg-blue-500" },
+  { key: "level2", color: "bg-blue-300" },
+  { key: "level3", color: "bg-blanc" },
   { key: "level4", color: "bg-danger" },
   { key: "level5", color: "bg-red-900" },
 ] as const;

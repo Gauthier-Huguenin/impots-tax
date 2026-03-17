@@ -17,7 +17,7 @@ export function MacroIndicators() {
     {
       key: "spendingToGdp",
       value: `${MACRO_INDICATORS.spendingToGdp}%`,
-      color: "text-warning",
+      color: "text-danger",
       glow: false,
     },
     {
@@ -29,14 +29,14 @@ export function MacroIndicators() {
     {
       key: "publicDebt",
       value: t("billions", { value: MACRO_INDICATORS.publicDebt.toLocaleString("fr-FR") }),
-      color: "text-gray-300",
+      color: "text-blanc",
       glow: false,
     },
   ];
 
   return (
     <Link href="/indicators" className="group block">
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-info/50">
+      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
         </h2>
@@ -68,7 +68,7 @@ export function MacroIndicators() {
           <span className="font-mono text-[10px] text-gray-600">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-info">
+          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>
