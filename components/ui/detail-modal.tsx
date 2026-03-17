@@ -1,0 +1,75 @@
+"use client";
+
+import { useEffect, useRef, useCallback, type ReactNode } from "react";
+
+interface DetailModalProps {
+  open: boolean;
+  onClose: () => void;
+  children: ReactNode;
+}
+
+export function DetailModal({ open, onClose, children }: DetailModalProps) {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose],
+  );
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", handleKeyDown);
+      contentRef.current?.focus();
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open, handleKeyDown]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      ref={overlayRef}
+      className="fixed inset-0 z-50 flex items-end justify-center sm:items-center"
+      onClick={(e) => {
+        if (e.target === overlayRef.current) onClose();
+      }}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-modal-backdrop" />
+
+      {/* Content */}
+      <div
+        ref={contentRef}
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
+        className="relative w-full max-h-[100dvh] sm:max-h-[85vh] sm:max-w-2xl overflow-y-auto rounded-t-lg sm:rounded-lg border border-gray-800 bg-panel shadow-2xl outline-none animate-modal-slide-up sm:animate-modal-fade-in"
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="sticky top-0 z-10 float-right m-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-gray-400 backdrop-blur-sm transition-colors hover:bg-gray-800 hover:text-gray-200"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Detail content */}
+        <div className="clear-both px-5 pb-6 pt-2 sm:px-6">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
