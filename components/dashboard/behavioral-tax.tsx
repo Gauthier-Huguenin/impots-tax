@@ -1,12 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import {
   TOBACCO_BREAKDOWN,
   TOBACCO_PACK_PRICE,
   TOBACCO_TAX_PERCENT,
 } from "@/lib/tax-data";
+
+interface BehavioralTaxProps {
+  onOpenDetail?: () => void;
+}
 
 const TOBACCO_COLORS: Record<string, string> = {
   accise: "bg-danger",
@@ -15,11 +18,17 @@ const TOBACCO_COLORS: Record<string, string> = {
   manufacturer: "bg-gray-600",
 };
 
-export function BehavioralTax() {
+export function BehavioralTax({ onOpenDetail }: BehavioralTaxProps) {
   const t = useTranslations("behavioralTax");
 
   return (
-    <Link href="/behavioral-tax" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -82,6 +91,6 @@ export function BehavioralTax() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

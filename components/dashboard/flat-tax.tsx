@@ -1,14 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { FLAT_TAX_2025, FLAT_TAX_2026 } from "@/lib/tax-data";
 
-export function FlatTax() {
+interface FlatTaxProps {
+  onOpenDetail?: () => void;
+}
+
+export function FlatTax({ onOpenDetail }: FlatTaxProps) {
   const t = useTranslations("flatTax");
 
   return (
-    <Link href="/flat-tax" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -74,6 +83,6 @@ export function FlatTax() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

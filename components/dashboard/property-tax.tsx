@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { PROPERTY_TAX, PROPERTY_TAX_RATES } from "@/lib/tax-data";
 
 const TOP_CITIES = PROPERTY_TAX_RATES.filter((c) =>
@@ -10,11 +9,21 @@ const TOP_CITIES = PROPERTY_TAX_RATES.filter((c) =>
 
 const MAX_RATE = Math.max(...TOP_CITIES.map((c) => c.rate));
 
-export function PropertyTax() {
+interface PropertyTaxProps {
+  onOpenDetail?: () => void;
+}
+
+export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
   const t = useTranslations("propertyTax");
 
   return (
-    <Link href="/property-tax" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -83,6 +92,6 @@ export function PropertyTax() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

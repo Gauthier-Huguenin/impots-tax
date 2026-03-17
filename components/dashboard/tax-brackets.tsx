@@ -1,8 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { IR_BRACKETS } from "@/lib/tax-data";
+
+interface TaxBracketsProps {
+  onOpenDetail?: () => void;
+}
 
 const BRACKET_COLORS = [
   "bg-favorable",
@@ -20,12 +23,18 @@ const BRACKET_TEXT_COLORS = [
   "text-danger",
 ];
 
-export function TaxBrackets() {
+export function TaxBrackets({ onOpenDetail }: TaxBracketsProps) {
   const t = useTranslations("taxBrackets");
   const maxRate = 45;
 
   return (
-    <Link href="/income-tax" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -76,6 +85,6 @@ export function TaxBrackets() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

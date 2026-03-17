@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import {
   CAPITAL_GAINS_CTO,
   CAPITAL_GAINS_PEA,
@@ -9,11 +8,21 @@ import {
   US_DIVIDEND_TAX,
 } from "@/lib/tax-data";
 
-export function CapitalGains() {
+interface CapitalGainsProps {
+  onOpenDetail?: () => void;
+}
+
+export function CapitalGains({ onOpenDetail }: CapitalGainsProps) {
   const t = useTranslations("capitalGains");
 
   return (
-    <Link href="/capital-gains" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -98,6 +107,6 @@ export function CapitalGains() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

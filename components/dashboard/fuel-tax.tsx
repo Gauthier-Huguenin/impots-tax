@@ -1,8 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { FUEL_BREAKDOWN, FUEL_PRICE, FUEL_TAX_PERCENT } from "@/lib/tax-data";
+
+interface FuelTaxProps {
+  onOpenDetail?: () => void;
+}
 
 const FUEL_COLORS: Record<string, string> = {
   crudeOil: "bg-gray-500",
@@ -12,11 +15,17 @@ const FUEL_COLORS: Record<string, string> = {
   vatAccise: "bg-red-800",
 };
 
-export function FuelTax() {
+export function FuelTax({ onOpenDetail }: FuelTaxProps) {
   const t = useTranslations("fuelTax");
 
   return (
-    <Link href="/fuel-tax" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -79,6 +88,6 @@ export function FuelTax() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

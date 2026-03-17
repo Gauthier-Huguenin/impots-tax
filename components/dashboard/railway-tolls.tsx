@@ -1,14 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { RAILWAY_TOLLS } from "@/lib/tax-data";
 
-export function RailwayTolls() {
+interface RailwayTollsProps {
+  onOpenDetail?: () => void;
+}
+
+export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
   const t = useTranslations("railwayTolls");
 
   return (
-    <Link href="/railway-tolls" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -66,6 +75,6 @@ export function RailwayTolls() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

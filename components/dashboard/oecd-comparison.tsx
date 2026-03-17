@@ -1,17 +1,26 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { OECD_COMPARISON, FRANCE_OECD_DELTA, USSR_COMPARISON } from "@/lib/tax-data";
 
 const MAX_TAX_GDP = 50; // Scale max for bar widths
 const USSR_WIDTH = (USSR_COMPARISON.taxToGdpPeak / MAX_TAX_GDP) * 100;
 
-export function OECDComparison() {
+interface OECDComparisonProps {
+  onOpenDetail?: () => void;
+}
+
+export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
   const t = useTranslations("oecdComparison");
 
   return (
-    <Link href="/comparison" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -103,6 +112,6 @@ export function OECDComparison() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

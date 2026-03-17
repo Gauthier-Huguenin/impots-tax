@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { SOCIAL_CONTRIBUTIONS, SOCIAL_CONTRIBUTIONS_TOTALS } from "@/lib/tax-data";
 
 function formatRate(value: number | null): string {
@@ -9,11 +8,21 @@ function formatRate(value: number | null): string {
   return `${value}%`;
 }
 
-export function SalaryCost() {
+interface SalaryCostProps {
+  onOpenDetail?: () => void;
+}
+
+export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
   const t = useTranslations("salaryCost");
 
   return (
-    <Link href="/salary-contributions" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -93,6 +102,6 @@ export function SalaryCost() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

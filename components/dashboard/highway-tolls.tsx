@@ -1,14 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
 import { HIGHWAY_TOLLS, HIGHWAY_ROUTES } from "@/lib/tax-data";
 
-export function HighwayTolls() {
+interface HighwayTollsProps {
+  onOpenDetail?: () => void;
+}
+
+export function HighwayTolls({ onOpenDetail }: HighwayTollsProps) {
   const t = useTranslations("highwayTolls");
 
   return (
-    <Link href="/highway-tolls" className="group block">
+    <div
+      role="button"
+      tabIndex={0}
+      className="group block cursor-pointer"
+      onClick={onOpenDetail}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+    >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
         <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
           {t("title")}
@@ -80,6 +89,6 @@ export function HighwayTolls() {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
