@@ -2,9 +2,45 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
 import { locales, defaultLocale, type Locale } from "@/lib/i18n/config";
 
-function buildUrl(path: string, locale: Locale): string {
+export function buildUrl(path: string, locale: Locale): string {
   const prefix = locale === defaultLocale ? "" : `/${locale}`;
   return `${siteConfig.url}${prefix}${path}`;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export function buildBreadcrumbJsonLd(
+  items: { name: string; path: string }[],
+  locale: Locale,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: buildUrl(item.path, locale),
+    })),
+  };
+}
+
+export function buildFaqJsonLd(faqs: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 }
 
 interface SeoMetadataOptions {

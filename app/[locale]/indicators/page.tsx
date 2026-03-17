@@ -4,6 +4,7 @@ import { localePath } from "@/lib/url";
 import { MACRO_INDICATORS, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
+import { StructuredData } from "@/components/detail/structured-data";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -29,6 +30,12 @@ export default async function IndicatorsPage({ params }: PageProps) {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <StructuredData
+        locale={typedLocale}
+        pageTitle={t("title")}
+        pagePath="/indicators"
+        homeLabel={td("backToDashboard")}
+      />
       <div className="flex h-1">
         <div className="flex-1 bg-tricolore-blue" />
         <div className="flex-1 bg-white" />

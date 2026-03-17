@@ -4,6 +4,7 @@ import { localePath } from "@/lib/url";
 import { TOBACCO_BREAKDOWN, TOBACCO_PACK_PRICE, TOBACCO_TAX_PERCENT, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
+import { StructuredData } from "@/components/detail/structured-data";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -32,6 +33,12 @@ export default async function BehavioralTaxPage({ params }: PageProps) {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <StructuredData
+        locale={typedLocale}
+        pageTitle={t("title")}
+        pagePath="/behavioral-tax"
+        homeLabel={td("backToDashboard")}
+      />
       <div className="flex h-1">
         <div className="flex-1 bg-tricolore-blue" />
         <div className="flex-1 bg-white" />
