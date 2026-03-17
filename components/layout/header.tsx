@@ -11,6 +11,7 @@ import { Link } from "@/lib/navigation";
 export function Header() {
   const t = useTranslations("header");
   const [utcTime, setUtcTime] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     function tick() {
@@ -24,8 +25,23 @@ export function Header() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="border-b border-gray-800 bg-panel px-4 py-3">
+    <header
+      className={`border-b border-gray-800 px-4 py-3 transition-all duration-300 ${
+        scrolled
+          ? "bg-panel/80 shadow-[0_4px_24px_rgba(0,0,0,0.4)] backdrop-blur-[12px] backdrop-saturate-[1.2]"
+          : "bg-panel"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         {/* Left: Logo + Title */}
         <div className="flex items-center gap-3">
