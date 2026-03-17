@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
 import { TOBACCO_BREAKDOWN, TOBACCO_PACK_PRICE, TOBACCO_TAX_PERCENT, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
+import { buildSeoMetadata } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -12,11 +13,12 @@ export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "detailBehavioralTax" });
 
-  return {
+  return buildSeoMetadata({
     title: t("metaTitle"),
     description: t("metaDescription"),
-    icons: { icon: "/logo.svg" },
-  };
+    locale: locale as Locale,
+    path: "/behavioral-tax",
+  });
 }
 
 export default async function BehavioralTaxPage({ params }: PageProps) {

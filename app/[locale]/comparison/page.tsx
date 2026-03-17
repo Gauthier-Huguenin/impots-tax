@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
 import { OECD_COMPARISON, FRANCE_OECD_DELTA, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
+import { buildSeoMetadata } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -12,11 +13,12 @@ export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "detailComparison" });
 
-  return {
+  return buildSeoMetadata({
     title: t("metaTitle"),
     description: t("metaDescription"),
-    icons: { icon: "/logo.svg" },
-  };
+    locale: locale as Locale,
+    path: "/comparison",
+  });
 }
 
 export default async function ComparisonPage({ params }: PageProps) {

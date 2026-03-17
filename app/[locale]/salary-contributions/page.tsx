@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { localePath } from "@/lib/url";
 import { SOCIAL_CONTRIBUTIONS, SOCIAL_CONTRIBUTIONS_TOTALS, TAX_DATA_YEAR } from "@/lib/tax-data";
 import type { Locale } from "@/lib/i18n/config";
+import { buildSeoMetadata } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -12,11 +13,12 @@ export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "detailSalaryContributions" });
 
-  return {
+  return buildSeoMetadata({
     title: t("metaTitle"),
     description: t("metaDescription"),
-    icons: { icon: "/logo.svg" },
-  };
+    locale: locale as Locale,
+    path: "/salary-contributions",
+  });
 }
 
 const JOURNEY_ROWS = [

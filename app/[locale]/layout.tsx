@@ -6,6 +6,8 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { JetBrains_Mono, Oswald } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
 import type { Locale } from "@/lib/i18n/config";
+import { buildSeoMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/config";
 import "@/styles/globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -33,13 +35,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
+  return buildSeoMetadata({
     title: t("title"),
     description: t("description"),
-    icons: {
-      icon: "/logo.svg",
-    },
-  };
+    locale: locale as Locale,
+    path: "/",
+  });
 }
 
 export default async function LocaleLayout({
@@ -60,6 +61,33 @@ export default async function LocaleLayout({
       className={`${jetbrainsMono.variable} ${oswald.variable}`}
     >
       <body className="bg-background text-gray-100 font-mono antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  name: "impots.tax",
+                  url: siteConfig.url,
+                  inLanguage: [typedLocale === "fr" ? "fr-FR" : "en-US"],
+                  description:
+                    typedLocale === "fr"
+                      ? "Centre de commandement fiscal — données réelles sur les impôts en France"
+                      : "French Tax Threat Monitor — real data on taxes in France",
+                },
+                {
+                  "@type": "Organization",
+                  name: "impots.tax",
+                  url: siteConfig.url,
+                  logo: `${siteConfig.url}/logo.svg`,
+                  sameAs: [siteConfig.social.x, siteConfig.social.github],
+                },
+              ],
+            }),
+          }}
+        />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         {process.env.NEXT_PUBLIC_UMAMI_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
           <Script

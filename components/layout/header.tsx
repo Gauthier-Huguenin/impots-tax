@@ -35,9 +35,9 @@ export function Header() {
             height={32}
             className="h-8 w-8"
           />
-          <h1 className="font-display text-lg font-bold uppercase tracking-widest text-danger sm:text-xl md:text-2xl">
+          <span className="font-display text-lg font-bold uppercase tracking-widest text-danger sm:text-xl md:text-2xl">
             {t("title")}
-          </h1>
+          </span>
         </div>
 
         {/* Right: Clock, data year, monitoring, language toggle */}

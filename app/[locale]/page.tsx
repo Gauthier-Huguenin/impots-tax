@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/layout/header";
 import { ThreatLevel } from "@/components/dashboard/threat-level";
 import { JourneyOf100 } from "@/components/dashboard/journey-of-100";
@@ -21,7 +22,14 @@ import { Timeline } from "@/components/dashboard/timeline";
 import { Ticker } from "@/components/dashboard/ticker";
 import { Footer } from "@/components/layout/footer";
 
-export default function HomePage() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function HomePage({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "header" });
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Tricolore stripe — top */}
@@ -36,6 +44,7 @@ export default function HomePage() {
 
       {/* Main content */}
       <main className="flex-1">
+        <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
         <JourneyOf100 />
 
