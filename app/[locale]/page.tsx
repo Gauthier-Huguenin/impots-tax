@@ -19,6 +19,7 @@ import { CapitalGains } from "@/components/dashboard/capital-gains";
 import { HighwayTolls } from "@/components/dashboard/highway-tolls";
 import { RailwayTolls } from "@/components/dashboard/railway-tolls";
 import { Timeline } from "@/components/dashboard/timeline";
+import { DonateCta } from "@/components/dashboard/donate-cta";
 import { Ticker } from "@/components/dashboard/ticker";
 import { Footer } from "@/components/layout/footer";
 
@@ -78,6 +79,10 @@ export default async function HomePage({ params }: PageProps) {
 
             <div className="md:col-span-2">
               <Timeline />
+            </div>
+
+            <div className="md:col-span-2">
+              <DonateCta />
             </div>
           </div>
         </div>

@@ -1,8 +1,13 @@
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import { siteConfig } from "@/lib/config";
+import { localePath } from "@/lib/url";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function Footer() {
   const t = await getTranslations("footer");
+  const locale = await getLocale() as Locale;
   const year = new Date().getFullYear();
 
   return (
@@ -36,6 +41,13 @@ export async function Footer() {
             </svg>
             <span>GitHub</span>
           </a>
+
+          <Link
+            href={localePath("/donate", locale)}
+            className="font-mono text-favorable/60 transition-colors hover:text-favorable"
+          >
+            {t("donate")}
+          </Link>
 
           <span>{t("copyright", { year })}</span>
         </div>

@@ -6,7 +6,8 @@
   "header": {
     "title": "FRENCH TAX THREAT MONITOR",
     "monitoring": "SURVEILLANCE ACTIVE",
-    "dataYear": "DONNÉES {year}"
+    "dataYear": "DONNÉES {year}",
+    "donate": "SOUTENIR"
   },
   "threatLevel": {
     "title": "NIVEAU DE MENACE FISCALE",
@@ -221,9 +222,52 @@
     "flatTax": "FLAT TAX 2026 : {value}",
     "irTop": "TMI MAX : {value}"
   },
+  "dashboardDonate": {
+    "title": "SOUTENIR LE MONITEUR",
+    "desc": "Ce tableau de bord est maintenu par un micro-entrepreneur. Même sur votre don, l'État prélève 26.2%. Mais si vous voulez quand même…",
+    "cta": "Voir le rapport fiscal de votre don ▸"
+  },
   "footer": {
     "disclaimer": "Données issues de sources officielles (OCDE, INSEE, URSSAF, DGFiP, Loi de finances). Présentation satirique.",
-    "copyright": "© {year} impots.tax"
+    "copyright": "© {year} impots.tax",
+    "donate": "Soutenir le moniteur"
+  },
+  "donate": {
+    "metaTitle": "Faire un don — impots.tax",
+    "metaDescription": "Soutenez impots.tax. Même sur votre don, l'État prélève sa part. Voici la preuve en temps réel.",
+    "title": "FAIRE UN DON",
+    "subtitle": "RAPPORT D'IMPACT FISCAL SUR LA GÉNÉROSITÉ CITOYENNE",
+    "intro": "Je suis micro-entrepreneur. Ce qui signifie que même votre générosité est soumise à l'extraction fiscale. Voici ce qui se passe réellement quand vous me donnez 10 €. Spoiler : l'État est le premier bénéficiaire.",
+    "breakdownTitle": "DÉCOMPOSITION DE VOTRE DON DE 10 €",
+    "step": "Étape",
+    "amount": "Montant",
+    "description": "Description",
+    "stepDonation": "Votre don",
+    "stepDonationDesc": "Votre geste de générosité",
+    "stepStripe": "Commission Stripe",
+    "stepStripeDesc": "1.5% + 0.25 € (cartes EU)",
+    "stepRevenue": "Chiffre d'affaires déclaré",
+    "stepRevenueDesc": "Ce que l'URSSAF considère comme mon « revenu »",
+    "stepUrssaf": "Cotisations URSSAF",
+    "stepUrssafDesc": "22% du CA — maladie, retraite, CSG, CRDS",
+    "stepIR": "Impôt sur le revenu",
+    "stepIRDesc": "4.2% — versement libératoire micro-entrepreneur",
+    "stepNet": "Ce que je reçois",
+    "stepNetDesc": "Merci (sincèrement)",
+    "summaryYouGive": "Vous donnez",
+    "summaryStateGets": "L'État récupère",
+    "summaryStripeGets": "Stripe récupère",
+    "summaryIGet": "Je reçois",
+    "summaryPercent": "du don original",
+    "verdictTitle": "VERDICT",
+    "verdictDesc": "Sur vos 10 €, l'État prélève 2.51 € en cotisations et impôts. Stripe prend 0.40 €. Il me reste 7.09 €. En France, même la générosité est imposable. L'État n'a rien produit, rien créé, rien ajouté — mais il prend sa part. Comme d'habitude.",
+    "ctaTitle": "MALGRÉ TOUT, SOUTENIR LE PROJET",
+    "ctaDesc": "Si, après avoir vu ce que l'État prélève, vous souhaitez quand même soutenir ce projet — voici le bouton. L'État vous remercie d'avance.",
+    "ctaButton": "Donner (l'État approuve)",
+    "ctaNote": "Paiement sécurisé via Stripe. Montant libre.",
+    "microEntrepreneurTitle": "POURQUOI CES PRÉLÈVEMENTS ?",
+    "microEntrepreneurDesc": "En tant que micro-entrepreneur, je suis soumis au régime simplifié : 22% de cotisations sociales sur le chiffre d'affaires (pas sur le bénéfice — sur le CA, même si j'ai des frais). Plus 4.2% d'impôt sur le revenu via le versement libératoire. Total : 26.2% de chaque euro encaissé part directement à l'État, avant que je ne puisse en dépenser un centime.",
+    "source": "URSSAF barème micro-entrepreneur 2025, taux versement libératoire BIC/BNC"
   },
   "propertyTax": {
     "title": "TAXE FONCIÈRE",
