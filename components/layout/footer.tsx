@@ -43,7 +43,7 @@ export async function Footer() {
           </a>
 
           <Link
-            href={localePath("/donate", locale)}
+            href={localePath("/", locale) + "#donate"}
             className="font-mono text-favorable/60 transition-colors hover:text-favorable"
           >
             {t("donate")}

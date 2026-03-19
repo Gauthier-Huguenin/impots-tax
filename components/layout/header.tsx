@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { TAX_DATA_YEAR } from "@/lib/tax-data";
 import { siteConfig } from "@/lib/config";
-import { Link } from "@/lib/navigation";
 
 export function Header() {
   const t = useTranslations("header");
@@ -98,12 +97,15 @@ export function Header() {
           </a>
 
           {/* Donate */}
-          <Link
-            href="/donate"
-            className="hidden font-mono text-[10px] uppercase tracking-wider text-favorable/70 transition-colors hover:text-favorable sm:inline"
+          <button
+            onClick={() => {
+              window.location.hash = "donate";
+              window.dispatchEvent(new HashChangeEvent("hashchange"));
+            }}
+            className="hidden font-mono text-[10px] uppercase tracking-wider text-favorable/70 transition-colors hover:text-favorable sm:inline cursor-pointer"
           >
             {t("donate")}
-          </Link>
+          </button>
 
           {/* Language toggle */}
           <LanguageSwitcher />

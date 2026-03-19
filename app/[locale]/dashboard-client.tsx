@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { TaxBrackets } from "@/components/dashboard/tax-brackets";
 import { CorporateTax } from "@/components/dashboard/corporate-tax";
 import { FlatTax } from "@/components/dashboard/flat-tax";
@@ -35,6 +35,8 @@ import { CapitalGainsDetail } from "@/components/detail/capital-gains-detail";
 import { HighwayTollsDetail } from "@/components/detail/highway-tolls-detail";
 import { RailwayTollsDetail } from "@/components/detail/railway-tolls-detail";
 import { ComparisonDetail } from "@/components/detail/comparison-detail";
+import { DonateDetail } from "@/components/detail/donate-detail";
+import { DonateCta } from "@/components/dashboard/donate-cta";
 
 type ModalSlug =
   | "income-tax"
@@ -52,7 +54,8 @@ type ModalSlug =
   | "capital-gains"
   | "highway-tolls"
   | "railway-tolls"
-  | "comparison";
+  | "comparison"
+  | "donate";
 
 const MODAL_CONTENT: Record<ModalSlug, React.ComponentType> = {
   "income-tax": IncomeTaxDetail,
@@ -71,17 +74,33 @@ const MODAL_CONTENT: Record<ModalSlug, React.ComponentType> = {
   "highway-tolls": HighwayTollsDetail,
   "railway-tolls": RailwayTollsDetail,
   "comparison": ComparisonDetail,
+  "donate": DonateDetail,
 };
 
-interface DashboardClientProps {
-  children?: ReactNode;
-}
+const HASH_MODAL_MAP: Record<string, ModalSlug> = { donate: "donate" };
 
-export function DashboardClient({ children }: DashboardClientProps) {
+export function DashboardClient() {
   const [openModal, setOpenModal] = useState<ModalSlug | null>(null);
 
   const open = (slug: ModalSlug) => () => setOpenModal(slug);
-  const close = () => setOpenModal(null);
+  const close = () => {
+    setOpenModal(null);
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
+  const checkHash = useCallback(() => {
+    const hash = window.location.hash.slice(1);
+    const slug = HASH_MODAL_MAP[hash];
+    if (slug) setOpenModal(slug);
+  }, []);
+
+  useEffect(() => {
+    checkHash();
+    window.addEventListener("hashchange", checkHash);
+    return () => window.removeEventListener("hashchange", checkHash);
+  }, [checkHash]);
 
   const DetailComponent = openModal ? MODAL_CONTENT[openModal] : null;
 
@@ -119,7 +138,9 @@ export function DashboardClient({ children }: DashboardClientProps) {
             <Timeline />
           </div>
 
-          {children}
+          <div className="md:col-span-2">
+            <DonateCta onOpenDetail={open("donate")} />
+          </div>
         </div>
       </div>
 

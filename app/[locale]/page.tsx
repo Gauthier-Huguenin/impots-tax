@@ -3,7 +3,6 @@ import { Header } from "@/components/layout/header";
 import { ThreatLevel } from "@/components/dashboard/threat-level";
 import { JourneyOf100 } from "@/components/dashboard/journey-of-100";
 import { Ticker } from "@/components/dashboard/ticker";
-import { DonateCta } from "@/components/dashboard/donate-cta";
 import { Footer } from "@/components/layout/footer";
 import { DashboardClient } from "@/app/[locale]/dashboard-client";
 
@@ -32,11 +31,7 @@ export default async function HomePage({ params }: PageProps) {
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
         <JourneyOf100 />
-        <DashboardClient>
-          <div className="md:col-span-2">
-            <DonateCta />
-          </div>
-        </DashboardClient>
+        <DashboardClient />
       </main>
 
       {/* Ticker */}
