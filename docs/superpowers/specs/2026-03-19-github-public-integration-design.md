@@ -36,6 +36,14 @@ Add a "★ Star" button between the X/Twitter icon and the Donate button. Inspir
 - Hidden on very small screens (`hidden sm:flex`) to avoid header overflow on mobile
 - The footer already has a GitHub link with icon + text label. No changes needed there.
 
+### 1b. Header Cleanup
+
+**Location**: `components/layout/header.tsx`
+
+Remove two elements to make room for the Star button:
+- Remove the tricolore micro-stripe (blue/white/red bars, lines 81-85)
+- Remove the data year display ("DONNÉES 2025", lines 68-70)
+
 ### 2. CONTRIBUTING.md
 
 **Location**: `CONTRIBUTING.md` (repo root)
