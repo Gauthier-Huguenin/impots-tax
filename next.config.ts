@@ -18,6 +18,13 @@ const nextConfig: NextConfig = {
       headers: securityHeaders,
     },
   ],
+  redirects: async () => [
+    {
+      source: "/x",
+      destination: "/?utm_source=x&utm_medium=social&utm_campaign=twitter",
+      permanent: false,
+    },
+  ],
 };
 
 const withNextIntl = createNextIntlPlugin("./lib/i18n/request.ts");
