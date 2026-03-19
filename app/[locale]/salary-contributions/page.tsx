@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { localePath } from "@/lib/url";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
+import { Breadcrumb } from "@/components/detail/breadcrumb";
 import { FaqSection } from "@/components/detail/faq-section";
 import type { FaqItem } from "@/lib/seo";
 import { SalaryContributionsDetail } from "@/components/detail/salary-contributions-detail";
@@ -58,12 +57,7 @@ export default async function SalaryContributionsPage({ params }: PageProps) {
       </div>
 
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
-        <Link
-          href={localePath("/", typedLocale)}
-          className="mb-8 inline-block font-mono text-sm text-info hover:text-info/80 transition-colors"
-        >
-          {td("backToDashboard")}
-        </Link>
+        <Breadcrumb locale={typedLocale} moduleTitle={t("title")} />
 
         <SalaryContributionsDetail />
 
