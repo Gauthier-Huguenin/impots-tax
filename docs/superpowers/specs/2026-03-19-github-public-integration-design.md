@@ -21,20 +21,20 @@ Key findings:
 
 ## Changes
 
-### 1. GitHub Button in Header
+### 1. GitHub Star Button in Header
 
 **Location**: `components/layout/header.tsx`
 
-Add a GitHub icon link between the X/Twitter icon and the Donate button.
+Add a "★ Star" button between the X/Twitter icon and the Donate button. Inspired by n8n's GitHub star button — a small outlined button with star icon + "Star" text, no live counter.
 
-- Reuse the GitHub SVG path from the footer component (`components/layout/footer.tsx`)
-- Same size as X icon (`h-4 w-4 fill-current`)
-- Same styling: `text-gray-400 transition-colors hover:text-gray-200`
+- Small pill/outlined button: border border-gray-700, rounded, px-2 py-0.5
+- Star icon (★) + "Star" text, monospace, text-xs
+- Color: gray-400 base, hover to white or favorable green (matches dashboard palette)
 - Links to `siteConfig.social.github`, `target="_blank"`, `rel="noopener noreferrer"`
-- `aria-label="GitHub"`
-- Icon only, no text — consistent with the X icon treatment
-
-The footer already has a GitHub link with icon + text label. No changes needed there.
+- `aria-label="Star on GitHub"`
+- "Star" label is not translated — universal GitHub terminology
+- Hidden on very small screens (`hidden sm:flex`) to avoid header overflow on mobile
+- The footer already has a GitHub link with icon + text label. No changes needed there.
 
 ### 2. CONTRIBUTING.md
 
@@ -87,7 +87,7 @@ Minimal checklist:
 
 | File | Action |
 |------|--------|
-| `components/layout/header.tsx` | Add GitHub icon link |
+| `components/layout/header.tsx` | Add GitHub Star button |
 | `CONTRIBUTING.md` | Create |
 | `.github/ISSUE_TEMPLATE/suggest-a-tax.yml` | Create |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Create |
