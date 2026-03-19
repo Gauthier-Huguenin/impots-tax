@@ -1,0 +1,20 @@
+name: Feature Request
+description: "An idea to make the tax surveillance even better."
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like?
+      description: Describe your idea.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why?
+      description: What problem does this solve or what does it improve?
+    validations:
+      required: false

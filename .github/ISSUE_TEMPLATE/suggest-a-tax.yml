@@ -1,0 +1,44 @@
+name: Suggest a Tax
+description: "In France, there's always another tax hiding somewhere. Help us track them all."
+title: "[Tax]: "
+labels: ["tax-suggestion"]
+body:
+  - type: input
+    id: tax-name
+    attributes:
+      label: Tax name
+      description: What is this tax called?
+      placeholder: e.g. Taxe sur les pylônes électriques
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is this tax? Who pays it? How much?
+      placeholder: Describe the tax, its rate, who it affects, and any notable absurdity.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Official links, legislation references, or government pages.
+      placeholder: |
+        - https://www.legifrance.gouv.fr/...
+        - Loi de finances 2025, article X
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Preferred language
+      options:
+        - French
+        - English
+        - No preference
+    validations:
+      required: false

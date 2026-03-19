@@ -1,0 +1,40 @@
+name: Correct a Number
+description: "Found a wrong number? Every digit matters — especially when the state is counting."
+title: "[Data]: "
+labels: ["data-correction"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Where is the error?
+      description: Which page or panel shows the incorrect number?
+      placeholder: e.g. Income Tax page, bracket 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-value
+    attributes:
+      label: Current (incorrect) value
+      description: What does the site currently show?
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-value
+    attributes:
+      label: Correct value
+      description: What should it be?
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source
+      description: Official link proving the correct value.
+      placeholder: |
+        - https://www.legifrance.gouv.fr/...
+        - OECD Revenue Statistics 2025
+    validations:
+      required: true
