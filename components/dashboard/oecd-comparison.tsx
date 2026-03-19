@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { OECD_COMPARISON, FRANCE_OECD_DELTA, USSR_COMPARISON } from "@/lib/tax-data";
+import { formatPercent } from "@/lib/format";
+import { IconGlobe } from "@/components/ui/panel-icons";
 
 const MAX_TAX_GDP = 50; // Scale max for bar widths
 const USSR_WIDTH = (USSR_COMPARISON.taxToGdpPeak / MAX_TAX_GDP) * 100;
@@ -22,7 +24,8 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <IconGlobe className="shrink-0" />
           {t("title")}
         </h2>
         <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
@@ -71,7 +74,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
                         : "text-gray-500"
                   }`}
                 >
-                  {country.taxToGdp}%
+                  {formatPercent(country.taxToGdp)}
                 </span>
               </div>
             );
@@ -92,7 +95,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
             </div>
           </div>
           <span className="w-12 shrink-0 font-mono text-[10px] font-bold text-warning sm:text-xs">
-            ~{USSR_COMPARISON.taxToGdpPeak}%
+            ~{formatPercent(USSR_COMPARISON.taxToGdpPeak)}
           </span>
         </div>
         <p className="mt-1 font-mono text-[10px] text-warning/70 italic">

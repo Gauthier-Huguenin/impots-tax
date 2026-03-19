@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { WELFARE_DATA } from "@/lib/tax-data";
+import { formatNumber } from "@/lib/format";
+import { IconHandshake } from "@/components/ui/panel-icons";
 
 interface WelfareSystemProps {
   onOpenDetail?: () => void;
@@ -19,7 +21,8 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <IconHandshake className="shrink-0" />
           {t("title")}
         </h2>
         <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
@@ -36,7 +39,7 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
               {t("rsaDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-favorable">
-              {t("rsaAmount", { amount: WELFARE_DATA.rsa.amountSingle.toFixed(2).replace(".", ",") })}
+              {t("rsaAmount", { amount: formatNumber(WELFARE_DATA.rsa.amountSingle, 2) })}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
               {t("rsaBeneficiaries", { count: "2M" })}
@@ -52,7 +55,7 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
               {t("aahDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-favorable">
-              {t("aahAmount", { amount: WELFARE_DATA.aah.amountMax.toFixed(2).replace(".", ",") })}
+              {t("aahAmount", { amount: formatNumber(WELFARE_DATA.aah.amountMax, 2) })}
             </p>
             <p className="font-mono text-[9px] text-gray-500">
               {t("aahCondition")}
