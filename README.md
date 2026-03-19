@@ -1,28 +1,103 @@
 # impots.tax
 
-Satirical dashboard presenting real French tax data in a "command center" aesthetic.
+**Centre de Commandement Fiscal** — Tableau de bord satirique présentant les vraies données fiscales françaises dans une esthétique "salle de guerre".
 
-Real data. Dramatic presentation. Every number is true — that's the joke.
+Données réelles. Présentation dramatique. Chaque nombre est vrai — c'est ça la blague.
 
-## Stack
+🌐 **[impots.tax](https://impots.tax)** — also available [in English](https://impots.tax/en/)
 
-- **Framework**: Next.js 16 (App Router) + React 19 + TypeScript
-- **Styling**: Tailwind CSS 4 (dark mode only)
-- **i18n**: next-intl 4.x (FR default, EN at `/en/`)
-- **Deployment**: Docker → GitHub Actions → GHCR → Coolify (Hetzner CX23)
+---
 
-## Development
+## Features
+
+- **The Journey of 100€** — From employer cost (~230€) to real purchasing power (~108€): the full extraction path, visualized
+- **18 tax modules** — Income tax, corporate tax, flat tax, VAT, fuel taxes, behavioral taxes, salary contributions, welfare system, property tax, rental tax, inheritance, capital gains, highway & railway tolls, OECD comparison, macro indicators
+- **Every number is sourced** — Official data from Loi de finances, URSSAF, OECD, INSEE, DGFiP
+- **Bilingual** — French (default) and English (`/en/`)
+- **Dark mode only** — Command center aesthetic with scanlines, pulsing alerts, and scrolling tickers
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router) + React 19 |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS 4 |
+| i18n | next-intl 4.x |
+| Runtime | Node.js 22 |
+| Container | Docker (node:22-alpine) |
+
+## Getting Started
 
 ```bash
+git clone https://github.com/Gauthier-Huguenin/impots-tax.git
+cd impots-tax
 npm install
 npm run dev
 ```
 
-## Documentation
+Open [http://localhost:3000](http://localhost:3000).
 
-- `CLAUDE.md` — Full project guide for Claude Code (conventions, architecture, rules)
-- `docs/tax-data-2025.md` — Source of truth for all fiscal data (sourced, dated)
+### Environment Variables
+
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Yes | Base URL (`https://impots.tax`) |
+| `NEXT_PUBLIC_UMAMI_URL` | No | Umami analytics instance URL |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No | Umami website ID |
+
+## Self-Hosting with Docker
+
+```bash
+docker build -t impots-tax .
+docker run -p 3000:3000 impots-tax
+```
+
+The Dockerfile uses a multi-stage build with `node:22-alpine` and Next.js standalone output.
+
+## Project Structure
+
+```
+app/[locale]/             # i18n pages (FR default, EN prefixed)
+  page.tsx                # Main dashboard
+  [module]/page.tsx       # Detail pages (income-tax, vat, flat-tax, ...)
+components/
+  dashboard/              # Dashboard panels
+  detail/                 # Detail page components
+  ui/                     # Shared primitives (Panel, GaugeCircle, DataTable, ...)
+lib/
+  tax-data.ts             # Centralized fiscal data (sourced, dated)
+  i18n/                   # Routing & locale config
+messages/                 # fr.json, en.json
+docs/
+  tax-data-2025.md        # Source of truth for all fiscal data
+```
+
+## Data Sources
+
+All fiscal data is documented in [`docs/tax-data-2025.md`](docs/tax-data-2025.md) with sources and dates. Primary references:
+
+- **Loi de finances** — Income tax brackets, rates
+- **URSSAF** — Social contributions
+- **OECD Revenue Statistics** — International comparisons
+- **INSEE** — GDP, debt, macro indicators
+- **DGFiP** — Tax revenue figures
+
+## Contributing
+
+Contributions are welcome — especially corrections to fiscal data, new tax modules, and translation improvements.
+
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/new-tax-module`)
+3. Commit your changes
+4. Open a pull request
 
 ## License
 
-TBD
+MIT — see [LICENSE](LICENSE).
+
+### Attribution
+
+If you reuse or adapt this project, please credit the original author:
+
+> **impots.tax** by [Gauthier Huguenin](https://github.com/Gauthier-Huguenin) — [impots.tax](https://impots.tax)
