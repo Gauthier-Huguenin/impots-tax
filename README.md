@@ -45,6 +45,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `NEXT_PUBLIC_SITE_URL` | Yes | Base URL (`https://impots.tax`) |
 | `NEXT_PUBLIC_UMAMI_URL` | No | Umami analytics instance URL |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No | Umami website ID |
+| `NEXT_PUBLIC_WEBHOOK_URL` | No | n8n webhook URL for report form (creates GitHub issues) |
 
 ## Self-Hosting with Docker
 

@@ -122,6 +122,7 @@ components/
   dashboard/              # Dashboard panels (JourneyOf100, TaxBrackets, SocialContributions, CorporateTax, FlatTax, OECDComparison, ThreatLevel, TVA, SalaryCost, FuelTax, BehavioralTax, WelfareSystem, MacroIndicators, Timeline, Ticker)
   detail/                 # Shared components for detail pages
   suggest/                # Tax suggestion form
+  report/                 # Report/feedback form (ReportForm, ReportButton modal)
   donate/                 # Donation page components (DonationBreakdown)
   ui/                     # Shared UI primitives (Panel, GaugeCircle, CompareBar, DataTable)
 lib/
@@ -173,7 +174,7 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 
 - Translation files: `messages/fr.json` and `messages/en.json`
 - **Always add keys in BOTH language files** when creating/modifying translations.
-- Namespaces: `metadata`, `header`, `threatLevel`, `journeyOf100`, `taxBrackets`, `corporateTax`, `flatTax`, `socialContributions`, `salaryCost`, `keyIndicators`, `oecdComparison`, `tva`, `fuelTax`, `behavioralTax`, `welfareSystem`, `propertyTax`, `rentalTax`, `inheritanceTax`, `capitalGains`, `highwayTolls`, `railwayTolls`, `timeline`, `ticker`, `suggest`, `donate`, `footer`
+- Namespaces: `metadata`, `header`, `threatLevel`, `journeyOf100`, `taxBrackets`, `corporateTax`, `flatTax`, `socialContributions`, `salaryCost`, `keyIndicators`, `oecdComparison`, `tva`, `fuelTax`, `behavioralTax`, `welfareSystem`, `propertyTax`, `rentalTax`, `inheritanceTax`, `capitalGains`, `highwayTolls`, `railwayTolls`, `timeline`, `ticker`, `suggest`, `donate`, `report`, `footer`
 - Server components: `const t = await getTranslations({ locale, namespace: 'ns' })`
 - Client components: `const t = useTranslations('ns')`
 - Rich text: `t.rich('key', { strong: (chunks) => <strong>{chunks}</strong> })`
@@ -197,6 +198,7 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 | `NEXT_PUBLIC_SITE_URL` | Yes | Base URL (https://impots.tax) |
 | `NEXT_PUBLIC_UMAMI_URL` | No | Umami instance base URL (e.g. https://analytics.example.com) |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | No | Umami website ID (UUID) |
+| `NEXT_PUBLIC_WEBHOOK_URL` | No | n8n webhook URL for report form (creates GitHub issues) |
 
 ## Important Rules
 
