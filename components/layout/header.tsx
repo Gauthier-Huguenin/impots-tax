@@ -108,8 +108,9 @@ export function Header() {
               window.location.hash = "donate";
               window.dispatchEvent(new HashChangeEvent("hashchange"));
             }}
-            className="hidden font-mono text-[10px] uppercase tracking-wider text-favorable/70 transition-colors hover:text-favorable sm:inline cursor-pointer"
+            className="hidden items-center gap-1.5 rounded-full border border-gray-600 bg-white/5 px-3 py-1 text-xs text-gray-300 transition-all hover:border-favorable/50 hover:bg-favorable/10 hover:text-favorable sm:flex cursor-pointer"
           >
+            <span className="text-sm leading-none" aria-hidden="true">$</span>
             {t("donate")}
           </button>
 
