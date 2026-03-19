@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { JOURNEY_SUMMARY, USSR_COMPARISON } from "@/lib/tax-data";
+import { formatEuro, formatPercent } from "@/lib/format";
+import { IconEuro } from "@/components/ui/panel-icons";
 
 const SEGMENTS = [
   { key: "employerContributions", amount: 23, color: "bg-tricolore-red" },
@@ -21,7 +23,8 @@ export function JourneyOf100() {
         <div className="relative z-10">
           {/* Title */}
           <div className="mb-4 flex items-baseline justify-between gap-4">
-            <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc sm:text-lg">
+            <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc sm:text-lg">
+              <IconEuro className="shrink-0" />
               {t("title")}
             </h2>
             <span className="hidden font-mono text-[10px] text-gray-500 sm:inline sm:text-xs">
@@ -41,22 +44,21 @@ export function JourneyOf100() {
           </div>
 
           {/* Legend — each item matches its bar segment */}
-          <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1.5 sm:flex sm:justify-between">
-            {SEGMENTS.map((s) => (
+          <div className="mt-3 grid grid-cols-1 gap-y-3 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-2">
+            {SEGMENTS.map((s, i) => (
               <div key={s.key} className="flex items-center gap-2">
-                <span className={`inline-block h-2.5 w-2.5 shrink-0 rounded-sm ${s.color}`} />
-                <span className="font-mono text-[11px] text-slate-300 sm:text-xs">
-                  {s.key === "remaining"
+                <span className={`inline-block h-3 w-3 shrink-0 rounded-sm ${s.color}`} />
+                <span className="font-mono text-sm text-slate-300">
+                  {i + 1}. {s.key === "remaining"
                     ? t("realPurchasingPower")
                     : t(s.key)}
                 </span>
                 <span
-                  className={`ml-auto font-mono text-xs font-semibold sm:text-sm ${
+                  className={`ml-auto font-mono text-sm font-semibold ${
                     s.key === "remaining" ? "text-favorable" : "text-danger"
                   }`}
                 >
-                  {s.key === "remaining" ? "" : "−"}
-                  {s.amount} €
+                  {s.key === "remaining" ? "" : "−"}{formatEuro(s.amount)}
                 </span>
               </div>
             ))}
@@ -69,7 +71,7 @@ export function JourneyOf100() {
                 {t("employerPays")}
               </p>
               <p className="font-mono text-2xl font-bold text-blanc sm:text-3xl">
-                {employerCost} €
+                {formatEuro(employerCost)}
               </p>
             </div>
             <div className="text-3xl text-gray-500 sm:text-4xl">→</div>
@@ -78,7 +80,7 @@ export function JourneyOf100() {
                 {t("youReceive")}
               </p>
               <p className="font-mono text-2xl font-bold text-favorable sm:text-3xl">
-                {realPurchasingPower} €
+                {formatEuro(realPurchasingPower)}
               </p>
             </div>
             <div className="text-3xl text-gray-500 sm:text-4xl">→</div>
@@ -87,7 +89,7 @@ export function JourneyOf100() {
                 {t("extractionRate")}
               </p>
               <p className="font-mono text-2xl font-bold text-danger animate-glow sm:text-3xl">
-                {extractionRate}%
+                {formatPercent(extractionRate)}
               </p>
             </div>
           </div>
