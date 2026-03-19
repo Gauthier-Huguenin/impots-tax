@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
-import { TAX_DATA_YEAR } from "@/lib/tax-data";
 import { siteConfig } from "@/lib/config";
 import { trackDonateOpen } from "@/lib/analytics";
 
@@ -64,24 +63,12 @@ export function Header() {
             {utcTime}
           </span>
 
-          {/* Data year */}
-          <span className="hidden font-mono text-gray-500 md:inline">
-            {t("dataYear", { year: TAX_DATA_YEAR })}
-          </span>
-
           {/* Monitoring indicator */}
           <div className="flex items-center gap-1.5">
             <span className="inline-block h-2 w-2 rounded-full bg-favorable animate-pulse-dot" />
             <span className="hidden font-mono text-favorable sm:inline">
               {t("monitoring")}
             </span>
-          </div>
-
-          {/* Tricolore micro-stripe */}
-          <div className="hidden items-center gap-0.5 md:flex">
-            <span className="h-3 w-1 rounded-sm bg-tricolore-blue" />
-            <span className="h-3 w-1 rounded-sm bg-blanc" />
-            <span className="h-3 w-1 rounded-sm bg-tricolore-red" />
           </div>
 
           {/* X / Twitter */}
@@ -95,6 +82,20 @@ export function Header() {
             <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
+          </a>
+
+          {/* GitHub Star */}
+          <a
+            href={siteConfig.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Star on GitHub"
+            className="hidden items-center gap-1.5 rounded-md border border-gray-700 px-2 py-0.5 font-mono text-[10px] text-gray-400 transition-colors hover:border-gray-500 hover:text-gray-200 sm:flex"
+          >
+            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 fill-current" aria-hidden="true">
+              <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z" />
+            </svg>
+            Star
           </a>
 
           {/* Donate */}
