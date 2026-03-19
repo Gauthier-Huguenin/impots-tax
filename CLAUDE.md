@@ -219,6 +219,11 @@ The visual identity is a dark "command center" dashboard:
 - **Accent colors**: Red (#ff2d2d) for danger/high tax, Amber (#ffb020) for warning, Cyan (#00d4ff) for info, Green (#00ff88) for low/favorable
 - **Typography**: Monospace for data (JetBrains Mono or Share Tech Mono), condensed sans-serif for titles (Oswald)
 - **Effects**: Subtle scanlines overlay, pulsing borders on critical elements, scrolling ticker
+- **Text color hierarchy** (WCAG AA compliant on dark backgrounds):
+  - **Primary** (`text-white` / `text-blanc`): Main titles, key numbers, important content
+  - **Secondary** (`text-slate-300`): Labels, descriptions, legend items, panel subtitles
+  - **Tertiary** (`text-gray-500`): Sources, metadata, timestamps, decorative text
+  - Never use `text-gray-400`, `text-gray-600`, or `text-gray-700` for text — they are banned for contrast reasons
 
 ### French Identity (without impersonation)
 
