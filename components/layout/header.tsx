@@ -87,11 +87,11 @@ export function Header() {
           {/* GitHub Star */}
           <span className="hidden sm:inline">
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=Gauthier-Huguenin&repo=impots-tax&type=star&size=large"
-              width="80"
-              height="30"
+              src="https://ghbtns.com/github-btn.html?user=Gauthier-Huguenin&repo=impots-tax&type=star"
+              width="56"
+              height="20"
               title="Star on GitHub"
-              className="border-0"
+              className="border-0 invert"
             />
           </span>
 
