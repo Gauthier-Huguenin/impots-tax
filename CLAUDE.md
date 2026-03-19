@@ -243,6 +243,15 @@ The visual identity is a dark "command center" dashboard:
 - Simple form: name (optional), email (optional), tax name, description.
 - Webhook to n8n or simple email forwarding.
 
+### Report & Ticketing
+
+- A "Report a problem" button in the footer opens a modal with a dynamic form.
+- 4 report types: Bug Report, Correct a Number, Feature Request, Suggest a Tax.
+- Fields adapt dynamically based on the selected type. Wordings match the GitHub issue templates in `.github/ISSUE_TEMPLATE/`.
+- **Pipeline**: Form → POST JSON to n8n webhook (`NEXT_PUBLIC_WEBHOOK_URL`) → n8n workflow creates a GitHub issue in the repo automatically, with the correct label and formatted body.
+- The form is client-side only — no API route needed. The webhook URL is exposed via `NEXT_PUBLIC_WEBHOOK_URL`.
+- Components: `components/report/report-form.tsx` (form logic), `components/report/report-modal.tsx` (button + modal wrapper).
+
 ### Donate Page
 
 - A donation page, entirely in humor.

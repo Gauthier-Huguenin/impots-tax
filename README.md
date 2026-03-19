@@ -84,6 +84,14 @@ All fiscal data is documented in [`docs/tax-data-2025.md`](docs/tax-data-2025.md
 - **INSEE** — GDP, debt, macro indicators
 - **DGFiP** — Tax revenue figures
 
+## Report & Ticketing
+
+A "Report a problem" button in the footer lets visitors submit bug reports, data corrections, feature requests, or tax suggestions directly from the site.
+
+The form sends a JSON payload to an [n8n](https://n8n.io/) webhook, which automatically creates a GitHub issue in the repository with the correct label and formatted body. No account required for visitors — the pipeline handles everything.
+
+Set `NEXT_PUBLIC_WEBHOOK_URL` to enable it (see [Environment Variables](#environment-variables)).
+
 ## Contributing
 
 Contributions are welcome — especially corrections to fiscal data, new tax modules, and translation improvements.
