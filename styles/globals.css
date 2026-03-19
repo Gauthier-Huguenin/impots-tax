@@ -16,6 +16,17 @@
   --font-display: var(--font-display), "Oswald", sans-serif;
 }
 
+/*
+ * ── Animation durations ──────────────────────────────
+ * pulse-dot:    1.5s  — status indicator blink
+ * pulse-border: 2.5s  — critical panel border pulse
+ * scanlines:    0.5s  — CRT scanline scroll
+ * ticker-scroll: 90s  — bottom ticker marquee
+ * flow-right:   3s    — journey bar gradient flow
+ * glow-pulse:   3s    — extraction rate text glow (max 12px)
+ * modal:        200ms — modal enter transitions
+ */
+
 /* Pulsing dot animation */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
@@ -26,14 +37,14 @@
   animation: pulse-dot 1.5s ease-in-out infinite;
 }
 
-/* Pulsing border for critical panels */
+/* Pulsing border for critical panels — 2.5s */
 @keyframes pulse-border {
   0%, 100% { border-color: rgba(237, 41, 57, 0.4); }
   50% { border-color: rgba(237, 41, 57, 0.8); }
 }
 
 .animate-pulse-border {
-  animation: pulse-border 2s ease-in-out infinite;
+  animation: pulse-border 2.5s ease-in-out infinite;
 }
 
 /* Scanlines overlay */
@@ -58,14 +69,14 @@
   z-index: 1;
 }
 
-/* Ticker scroll */
+/* Ticker scroll — 90s */
 @keyframes ticker-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-ticker {
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll 90s linear infinite;
 }
 
 /* Flow animation for the journey bar */
@@ -79,14 +90,14 @@
   animation: flow-right 3s linear infinite;
 }
 
-/* Glow pulse for extraction rate */
+/* Glow pulse for extraction rate — 3s, max 12px */
 @keyframes glow-pulse {
   0%, 100% { text-shadow: 0 0 8px rgba(237, 41, 57, 0.5); }
-  50% { text-shadow: 0 0 20px rgba(237, 41, 57, 0.9); }
+  50% { text-shadow: 0 0 12px rgba(237, 41, 57, 0.9); }
 }
 
 .animate-glow {
-  animation: glow-pulse 2s ease-in-out infinite;
+  animation: glow-pulse 3s ease-in-out infinite;
 }
 
 /* Modal animations */
@@ -115,4 +126,41 @@
 
 .animate-modal-slide-up {
   animation: modal-slide-up 200ms ease-out;
+}
+
+/* ── Reduced motion ──────────────────────────────────
+ * Respects prefers-reduced-motion: disables all looping
+ * keyframe animations, keeps modals functional (instant).
+ */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-dot,
+  .animate-pulse-border,
+  .animate-ticker,
+  .animate-flow,
+  .animate-glow {
+    animation: none;
+  }
+
+  .animate-pulse-dot {
+    opacity: 0.5;
+  }
+
+  .animate-pulse-border {
+    border-color: rgba(237, 41, 57, 0.6);
+  }
+
+  .animate-glow {
+    text-shadow: 0 0 8px rgba(237, 41, 57, 0.5);
+  }
+
+  .scanlines::after {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .animate-modal-backdrop,
+  .animate-modal-fade-in,
+  .animate-modal-slide-up {
+    animation-duration: 0.01ms;
+  }
 }
