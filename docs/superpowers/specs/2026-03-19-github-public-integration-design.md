@@ -27,9 +27,10 @@ Key findings:
 
 Add a GitHub icon link between the X/Twitter icon and the Donate button.
 
-- SVG icon, same size as X icon (`h-4 w-4`)
+- Reuse the GitHub SVG path from the footer component (`components/layout/footer.tsx`)
+- Same size as X icon (`h-4 w-4 fill-current`)
 - Same styling: `text-gray-400 transition-colors hover:text-gray-200`
-- Links to `siteConfig.social.github`, opens in new tab
+- Links to `siteConfig.social.github`, `target="_blank"`, `rel="noopener noreferrer"`
 - `aria-label="GitHub"`
 - Icon only, no text — consistent with the X icon treatment
 
@@ -47,7 +48,7 @@ Contents:
 - Link to the "Suggest a tax" issue template
 - Reminder that FR/EN translations must stay in sync
 - Development setup instructions (clone, npm install, npm run dev)
-- Mention of `npm run type-check` requirement before PRs
+- Mention of `npm run type-check` and `npm run lint` requirement before PRs
 
 ### 3. Issue Template — Suggest a Tax
 
@@ -70,7 +71,7 @@ Minimal checklist:
 - What: brief description of the change
 - Why: motivation/context
 - Checklist:
-  - [ ] `npm run type-check` passes
+  - [ ] `npm run type-check` and `npm run lint` pass
   - [ ] Translations added in both `fr.json` and `en.json`
   - [ ] Fiscal data is sourced and dated (if applicable)
 
