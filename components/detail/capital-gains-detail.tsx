@@ -33,7 +33,7 @@ export function CapitalGainsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("ctoTitle")}
         </h2>
-        <p className="mb-4 font-mono text-sm text-gray-400">
+        <p className="mb-4 font-mono text-sm text-slate-300">
           {t("ctoDesc")}
         </p>
 
@@ -81,7 +81,7 @@ export function CapitalGainsDetail() {
         <p className="mb-4 font-mono text-sm leading-relaxed text-gray-300">
           {t("peaDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-favorable">&#9658;</span> IR : {CAPITAL_GAINS_PEA.ir}% (5 ans+)
           </li>
@@ -173,7 +173,7 @@ export function CapitalGainsDetail() {
         <p className="mb-3 font-mono text-sm leading-relaxed text-gray-300">
           {t("usDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">&#9658;</span> US withholding: {US_DIVIDEND_TAX.withholdingRate}%
           </li>
@@ -190,10 +190,10 @@ export function CapitalGainsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

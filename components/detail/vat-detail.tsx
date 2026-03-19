@@ -98,10 +98,10 @@ export function VatDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

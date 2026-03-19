@@ -89,7 +89,7 @@ export function InheritanceTaxDetail() {
 
         <div className="mb-4">
           <h3 className="mb-2 font-mono text-sm font-bold text-warning">{t("siblingsTitle")}</h3>
-          <ul className="space-y-1 font-mono text-sm text-gray-400">
+          <ul className="space-y-1 font-mono text-sm text-slate-300">
             <li className="flex items-start gap-2">
               <span className="text-warning">&#9658;</span> {t("siblingsAllowance")}
             </li>
@@ -104,7 +104,7 @@ export function InheritanceTaxDetail() {
 
         <div>
           <h3 className="mb-2 font-mono text-sm font-bold text-danger">{t("nonRelativeTitle")}</h3>
-          <p className="font-mono text-sm text-gray-400">
+          <p className="font-mono text-sm text-slate-300">
             {t("nonRelativeDesc")}
           </p>
         </div>
@@ -115,7 +115,7 @@ export function InheritanceTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("lifeInsuranceTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-favorable">&#9658;</span> {t("lifeInsuranceBefore70")}
           </li>
@@ -186,10 +186,10 @@ export function InheritanceTaxDetail() {
       <FaqSection title={t("faqTitle")} faqs={faqs} />
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

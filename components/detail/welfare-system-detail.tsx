@@ -73,7 +73,7 @@ export function WelfareSystemDetail() {
         <h3 className="mb-3 mt-6 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("rsaStatsTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-favorable">&#9656;</span> {t("rsaBeneficiaries")}
           </li>
@@ -81,14 +81,14 @@ export function WelfareSystemDetail() {
             <span className="text-warning">&#9656;</span> {t("rsaNonTakeUp")}
           </li>
           <li className="flex items-start gap-2 text-xs text-gray-500">
-            <span className="text-gray-600">&#9656;</span> {t("rsaNonTakeUpNote")}
+            <span className="text-gray-500">&#9656;</span> {t("rsaNonTakeUpNote")}
           </li>
         </ul>
 
         <h3 className="mb-3 mt-6 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("rsaReformTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-warning">&#9656;</span> {t("rsaReform1")}
           </li>
@@ -124,7 +124,7 @@ export function WelfareSystemDetail() {
         <h3 className="mb-3 mt-6 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("aahConditionsTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-favorable">&#9656;</span> {t("aahCondition1")}
           </li>
@@ -149,7 +149,7 @@ export function WelfareSystemDetail() {
         <h3 className="mb-3 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("areConditionsTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-warning">&#9656;</span> {t("areCondition1")}
           </li>
@@ -188,7 +188,7 @@ export function WelfareSystemDetail() {
         <h3 className="mb-3 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("ameConditionsTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">&#9656;</span> {t("ameCondition1")}
           </li>
@@ -203,7 +203,7 @@ export function WelfareSystemDetail() {
         <h3 className="mb-3 mt-6 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("ameStatsTitle")}
         </h3>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">&#9656;</span> {t("ameBeneficiaries")}
           </li>
@@ -227,24 +227,24 @@ export function WelfareSystemDetail() {
         <div className="space-y-2">
           <div className="flex items-center gap-3">
             <div className="h-3 rounded-full bg-danger" style={{ width: "60.8%" }} />
-            <span className="font-mono text-xs text-gray-400">{t("ameHospital")}</span>
+            <span className="font-mono text-xs text-slate-300">{t("ameHospital")}</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="h-3 rounded-full bg-warning" style={{ width: "26.5%" }} />
-            <span className="font-mono text-xs text-gray-400">{t("ameCityCare")}</span>
+            <span className="font-mono text-xs text-slate-300">{t("ameCityCare")}</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="h-3 rounded-full bg-blanc" style={{ width: "12.7%" }} />
-            <span className="font-mono text-xs text-gray-400">{t("amePharmacy")}</span>
+            <span className="font-mono text-xs text-slate-300">{t("amePharmacy")}</span>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

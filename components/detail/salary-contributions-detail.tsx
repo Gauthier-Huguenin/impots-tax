@@ -141,7 +141,7 @@ export function SalaryContributionsDetail() {
                 delta: SOCIAL_CONTRIBUTIONS_TOTALS.total - USSR_COMPARISON.socialContributions,
               })}
             </p>
-            <p className="mt-2 font-mono text-[10px] text-gray-600">
+            <p className="mt-2 font-mono text-[10px] text-gray-500">
               {t("ussrSource")}
             </p>
           </div>
@@ -153,7 +153,7 @@ export function SalaryContributionsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("notesTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-xs text-gray-400">
+        <ul className="space-y-2 font-mono text-xs text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-warning">&#9656;</span> {t("note1")}
           </li>
@@ -241,10 +241,10 @@ export function SalaryContributionsDetail() {
       <FaqSection title={t("faqTitle")} faqs={faqs} />
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

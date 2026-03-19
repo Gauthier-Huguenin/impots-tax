@@ -24,7 +24,7 @@ export function JourneyOf100() {
             <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc sm:text-lg">
               {t("title")}
             </h2>
-            <span className="hidden font-mono text-[10px] text-gray-600 sm:inline sm:text-xs">
+            <span className="hidden font-mono text-[10px] text-gray-500 sm:inline sm:text-xs">
               {t("source")}
             </span>
           </div>
@@ -45,7 +45,7 @@ export function JourneyOf100() {
             {SEGMENTS.map((s) => (
               <div key={s.key} className="flex items-center gap-2">
                 <span className={`inline-block h-2.5 w-2.5 shrink-0 rounded-sm ${s.color}`} />
-                <span className="font-mono text-[11px] text-gray-400 sm:text-xs">
+                <span className="font-mono text-[11px] text-slate-300 sm:text-xs">
                   {s.key === "remaining"
                     ? t("realPurchasingPower")
                     : t(s.key)}
@@ -72,7 +72,7 @@ export function JourneyOf100() {
                 {employerCost} €
               </p>
             </div>
-            <div className="text-3xl text-gray-700 sm:text-4xl">→</div>
+            <div className="text-3xl text-gray-500 sm:text-4xl">→</div>
             <div className="text-center">
               <p className="font-mono text-[10px] uppercase tracking-wide text-gray-500 sm:text-xs">
                 {t("youReceive")}
@@ -81,7 +81,7 @@ export function JourneyOf100() {
                 {realPurchasingPower} €
               </p>
             </div>
-            <div className="text-3xl text-gray-700 sm:text-4xl">→</div>
+            <div className="text-3xl text-gray-500 sm:text-4xl">→</div>
             <div className="text-center">
               <p className="font-mono text-[10px] uppercase tracking-wide text-gray-500 sm:text-xs">
                 {t("extractionRate")}

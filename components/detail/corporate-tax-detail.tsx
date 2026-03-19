@@ -39,7 +39,7 @@ export function CorporateTaxDetail() {
           <div className="mt-2 font-mono text-5xl font-bold text-danger">
             {CORPORATE_TAX.normalRate}%
           </div>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-400">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-slate-300">
             {t("normalRateDesc")}
           </p>
         </div>
@@ -52,7 +52,7 @@ export function CorporateTaxDetail() {
           <div className="mt-2 font-mono text-5xl font-bold text-warning">
             {CORPORATE_TAX.pmeRate}%
           </div>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-400">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-slate-300">
             {t("pmeRateDesc")}
           </p>
         </div>
@@ -63,7 +63,7 @@ export function CorporateTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("pmeConditionsTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-blanc">▸</span> {t("pmeCondition1")}
           </li>
@@ -102,7 +102,7 @@ export function CorporateTaxDetail() {
         <p className="mb-4 font-mono text-sm leading-relaxed text-gray-300">
           {t("exceptionalDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">▸</span> {t("exceptionalRate1")}
           </li>
@@ -127,10 +127,10 @@ export function CorporateTaxDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

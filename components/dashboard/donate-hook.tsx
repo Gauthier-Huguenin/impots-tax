@@ -33,7 +33,7 @@ export function DonateHook({ onOpenDetail }: DonateHookProps) {
           <span className="shrink-0 font-mono text-lg text-danger" aria-hidden="true">
             ☭
           </span>
-          <p className="font-mono text-xs text-gray-400 sm:text-sm">
+          <p className="font-mono text-xs text-slate-300 sm:text-sm">
             <span className="text-blanc font-bold">{t("hook")}</span>
             {" "}
             <span className="hidden sm:inline">{t("detail")}</span>

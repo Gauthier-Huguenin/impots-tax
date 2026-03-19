@@ -132,7 +132,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
           </svg>
         </div>
         <p className="font-mono text-sm text-favorable">{t("successTitle")}</p>
-        <p className="text-xs text-gray-400">{t("successDesc")}</p>
+        <p className="text-xs text-slate-300">{t("successDesc")}</p>
         <button
           onClick={onClose}
           className="mt-2 rounded border border-gray-700 px-4 py-1.5 font-mono text-xs text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
@@ -147,7 +147,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div>
         <h2 className="font-heading text-lg uppercase tracking-wider text-white">{t("title")}</h2>
-        <p className="mt-1 text-xs text-gray-400">{t("subtitle")}</p>
+        <p className="mt-1 text-xs text-slate-300">{t("subtitle")}</p>
       </div>
 
       {/* Type selector */}
@@ -160,7 +160,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
             className={`rounded border px-3 py-2 font-mono text-xs transition-colors ${
               reportType === type
                 ? "border-info/50 bg-info/10 text-info"
-                : "border-gray-700 text-gray-400 hover:border-gray-500 hover:text-gray-200"
+                : "border-gray-700 text-slate-300 hover:border-gray-500 hover:text-gray-200"
             }`}
           >
             {t(`type_${type}`)}
@@ -190,14 +190,14 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
         <div className="flex flex-col gap-1">
           <label className="font-mono text-xs text-gray-300">
             {t("field_email")}
-            <span className="ml-1 text-gray-600">{t("optional")}</span>
+            <span className="ml-1 text-gray-500">{t("optional")}</span>
           </label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={t("placeholder_email")}
-            className="rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-600 focus:border-info/50 focus:outline-none"
+            className="rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-500 focus:border-info/50 focus:outline-none"
           />
           {email && !isEmailValid(email) && (
             <span className="text-xs text-danger">{t("invalidEmail")}</span>
@@ -244,14 +244,14 @@ interface FieldInputProps {
 function FieldInput({ field, value, onChange, label, placeholder, required, options }: FieldInputProps) {
   const t = useTranslations("report");
   const baseClass =
-    "rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-600 focus:border-info/50 focus:outline-none";
+    "rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-500 focus:border-info/50 focus:outline-none";
 
   return (
     <div className="flex flex-col gap-1">
       <label className="font-mono text-xs text-gray-300">
         {label}
         {required && <span className="ml-1 text-danger">*</span>}
-        {!required && <span className="ml-1 text-gray-600">{t("optional")}</span>}
+        {!required && <span className="ml-1 text-gray-500">{t("optional")}</span>}
       </label>
       {field.type === "text" && (
         <input

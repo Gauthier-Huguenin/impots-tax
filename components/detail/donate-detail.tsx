@@ -7,7 +7,7 @@ const STRIPE_LINK = "https://buy.stripe.com/4gMdRb8dl6JGafxcHp53O01";
 
 const BREAKDOWN_STEPS = [
   { key: "stepDonation", amount: "10.00 €", className: "text-favorable" },
-  { key: "stepStripe", amount: "-0.40 €", className: "text-gray-400" },
+  { key: "stepStripe", amount: "-0.40 €", className: "text-slate-300" },
   { key: "stepRevenue", amount: "9.60 €", className: "text-blanc" },
   { key: "stepUrssaf", amount: "-2.11 €", className: "text-danger" },
   { key: "stepIR", amount: "-0.40 €", className: "text-warning" },
@@ -63,7 +63,7 @@ export function DonateDetail() {
                   <td className={`py-2.5 pr-4 text-right tabular-nums ${step.className}`}>
                     {step.amount}
                   </td>
-                  <td className="py-2.5 text-gray-400">
+                  <td className="py-2.5 text-slate-300">
                     {t(`${step.key}Desc`)}
                   </td>
                 </tr>
@@ -98,7 +98,7 @@ export function DonateDetail() {
           <p className="font-mono text-xs uppercase tracking-wider text-gray-500">
             {t("summaryStripeGets")}
           </p>
-          <p className="mt-1 font-mono text-xl font-bold text-gray-400">
+          <p className="mt-1 font-mono text-xl font-bold text-slate-300">
             0.40 €
           </p>
           <p className="mt-0.5 font-mono text-[10px] text-gray-500">
@@ -158,10 +158,10 @@ export function DonateDetail() {
 
       {/* Micro-entrepreneur explanation */}
       <div className="mb-8 rounded border border-blanc/10 bg-panel p-5 sm:p-6">
-        <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-gray-400">
+        <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-slate-300">
           {t("microEntrepreneurTitle")}
         </h2>
-        <p className="font-mono text-xs leading-relaxed text-gray-400">
+        <p className="font-mono text-xs leading-relaxed text-slate-300">
           {t("microEntrepreneurDesc")}
         </p>
       </div>
@@ -171,7 +171,7 @@ export function DonateDetail() {
         <h2 className="mb-3 font-display text-lg font-bold uppercase tracking-wider text-favorable">
           {t("ctaTitle")}
         </h2>
-        <p className="mx-auto mb-6 max-w-md font-mono text-sm text-gray-400">
+        <p className="mx-auto mb-6 max-w-md font-mono text-sm text-slate-300">
           {t("ctaDesc")}
         </p>
         <a
@@ -186,13 +186,13 @@ export function DonateDetail() {
           </svg>
           {t("ctaButton")}
         </a>
-        <p className="mt-3 font-mono text-[10px] text-gray-600">
+        <p className="mt-3 font-mono text-[10px] text-gray-500">
           {t("ctaNote")}
         </p>
       </div>
 
       {/* Source */}
-      <p className="mb-4 font-mono text-[10px] text-gray-600">
+      <p className="mb-4 font-mono text-[10px] text-gray-500">
         {t("source")}
       </p>
     </>

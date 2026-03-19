@@ -21,7 +21,7 @@ export function FaqSection({ title, faqs }: FaqSectionProps) {
               <span className="text-info mr-2">▸</span>
               {faq.question}
             </summary>
-            <div className="border-t border-gray-800 px-5 py-4 font-mono text-sm leading-relaxed text-gray-400">
+            <div className="border-t border-gray-800 px-5 py-4 font-mono text-sm leading-relaxed text-slate-300">
               {faq.answer}
             </div>
           </details>

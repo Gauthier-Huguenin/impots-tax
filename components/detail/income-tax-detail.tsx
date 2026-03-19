@@ -109,7 +109,7 @@ export function IncomeTaxDetail() {
         <p className="mb-4 font-mono text-sm leading-relaxed text-gray-300">
           {t("quotientDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-blanc">▸</span> {t("quotientAdult")}
           </li>
@@ -146,10 +146,10 @@ export function IncomeTaxDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

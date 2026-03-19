@@ -53,7 +53,7 @@ export function HighwayTollsDetail() {
               {HIGHWAY_CONCESSIONS.map((concession) => (
                 <tr key={concession.key} className="border-b border-gray-800/50">
                   <td className="px-4 py-3 uppercase text-gray-300">{concession.key}</td>
-                  <td className="px-4 py-3 text-gray-400">{concession.group}</td>
+                  <td className="px-4 py-3 text-slate-300">{concession.group}</td>
                   <td className="px-4 py-3 text-right text-warning">{concession.endDate}</td>
                 </tr>
               ))}
@@ -101,7 +101,7 @@ export function HighwayTollsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("increasesTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">▸</span> {t("increase2024")}
           </li>
@@ -147,7 +147,7 @@ export function HighwayTollsDetail() {
           <div className="inline-block h-full bg-warning" style={{ width: "33%" }} />
         </div>
 
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-danger">▸</span> {t("stateSlice")}
           </li>
@@ -161,10 +161,10 @@ export function HighwayTollsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

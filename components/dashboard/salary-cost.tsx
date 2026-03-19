@@ -24,10 +24,10 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
+        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-600">
+        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
           {t("subtitle")}
         </p>
 
@@ -56,16 +56,16 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
                   key={row.key}
                   className="border-b border-gray-800/50 text-gray-300"
                 >
-                  <td className="py-1.5 pr-2 text-[10px] text-gray-400 sm:text-xs">
+                  <td className="py-1.5 pr-2 text-[10px] text-slate-300 sm:text-xs">
                     {t(row.key as "health")}
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employer === null ? "text-gray-700" : ""}>
+                    <span className={row.employer === null ? "text-gray-500" : ""}>
                       {formatRate(row.employer)}
                     </span>
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employee === null ? "text-gray-700" : ""}>
+                    <span className={row.employee === null ? "text-gray-500" : ""}>
                       {formatRate(row.employee)}
                     </span>
                   </td>
@@ -94,10 +94,10 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
         </div>
 
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-600">
+          <span className="font-mono text-[10px] text-gray-500">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
+          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

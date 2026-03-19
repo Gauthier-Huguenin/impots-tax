@@ -21,10 +21,10 @@ export default function NotFound() {
         <h1 className="mt-4 font-display text-7xl font-bold tracking-wider text-danger md:text-9xl">
           404
         </h1>
-        <p className="mt-6 max-w-md font-mono text-lg text-gray-400">
+        <p className="mt-6 max-w-md font-mono text-lg text-slate-300">
           Cette page a été prélevée à la source. Il n&apos;en reste plus rien.
         </p>
-        <p className="mt-2 font-mono text-sm text-gray-600">
+        <p className="mt-2 font-mono text-sm text-gray-500">
           This page has been taxed out of existence.
         </p>
 
@@ -37,7 +37,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/comparison"
-            className="border border-gray-700 px-6 py-3 font-mono text-sm uppercase tracking-wider text-gray-400 transition-colors hover:border-gray-500 hover:text-gray-200"
+            className="border border-gray-700 px-6 py-3 font-mono text-sm uppercase tracking-wider text-slate-300 transition-colors hover:border-gray-500 hover:text-gray-200"
           >
             Comparaison OCDE
           </Link>

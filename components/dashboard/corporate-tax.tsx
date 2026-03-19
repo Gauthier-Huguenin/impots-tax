@@ -19,10 +19,10 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
+        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-600">
+        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
           {t("subtitle")}
         </p>
 
@@ -31,7 +31,7 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
             <p className="font-mono text-3xl font-bold text-danger">
               {CORPORATE_TAX.normalRate}%
             </p>
-            <p className="mt-1 font-mono text-xs text-gray-400">
+            <p className="mt-1 font-mono text-xs text-slate-300">
               {t("normalRate")}
             </p>
           </div>
@@ -39,7 +39,7 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
             <p className="font-mono text-3xl font-bold text-warning">
               {CORPORATE_TAX.pmeRate}%
             </p>
-            <p className="mt-1 font-mono text-xs text-gray-400">
+            <p className="mt-1 font-mono text-xs text-slate-300">
               {t("pmeRate")}
             </p>
           </div>
@@ -50,7 +50,7 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
             threshold: CORPORATE_TAX.pmeThreshold.toLocaleString("fr-FR"),
           })}
         </p>
-        <p className="mt-1 font-mono text-[10px] text-gray-600">
+        <p className="mt-1 font-mono text-[10px] text-gray-500">
           {t("pmeRequirements")}
         </p>
 
@@ -59,10 +59,10 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
         </p>
 
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-600">
+          <span className="font-mono text-[10px] text-gray-500">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
+          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

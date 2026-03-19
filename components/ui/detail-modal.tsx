@@ -58,7 +58,7 @@ export function DetailModal({ open, onClose, children }: DetailModalProps) {
         <button
           onClick={onClose}
           aria-label="Close"
-          className="sticky top-0 z-10 float-right m-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-gray-400 backdrop-blur-sm transition-colors hover:bg-gray-800 hover:text-gray-200"
+          className="sticky top-0 z-10 float-right m-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 text-slate-300 backdrop-blur-sm transition-colors hover:bg-gray-800 hover:text-gray-200"
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
             <path d="M18 6 6 18M6 6l12 12" />

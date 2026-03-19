@@ -71,14 +71,14 @@ export function IndicatorsDetail() {
               <div className="font-mono text-2xl font-bold text-danger">
                 {MACRO_INDICATORS.spendingToGdp}%
               </div>
-              <p className="font-mono text-[10px] text-gray-400">France 2024</p>
+              <p className="font-mono text-[10px] text-slate-300">France 2024</p>
             </div>
-            <div className="font-mono text-lg text-gray-600">&gt;</div>
+            <div className="font-mono text-lg text-gray-500">&gt;</div>
             <div className="text-center">
               <div className="font-mono text-2xl font-bold text-warning">
                 ~{USSR_COMPARISON.spendingToGdp}%
               </div>
-              <p className="font-mono text-[10px] text-gray-400">URSS {USSR_COMPARISON.period}</p>
+              <p className="font-mono text-[10px] text-slate-300">URSS {USSR_COMPARISON.period}</p>
             </div>
           </div>
           <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
@@ -108,7 +108,7 @@ export function IndicatorsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("otherTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-blanc">▸</span> {t("smicNet")}
           </li>
@@ -132,10 +132,10 @@ export function IndicatorsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

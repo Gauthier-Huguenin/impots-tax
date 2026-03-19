@@ -46,10 +46,10 @@ export function MacroIndicators({ onOpenDetail }: MacroIndicatorsProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-gray-400">
+        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-600">
+        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
           {t("subtitle")}
         </p>
 
@@ -74,10 +74,10 @@ export function MacroIndicators({ onOpenDetail }: MacroIndicatorsProps) {
         </div>
 
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-600">
+          <span className="font-mono text-[10px] text-gray-500">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-600 group-hover:text-blanc">
+          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

@@ -95,7 +95,7 @@ export function RentalTaxDetail() {
         <p className="mb-4 font-mono text-sm leading-relaxed text-gray-300">
           {t("loiLeMeurDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm text-gray-400">
+        <ul className="space-y-2 font-mono text-sm text-slate-300">
           <li className="flex items-start gap-2">
             <span className="text-warning">&#9658;</span> {t("measure1")}
           </li>
@@ -133,10 +133,10 @@ export function RentalTaxDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

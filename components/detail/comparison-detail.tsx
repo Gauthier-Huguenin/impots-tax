@@ -47,7 +47,7 @@ export function ComparisonDetail() {
             const textColor = isFrance
               ? "text-danger"
               : isAverage
-                ? "text-gray-400"
+                ? "text-slate-300"
                 : "text-gray-300";
             const borderClass = isFrance
               ? "border-danger/30 bg-danger/5"
@@ -118,10 +118,10 @@ export function ComparisonDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-600">
+        <p className="font-mono text-xs text-gray-500">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-600">
+        <p className="mt-1 font-mono text-xs text-gray-500">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>
