@@ -1,11 +1,20 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "impots.tax — Centre de Commandement Fiscal";
+export const alt = "impots.tax — Centre de Commandement Fiscal / Fiscal Command Center";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OGImage() {
+export default async function OGImage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+
+  const subtitle = locale === "en" ? "Fiscal Command Center" : "Centre de Commandement Fiscal";
+  const extractionLabel = locale === "en" ? "EXTRACTION RATE" : "TAUX D\u0027EXTRACTION";
+  const debtLabel = locale === "en" ? "DEBT / GDP" : "DETTE / PIB";
+  const tagline = locale === "en"
+    ? "REAL DATA • SATIRICAL PRESENTATION • OFFICIAL SOURCES"
+    : "DONNÉES RÉELLES • PRÉSENTATION SATIRIQUE • SOURCES OFFICIELLES";
+
   return new ImageResponse(
     (
       <div
@@ -60,7 +69,7 @@ export default function OGImage() {
               textTransform: "uppercase",
             }}
           >
-            Centre de Commandement Fiscal
+            {subtitle}
           </div>
 
           {/* Stats row */}
@@ -96,7 +105,7 @@ export default function OGImage() {
                 52%
               </div>
               <div style={{ fontSize: "14px", color: "#6b7280", marginTop: "4px" }}>
-                TAUX D&apos;EXTRACTION
+                {extractionLabel}
               </div>
             </div>
             <div
@@ -110,7 +119,7 @@ export default function OGImage() {
                 112%
               </div>
               <div style={{ fontSize: "14px", color: "#6b7280", marginTop: "4px" }}>
-                DETTE / PIB
+                {debtLabel}
               </div>
             </div>
           </div>
@@ -124,7 +133,7 @@ export default function OGImage() {
               letterSpacing: "2px",
             }}
           >
-            DONNÉES RÉELLES • PRÉSENTATION SATIRIQUE • SOURCES OFFICIELLES
+            {tagline}
           </div>
         </div>
 
