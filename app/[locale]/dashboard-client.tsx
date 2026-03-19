@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { TaxBrackets } from "@/components/dashboard/tax-brackets";
 import { CorporateTax } from "@/components/dashboard/corporate-tax";
 import { FlatTax } from "@/components/dashboard/flat-tax";
@@ -37,6 +37,13 @@ import { RailwayTollsDetail } from "@/components/detail/railway-tolls-detail";
 import { ComparisonDetail } from "@/components/detail/comparison-detail";
 import { DonateDetail } from "@/components/detail/donate-detail";
 import { DonateCta } from "@/components/dashboard/donate-cta";
+import { DonateHook } from "@/components/dashboard/donate-hook";
+import {
+  trackPanelClick,
+  trackDonateOpen,
+  trackScrollDepth,
+  trackTimeOnPage,
+} from "@/lib/analytics";
 
 type ModalSlug =
   | "income-tax"
@@ -81,8 +88,15 @@ const HASH_MODAL_MAP: Record<string, ModalSlug> = { donate: "donate" };
 
 export function DashboardClient() {
   const [openModal, setOpenModal] = useState<ModalSlug | null>(null);
+  const scrollFired = useRef(new Set<number>());
+  const timeFired = useRef(new Set<number>());
 
-  const open = (slug: ModalSlug) => () => setOpenModal(slug);
+  const open = (slug: ModalSlug) => () => {
+    trackPanelClick(slug);
+    if (slug === "donate") trackDonateOpen("panel");
+    setOpenModal(slug);
+  };
+
   const close = () => {
     setOpenModal(null);
     if (window.location.hash) {
@@ -93,7 +107,10 @@ export function DashboardClient() {
   const checkHash = useCallback(() => {
     const hash = window.location.hash.slice(1);
     const slug = HASH_MODAL_MAP[hash];
-    if (slug) setOpenModal(slug);
+    if (slug) {
+      if (slug === "donate") trackDonateOpen("hash");
+      setOpenModal(slug);
+    }
   }, []);
 
   useEffect(() => {
@@ -102,10 +119,45 @@ export function DashboardClient() {
     return () => window.removeEventListener("hashchange", checkHash);
   }, [checkHash]);
 
+  // P0: Scroll depth tracking (25/50/75/100%)
+  useEffect(() => {
+    function onScroll() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const percent = Math.round((scrollTop / docHeight) * 100);
+      for (const threshold of [25, 50, 75, 100]) {
+        if (percent >= threshold && !scrollFired.current.has(threshold)) {
+          scrollFired.current.add(threshold);
+          trackScrollDepth(threshold);
+        }
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // P0: Time on page tracking (30s, 60s, 120s)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const elapsed = Math.round(performance.now() / 1000);
+      for (const milestone of [30, 60, 120]) {
+        if (elapsed >= milestone && !timeFired.current.has(milestone)) {
+          timeFired.current.add(milestone);
+          trackTimeOnPage(milestone);
+        }
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   const DetailComponent = openModal ? MODAL_CONTENT[openModal] : null;
 
   return (
     <>
+      {/* P1: Donate CTA right after hero */}
+      <DonateHook onOpenDetail={open("donate")} />
+
       {/* Dashboard grid */}
       <div className="mx-auto max-w-7xl px-4 py-6">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

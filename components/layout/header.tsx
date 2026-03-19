@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { TAX_DATA_YEAR } from "@/lib/tax-data";
 import { siteConfig } from "@/lib/config";
+import { trackDonateOpen } from "@/lib/analytics";
 
 export function Header() {
   const t = useTranslations("header");
@@ -99,6 +100,7 @@ export function Header() {
           {/* Donate */}
           <button
             onClick={() => {
+              trackDonateOpen("header");
               window.location.hash = "donate";
               window.dispatchEvent(new HashChangeEvent("hashchange"));
             }}

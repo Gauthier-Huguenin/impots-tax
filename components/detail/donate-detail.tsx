@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { trackStripeClick } from "@/lib/analytics";
 
 const STRIPE_LINK = "https://buy.stripe.com/4gMdRb8dl6JGafxcHp53O01";
 
@@ -177,6 +178,7 @@ export function DonateDetail() {
           href={STRIPE_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackStripeClick}
           className="inline-flex items-center gap-2 rounded border border-favorable/50 bg-favorable/10 px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider text-favorable transition-all hover:bg-favorable/20 hover:border-favorable"
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
