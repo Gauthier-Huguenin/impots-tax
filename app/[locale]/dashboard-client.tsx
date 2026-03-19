@@ -162,9 +162,13 @@ export function DashboardClient() {
       <div className="mx-auto max-w-7xl px-4 py-6">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <TaxBrackets onOpenDetail={open("income-tax")} />
+          <OECDComparison onOpenDetail={open("comparison")} />
           <CorporateTax onOpenDetail={open("corporate-tax")} />
           <FlatTax onOpenDetail={open("flat-tax")} />
-          <TVA onOpenDetail={open("vat")} />
+
+          <div className="md:col-span-2">
+            <TVA onOpenDetail={open("vat")} />
+          </div>
 
           <div className="md:col-span-2">
             <SalaryCost onOpenDetail={open("salary-contributions")} />
@@ -181,10 +185,6 @@ export function DashboardClient() {
           <CapitalGains onOpenDetail={open("capital-gains")} />
           <HighwayTolls onOpenDetail={open("highway-tolls")} />
           <RailwayTolls onOpenDetail={open("railway-tolls")} />
-
-          <div className="md:col-span-2">
-            <OECDComparison onOpenDetail={open("comparison")} />
-          </div>
 
           <div className="md:col-span-2">
             <Timeline />
