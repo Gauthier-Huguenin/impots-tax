@@ -4,6 +4,7 @@ import { getLocale } from "next-intl/server";
 import { siteConfig } from "@/lib/config";
 import { localePath } from "@/lib/url";
 import type { Locale } from "@/lib/i18n/config";
+import { ReportButton } from "@/components/report/report-modal";
 
 export async function Footer() {
   const t = await getTranslations("footer");
@@ -41,6 +42,8 @@ export async function Footer() {
             </svg>
             <span>GitHub</span>
           </a>
+
+          <ReportButton />
 
           <Link
             href={localePath("/", locale) + "#donate"}
