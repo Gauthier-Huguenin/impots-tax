@@ -24,6 +24,14 @@ export function trackStripeClick() {
   track("stripe_click");
 }
 
+export function trackReportOpen() {
+  track("report_open");
+}
+
+export function trackReportSubmit(type: string) {
+  track("report_submit", { type });
+}
+
 export function trackScrollDepth(depth: number) {
   track("scroll_depth", { percent: depth });
 }

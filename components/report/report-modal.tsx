@@ -1,18 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { DetailModal } from "@/components/ui/detail-modal";
 import { ReportForm } from "@/components/report/report-form";
+import { trackReportOpen } from "@/lib/analytics";
 
 export function ReportButton() {
   const t = useTranslations("report");
   const [open, setOpen] = useState(false);
 
+  const handleOpen = useCallback(() => {
+    setOpen(true);
+    trackReportOpen();
+  }, []);
+
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
+        onClick={handleOpen}
         className="flex items-center gap-1.5 font-mono text-xs text-gray-400 transition-colors hover:text-warning"
       >
         <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2}>

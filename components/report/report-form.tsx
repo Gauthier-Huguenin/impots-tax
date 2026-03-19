@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
+import { trackReportSubmit } from "@/lib/analytics";
 
 type ReportType = "bug" | "data" | "feature" | "tax";
 
@@ -107,6 +108,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
           body: JSON.stringify(payload),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        trackReportSubmit(reportType);
         setStatus("success");
       } catch {
         setStatus("error");
