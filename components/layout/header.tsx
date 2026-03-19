@@ -85,18 +85,15 @@ export function Header() {
           </a>
 
           {/* GitHub Star */}
-          <a
-            href={siteConfig.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Star on GitHub"
-            className="hidden items-center gap-1.5 rounded-md border border-gray-700 px-2 py-0.5 font-mono text-[10px] text-gray-400 transition-colors hover:border-gray-500 hover:text-gray-200 sm:flex"
-          >
-            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 fill-current" aria-hidden="true">
-              <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z" />
-            </svg>
-            Star
-          </a>
+          <span className="hidden sm:inline">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=Gauthier-Huguenin&repo=impots-tax&type=star&size=large"
+              width="80"
+              height="30"
+              title="Star on GitHub"
+              className="border-0"
+            />
+          </span>
 
           {/* Donate */}
           <button
