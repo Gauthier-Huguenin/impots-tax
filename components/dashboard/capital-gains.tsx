@@ -7,6 +7,7 @@ import {
   CAPITAL_GAINS_COMPARISON,
   US_DIVIDEND_TAX,
 } from "@/lib/tax-data";
+import { IconStock } from "@/components/ui/panel-icons";
 
 interface CapitalGainsProps {
   onOpenDetail?: () => void;
@@ -24,7 +25,8 @@ export function CapitalGains({ onOpenDetail }: CapitalGainsProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <IconStock className="shrink-0" />
           {t("title")}
         </h2>
         <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">

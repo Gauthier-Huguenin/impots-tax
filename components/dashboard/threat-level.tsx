@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { IconWarning } from "@/components/ui/panel-icons";
 
 const LEVELS = [
   { key: "level1", color: "bg-blue-500" },
@@ -19,7 +20,8 @@ export function ThreatLevel() {
     <div className="mx-auto max-w-7xl px-4 py-4">
       <div className="rounded border border-danger/30 bg-panel p-4 animate-pulse-border">
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+            <IconWarning className="shrink-0" />
             {t("title")}
           </h2>
           <span className="font-mono text-xs text-gray-500">

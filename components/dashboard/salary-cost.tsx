@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { SOCIAL_CONTRIBUTIONS, SOCIAL_CONTRIBUTIONS_TOTALS } from "@/lib/tax-data";
+import { IconBriefcase } from "@/components/ui/panel-icons";
 
 function formatRate(value: number | null): string {
   if (value === null) return "—";
@@ -24,7 +25,8 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <IconBriefcase className="shrink-0" />
           {t("title")}
         </h2>
         <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">

@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { INHERITANCE_DATA } from "@/lib/tax-data";
+import { IconScroll } from "@/components/ui/panel-icons";
 
 interface InheritanceTaxProps {
   onOpenDetail?: () => void;
@@ -19,7 +20,8 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
       <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <IconScroll className="shrink-0" />
           {t("title")}
         </h2>
         <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
