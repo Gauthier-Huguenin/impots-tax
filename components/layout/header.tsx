@@ -16,7 +16,12 @@ export function Header() {
     function tick() {
       const now = new Date();
       setUtcTime(
-        now.toISOString().slice(11, 19) + " UTC"
+        now.toLocaleTimeString("fr-FR", {
+          timeZone: "Europe/Paris",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }) + " PARIS"
       );
     }
     tick();
@@ -57,7 +62,7 @@ export function Header() {
         </div>
 
         {/* Right: Clock, data year, monitoring, language toggle */}
-        <div className="flex items-center gap-4 text-xs">
+        <div className="flex items-center gap-3 text-xs">
           {/* UTC Clock */}
           <span className="hidden font-mono text-gray-400 sm:inline">
             {utcTime}
