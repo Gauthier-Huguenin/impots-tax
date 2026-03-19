@@ -92,6 +92,8 @@ The form sends a JSON payload to an [n8n](https://n8n.io/) webhook, which automa
 
 Set `NEXT_PUBLIC_WEBHOOK_URL` to enable it (see [Environment Variables](#environment-variables)).
 
+To set up your own pipeline, import the n8n workflow template [`docs/n8n-report-workflow.json`](docs/n8n-report-workflow.json) into your n8n instance and replace the `YOUR_*` placeholders with your GitHub credentials, repository, and webhook path.
+
 ## Contributing
 
 Contributions are welcome — especially corrections to fiscal data, new tax modules, and translation improvements.

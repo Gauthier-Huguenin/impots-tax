@@ -1,0 +1,89 @@
+{
+  "name": "impots-tax-tickets",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "YOUR_WEBHOOK_PATH",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [368, 208]
+    },
+    {
+      "parameters": {
+        "jsCode": "const type = $json.body.type;\nconst title = $json.body.title;\nconst email = $json.body.email || \"Not provided\";\nconst fields = $json.body.fields;\n\nlet github_title, github_labels, github_body;\n\nswitch(type) {\n  case \"bug\":\n    github_title = `[Bug]: ${title}`;\n    github_labels = \"bug\";\n    github_body = `**What happened?**\\n${fields.description}\\n\\n**Expected behavior**\\n${fields.expected}\\n\\n**Page URL**\\n${fields.url || \"Not provided\"}\\n\\n**Device**\\n${fields.device || \"Not provided\"}\\n\\n**Browser**\\n${fields.browser || \"Not provided\"}\\n\\n**Reporter email**\\n${email}`;\n    break;\n  case \"data\":\n    github_title = `[Data]: ${title}`;\n    github_labels = \"data-correction\";\n    github_body = `**Where is the error?**\\n${fields.location}\\n\\n**Current (incorrect) value**\\n${fields.current_value}\\n\\n**Correct value**\\n${fields.correct_value}\\n\\n**Source**\\n${fields.sources}\\n\\n**Reporter email**\\n${email}`;\n    break;\n  case \"feature\":\n    github_title = `[Feature]: ${title}`;\n    github_labels = \"enhancement\";\n    github_body = `**What would you like?**\\n${fields.description}\\n\\n**Why?**\\n${fields.motivation || \"Not provided\"}\\n\\n**Reporter email**\\n${email}`;\n    break;\n  case \"tax\":\n    github_title = `[Tax]: ${title}`;\n    github_labels = \"tax-suggestion\";\n    github_body = `**Tax name**\\n${fields.tax_name}\\n\\n**Description**\\n${fields.description}\\n\\n**Sources**\\n${fields.sources}\\n\\n**Reporter email**\\n${email}`;\n    break;\n  default:\n    throw new Error(`Unknown type: ${type}`);\n}\n\nreturn {\n  github_title,\n  github_labels,\n  github_body\n};"
+      },
+      "name": "Code in JavaScript",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [704, 208]
+    },
+    {
+      "parameters": {
+        "owner": {
+          "__rl": true,
+          "value": "YOUR_GITHUB_USERNAME",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "YOUR_REPO_NAME",
+          "mode": "name"
+        },
+        "title": "={{ $json.github_title }}",
+        "body": "={{ $json.github_body }}",
+        "labels": [
+          {
+            "label": "={{ $json.github_labels }}"
+          }
+        ],
+        "assignees": [
+          {
+            "assignee": "YOUR_GITHUB_USERNAME"
+          }
+        ]
+      },
+      "name": "Create an issue",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [1024, 208],
+      "credentials": {
+        "githubApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "GitHub account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Create an issue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
