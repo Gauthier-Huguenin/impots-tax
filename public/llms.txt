@@ -1,0 +1,46 @@
+# impots.tax
+
+> Satirical dashboard presenting real French tax data in a "command center" aesthetic. All data is sourced from official institutions (OECD, INSEE, URSSAF, DGFiP, French Finance Law). Bilingual FR/EN. The tone is factual and satirical — every number is real, the satire comes from the presentation.
+
+## Key facts
+
+- France ranks #1 worldwide in tax pressure (46.1% of GDP, source: OECD 2024)
+- For every €100 an employer pays, a median worker keeps only ~€48 in real purchasing power (extraction rate: 52%)
+- VAT was invented in France in 1954
+- ~82% of the price of a pack of cigarettes is taxes
+- ~55% of the price of a liter of gasoline is taxes (including a tax on a tax: VAT applied on top of the excise tax)
+- Inheritance tax reaches 60% for non-relatives
+
+## Site pages
+
+- [Dashboard](https://impots.tax): Overview of all tax modules with the "Journey of €100" as hero panel
+- [Income Tax](https://impots.tax/income-tax): Progressive brackets 2026 (0% to 45%), new CDHR minimum tax
+- [Corporate Tax](https://impots.tax/corporate-tax): Standard rate 25%, SME rate 15%
+- [Flat Tax / PFU](https://impots.tax/flat-tax): Flat tax 30% → 31.4% in 2026
+- [VAT](https://impots.tax/vat): 4 rates (20%, 10%, 5.5%, 2.1%)
+- [Fuel Tax](https://impots.tax/fuel-tax): SP95 price breakdown, excise tax, VAT on excise
+- [Behavioral Taxes](https://impots.tax/behavioral-tax): Tobacco (~82% tax), alcohol, sugar
+- [Salary & Contributions](https://impots.tax/salary-contributions): Employer contributions (~32%) and employee (~20%)
+- [Welfare System](https://impots.tax/welfare-system): RSA, AAH, ARE, AME
+- [Property Tax](https://impots.tax/property-tax): €55.3B revenue, +30% in 10 years
+- [LMNP & Airbnb](https://impots.tax/rental-tax): Le Meur law, micro-BIC, depreciation reintegration
+- [Inheritance & Gift Tax](https://impots.tax/inheritance-tax): 5% to 45% (direct line), 60% non-relatives
+- [Capital Gains (non-PEA)](https://impots.tax/capital-gains): CTO vs PEA, S&P 500 from France
+- [Highway Tolls](https://impots.tax/highway-tolls): €11.9B revenue, €4.4B profits, concessions end 2031-2036
+- [Railway Tolls](https://impots.tax/railway-tolls): 40% of a TGV ticket price = network toll
+- [International Comparison](https://impots.tax/comparison): OECD rankings, France vs major economies
+- [Macro Indicators](https://impots.tax/indicators): Debt/GDP 112%, spending/GDP 56.5%, deficit -5.4%
+
+## Full tax data
+
+- [Complete reference](https://impots.tax/llms-full.txt): All 2025-2026 French tax data with sources
+
+## Official sources
+
+- OECD Revenue Statistics 2024
+- French Finance Law 2026 (Loi de finances)
+- URSSAF rate schedule 2025
+- INSEE (National Statistics)
+- DGFiP (Tax Administration)
+- Service-Public.fr
+- impots.gouv.fr

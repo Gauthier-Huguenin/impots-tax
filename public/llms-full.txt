@@ -1,0 +1,349 @@
+# impots.tax — Complete French Tax Data Reference
+
+> Site: https://impots.tax
+> Last updated: March 2026
+> Data year: 2025-2026
+> Every number is sourced from official institutions. Unverified data is marked [TODO: verify].
+> This file contains all tax data displayed on the site.
+> Note: French fiscal terms are kept in their original form where no standard English equivalent exists.
+
+---
+
+## 1. Income Tax (Impôt sur le revenu / IR) — 2026 Schedule (2025 income)
+
+Source: French Finance Law 2026, Service-Public.fr, economie.gouv.fr
+Indexation: +0.9% (inflation)
+
+| Bracket (per tax share) | Rate |
+|---|---|
+| Up to €11,600 | 0% |
+| €11,601 — €29,579 | 11% |
+| €29,580 — €84,577 | 30% |
+| €84,578 — €181,917 | 41% |
+| Above €181,917 | 45% |
+
+New in 2026: CDHR (Contribution Différentielle sur les Hauts Revenus), a minimum effective tax rate of 20% for the wealthiest households.
+
+Family quotient: 1 share per adult, 0.5 per child (1 share from the 3rd child).
+Cap on family quotient benefit: €1,807 per half-share (2026).
+
+---
+
+## 2. Corporate Tax (Impôt sur les sociétés / IS) — 2025/2026
+
+Source: economie.gouv.fr, entreprendre.service-public.fr
+
+| Rate | Condition |
+|---|---|
+| 25% | Standard rate, all companies |
+| 15% | SMEs, on first €42,500 of profit |
+
+SME reduced rate conditions:
+- Revenue ≤ €10M (excl. VAT)
+- Fully paid-up share capital
+- ≥ 75% held by individuals
+
+Social contribution on corporate tax: 3.3% for companies with revenue > €7.63M and tax > €763,000.
+
+Exceptional surcharge 2025-2026 (large companies): 20.6% between €1B and €3B revenue, 41.2% above. Source: Finance Law 2025, extended to 2026.
+
+Note: Finance Law 2026 raised the reduced rate threshold from €42,500 to €100,000, effective January 1, 2026.
+
+---
+
+## 3. Flat Tax / PFU (Prélèvement Forfaitaire Unique)
+
+Source: Ramify.fr, Shine.fr, Service-Public.fr, LFSS 2026
+
+### 2025 Income (filed in 2026)
+| Component | Rate |
+|---|---|
+| Flat income tax | 12.8% |
+| Social levies | 17.2% |
+| **Total PFU** | **30%** |
+
+### 2026 Income (filed in 2027) — CHANGE
+| Component | Rate |
+|---|---|
+| Flat income tax | 12.8% |
+| Social levies | 18.6% (CSG increase from 9.2% to 10.6%) |
+| **Total PFU** | **31.4%** |
+
+Applies to: dividends, interest, capital gains on securities, crypto gains (exemption threshold: €305/year in disposals).
+
+Progressive scale option: available annually (box 2OP). Beneficial if marginal rate ≤ 11%. For dividends, 40% allowance applies only under progressive scale.
+
+---
+
+## 4. VAT (TVA)
+
+Source: impots.gouv.fr, economie.gouv.fr
+
+| Rate | Application |
+|---|---|
+| 20% | Standard rate (most goods and services) |
+| 10% | Intermediate rate (restaurants, transport, renovation) |
+| 5.5% | Reduced rate (food, books, energy) |
+| 2.1% | Super-reduced rate (press, reimbursable medicines) |
+
+France invented VAT in 1954 (Maurice Lauré). Original rate: 16.85%.
+
+---
+
+## 5. Social Contributions (Private sector employees) — 2025
+
+Source: URSSAF rate schedule 2025, CAPEB 2025
+
+Monthly Social Security ceiling (PMSS): €3,925 | Annual: €47,100 | Minimum wage (gross): €1,801.80
+
+| Contribution | Employer | Employee | Total |
+|---|---|---|---|
+| Health, maternity, disability, death | 7.00% | — | 7.00% |
+| Pension capped (≤ 1 PMSS) | 8.55% | 6.90% | 15.45% |
+| Pension uncapped | 2.02% | 0.40% | 2.42% |
+| Family allowances (≤ 3.5 × min. wage) | 3.45% | — | 3.45% |
+| Unemployment (from May 2025) | 4.00% | — | 4.00% |
+| CSG (on 98.25% of gross) | — | 9.20% | 9.20% |
+| CRDS (on 98.25% of gross) | — | 0.50% | 0.50% |
+| AGIRC-ARRCO Tier 1 | 4.72% | 3.15% | 7.87% |
+| Work accident (average) | ~2.00% | — | ~2.00% |
+| FNAL (< 50 employees) | 0.10% | — | 0.10% |
+| Autonomy contribution | 0.30% | — | 0.30% |
+| **Estimated total** | **~32%** | **~20%** | **~52%** |
+
+### The Journey of €100 (median salary ~€2,400 net, 30% marginal rate)
+
+| Step | Amount |
+|---|---|
+| Total employer cost ("super-gross") | ~€230 |
+| Employer contributions | −€54 |
+| Gross salary | ~€176 |
+| Employee contributions | −€26 |
+| Net salary before income tax | ~€150 |
+| Income tax (withholding) | −€20 |
+| Net salary after tax | ~€130 |
+| VAT on spending (20% average) | −€22 |
+| **Real purchasing power** | **~€108** |
+
+Total extraction rate: ~52% (€100 employer base → €48 purchasing power).
+
+---
+
+## 6. Fuel Tax
+
+Source: UFIP Énergies & Mobilités, Fipeco (February 2026 data)
+
+### SP95 gasoline price breakdown (~€1.71/liter)
+| Component | Amount | % of price |
+|---|---|---|
+| Crude oil + refining | ~€0.48 | ~28% |
+| Distribution + margin | ~€0.21 | ~12% |
+| Excise tax (ex-TICPE) | ~€0.67 | ~39% |
+| VAT on product | ~€0.15 | ~9% |
+| VAT on excise tax | ~€0.13 | ~8% |
+| **Total taxes** | **~€0.95** | **~55%** |
+
+Key point: VAT is applied ON TOP of the excise tax. It's a tax on a tax.
+
+Carbon component: frozen at €44.60/tonne CO₂ since 2018 (Yellow Vests movement). Was supposed to reach €100/t by 2030.
+
+---
+
+## 7. Behavioral Taxes
+
+### Tobacco — 2025/2026
+Source: French Customs, Revue des Tabacs
+
+Breakdown of a €13 pack:
+| Component | Amount | % |
+|---|---|---|
+| Excise (proportional + specific) | ~€8.50 | ~65% |
+| VAT (16.67% inclusive) | ~€2.17 | ~17% |
+| Retailer commission | ~€1.34 | ~10% |
+| Manufacturer margin | ~€0.99 | ~8% |
+| **Total taxes** | **~€10.67** | **~82%** |
+
+Evolution: pack price went from ~€1.50 (1990) to ~€13 (2025), a +766% increase in 35 years.
+
+### Alcohol — 2025/2026
+Source: French Customs (BOD N°7614)
+
+| Category | Excise 2026 |
+|---|---|
+| Spirits (> 18° vol.) | €1,932.42/hlap |
+| Beer > 2.8° vol. | €8.24/hl |
+| Still wine | €4.19/hl |
+
+Wine is very lightly taxed in France (~€0.03/bottle vs ~€349/hl in the UK). The French wine lobby is historically very powerful.
+
+### Sugar Tax — 2025/2026
+Source: LFSS 2025
+
+| Added sugar per hectoliter | Tax per hectoliter |
+|---|---|
+| < 5 kg | €4 |
+| 5 to 8 kg | €21 |
+| > 8 kg | €35 |
+
+---
+
+## 8. French Welfare System
+
+### RSA (Revenu de Solidarité Active / Minimum Income) — 2025
+Source: Service-Public.fr
+
+| Household | Monthly amount (April 2025) |
+|---|---|
+| Single person | €646.52 |
+| Couple, no children | €969.78 |
+| Couple + 2 children | €1,357.69 |
+
+~2 million recipient households. Non-take-up rate: ~30%.
+
+### AAH (Disability Allowance)
+Maximum: €1,033.32/month (April 2025). Condition: disability ≥ 80%.
+
+### Unemployment Insurance (ARE)
+~57% of daily reference wage. Minimum: ~€31.59/day (~€948/month).
+
+### AME (State Medical Aid for undocumented immigrants)
+~466,000 beneficiaries. 2024 budget: €1.386B. Cost per capita: ~€17.91/year. Share of total health spending: ~0.5%.
+
+---
+
+## 9. International Comparison — Tax Pressure
+
+Source: OECD Revenue Statistics 2024
+
+| Country | Tax-to-GDP ratio |
+|---|---|
+| **France** | **46.1%** |
+| Denmark | 43.4% |
+| Belgium | 42.9% |
+| Austria | 42.7% |
+| Italy | 42.1% |
+| Sweden | 41.3% |
+| Germany | 37.6% |
+| United Kingdom | 35.3% |
+| OECD Average | 33.5% |
+| Canada | 33.2% |
+| Japan | 33.2% |
+| United States | 27.7% |
+| Switzerland | 27.6% |
+| Mexico | 17.7% |
+
+France: #1 in the OECD, +12.6 points above average.
+
+### Macro indicators
+- Public debt: ~€3,300B (~112% of GDP)
+- Public spending: 56.5% of GDP
+- Budget deficit 2025: ~5.8% of GDP
+- Net minimum wage 2025: €1,426/month
+
+---
+
+## 10. Property Tax (Taxe foncière)
+
+Source: DGFiP, IFRAP
+
+| Indicator | Value |
+|---|---|
+| Total revenue | €55.3B (2024) |
+| Average per taxpayer | €1,082 |
+| Cumulative increase over 10 years | +30% |
+
+Rates by city (2025): Paris 20.5%, Lyon 32.44%, Marseille 47.13%, Grenoble 67.92%.
+
+---
+
+## 11. Furnished Rental / Airbnb (Le Meur Law)
+
+Source: Law n°2024-1039, Finance Laws 2025/2026
+
+| Rental type | Micro-BIC ceiling | Allowance |
+|---|---|---|
+| Unclassified tourist rental (Airbnb) | €15,000 | 30% |
+| Classified tourist rental | €77,700 | 50% |
+| Long-term furnished rental | €77,700 | 50% |
+
+Major 2025 change: depreciation deducted during the rental period is now reintegrated into capital gains at resale.
+
+---
+
+## 12. Inheritance & Gift Tax
+
+Source: Service-Public.fr, art. 777 CGI
+
+Direct line allowance: €100,000 per parent per child (renewable every 15 years).
+
+| Bracket (after allowance) | Rate |
+|---|---|
+| Up to €8,072 | 5% |
+| €8,072 — €12,109 | 10% |
+| €12,109 — €15,932 | 15% |
+| €15,932 — €552,324 | 20% |
+| €552,324 — €902,838 | 30% |
+| €902,838 — €1,805,677 | 40% |
+| Above €1,805,677 | 45% |
+
+Non-relatives: flat rate **60%** (after €1,594 allowance).
+Life insurance (premiums paid before age 70): €152,500 allowance per beneficiary.
+
+France has the 3rd highest marginal rate globally (after Japan 55% and South Korea 50%), but a low allowance (€100,000) vs USA ($13.6M), Germany (€400,000), or UK (£325,000 + £175,000 residence).
+
+---
+
+## 13. Highway Tolls
+
+Source: ART (Transport Regulatory Authority), French Senate
+
+| Indicator | Value |
+|---|---|
+| Toll network | 9,300 km |
+| Toll revenue (2023) | €11.9B |
+| Net profits (2023) | €4.4B (record) |
+| Shareholder dividends | €4.1B |
+
+Concession end dates: 2031-2036. Privatized in 2006 under PM Villepin.
+
+---
+
+## 14. Railway Tolls
+
+Source: SNCF Réseau, ART
+
+| Indicator | Value |
+|---|---|
+| Toll revenue (2024) | >€7B |
+| Share of TGV ticket price | ~40% |
+| Share of TER ticket price | ~15% |
+| Annual increase | ~4%/year |
+
+---
+
+## 15. Capital Gains Outside PEA (S&P 500 from France)
+
+Source: Service-Public.fr, France-USA tax treaty
+
+| Account type | Capital gains tax | Ceiling |
+|---|---|---|
+| CTO (brokerage, flat tax) | 30% (2025) / 31.4% (2026) | Unlimited |
+| PEA (tax-advantaged, after 5 years) | 17.2% (2025) / 18.6% (2026) | €150,000 |
+
+On €10,000 invested for 10 years (+8%/year): PEA saves ~€1,500 in taxes vs CTO.
+
+US stocks are not directly eligible for the PEA, but European-domiciled synthetic ETFs replicating the S&P 500 are (e.g., Amundi PEA S&P 500).
+
+---
+
+## 16. Tax History Timeline
+
+| Year | Event |
+|---|---|
+| 1914 | Income tax created. Max rate: 2%. Presented as a "temporary" wartime measure. |
+| 1954 | VAT invented by Maurice Lauré. Original rate: 16.85%. |
+| 1991 | CSG (social contribution) created. Presented as "temporary." Initial rate: 1.1%, now 9.2%. |
+| 1996 | CRDS created to repay social debt. Still active 30 years later. |
+| 2018 | Flat Tax (PFU) at 30%. Wealth tax (ISF) replaced by property-only IFI. |
+| 2019 | Carbon tax frozen at €44.60/t after the Yellow Vests movement. |
+| 2026 | CDHR minimum tax, CSG increase on financial income, Flat Tax → 31.4%. |
