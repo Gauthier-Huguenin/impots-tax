@@ -66,6 +66,7 @@ export function buildSeoMetadata({
   return {
     title,
     description,
+    manifest: "/site.webmanifest",
     icons: { icon: "/logo.svg" },
     alternates: {
       canonical,

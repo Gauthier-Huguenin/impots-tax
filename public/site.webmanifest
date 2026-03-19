@@ -1,0 +1,16 @@
+{
+  "name": "impots.tax — Centre de Commandement Fiscal",
+  "short_name": "impots.tax",
+  "description": "Tableau de bord satirique des impôts et taxes en France",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#0a0c10",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

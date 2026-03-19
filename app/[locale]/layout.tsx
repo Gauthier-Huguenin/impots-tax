@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { JetBrains_Mono, Oswald } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
-import type { Locale } from "@/lib/i18n/config";
+import { locales, type Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
 import "@/styles/globals.css";
@@ -43,6 +43,10 @@ export async function generateMetadata({
   });
 }
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -71,7 +75,7 @@ export default async function LocaleLayout({
                   "@type": "WebSite",
                   name: "impots.tax",
                   url: siteConfig.url,
-                  inLanguage: [typedLocale === "fr" ? "fr-FR" : "en-US"],
+                  inLanguage: typedLocale === "fr" ? "fr-FR" : "en-US",
                   description:
                     typedLocale === "fr"
                       ? "Centre de commandement fiscal — données réelles sur les impôts en France"

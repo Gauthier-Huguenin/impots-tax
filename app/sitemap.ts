@@ -20,6 +20,7 @@ const routes = [
   "/railway-tolls",
   "/comparison",
   "/indicators",
+  "/donate",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
