@@ -5,6 +5,8 @@ import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
 import { ComparisonDetail } from "@/components/detail/comparison-detail";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -36,10 +38,13 @@ export default async function ComparisonPage({ params }: PageProps) {
         pagePath="/comparison"
         homeLabel={td("backToDashboard")}
       />
-      <div className="flex h-1">
-        <div className="flex-1 bg-tricolore-blue" />
-        <div className="flex-1 bg-white" />
-        <div className="flex-1 bg-tricolore-red" />
+      <div className="sticky top-0 z-50">
+        <div className="flex h-1">
+          <div className="flex-1 bg-tricolore-blue" />
+          <div className="flex-1 bg-white" />
+          <div className="flex-1 bg-tricolore-red" />
+        </div>
+        <Header />
       </div>
 
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
@@ -52,6 +57,8 @@ export default async function ComparisonPage({ params }: PageProps) {
 
         <ComparisonDetail />
       </main>
+
+      <Footer />
 
       <div className="flex h-1">
         <div className="flex-1 bg-tricolore-blue" />
