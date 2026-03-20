@@ -63,6 +63,13 @@ export function buildSeoMetadata({
   }
   languages["x-default"] = buildUrl(path, defaultLocale);
 
+  const ogImage = {
+    url: `${siteConfig.url}/og-image.png`,
+    width: 1200,
+    height: 630,
+    alt: title,
+  };
+
   return {
     title,
     description,
@@ -79,12 +86,14 @@ export function buildSeoMetadata({
       siteName: "impots.tax",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       creator: "@leploutos",
+      images: [ogImage.url],
     },
   };
 }
