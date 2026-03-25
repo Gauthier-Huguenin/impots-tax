@@ -416,3 +416,220 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   { year: 2025, key: "csg2025" },
   { year: 2026, key: "cdhr2026" },
 ];
+
+// ─── Economic indicators ──────────────────────────────────────
+// Source: INSEE 2026
+
+export const INFLATION_RATE_2026 = 2.1; // % — taux d'inflation estimé 2026
+
+// ─── Quiz: Guess The Tax ──────────────────────────────────────
+// Questions en français pour le quiz interactif
+// Source: Données dashboard, docs/tax-data-2025.md
+
+export interface QuizQuestion {
+  id: number;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+}
+
+export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
+  {
+    id: 1,
+    question: "Quel est le taux de TVA normal en France ?",
+    options: ["18%", "20%", "22%", "25%"],
+    correctIndex: 1,
+    explanation: "Le taux normal de TVA est 20% depuis 2000. Source: impots.gouv.fr",
+  },
+  {
+    id: 2,
+    question: "Quel est le taux d'impôt sur les sociétés (IS) standard ?",
+    options: ["19%", "22%", "25%", "28%"],
+    correctIndex: 2,
+    explanation: "Le taux normal d'IS est 25% pour toutes les entreprises depuis 2022. Source: economie.gouv.fr",
+  },
+  {
+    id: 3,
+    question: "Combien de taux de TVA réduits existent en France (en plus du taux normal) ?",
+    options: ["1", "2", "3", "4"],
+    correctIndex: 2,
+    explanation: "3 taux réduits: 10% (intermédiaire), 5.5% (réduit), 2.1% (super-réduit). Source: impots.gouv.fr",
+  },
+  {
+    id: 4,
+    question: "Quel pourcentage du prix d'un litre d'essence est constitué de taxes ?",
+    options: ["35%", "45%", "55%", "65%"],
+    correctIndex: 2,
+    explanation: "Environ 55% du prix du carburant est composé de taxes (accise + TVA). Source: UFIP 2026",
+  },
+  {
+    id: 5,
+    question: "Quel est le taux de CSG (Contribution Sociale Généralisée) sur les salaires ?",
+    options: ["7.5%", "8.2%", "9.2%", "10.5%"],
+    correctIndex: 2,
+    explanation: "La CSG est à 9.2% depuis 2025 pour les salariés du secteur privé. Source: URSSAF",
+  },
+  {
+    id: 6,
+    question: "Quel est le taux de contribution patronale de santé (employer) ?",
+    options: ["6%", "7%", "8%", "9%"],
+    correctIndex: 1,
+    explanation: "La contribution patronale santé est d'environ 7% du salaire brut. Source: URSSAF 2025",
+  },
+  {
+    id: 7,
+    question: "Quel est le taux marginal d'imposition maximal (TMI) en France ?",
+    options: ["41%", "43%", "45%", "48%"],
+    correctIndex: 2,
+    explanation: "La TMI maximale est 45% pour les revenus dépassant 181 918€. Source: Loi de finances 2026",
+  },
+  {
+    id: 8,
+    question: "Quel est le montant mensuel minimum du RSA (personne seule) en 2025 ?",
+    options: ["550€", "600€", "650€", "700€"],
+    correctIndex: 2,
+    explanation: "Le RSA pour une personne seule est environ 646€/mois en 2025. Source: aide-sociale.fr",
+  },
+  {
+    id: 9,
+    question: "Quel est le nouveau taux de flat tax (PFU) en 2026 ?",
+    options: ["29%", "30%", "31%", "31.4%"],
+    correctIndex: 3,
+    explanation: "La flat tax PFU passe de 30% en 2025 à 31.4% en 2026 (augmentation CSG). Source: LFSS 2026",
+  },
+  {
+    id: 10,
+    question: "Quel pourcentage du prix d'une cigarette représente les taxes ?",
+    options: ["65%", "70%", "75%", "82%"],
+    correctIndex: 3,
+    explanation: "Environ 82% du prix d'une cigarette est constitué de taxes (accise + TVA). Source: Douanes 2025",
+  },
+  {
+    id: 11,
+    question: "Quel est le ratio dette/PIB de la France (estimation 2024) ?",
+    options: ["105%", "110%", "112%", "115%"],
+    correctIndex: 2,
+    explanation: "La dette publique française représente environ 112% du PIB. Source: INSEE 2024",
+  },
+  {
+    id: 12,
+    question: "Quel est le ratio impôts/PIB pour la France (OCDE 2024) ?",
+    options: ["42%", "44%", "46.1%", "48%"],
+    correctIndex: 2,
+    explanation: "La France a un ratio impôts/PIB de 46.1%, le plus élevé de l'OCDE. Source: OECD Revenue Statistics 2024",
+  },
+  {
+    id: 13,
+    question: "Quel est le taux de TVA sur les transports intérieurs (TER, bus) ?",
+    options: ["5.5%", "10%", "15%", "20%"],
+    correctIndex: 1,
+    explanation: "La TVA sur les transports intérieurs est 10%, réduite par rapport au taux normal. Source: Code des douanes",
+  },
+  {
+    id: 14,
+    question: "Combien de milliards d'euros représentent les péages d'autoroutes (2023) ?",
+    options: ["8 Mds€", "10 Mds€", "11.9 Mds€", "14 Mds€"],
+    correctIndex: 2,
+    explanation: "Les péages autoroutiers représentent 11.9 Mds€ de recettes en 2023. Source: ART, Sénat",
+  },
+  {
+    id: 15,
+    question: "Quel pourcentage du prix d'un billet TGV est constitué par le péage réseau ?",
+    options: ["25%", "30%", "40%", "50%"],
+    correctIndex: 2,
+    explanation: "Le péage réseau représente environ 40% du prix d'un billet TGV. Source: SNCF Réseau 2024",
+  },
+  {
+    id: 16,
+    question: "Quel est le montant mensuel maximum de l'AAH (allocation aux adultes handicapés) ?",
+    options: ["900€", "950€", "1000€", "1033€"],
+    correctIndex: 3,
+    explanation: "L'AAH au taux plein est environ 1033€/mois en 2025. Source: Service-Public.fr",
+  },
+  {
+    id: 17,
+    question: "Quel est le taux d'exonération d'impôt sur les plus-values dans un PEA après 5 ans ?",
+    options: ["50%", "75%", "95%", "100%"],
+    correctIndex: 3,
+    explanation: "Les plus-values dans un PEA sont totalement exonérées d'impôt après 5 ans. Source: Service-Public.fr",
+  },
+  {
+    id: 18,
+    question: "Quel est le taux d'impôt sur les successions en ligne directe (enfant) jusqu'à 8 072€ ?",
+    options: ["3%", "5%", "10%", "15%"],
+    correctIndex: 1,
+    explanation: "Le taux de droits de succession en ligne directe commence à 5% jusqu'à 8 072€. Source: CGI art. 777",
+  },
+  {
+    id: 19,
+    question: "Quel est le total des cotisations sociales (employer + employee) environ ?",
+    options: ["35%", "42%", "52%", "60%"],
+    correctIndex: 2,
+    explanation: "Le total des cotisations sociales représente environ 52% du coût du travail. Source: URSSAF 2025",
+  },
+  {
+    id: 20,
+    question: "Quel est le taux de TVA super-réduit en France ?",
+    options: ["1%", "1.5%", "2.1%", "3%"],
+    correctIndex: 2,
+    explanation: "Le taux super-réduit de TVA est 2.1% (livres, fournitures scolaires). Source: impots.gouv.fr",
+  },
+  {
+    id: 21,
+    question: "Quel est le plafond mensuel (PMSS) pour les cotisations salariales en 2025 ?",
+    options: ["3 500€", "3 800€", "3 925€", "4 100€"],
+    correctIndex: 2,
+    explanation: "Le plafond mensuel de sécurité sociale (PMSS) 2025 est 3 925€. Source: URSSAF",
+  },
+  {
+    id: 22,
+    question: "Quel est le ratio dépenses publiques/PIB de la France (2024) ?",
+    options: ["50%", "53%", "56.5%", "60%"],
+    correctIndex: 2,
+    explanation: "Les dépenses publiques représentent environ 56.5% du PIB français. Source: INSEE 2024",
+  },
+  {
+    id: 23,
+    question: "Combien de milliards d'euros de revenus apportent les péages ferroviaires ?",
+    options: ["5 Mds€", "6 Mds€", "7 Mds€", "8 Mds€"],
+    correctIndex: 2,
+    explanation: "Les péages ferroviaires représentent environ 7 Mds€ de revenus. Source: SNCF Réseau 2024",
+  },
+  {
+    id: 24,
+    question: "Quel est le taux de CRDS (Contribution au Remboursement de la Dette Sociale) ?",
+    options: ["0.3%", "0.5%", "0.8%", "1%"],
+    correctIndex: 1,
+    explanation: "La CRDS est à 0.5% des revenus d'activité. Source: URSSAF 2025",
+  },
+  {
+    id: 25,
+    question: "Quel est le montant de l'abattement fiscal par enfant pour l'impôt sur les successions ?",
+    options: ["50 000€", "75 000€", "100 000€", "150 000€"],
+    correctIndex: 2,
+    explanation: "Chaque parent a un abattement de 100 000€ par enfant pour les droits de succession. Source: CGI",
+  },
+  {
+    id: 26,
+    question: "Quel est le taux d'impôt pour un non-résident à la succession en France ?",
+    options: ["40%", "50%", "60%", "75%"],
+    correctIndex: 2,
+    explanation: "Le taux de droits de succession pour un non-résident (hors ligne directe) est 60%. Source: CGI",
+  },
+  {
+    id: 27,
+    question: "Quel est le taux de retenue à la source USA sur les dividendes (convention) ?",
+    options: ["10%", "12%", "15%", "20%"],
+    correctIndex: 2,
+    explanation: "La retenue à la source US sur les dividendes est 15% selon la convention France-USA. Source: impots.gouv.fr",
+  },
+  {
+    id: 28,
+    question: "Quel pourcentage du revenu de la Loi de finances 2025 provient des impôts directs ?",
+    options: ["35%", "45%", "55%", "65%"],
+    correctIndex: 2,
+    explanation: "Les impôts directs (IR, IS, taxe foncière) représentent environ 50-55% des recettes fiscales. Source: LFI 2025",
+  },
+];
+
