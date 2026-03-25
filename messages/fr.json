@@ -1015,5 +1015,12 @@
     "errorGeneric": "Échec de la transmission. L'État l'a probablement interceptée. Veuillez réessayer.",
     "errorNoWebhook": "Configuration manquante. Contactez l'administrateur.",
     "retry": "Réessayer"
+  },
+  "interactiveCalculators": {
+    "shareButton": {
+      "label": "Partager",
+      "copyToClipboard": "Copié!",
+      "shareOgImage": "Générer image"
+    }
   }
 }

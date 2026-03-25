@@ -1015,5 +1015,12 @@
     "errorGeneric": "Transmission failed. The State probably intercepted it. Please try again.",
     "errorNoWebhook": "Missing configuration. Contact the administrator.",
     "retry": "Retry"
+  },
+  "interactiveCalculators": {
+    "shareButton": {
+      "label": "Share",
+      "copyToClipboard": "Copied!",
+      "shareOgImage": "Generate image"
+    }
   }
 }
