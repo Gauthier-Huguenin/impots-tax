@@ -1029,5 +1029,18 @@
     "wealthTransfer": "Patrimoine",
     "infrastructure": "Infrastructure",
     "backToTop": "Haut de page"
+  },
+  "taxMap": {
+    "title": "CARTE DES ABERRATIONS FISCALES",
+    "subtitle": "Zones de prélèvement intensif — taux records, hausses brutales, taxes insolites",
+    "pointsLabel": "anomalies détectées",
+    "legend": "Catégories",
+    "source": "Sources : UNPI, DGFiP, ORKA.tax, Meilleurtaux.com, Franceinfo 2024-2026",
+    "cat_rate-record": "Taux record",
+    "cat_brutal-hike": "Hausse brutale",
+    "cat_quirky-tax": "Taxe insolite",
+    "cat_secondary-home": "Résidence secondaire",
+    "expandLabel": "Agrandir la carte",
+    "resetLabel": "Revenir à la vue initiale"
   }
 }

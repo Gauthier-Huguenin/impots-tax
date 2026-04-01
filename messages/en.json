@@ -1029,5 +1029,18 @@
     "wealthTransfer": "Wealth Transfer",
     "infrastructure": "Infrastructure",
     "backToTop": "Back to top"
+  },
+  "taxMap": {
+    "title": "TAX ABERRATION MAP",
+    "subtitle": "Zones of intensive extraction — record rates, brutal hikes, quirky taxes",
+    "pointsLabel": "anomalies detected",
+    "legend": "Categories",
+    "source": "Sources: UNPI, DGFiP, ORKA.tax, Meilleurtaux.com, Franceinfo 2024-2026",
+    "cat_rate-record": "Record Rate",
+    "cat_brutal-hike": "Brutal Hike",
+    "cat_quirky-tax": "Quirky Tax",
+    "cat_secondary-home": "Second Home",
+    "expandLabel": "Expand map",
+    "resetLabel": "Reset view"
   }
 }
