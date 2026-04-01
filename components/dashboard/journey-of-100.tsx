@@ -27,7 +27,7 @@ export function JourneyOf100() {
               <IconEuro className="shrink-0" />
               {t("title")}
             </h2>
-            <span className="hidden font-mono text-xs text-muted sm:inline sm:text-sm">
+            <span className="hidden font-mono text-xs font-light text-muted sm:inline sm:text-sm">
               {t("source")}
             </span>
           </div>
@@ -67,35 +67,35 @@ export function JourneyOf100() {
           {/* 3 key numbers */}
           <div className="mt-4 flex items-center justify-around border-t border-gray-800 pt-4">
             <div className="text-center">
-              <p className="font-mono text-xs uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
                 {t("employerPays")}
               </p>
-              <p className="font-mono text-2xl font-bold text-blanc sm:text-3xl">
+              <p className="font-mono text-2xl font-extrabold text-blanc sm:text-3xl">
                 {formatEuro(employerCost)}
               </p>
             </div>
             <div className="text-3xl text-muted sm:text-4xl">→</div>
             <div className="text-center">
-              <p className="font-mono text-xs uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
                 {t("youReceive")}
               </p>
-              <p className="font-mono text-2xl font-bold text-favorable sm:text-3xl">
+              <p className="font-mono text-2xl font-extrabold text-favorable sm:text-3xl">
                 {formatEuro(realPurchasingPower)}
               </p>
             </div>
             <div className="text-3xl text-muted sm:text-4xl">→</div>
             <div className="text-center">
-              <p className="font-mono text-xs uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
                 {t("extractionRate")}
               </p>
-              <p className="font-mono text-2xl font-bold text-danger animate-glow sm:text-3xl">
+              <p className="font-mono text-2xl font-black text-danger animate-glow sm:text-3xl">
                 {formatPercent(extractionRate)}
               </p>
             </div>
           </div>
 
           {/* USSR comparison */}
-          <p className="mt-3 text-center font-mono text-xs text-warning/80 sm:text-sm">
+          <p className="mt-3 text-center font-mono text-xs font-light text-warning/80 sm:text-sm">
             ☭ {t("ussrComparison", { ussrRate: USSR_COMPARISON.socialContributions, frRate: extractionRate })}
           </p>
         </div>

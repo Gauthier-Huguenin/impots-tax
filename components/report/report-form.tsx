@@ -146,8 +146,8 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div>
-        <h2 className="font-heading text-lg uppercase tracking-wider text-white">{t("title")}</h2>
-        <p className="mt-1 text-xs text-slate-300">{t("subtitle")}</p>
+        <h2 className="font-display text-lg font-bold uppercase tracking-wider text-white">{t("title")}</h2>
+        <p className="mt-1 text-xs font-light text-slate-300">{t("subtitle")}</p>
       </div>
 
       {/* Type selector */}
@@ -159,8 +159,8 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
             onClick={() => handleTypeChange(type)}
             className={`rounded border px-3 py-2 font-mono text-xs transition-colors ${
               reportType === type
-                ? "border-info/50 bg-info/10 text-info"
-                : "border-gray-700 text-slate-300 hover:border-gray-500 hover:text-gray-200"
+                ? "border-info/50 bg-info/10 text-info font-semibold"
+                : "border-gray-700 text-slate-300 font-medium hover:border-gray-500 hover:text-gray-200"
             }`}
           >
             {t(`type_${type}`)}
@@ -188,7 +188,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
 
         {/* Email (always shown) */}
         <div className="flex flex-col gap-1">
-          <label className="font-mono text-xs text-gray-300">
+          <label className="font-mono text-xs font-medium text-gray-300">
             {t("field_email")}
             <span className="ml-1 text-muted">{t("optional")}</span>
           </label>
@@ -223,7 +223,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="rounded border border-info/50 bg-info/10 px-4 py-2.5 font-mono text-sm text-info transition-colors hover:bg-info/20 disabled:cursor-not-allowed disabled:opacity-50"
+        className="rounded border border-info/50 bg-info/10 px-4 py-2.5 font-mono text-sm font-semibold text-info transition-colors hover:bg-info/20 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {status === "submitting" ? t("submitting") : t("submit")}
       </button>

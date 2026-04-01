@@ -21,10 +21,10 @@ export function DonateDetail() {
     <>
       {/* Header */}
       <div className="mb-8">
-        <h1 className="font-display text-2xl font-bold uppercase tracking-widest text-danger sm:text-3xl">
+        <h1 className="font-display text-2xl font-extrabold uppercase tracking-widest text-danger sm:text-3xl">
           {t("title")}
         </h1>
-        <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted">
+        <p className="mt-1 font-mono text-xs font-light uppercase tracking-wider text-muted">
           {t("subtitle")}
         </p>
       </div>
@@ -45,7 +45,7 @@ export function DonateDetail() {
         <div className="overflow-x-auto">
           <table className="w-full font-mono text-sm">
             <thead>
-              <tr className="border-b border-blanc/10 text-left text-xs uppercase tracking-wider text-muted">
+              <tr className="border-b border-blanc/10 text-left text-xs font-medium uppercase tracking-wider text-muted">
                 <th className="pb-2 pr-4">{t("step")}</th>
                 <th className="pb-2 pr-4 text-right">{t("amount")}</th>
                 <th className="pb-2">{t("description")}</th>
@@ -76,43 +76,43 @@ export function DonateDetail() {
       {/* Summary boxes */}
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <div className="rounded border border-blanc/20 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
             {t("summaryYouGive")}
           </p>
-          <p className="mt-1 font-mono text-xl font-bold text-favorable">
+          <p className="mt-1 font-mono text-xl font-extrabold text-favorable">
             10.00 €
           </p>
         </div>
         <div className="rounded border border-danger/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
             {t("summaryStateGets")}
           </p>
-          <p className="mt-1 font-mono text-xl font-bold text-danger">
+          <p className="mt-1 font-mono text-xl font-extrabold text-danger">
             2.51 €
           </p>
-          <p className="mt-0.5 font-mono text-xs text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-muted">
             25.1% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border border-blanc/10 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
             {t("summaryStripeGets")}
           </p>
           <p className="mt-1 font-mono text-xl font-bold text-slate-300">
             0.40 €
           </p>
-          <p className="mt-0.5 font-mono text-xs text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-muted">
             4.0% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border border-favorable/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
             {t("summaryIGet")}
           </p>
-          <p className="mt-1 font-mono text-xl font-bold text-favorable">
+          <p className="mt-1 font-mono text-xl font-extrabold text-favorable">
             7.09 €
           </p>
-          <p className="mt-0.5 font-mono text-xs text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-muted">
             70.9% {t("summaryPercent")}
           </p>
         </div>
@@ -179,20 +179,20 @@ export function DonateDetail() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={trackStripeClick}
-          className="inline-flex items-center gap-2 rounded border border-favorable/50 bg-favorable/10 px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider text-favorable transition-all hover:bg-favorable/20 hover:border-favorable"
+          className="inline-flex items-center gap-2 rounded border border-favorable/50 bg-favorable/10 px-6 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-favorable transition-all hover:bg-favorable/20 hover:border-favorable"
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
             <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
           </svg>
           {t("ctaButton")}
         </a>
-        <p className="mt-3 font-mono text-xs text-muted">
+        <p className="mt-3 font-mono text-xs font-light text-muted">
           {t("ctaNote")}
         </p>
       </div>
 
       {/* Source */}
-      <p className="mb-4 font-mono text-xs text-muted">
+      <p className="mb-4 font-mono text-xs font-light text-muted">
         {t("source")}
       </p>
     </>
