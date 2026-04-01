@@ -9,7 +9,7 @@ export function TimelinePanel() {
   return (
     <>
       <div
-        className="rounded border-2 border-blanc bg-panel p-5 cursor-pointer hover:border-blanc/80 transition-colors"
+        className="rounded border-2 border-blanc bg-[--color-panel] p-5 cursor-pointer hover:border-blanc/80 transition-colors"
         onClick={() => setIsModalOpen(true)}
       >
         <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc">

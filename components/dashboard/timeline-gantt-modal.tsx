@@ -22,7 +22,7 @@ export function TimelineGanttModal({ isOpen, onClose }: TimelineGanttModalProps)
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-4xl rounded border-2 border-blanc bg-panel p-6 m-4">
+      <div className="relative w-full max-w-4xl rounded border-2 border-blanc bg-[--color-panel] p-6 m-4">
         {/* Header */}
         <div className="mb-6 flex items-start justify-between border-b border-blanc/20 pb-4">
           <div>
