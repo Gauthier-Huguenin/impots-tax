@@ -29,13 +29,13 @@ export function TimelineGanttModal({ isOpen, onClose }: TimelineGanttModalProps)
             <h2 className="font-display text-lg font-bold uppercase tracking-widest text-blanc">
               {t("title")}
             </h2>
-            <p className="mt-1 font-mono text-xs text-muted">
+            <p className="mt-1 font-mono text-xs text-[--color-muted]">
               1914 &rarr; 2026 • Les jalons qui ont façonné l&apos;extraction
             </p>
           </div>
           <button
             onClick={onClose}
-            className="text-xl text-muted hover:text-blanc transition-colors"
+            className="text-xl text-[--color-muted] hover:text-blanc transition-colors"
             aria-label="Close modal"
           >
             ✕
@@ -45,7 +45,7 @@ export function TimelineGanttModal({ isOpen, onClose }: TimelineGanttModalProps)
         {/* Gantt Chart */}
         <div className="mb-4">
           {/* Timeline axis */}
-          <div className="mb-3 flex justify-between px-10 font-mono text-xs font-bold text-muted">
+          <div className="mb-3 flex justify-between px-10 font-mono text-xs font-bold text-[--color-muted]">
             <span>1900</span>
             <span>1920</span>
             <span>1940</span>
@@ -67,7 +67,7 @@ export function TimelineGanttModal({ isOpen, onClose }: TimelineGanttModalProps)
                   >
                     {event.year} {event.key.split(/(?=[A-Z])/).slice(0, -1).join("").toUpperCase()}
                   </div>
-                  <div className="mt-0.5 font-mono text-xs text-muted">
+                  <div className="mt-0.5 font-mono text-xs text-[--color-muted]">
                     {t(event.key as "ir1914")}
                   </div>
                 </div>

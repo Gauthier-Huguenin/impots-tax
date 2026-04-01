@@ -15,7 +15,7 @@ export function TimelinePanel() {
         <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc">
           CHRONOLOGIE FISCALE
         </h2>
-        <p className="mt-2 font-mono text-xs text-muted">
+        <p className="mt-2 font-mono text-xs text-[--color-muted]">
           Cliquez pour voir la chronologie complète
         </p>
       </div>
