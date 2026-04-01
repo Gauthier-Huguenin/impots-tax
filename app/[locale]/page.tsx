@@ -24,7 +24,7 @@ export default async function HomePage({ params }: PageProps) {
         Skip to content
       </a>
       {/* Sticky tricolore + header */}
-      <div className="sticky top-0 z-[200]">
+      <div className="sticky top-0 z-[1000]">
         <div className="flex h-1">
           <div className="flex-1 bg-tricolore-blue" />
           <div className="flex-1 bg-white" />
@@ -37,7 +37,7 @@ export default async function HomePage({ params }: PageProps) {
       <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
-        <div className="relative isolate mx-auto max-w-7xl px-4 pt-6">
+        <div className="relative mx-auto max-w-7xl px-4 pt-6">
           <TaxMapClient />
         </div>
         <JourneyOf100 />

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "@/lib/navigation";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { siteConfig } from "@/lib/config";
 import { trackDonateOpen } from "@/lib/analytics";
@@ -48,7 +49,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         {/* Left: Logo + Title */}
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
           <Image
             src="/logo.svg"
             alt="impots.tax"
@@ -59,7 +60,7 @@ export function Header() {
           <span className="font-display text-lg font-black uppercase tracking-widest text-danger sm:text-xl md:text-2xl">
             {t("title")}
           </span>
-        </div>
+        </Link>
 
         {/* Right: Clock, data year, monitoring, language toggle */}
         <div className="flex items-center gap-3 text-xs">

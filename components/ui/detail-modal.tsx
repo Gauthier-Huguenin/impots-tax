@@ -38,13 +38,13 @@ export function DetailModal({ open, onClose, children }: DetailModalProps) {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 flex items-end justify-center sm:items-center"
-      onClick={(e) => {
-        if (e.target === overlayRef.current) onClose();
-      }}
+      className="fixed inset-0 z-[1100] flex items-end justify-center sm:items-center"
     >
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-modal-backdrop" />
+      {/* Backdrop — clicking it closes the modal */}
+      <div
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-modal-backdrop"
+        onClick={onClose}
+      />
 
       {/* Content */}
       <div
