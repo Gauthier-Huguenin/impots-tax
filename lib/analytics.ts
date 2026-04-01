@@ -13,29 +13,33 @@ function track(event: string, data?: Record<string, string | number>) {
 }
 
 export function trackPanelClick(panel: string) {
-  track("panel_click", { panel });
+  track("panel-click", { panel });
 }
 
 export function trackDonateOpen(source: string) {
-  track("donate_open", { source });
+  track("donate-open", { source });
 }
 
 export function trackStripeClick() {
-  track("stripe_click");
+  track("stripe-click");
 }
 
 export function trackReportOpen() {
-  track("report_open");
+  track("report-open");
 }
 
 export function trackReportSubmit(type: string) {
-  track("report_submit", { type });
+  track("report-submit", { type });
 }
 
 export function trackScrollDepth(depth: number) {
-  track("scroll_depth", { percent: depth });
+  track("scroll-depth", { percent: depth });
 }
 
 export function trackTimeOnPage(seconds: number) {
-  track("time_on_page", { seconds });
+  track("time-on-page", { seconds });
+}
+
+export function umamiTrack(event: string, data?: Record<string, string | number>) {
+  track(event, data);
 }

@@ -153,16 +153,15 @@ export function DashboardClient() {
 
   // P0: Time on page tracking (30s, 60s, 120s)
   useEffect(() => {
-    const interval = setInterval(() => {
-      const elapsed = Math.round(performance.now() / 1000);
-      for (const milestone of [30, 60, 120]) {
-        if (elapsed >= milestone && !timeFired.current.has(milestone)) {
-          timeFired.current.add(milestone);
-          trackTimeOnPage(milestone);
+    const timers = [30, 60, 120].map((seconds) =>
+      setTimeout(() => {
+        if (!timeFired.current.has(seconds)) {
+          timeFired.current.add(seconds);
+          trackTimeOnPage(seconds);
         }
-      }
-    }, 5000);
-    return () => clearInterval(interval);
+      }, seconds * 1000)
+    );
+    return () => timers.forEach(clearTimeout);
   }, []);
 
   const DetailComponent = openModal ? MODAL_CONTENT[openModal] : null;
