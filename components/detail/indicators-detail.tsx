@@ -16,7 +16,7 @@ export function IndicatorsDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -40,7 +40,7 @@ export function IndicatorsDetail() {
           <p className="mt-2 font-mono text-sm text-gray-300">
             {t("debtRatio")}
           </p>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-muted">
             {t("debtNote")}
           </p>
         </div>
@@ -56,7 +56,7 @@ export function IndicatorsDetail() {
           <p className="mt-2 font-mono text-sm text-gray-300">
             {t("spendingRatio")}
           </p>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-muted">
             {t("spendingNote")}
           </p>
         </div>
@@ -71,17 +71,17 @@ export function IndicatorsDetail() {
               <div className="font-mono text-2xl font-bold text-danger">
                 {MACRO_INDICATORS.spendingToGdp}%
               </div>
-              <p className="font-mono text-[10px] text-slate-300">France 2024</p>
+              <p className="font-mono text-xs text-slate-300">France 2024</p>
             </div>
-            <div className="font-mono text-lg text-gray-500">&gt;</div>
+            <div className="font-mono text-lg text-muted">&gt;</div>
             <div className="text-center">
               <div className="font-mono text-2xl font-bold text-warning">
                 ~{USSR_COMPARISON.spendingToGdp}%
               </div>
-              <p className="font-mono text-[10px] text-slate-300">URSS {USSR_COMPARISON.period}</p>
+              <p className="font-mono text-xs text-slate-300">URSS {USSR_COMPARISON.period}</p>
             </div>
           </div>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-muted">
             {t("ussrSpendingNote")}
           </p>
         </div>
@@ -97,7 +97,7 @@ export function IndicatorsDetail() {
           <p className="mt-2 font-mono text-sm text-gray-300">
             {t("deficitRatio")}
           </p>
-          <p className="mt-3 font-mono text-xs leading-relaxed text-gray-500">
+          <p className="mt-3 font-mono text-xs leading-relaxed text-muted">
             {t("deficitNote")}
           </p>
         </div>
@@ -132,10 +132,10 @@ export function IndicatorsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

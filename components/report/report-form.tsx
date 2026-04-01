@@ -169,7 +169,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
       </div>
 
       {/* Type description — punchline */}
-      <p className="text-xs italic text-gray-500">{t(`desc_${reportType}`)}</p>
+      <p className="text-xs italic text-muted">{t(`desc_${reportType}`)}</p>
 
       {/* Dynamic fields */}
       <div className="flex flex-col gap-3">
@@ -190,14 +190,14 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
         <div className="flex flex-col gap-1">
           <label className="font-mono text-xs text-gray-300">
             {t("field_email")}
-            <span className="ml-1 text-gray-500">{t("optional")}</span>
+            <span className="ml-1 text-muted">{t("optional")}</span>
           </label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={t("placeholder_email")}
-            className="rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-500 focus:border-info/50 focus:outline-none"
+            className="rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-muted focus:border-info/50 focus:outline-none"
           />
           {email && !isEmailValid(email) && (
             <span className="text-xs text-danger">{t("invalidEmail")}</span>
@@ -244,14 +244,14 @@ interface FieldInputProps {
 function FieldInput({ field, value, onChange, label, placeholder, required, options }: FieldInputProps) {
   const t = useTranslations("report");
   const baseClass =
-    "rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-gray-500 focus:border-info/50 focus:outline-none";
+    "rounded border border-gray-700 bg-background px-3 py-2 font-mono text-sm text-white placeholder:text-muted focus:border-info/50 focus:outline-none";
 
   return (
     <div className="flex flex-col gap-1">
       <label className="font-mono text-xs text-gray-300">
         {label}
         {required && <span className="ml-1 text-danger">*</span>}
-        {!required && <span className="ml-1 text-gray-500">{t("optional")}</span>}
+        {!required && <span className="ml-1 text-muted">{t("optional")}</span>}
       </label>
       {field.type === "text" && (
         <input

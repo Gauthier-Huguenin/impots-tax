@@ -24,7 +24,7 @@ export default function NotFound() {
         <p className="mt-6 max-w-md font-mono text-lg text-slate-300">
           Cette page a été prélevée à la source. Il n&apos;en reste plus rien.
         </p>
-        <p className="mt-2 font-mono text-sm text-gray-500">
+        <p className="mt-2 font-mono text-sm text-muted">
           This page has been taxed out of existence.
         </p>
 

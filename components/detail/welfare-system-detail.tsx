@@ -25,7 +25,7 @@ export function WelfareSystemDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -65,7 +65,7 @@ export function WelfareSystemDetail() {
           </table>
         </div>
 
-        <div className="mt-4 space-y-1 font-mono text-xs text-gray-500">
+        <div className="mt-4 space-y-1 font-mono text-xs text-muted">
           <p>{t("rsaRevaluation")}</p>
           <p>{t("rsaEstimate2026")}</p>
         </div>
@@ -80,8 +80,8 @@ export function WelfareSystemDetail() {
           <li className="flex items-start gap-2">
             <span className="text-warning">&#9656;</span> {t("rsaNonTakeUp")}
           </li>
-          <li className="flex items-start gap-2 text-xs text-gray-500">
-            <span className="text-gray-500">&#9656;</span> {t("rsaNonTakeUpNote")}
+          <li className="flex items-start gap-2 text-xs text-muted">
+            <span className="text-muted">&#9656;</span> {t("rsaNonTakeUpNote")}
           </li>
         </ul>
 
@@ -117,9 +117,9 @@ export function WelfareSystemDetail() {
           <span className="font-mono text-3xl font-bold text-favorable">
             {WELFARE_DATA.aah.amountMax} \u20ac
           </span>
-          <span className="font-mono text-xs text-gray-500">{td("perMonth")}</span>
+          <span className="font-mono text-xs text-muted">{td("perMonth")}</span>
         </div>
-        <p className="mb-4 font-mono text-xs text-gray-500">{t("aahEstimate2026")}</p>
+        <p className="mb-4 font-mono text-xs text-muted">{t("aahEstimate2026")}</p>
 
         <h3 className="mb-3 mt-6 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
           {t("aahConditionsTitle")}
@@ -132,7 +132,7 @@ export function WelfareSystemDetail() {
             <span className="text-favorable">&#9656;</span> {t("aahCondition2")}
           </li>
         </ul>
-        <p className="mt-4 font-mono text-xs text-gray-500">
+        <p className="mt-4 font-mono text-xs text-muted">
           {t("aahDeconjugalization")}
         </p>
       </section>
@@ -172,8 +172,8 @@ export function WelfareSystemDetail() {
             ~{WELFARE_DATA.are.calcRate}%
           </span>
         </div>
-        <p className="mt-2 font-mono text-xs text-gray-500">{t("areMinimum")}</p>
-        <p className="mt-1 font-mono text-xs text-gray-500">{t("areFunding")}</p>
+        <p className="mt-2 font-mono text-xs text-muted">{t("areMinimum")}</p>
+        <p className="mt-1 font-mono text-xs text-muted">{t("areFunding")}</p>
       </section>
 
       {/* AME */}
@@ -241,10 +241,10 @@ export function WelfareSystemDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
         className={`px-2 py-1 font-mono uppercase tracking-wider transition-colors ${
           locale === "fr"
             ? "bg-info/20 text-info border border-info/50"
-            : "text-gray-500 hover:text-gray-300 border border-transparent"
+            : "text-muted hover:text-gray-300 border border-transparent"
         }`}
       >
         FR
@@ -30,7 +30,7 @@ export function LanguageSwitcher() {
         className={`px-2 py-1 font-mono uppercase tracking-wider transition-colors ${
           locale === "en"
             ? "bg-info/20 text-info border border-info/50"
-            : "text-gray-500 hover:text-gray-300 border border-transparent"
+            : "text-muted hover:text-gray-300 border border-transparent"
         }`}
       >
         EN

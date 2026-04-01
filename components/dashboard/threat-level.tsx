@@ -18,13 +18,13 @@ export function ThreatLevel() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4">
-      <div className="rounded border border-danger/30 bg-panel p-4 animate-pulse-border">
+      <div className="rounded border border-danger/30 bg-panel p-5 animate-pulse-border">
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+          <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
             <IconWarning className="shrink-0" />
             {t("title")}
           </h2>
-          <span className="font-mono text-xs text-gray-500">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
         </div>
@@ -34,7 +34,7 @@ export function ThreatLevel() {
           {LEVELS.map((level, i) => (
             <div key={level.key} className="flex-1">
               <div
-                className={`h-8 sm:h-10 flex items-center justify-center text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wide transition-all ${
+                className={`h-8 sm:h-10 flex items-center justify-center text-xs sm:text-sm font-mono font-bold uppercase tracking-wide transition-all ${
                   level.color
                 } ${
                   i <= ACTIVE_INDEX

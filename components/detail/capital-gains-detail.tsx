@@ -16,7 +16,7 @@ export function CapitalGainsDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -41,13 +41,13 @@ export function CapitalGainsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("component")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("rate2025")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("rate2026")}
                 </th>
               </tr>
@@ -92,7 +92,7 @@ export function CapitalGainsDetail() {
             <span className="text-danger">&#9658;</span> PS 2026 : {CAPITAL_GAINS_PEA.social2026}%
           </li>
         </ul>
-        <p className="mt-3 font-mono text-xs text-gray-500">
+        <p className="mt-3 font-mono text-xs text-muted">
           {t("peaNote")}
         </p>
       </section>
@@ -112,7 +112,7 @@ export function CapitalGainsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("comparisonTitle")}
         </h2>
-        <p className="mb-4 font-mono text-xs text-gray-500">
+        <p className="mb-4 font-mono text-xs text-muted">
           {t("comparisonNote")}
         </p>
 
@@ -120,19 +120,19 @@ export function CapitalGainsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("envelope")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("finalGross")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("gain")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("tax")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("netFinal")}
                 </th>
               </tr>
@@ -184,16 +184,16 @@ export function CapitalGainsDetail() {
             <span className="text-danger">&#9658;</span> Leakage: {US_DIVIDEND_TAX.leakage}%
           </li>
         </ul>
-        <p className="mt-3 font-mono text-xs text-gray-500">
+        <p className="mt-3 font-mono text-xs text-muted">
           {t("usNote")}
         </p>
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -19,7 +19,7 @@ export function BehavioralTaxDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -35,20 +35,20 @@ export function BehavioralTaxDetail() {
         <h2 className="mb-2 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("tobaccoTitle")}
         </h2>
-        <p className="mb-2 font-mono text-xs text-gray-500">{t("tobaccoPMP")}</p>
+        <p className="mb-2 font-mono text-xs text-muted">{t("tobaccoPMP")}</p>
         <p className="mb-6 font-mono text-xs text-warning">{t("tobaccoTarget")}</p>
 
         <div className="overflow-x-auto rounded border border-gray-800">
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("component")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("amount")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("percent")}
                 </th>
               </tr>
@@ -92,7 +92,7 @@ export function BehavioralTaxDetail() {
             />
           ))}
         </div>
-        <div className="mt-2 flex justify-between font-mono text-xs text-gray-500">
+        <div className="mt-2 flex justify-between font-mono text-xs text-muted">
           <span>{TOBACCO_PACK_PRICE} \u20ac</span>
           <span>~{TOBACCO_TAX_PERCENT}% taxes</span>
         </div>
@@ -147,10 +147,10 @@ export function BehavioralTaxDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

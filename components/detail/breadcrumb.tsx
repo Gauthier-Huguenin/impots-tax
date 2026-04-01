@@ -17,12 +17,12 @@ export async function Breadcrumb({ locale, moduleTitle }: BreadcrumbProps) {
         <li>
           <Link
             href={localePath("/", locale)}
-            className="text-gray-500 transition-colors hover:text-slate-300"
+            className="text-muted transition-colors hover:text-slate-300"
           >
             {t("breadcrumbHome")}
           </Link>
         </li>
-        <li className="text-gray-500" aria-hidden="true">&gt;</li>
+        <li className="text-muted" aria-hidden="true">&gt;</li>
         <li className="text-slate-300">{moduleTitle}</li>
       </ol>
     </nav>

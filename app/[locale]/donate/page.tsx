@@ -52,7 +52,7 @@ export default async function DonatePage({ params }: PageProps) {
         {/* Back button */}
         <Link
           href={localePath("/", typedLocale)}
-          className="mb-6 inline-flex items-center gap-1 font-mono text-xs text-gray-500 transition-colors hover:text-gray-300"
+          className="mb-6 inline-flex items-center gap-1 font-mono text-xs text-muted transition-colors hover:text-gray-300"
         >
           ← {td("backToDashboard")}
         </Link>

@@ -15,16 +15,17 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconTrain className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-4 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
 
@@ -40,7 +41,7 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
             <p className="font-mono text-lg font-bold text-warning">
               {RAILWAY_TOLLS.terShare}%
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("terShare")}
             </p>
           </div>
@@ -48,7 +49,7 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
             <p className="font-mono text-lg font-bold text-danger">
               &gt;{RAILWAY_TOLLS.totalRevenue}
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("totalRevenue")}
             </p>
           </div>
@@ -59,20 +60,20 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
           <p className="font-mono text-lg font-bold text-danger">
             +{RAILWAY_TOLLS.annualIncrease}%
           </p>
-          <p className="font-mono text-[9px] text-gray-500">
+          <p className="font-mono text-[10px] text-muted">
             {t("annualIncrease")}
           </p>
         </div>
 
-        <p className="mt-2 font-mono text-[10px] text-gray-500">
+        <p className="mt-2 font-mono text-xs text-muted">
           {t("sncfNote", { revenue: RAILWAY_TOLLS.groupRevenue })}
         </p>
 
-        <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

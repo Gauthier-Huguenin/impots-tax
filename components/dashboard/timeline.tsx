@@ -7,8 +7,8 @@ export function Timeline() {
   const t = useTranslations("timeline");
 
   return (
-    <div className="rounded border border-gray-800 bg-panel p-4">
-      <h2 className="font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+    <div className="rounded border border-gray-800 bg-panel p-5">
+      <h2 className="font-display text-base font-bold uppercase tracking-widest text-slate-300">
         {t("title")}
       </h2>
 
@@ -41,7 +41,7 @@ export function Timeline() {
                 >
                   {event.year}
                 </span>
-                <p className="mt-0.5 font-mono text-[10px] leading-relaxed text-slate-300 sm:text-xs">
+                <p className="mt-0.5 font-mono text-xs leading-relaxed text-slate-300 sm:text-sm">
                   {t(event.key as "ir1914")}
                 </p>
               </div>

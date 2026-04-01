@@ -36,7 +36,7 @@ export function VatDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -98,10 +98,10 @@ export function VatDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

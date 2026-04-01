@@ -13,7 +13,7 @@ export async function Footer() {
 
   return (
     <footer className="border-t border-gray-800 bg-panel px-4 py-6">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 text-xs text-gray-500 sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 text-xs text-muted sm:flex-row sm:justify-between">
         <p className="text-center">{t("disclaimer")}</p>
 
         <div className="flex items-center gap-4">

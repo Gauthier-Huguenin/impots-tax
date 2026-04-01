@@ -16,7 +16,7 @@ export function RentalTaxDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -38,16 +38,16 @@ export function RentalTaxDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("type")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("ceiling")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("allowance")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("before")}
                 </th>
               </tr>
@@ -64,7 +64,7 @@ export function RentalTaxDetail() {
                   <td className={`px-4 py-3 text-right ${row.allowance <= 30 ? "text-danger" : "text-favorable"}`}>
                     {row.allowance}%
                   </td>
-                  <td className="px-4 py-3 text-right text-gray-500">
+                  <td className="px-4 py-3 text-right text-muted">
                     {row.before}
                   </td>
                 </tr>
@@ -82,7 +82,7 @@ export function RentalTaxDetail() {
         <p className="mb-3 font-mono text-sm leading-relaxed text-gray-300">
           {t("depreciationDesc")}
         </p>
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {t("depreciationException")}
         </p>
       </section>
@@ -133,10 +133,10 @@ export function RentalTaxDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

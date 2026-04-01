@@ -25,7 +25,7 @@ export function Ticker() {
   const allItems = [...items, ...items];
 
   return (
-    <div className="overflow-hidden border-t border-gray-800 bg-panel">
+    <div className="overflow-hidden border-t border-gray-800 bg-panel" aria-live="off" aria-label="Ticker data">
       <div className="flex animate-ticker whitespace-nowrap py-2">
         {allItems.map((text, i) => (
           <span key={i} className="mx-6 font-mono text-xs text-slate-300">

@@ -24,7 +24,7 @@ export function DonateDetail() {
         <h1 className="font-display text-2xl font-bold uppercase tracking-widest text-danger sm:text-3xl">
           {t("title")}
         </h1>
-        <p className="mt-1 font-mono text-xs uppercase tracking-wider text-gray-500">
+        <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted">
           {t("subtitle")}
         </p>
       </div>
@@ -45,7 +45,7 @@ export function DonateDetail() {
         <div className="overflow-x-auto">
           <table className="w-full font-mono text-sm">
             <thead>
-              <tr className="border-b border-blanc/10 text-left text-xs uppercase tracking-wider text-gray-500">
+              <tr className="border-b border-blanc/10 text-left text-xs uppercase tracking-wider text-muted">
                 <th className="pb-2 pr-4">{t("step")}</th>
                 <th className="pb-2 pr-4 text-right">{t("amount")}</th>
                 <th className="pb-2">{t("description")}</th>
@@ -76,7 +76,7 @@ export function DonateDetail() {
       {/* Summary boxes */}
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <div className="rounded border border-blanc/20 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-gray-500">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("summaryYouGive")}
           </p>
           <p className="mt-1 font-mono text-xl font-bold text-favorable">
@@ -84,35 +84,35 @@ export function DonateDetail() {
           </p>
         </div>
         <div className="rounded border border-danger/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-gray-500">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("summaryStateGets")}
           </p>
           <p className="mt-1 font-mono text-xl font-bold text-danger">
             2.51 €
           </p>
-          <p className="mt-0.5 font-mono text-[10px] text-gray-500">
+          <p className="mt-0.5 font-mono text-xs text-muted">
             25.1% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border border-blanc/10 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-gray-500">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("summaryStripeGets")}
           </p>
           <p className="mt-1 font-mono text-xl font-bold text-slate-300">
             0.40 €
           </p>
-          <p className="mt-0.5 font-mono text-[10px] text-gray-500">
+          <p className="mt-0.5 font-mono text-xs text-muted">
             4.0% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border border-favorable/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-wider text-gray-500">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("summaryIGet")}
           </p>
           <p className="mt-1 font-mono text-xl font-bold text-favorable">
             7.09 €
           </p>
-          <p className="mt-0.5 font-mono text-[10px] text-gray-500">
+          <p className="mt-0.5 font-mono text-xs text-muted">
             70.9% {t("summaryPercent")}
           </p>
         </div>
@@ -122,24 +122,24 @@ export function DonateDetail() {
       <div className="mb-8 overflow-hidden rounded border border-blanc/20 bg-panel">
         <div className="flex h-8">
           <div
-            className="flex items-center justify-center bg-favorable/80 text-[10px] font-bold text-background"
+            className="flex items-center justify-center bg-favorable/80 text-xs font-bold text-background"
             style={{ width: "70.9%" }}
           >
             70.9%
           </div>
           <div
-            className="flex items-center justify-center bg-danger/80 text-[10px] font-bold text-white"
+            className="flex items-center justify-center bg-danger/80 text-xs font-bold text-white"
             style={{ width: "25.1%" }}
           >
             25.1%
           </div>
           <div
-            className="flex items-center justify-center bg-gray-600 text-[10px] font-bold text-white"
+            className="flex items-center justify-center bg-gray-600 text-xs font-bold text-white"
             style={{ width: "4%" }}
           >
           </div>
         </div>
-        <div className="flex justify-between px-3 py-1.5 text-[10px] text-gray-500">
+        <div className="flex justify-between px-3 py-1.5 text-xs text-muted">
           <span>{t("summaryIGet")}</span>
           <span>{t("summaryStateGets")}</span>
           <span>Stripe</span>
@@ -186,13 +186,13 @@ export function DonateDetail() {
           </svg>
           {t("ctaButton")}
         </a>
-        <p className="mt-3 font-mono text-[10px] text-gray-500">
+        <p className="mt-3 font-mono text-xs text-muted">
           {t("ctaNote")}
         </p>
       </div>
 
       {/* Source */}
-      <p className="mb-4 font-mono text-[10px] text-gray-500">
+      <p className="mb-4 font-mono text-xs text-muted">
         {t("source")}
       </p>
     </>

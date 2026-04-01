@@ -26,16 +26,17 @@ export function BehavioralTax({ onOpenDetail }: BehavioralTaxProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconCigarette className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-1 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-1 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
         <p className="mb-3 font-mono text-xs text-slate-300">
@@ -64,31 +65,31 @@ export function BehavioralTax({ onOpenDetail }: BehavioralTaxProps) {
         {/* Legend */}
         <div className="space-y-1">
           {TOBACCO_BREAKDOWN.map((item) => (
-            <div key={item.key} className="flex items-center justify-between font-mono text-[10px]">
+            <div key={item.key} className="flex items-center justify-between font-mono text-xs">
               <div className="flex items-center gap-1.5">
                 <span
                   className={`inline-block h-2 w-2 rounded-sm ${TOBACCO_COLORS[item.key]}`}
                 />
-                <span className={item.isTax ? "text-gray-300" : "text-gray-500"}>
+                <span className={item.isTax ? "text-gray-300" : "text-muted"}>
                   {t(item.key as "accise")}
                 </span>
               </div>
-              <span className={item.isTax ? "text-danger" : "text-gray-500"}>
+              <span className={item.isTax ? "text-danger" : "text-muted"}>
                 {item.amount.toFixed(2)} € ({item.percent}%)
               </span>
             </div>
           ))}
         </div>
 
-        <p className="mt-3 font-mono text-[10px] text-warning">
+        <p className="mt-3 font-mono text-xs text-warning">
           {t("priceEvolution")}
         </p>
 
-        <div className="mt-2 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

@@ -11,6 +11,7 @@
   --color-tricolore-blue: #002395;
   --color-tricolore-red: #ED2939;
   --color-blanc: #e2e8f0;
+  --color-muted: #8b95a5;
 
   --font-mono: var(--font-mono), "JetBrains Mono", "Share Tech Mono", monospace;
   --font-display: var(--font-display), "Oswald", sans-serif;
@@ -19,11 +20,11 @@
 /*
  * ── Animation durations ──────────────────────────────
  * pulse-dot:    1.5s  — status indicator blink
- * pulse-border: 2.5s  — critical panel border pulse
- * scanlines:    0.5s  — CRT scanline scroll
+ * pulse-border: 4s    — critical panel border pulse (subtle)
+ * scanlines:    0.5s  — CRT scanline scroll (3% opacity)
  * ticker-scroll: 90s  — bottom ticker marquee
  * flow-right:   3s    — journey bar gradient flow
- * glow-pulse:   3s    — extraction rate text glow (max 12px)
+ * glow:         static — extraction rate text glow (6px, no animation)
  * modal:        200ms — modal enter transitions
  */
 
@@ -37,14 +38,14 @@
   animation: pulse-dot 1.5s ease-in-out infinite;
 }
 
-/* Pulsing border for critical panels — 2.5s */
+/* Pulsing border for critical panels — 4s, subtle */
 @keyframes pulse-border {
-  0%, 100% { border-color: rgba(237, 41, 57, 0.4); }
-  50% { border-color: rgba(237, 41, 57, 0.8); }
+  0%, 100% { border-color: rgba(237, 41, 57, 0.3); }
+  50% { border-color: rgba(237, 41, 57, 0.55); }
 }
 
 .animate-pulse-border {
-  animation: pulse-border 2.5s ease-in-out infinite;
+  animation: pulse-border 4s ease-in-out infinite;
 }
 
 /* Scanlines overlay */
@@ -62,8 +63,8 @@
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.08) 2px,
-    rgba(0, 0, 0, 0.08) 4px
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
   );
   animation: scanlines 0.5s linear infinite;
   z-index: 1;
@@ -90,14 +91,9 @@
   animation: flow-right 3s linear infinite;
 }
 
-/* Glow pulse for extraction rate — 3s, max 12px */
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 8px rgba(237, 41, 57, 0.5); }
-  50% { text-shadow: 0 0 12px rgba(237, 41, 57, 0.9); }
-}
-
+/* Static subtle glow for extraction rate */
 .animate-glow {
-  animation: glow-pulse 3s ease-in-out infinite;
+  text-shadow: 0 0 6px rgba(237, 41, 57, 0.4);
 }
 
 /* Modal animations */
@@ -136,8 +132,7 @@
   .animate-pulse-dot,
   .animate-pulse-border,
   .animate-ticker,
-  .animate-flow,
-  .animate-glow {
+  .animate-flow {
     animation: none;
   }
 
@@ -146,11 +141,7 @@
   }
 
   .animate-pulse-border {
-    border-color: rgba(237, 41, 57, 0.6);
-  }
-
-  .animate-glow {
-    text-shadow: 0 0 8px rgba(237, 41, 57, 0.5);
+    border-color: rgba(237, 41, 57, 0.4);
   }
 
   .scanlines::after {
@@ -163,4 +154,35 @@
   .animate-modal-slide-up {
     animation-duration: 0.01ms;
   }
+}
+
+/* Scroll hint: fade gradient on the right edge of horizontally scrollable containers */
+.scroll-hint {
+  position: relative;
+}
+.scroll-hint::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, transparent, var(--color-panel));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+@media (min-width: 640px) {
+  .scroll-hint::after {
+    display: none;
+  }
+}
+
+/* Hide scrollbar for horizontal scroll navigation */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }

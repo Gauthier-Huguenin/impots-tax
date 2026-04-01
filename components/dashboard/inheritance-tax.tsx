@@ -15,16 +15,17 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconScroll className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-4 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
 
@@ -40,7 +41,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             <p className="font-mono text-lg font-bold text-danger">
               {INHERITANCE_DATA.nonRelativeRate}%
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("nonRelativeRate")}
             </p>
           </div>
@@ -48,7 +49,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             <p className="font-mono text-lg font-bold text-favorable">
               {(INHERITANCE_DATA.childAllowance / 1000).toFixed(0)}k €
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("childAllowance")}
             </p>
           </div>
@@ -56,7 +57,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             <p className="font-mono text-lg font-bold text-favorable">
               {INHERITANCE_DATA.successionsTaxed}%
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("actuallyTaxed")}
             </p>
           </div>
@@ -64,24 +65,24 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             <p className="font-mono text-lg font-bold text-warning">
               {INHERITANCE_DATA.totalRevenue}
             </p>
-            <p className="font-mono text-[9px] text-gray-500">
+            <p className="font-mono text-[10px] text-muted">
               {t("totalRevenue")}
             </p>
           </div>
         </div>
 
-        <p className="font-mono text-[10px] text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {t("medianNote", {
             median: (INHERITANCE_DATA.medianInheritance / 1000).toFixed(0),
             avg: (INHERITANCE_DATA.avgInheritance / 1000).toFixed(0),
           })}
         </p>
 
-        <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

@@ -15,29 +15,30 @@ export function RentalTax({ onOpenDetail }: RentalTaxProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconKey className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-4 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
 
         {/* LMNP micro-BIC table */}
         <div className="overflow-hidden rounded border border-gray-800">
-          <table className="w-full text-left font-mono text-[10px]">
+          <table className="w-full text-left font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-background/50">
-                <th className="px-2 py-1.5 text-gray-500">{t("regime")}</th>
-                <th className="px-2 py-1.5 text-right text-gray-500">
+                <th className="px-2 py-1.5 text-muted">{t("regime")}</th>
+                <th className="px-2 py-1.5 text-right text-muted">
                   {t("ceiling")}
                 </th>
-                <th className="px-2 py-1.5 text-right text-gray-500">
+                <th className="px-2 py-1.5 text-right text-muted">
                   {t("allowance")}
                 </th>
               </tr>
@@ -64,19 +65,19 @@ export function RentalTax({ onOpenDetail }: RentalTaxProps) {
         </div>
 
         {/* Before/after note */}
-        <p className="mt-3 font-mono text-[10px] text-warning">
+        <p className="mt-3 font-mono text-xs text-warning">
           {t("depreciationNote")}
         </p>
 
-        <p className="mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {t("leMeurLaw")}
         </p>
 
-        <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

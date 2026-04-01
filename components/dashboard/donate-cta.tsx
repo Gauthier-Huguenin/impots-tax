@@ -24,10 +24,10 @@ export function DonateCta({ onOpenDetail }: DonateCtaProps) {
     >
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
         <div>
-          <h3 className="font-display text-sm font-bold uppercase tracking-wider text-favorable">
+          <h3 className="font-display text-base font-bold uppercase tracking-wider text-favorable">
             {t("title")}
           </h3>
-          <p className="mt-1 font-mono text-xs text-gray-500">
+          <p className="mt-1 font-mono text-xs text-muted">
             {t("desc")}
           </p>
         </div>

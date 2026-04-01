@@ -16,7 +16,7 @@ export function HighwayTollsDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -38,13 +38,13 @@ export function HighwayTollsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("company")}
                 </th>
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("group")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("endDate")}
                 </th>
               </tr>
@@ -72,10 +72,10 @@ export function HighwayTollsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("route")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("toll")}
                 </th>
               </tr>
@@ -161,10 +161,10 @@ export function HighwayTollsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

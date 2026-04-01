@@ -20,35 +20,33 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconBriefcase className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-4 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
 
-        <div className="overflow-x-auto">
-          <table className="w-full font-mono text-xs">
+        <div className="scroll-hint overflow-x-auto">
+          <table className="w-full font-mono text-sm">
             <thead>
-              <tr className="border-b border-gray-700 text-[10px] uppercase text-gray-500">
+              <tr className="border-b border-gray-700 text-sm uppercase text-muted">
                 <th className="py-2 pr-2 text-left">{t("contribution")}</th>
-                <th className="px-2 py-2 text-right">
-                  <span className="hidden sm:inline">{t("employerCol")}</span>
-                  <span className="sm:hidden">E</span>
+                <th className="px-2 py-2 text-right text-xs sm:text-sm">
+                  {t("employerCol")}
                 </th>
-                <th className="px-2 py-2 text-right">
-                  <span className="hidden sm:inline">{t("employeeCol")}</span>
-                  <span className="sm:hidden">S</span>
+                <th className="px-2 py-2 text-right text-xs sm:text-sm">
+                  {t("employeeCol")}
                 </th>
-                <th className="py-2 pl-2 text-right">
-                  <span className="hidden sm:inline">{t("totalCol")}</span>
-                  <span className="sm:hidden">T</span>
+                <th className="py-2 pl-2 text-right text-xs sm:text-sm">
+                  {t("totalCol")}
                 </th>
               </tr>
             </thead>
@@ -58,16 +56,16 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
                   key={row.key}
                   className="border-b border-gray-800/50 text-gray-300"
                 >
-                  <td className="py-1.5 pr-2 text-[10px] text-slate-300 sm:text-xs">
+                  <td className="py-1.5 pr-2 text-sm text-slate-300">
                     {t(row.key as "health")}
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employer === null ? "text-gray-500" : ""}>
+                    <span className={row.employer === null ? "text-muted" : ""}>
                       {formatRate(row.employer)}
                     </span>
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employee === null ? "text-gray-500" : ""}>
+                    <span className={row.employee === null ? "text-muted" : ""}>
                       {formatRate(row.employee)}
                     </span>
                   </td>
@@ -78,7 +76,7 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
               ))}
               {/* Totals row */}
               <tr className="border-t border-danger/30 bg-danger/5 font-bold text-danger">
-                <td className="py-2 pr-2 text-[10px] sm:text-xs">
+                <td className="py-2 pr-2 text-sm">
                   {t("totalRow")}
                 </td>
                 <td className="px-2 py-2 text-right">
@@ -95,11 +93,11 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
           </table>
         </div>
 
-        <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

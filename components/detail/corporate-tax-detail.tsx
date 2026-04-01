@@ -17,7 +17,7 @@ export function CorporateTaxDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -33,7 +33,7 @@ export function CorporateTaxDetail() {
       <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* Normal rate */}
         <div className="rounded border border-danger/30 bg-danger/5 p-6">
-          <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
+          <div className="font-mono text-xs uppercase tracking-wide text-muted">
             {t("normalRateTitle")}
           </div>
           <div className="mt-2 font-mono text-5xl font-bold text-danger">
@@ -46,7 +46,7 @@ export function CorporateTaxDetail() {
 
         {/* PME rate */}
         <div className="rounded border border-warning/30 bg-warning/5 p-6">
-          <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
+          <div className="font-mono text-xs uppercase tracking-wide text-muted">
             {t("pmeRateTitle")}
           </div>
           <div className="mt-2 font-mono text-5xl font-bold text-warning">
@@ -110,7 +110,7 @@ export function CorporateTaxDetail() {
             <span className="text-danger">▸</span> {t("exceptionalRate2")}
           </li>
         </ul>
-        <p className="mt-4 font-mono text-xs text-gray-500">
+        <p className="mt-4 font-mono text-xs text-muted">
           {t("exceptionalNote")}
         </p>
       </section>
@@ -127,10 +127,10 @@ export function CorporateTaxDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -25,7 +25,7 @@ export function PropertyTaxDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -45,7 +45,7 @@ export function PropertyTaxDetail() {
         <p className="mb-3 font-mono text-sm text-warning">
           {t("calculFormula")}
         </p>
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {t("calculNote")}
         </p>
       </section>
@@ -60,10 +60,10 @@ export function PropertyTaxDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("revaluationYear")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("revaluationRate")}
                 </th>
               </tr>
@@ -80,7 +80,7 @@ export function PropertyTaxDetail() {
             </tbody>
           </table>
         </div>
-        <p className="mt-3 font-mono text-xs text-gray-500">
+        <p className="mt-3 font-mono text-xs text-muted">
           {t("revaluation2026Note")}
         </p>
       </section>
@@ -119,10 +119,10 @@ export function PropertyTaxDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("city")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("rate")}
                 </th>
               </tr>
@@ -139,7 +139,7 @@ export function PropertyTaxDetail() {
             </tbody>
           </table>
         </div>
-        <p className="mt-3 font-mono text-xs text-gray-500">
+        <p className="mt-3 font-mono text-xs text-muted">
           {t("ratesNote")}
         </p>
       </section>
@@ -157,10 +157,10 @@ export function PropertyTaxDetail() {
       <FaqSection title={t("faqTitle")} faqs={faqs} />
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

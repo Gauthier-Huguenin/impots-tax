@@ -19,16 +19,17 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
     <div
       role="button"
       tabIndex={0}
+      aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="rounded border border-gray-800 bg-panel p-4 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-slate-300">
+      <div className="rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
           <IconGlobe className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-[10px] text-gray-500">
+        <p className="mb-4 mt-1 font-mono text-xs text-muted">
           {t("subtitle")}
         </p>
 
@@ -41,7 +42,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
             return (
               <div key={country.key} className="flex items-center gap-2">
                 <span
-                  className={`w-24 shrink-0 text-right font-mono text-[10px] sm:w-32 sm:text-xs ${
+                  className={`w-24 shrink-0 text-right font-mono text-xs sm:w-32 sm:text-sm ${
                     isFrance
                       ? "font-bold text-danger"
                       : isAverage
@@ -66,12 +67,12 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
                   </div>
                 </div>
                 <span
-                  className={`w-12 shrink-0 font-mono text-[10px] font-bold sm:text-xs ${
+                  className={`w-12 shrink-0 font-mono text-xs font-bold sm:text-sm ${
                     isFrance
                       ? "text-danger"
                       : isAverage
                         ? "text-blanc"
-                        : "text-gray-500"
+                        : "text-muted"
                   }`}
                 >
                   {formatPercent(country.taxToGdp)}
@@ -83,7 +84,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
 
         {/* USSR reference line */}
         <div className="mt-2 flex items-center gap-2 rounded border border-dashed border-warning/40 bg-warning/5 px-1 py-1">
-          <span className="w-24 shrink-0 text-right font-mono text-[10px] font-bold text-warning sm:w-32 sm:text-xs">
+          <span className="w-24 shrink-0 text-right font-mono text-xs font-bold text-warning sm:w-32 sm:text-sm">
             ☭ {t("ussrLabel")}
           </span>
           <div className="flex-1">
@@ -94,11 +95,11 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
               />
             </div>
           </div>
-          <span className="w-12 shrink-0 font-mono text-[10px] font-bold text-warning sm:text-xs">
+          <span className="w-12 shrink-0 font-mono text-xs font-bold text-warning sm:text-sm">
             ~{formatPercent(USSR_COMPARISON.taxToGdpPeak)}
           </span>
         </div>
-        <p className="mt-1 font-mono text-[10px] text-warning/70 italic">
+        <p className="mt-1 font-mono text-xs text-warning/70 italic">
           {t("ussrNote")}
         </p>
 
@@ -106,11 +107,11 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
           {t("franceDelta", { delta: FRANCE_OECD_DELTA })}
         </p>
 
-        <div className="mt-2 flex items-center justify-between">
-          <span className="font-mono text-[10px] text-gray-500">
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-muted">
             {t("source")}
           </span>
-          <span className="font-mono text-[10px] text-gray-500 group-hover:text-blanc">
+          <span className="font-mono text-xs text-muted group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

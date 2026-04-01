@@ -37,7 +37,7 @@ export function SalaryContributionsDetail() {
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
@@ -76,16 +76,16 @@ export function SalaryContributionsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("contribution")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("employer")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("employee")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("total")}
                 </th>
               </tr>
@@ -141,7 +141,7 @@ export function SalaryContributionsDetail() {
                 delta: SOCIAL_CONTRIBUTIONS_TOTALS.total - USSR_COMPARISON.socialContributions,
               })}
             </p>
-            <p className="mt-2 font-mono text-[10px] text-gray-500">
+            <p className="mt-2 font-mono text-xs text-muted">
               {t("ussrSource")}
             </p>
           </div>
@@ -177,19 +177,19 @@ export function SalaryContributionsDetail() {
         <h2 className="mb-2 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
           {t("journeyTitle")}
         </h2>
-        <p className="mb-6 font-mono text-xs text-gray-500">{t("journeySubtitle")}</p>
+        <p className="mb-6 font-mono text-xs text-muted">{t("journeySubtitle")}</p>
 
         <div className="overflow-x-auto rounded border border-gray-800">
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("step")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
                   {t("stepAmount")}
                 </th>
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-gray-500">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
                   {t("stepDescription")}
                 </th>
               </tr>
@@ -228,7 +228,7 @@ export function SalaryContributionsDetail() {
                   >
                     {row.amount}
                   </td>
-                  <td className="px-4 py-3 text-xs text-gray-500">
+                  <td className="px-4 py-3 text-xs text-muted">
                     {t(row.desc)}
                   </td>
                 </tr>
@@ -241,10 +241,10 @@ export function SalaryContributionsDetail() {
       <FaqSection title={t("faqTitle")} faqs={faqs} />
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-gray-500">
+        <p className="font-mono text-xs text-muted">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-gray-500">
+        <p className="mt-1 font-mono text-xs text-muted">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

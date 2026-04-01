@@ -39,7 +39,7 @@ export function DonateHook({ onOpenDetail }: DonateHookProps) {
             <span className="hidden sm:inline">{t("detail")}</span>
           </p>
         </div>
-        <span className="shrink-0 rounded border border-favorable/30 bg-favorable/5 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-favorable transition-all group-hover:bg-favorable/15 sm:text-xs">
+        <span className="shrink-0 rounded border border-favorable/30 bg-favorable/5 px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-favorable transition-all group-hover:bg-favorable/15 sm:text-sm">
           {t("cta")}
         </span>
       </div>
