@@ -208,18 +208,14 @@
   },
   "timeline": {
     "title": "FISCAL TIMELINE",
-    "ir1914": "Income tax created. Top rate: 2%. A 'temporary' wartime measure.",
-    "tip1928": "TIP created (ancestor of modern fuel excise duty).",
-    "secu1945": "Social Security created. Social contributions begin.",
-    "tva1954": "VAT invented by Maurice Lauré. Initial rate: 16.85%.",
-    "csg1991": "CSG created. Presented as 'temporary'. Initial rate: 1.1%.",
-    "crds1996": "CRDS created to repay social debt. Still active 30 years later.",
-    "ame2000": "AME (healthcare for undocumented immigrants) created.",
-    "tmi2012": "Top rate raised to 45%. 75% 'supertax' attempted (>€1M), struck down.",
-    "pfu2018": "Flat Tax (PFU) created at 30%. Wealth tax (ISF) replaced by IFI.",
-    "carbon2019": "Carbon tax frozen at €44.60/ton after the Yellow Vests movement.",
-    "csg2025": "CSG: still at 9.2%. CRDS: still at 0.5%.",
-    "cdhr2026": "CDHR: minimum 20% effective tax rate. CSG raised to 10.6% on investment income. Flat Tax: 31.4%."
+    "ir1914": "Income tax",
+    "secu1945": "Social security",
+    "tva1954": "Value added tax",
+    "csg1991": "Social contribution",
+    "crds1996": "Social debt repayment",
+    "pfu2018": "Flat tax (PFU)",
+    "carbon2019": "Carbon tax",
+    "cdhr2026": "Minimum tax & CSG increase"
   },
   "ticker": {
     "smic": "MIN WAGE NET 2025: {value}",
