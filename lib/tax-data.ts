@@ -35,6 +35,8 @@ export interface OECDCountry {
 export interface TimelineEvent {
   year: number;
   key: string;
+  color: string;
+  displayValue: string;
 }
 
 // ─── Section 5: Journey of 100€ ──────────────────────────────
@@ -403,18 +405,54 @@ export const US_DIVIDEND_TAX = {
 // Source: docs/tax-data-2025.md §10
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
-  { year: 1914, key: "ir1914" },
-  { year: 1928, key: "tip1928" },
-  { year: 1945, key: "secu1945" },
-  { year: 1954, key: "tva1954" },
-  { year: 1991, key: "csg1991" },
-  { year: 1996, key: "crds1996" },
-  { year: 2000, key: "ame2000" },
-  { year: 2012, key: "tmi2012" },
-  { year: 2018, key: "pfu2018" },
-  { year: 2019, key: "carbon2019" },
-  { year: 2025, key: "csg2025" },
-  { year: 2026, key: "cdhr2026" },
+  {
+    year: 1914,
+    key: "ir1914",
+    color: "#00ff88",
+    displayValue: "2%"
+  },
+  {
+    year: 1945,
+    key: "secu1945",
+    color: "#00d4ff",
+    displayValue: "Cotisations"
+  },
+  {
+    year: 1954,
+    key: "tva1954",
+    color: "#ffb020",
+    displayValue: "16.85%"
+  },
+  {
+    year: 1991,
+    key: "csg1991",
+    color: "#ff2d2d",
+    displayValue: "9.2%"
+  },
+  {
+    year: 1996,
+    key: "crds1996",
+    color: "#ff9500",
+    displayValue: "0.5%"
+  },
+  {
+    year: 2018,
+    key: "pfu2018",
+    color: "#00ffff",
+    displayValue: "30%"
+  },
+  {
+    year: 2019,
+    key: "carbon2019",
+    color: "#9d4edd",
+    displayValue: "44.60€/t"
+  },
+  {
+    year: 2026,
+    key: "cdhr2026",
+    color: "#ff2d2d",
+    displayValue: "CSG+10.6%"
+  },
 ];
 
 // ─── Economic indicators ──────────────────────────────────────
