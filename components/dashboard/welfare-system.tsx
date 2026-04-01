@@ -21,12 +21,12 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconHandshake className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
@@ -36,13 +36,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
             <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
               {t("rsaTitle")}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("rsaDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-favorable">
               {t("rsaAmount", { amount: formatNumber(WELFARE_DATA.rsa.amountSingle, 2) })}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("rsaBeneficiaries", { count: "2M" })}
             </p>
           </div>
@@ -52,13 +52,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
             <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
               {t("aahTitle")}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("aahDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-favorable">
               {t("aahAmount", { amount: formatNumber(WELFARE_DATA.aah.amountMax, 2) })}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("aahCondition")}
             </p>
           </div>
@@ -68,13 +68,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
             <p className="font-display text-xs font-bold uppercase tracking-wider text-warning">
               {t("areTitle")}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("areDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-warning">
               {t("areCalc", { rate: WELFARE_DATA.are.calcRate })}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("areMin", { amount: WELFARE_DATA.are.minDaily })}
             </p>
           </div>
@@ -84,26 +84,26 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
             <p className="font-display text-xs font-bold uppercase tracking-wider text-danger">
               {t("ameTitle")}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("ameDesc")}
             </p>
             <p className="mt-1 font-mono text-lg font-bold text-danger">
               {t("ameBudget", { amount: WELFARE_DATA.ame.budget })}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("ameBeneficiaries", { count: "466 000" })}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("ameCostPerCapita", { amount: WELFARE_DATA.ame.costPerCapita })}
             </p>
           </div>
         </div>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

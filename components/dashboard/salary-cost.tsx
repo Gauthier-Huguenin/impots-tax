@@ -25,19 +25,19 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconBriefcase className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
         <div className="scroll-hint overflow-x-auto">
           <table className="w-full font-mono text-sm">
             <thead>
-              <tr className="border-b border-gray-700 text-sm uppercase text-muted">
+              <tr className="border-b border-gray-700 text-sm uppercase text-blanc">
                 <th className="py-2 pr-2 text-left">{t("contribution")}</th>
                 <th className="px-2 py-2 text-right text-xs sm:text-sm">
                   {t("employerCol")}
@@ -54,22 +54,22 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
               {SOCIAL_CONTRIBUTIONS.map((row) => (
                 <tr
                   key={row.key}
-                  className="border-b border-gray-800/50 text-gray-300"
+                  className="border-b border-gray-800/50 text-blanc"
                 >
-                  <td className="py-1.5 pr-2 text-sm text-slate-300">
+                  <td className="py-1.5 pr-2 text-sm text-blanc">
                     {t(row.key as "health")}
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employer === null ? "text-muted" : ""}>
+                    <span className={row.employer === null ? "text-blanc" : ""}>
                       {formatRate(row.employer)}
                     </span>
                   </td>
                   <td className="px-2 py-1.5 text-right">
-                    <span className={row.employee === null ? "text-muted" : ""}>
+                    <span className={row.employee === null ? "text-blanc" : ""}>
                       {formatRate(row.employee)}
                     </span>
                   </td>
-                  <td className="py-1.5 pl-2 text-right text-gray-200">
+                  <td className="py-1.5 pl-2 text-right text-blanc">
                     {formatRate(row.total)}
                   </td>
                 </tr>
@@ -94,10 +94,10 @@ export function SalaryCost({ onOpenDetail }: SalaryCostProps) {
         </div>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

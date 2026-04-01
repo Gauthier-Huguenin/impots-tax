@@ -19,7 +19,7 @@ export function ReportButton() {
     <>
       <button
         onClick={handleOpen}
-        className="flex items-center gap-1.5 font-mono text-xs text-slate-300 transition-colors hover:text-warning"
+        className="flex items-center gap-1.5 font-mono text-xs text-blanc transition-colors hover:text-warning"
       >
         <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2}>
           <circle cx="12" cy="12" r="10" />

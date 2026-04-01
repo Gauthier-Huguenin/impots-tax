@@ -7,7 +7,7 @@ const STRIPE_LINK = "https://buy.stripe.com/4gMdRb8dl6JGafxcHp53O01";
 
 const BREAKDOWN_STEPS = [
   { key: "stepDonation", amount: "10.00 €", className: "text-favorable" },
-  { key: "stepStripe", amount: "-0.40 €", className: "text-slate-300" },
+  { key: "stepStripe", amount: "-0.40 €", className: "text-blanc" },
   { key: "stepRevenue", amount: "9.60 €", className: "text-blanc" },
   { key: "stepUrssaf", amount: "-2.11 €", className: "text-danger" },
   { key: "stepIR", amount: "-0.40 €", className: "text-warning" },
@@ -24,14 +24,14 @@ export function DonateDetail() {
         <h1 className="font-display text-2xl font-extrabold uppercase tracking-widest text-danger sm:text-3xl">
           {t("title")}
         </h1>
-        <p className="mt-1 font-mono text-xs font-light uppercase tracking-wider text-muted">
+        <p className="mt-1 font-mono text-xs font-light uppercase tracking-wider text-blanc">
           {t("subtitle")}
         </p>
       </div>
 
       {/* Intro */}
-      <div className="mb-8 rounded border border-blanc/20 bg-panel p-5 sm:p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+      <div className="mb-8 rounded border-2 border-blanc bg-panel p-5 sm:p-6">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </div>
@@ -45,7 +45,7 @@ export function DonateDetail() {
         <div className="overflow-x-auto">
           <table className="w-full font-mono text-sm">
             <thead>
-              <tr className="border-b border-blanc/10 text-left text-xs font-medium uppercase tracking-wider text-muted">
+              <tr className="border-b border-blanc/10 text-left text-xs font-medium uppercase tracking-wider text-blanc">
                 <th className="pb-2 pr-4">{t("step")}</th>
                 <th className="pb-2 pr-4 text-right">{t("amount")}</th>
                 <th className="pb-2">{t("description")}</th>
@@ -63,7 +63,7 @@ export function DonateDetail() {
                   <td className={`py-2.5 pr-4 text-right tabular-nums ${step.className}`}>
                     {step.amount}
                   </td>
-                  <td className="py-2.5 text-slate-300">
+                  <td className="py-2.5 text-blanc">
                     {t(`${step.key}Desc`)}
                   </td>
                 </tr>
@@ -75,8 +75,8 @@ export function DonateDetail() {
 
       {/* Summary boxes */}
       <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded border border-blanc/20 bg-panel p-4 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
+        <div className="rounded border-2 border-blanc bg-panel p-4 text-center">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-blanc">
             {t("summaryYouGive")}
           </p>
           <p className="mt-1 font-mono text-xl font-extrabold text-favorable">
@@ -84,42 +84,42 @@ export function DonateDetail() {
           </p>
         </div>
         <div className="rounded border border-danger/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-blanc">
             {t("summaryStateGets")}
           </p>
           <p className="mt-1 font-mono text-xl font-extrabold text-danger">
             2.51 €
           </p>
-          <p className="mt-0.5 font-mono text-xs font-light text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-blanc">
             25.1% {t("summaryPercent")}
           </p>
         </div>
-        <div className="rounded border border-blanc/10 bg-panel p-4 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
+        <div className="rounded border-2 border-blanc bg-panel p-4 text-center">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-blanc">
             {t("summaryStripeGets")}
           </p>
-          <p className="mt-1 font-mono text-xl font-bold text-slate-300">
+          <p className="mt-1 font-mono text-xl font-bold text-blanc">
             0.40 €
           </p>
-          <p className="mt-0.5 font-mono text-xs font-light text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-blanc">
             4.0% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border border-favorable/30 bg-panel p-4 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-wider text-muted">
+          <p className="font-mono text-xs font-medium uppercase tracking-wider text-blanc">
             {t("summaryIGet")}
           </p>
           <p className="mt-1 font-mono text-xl font-extrabold text-favorable">
             7.09 €
           </p>
-          <p className="mt-0.5 font-mono text-xs font-light text-muted">
+          <p className="mt-0.5 font-mono text-xs font-light text-blanc">
             70.9% {t("summaryPercent")}
           </p>
         </div>
       </div>
 
       {/* Visual bar */}
-      <div className="mb-8 overflow-hidden rounded border border-blanc/20 bg-panel">
+      <div className="mb-8 overflow-hidden rounded border-2 border-blanc bg-panel">
         <div className="flex h-8">
           <div
             className="flex items-center justify-center bg-favorable/80 text-xs font-bold text-background"
@@ -139,7 +139,7 @@ export function DonateDetail() {
           >
           </div>
         </div>
-        <div className="flex justify-between px-3 py-1.5 text-xs text-muted">
+        <div className="flex justify-between px-3 py-1.5 text-xs text-blanc">
           <span>{t("summaryIGet")}</span>
           <span>{t("summaryStateGets")}</span>
           <span>Stripe</span>
@@ -151,17 +151,17 @@ export function DonateDetail() {
         <h2 className="mb-3 font-display text-lg font-bold uppercase tracking-wider text-warning">
           {t("verdictTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("verdictDesc")}
         </p>
       </div>
 
       {/* Micro-entrepreneur explanation */}
-      <div className="mb-8 rounded border border-blanc/10 bg-panel p-5 sm:p-6">
-        <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-slate-300">
+      <div className="mb-8 rounded border-2 border-blanc bg-panel p-5 sm:p-6">
+        <h2 className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-blanc">
           {t("microEntrepreneurTitle")}
         </h2>
-        <p className="font-mono text-xs leading-relaxed text-slate-300">
+        <p className="font-mono text-xs leading-relaxed text-blanc">
           {t("microEntrepreneurDesc")}
         </p>
       </div>
@@ -171,7 +171,7 @@ export function DonateDetail() {
         <h2 className="mb-3 font-display text-lg font-bold uppercase tracking-wider text-favorable">
           {t("ctaTitle")}
         </h2>
-        <p className="mx-auto mb-6 max-w-md font-mono text-sm text-slate-300">
+        <p className="mx-auto mb-6 max-w-md font-mono text-sm text-blanc">
           {t("ctaDesc")}
         </p>
         <a
@@ -186,13 +186,13 @@ export function DonateDetail() {
           </svg>
           {t("ctaButton")}
         </a>
-        <p className="mt-3 font-mono text-xs font-light text-muted">
+        <p className="mt-3 font-mono text-xs font-light text-blanc">
           {t("ctaNote")}
         </p>
       </div>
 
       {/* Source */}
-      <p className="mb-4 font-mono text-xs font-light text-muted">
+      <p className="mb-4 font-mono text-xs font-light text-blanc">
         {t("source")}
       </p>
     </>

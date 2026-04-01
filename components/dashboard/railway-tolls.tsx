@@ -20,19 +20,19 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconTrain className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
         {/* Headline: TGV share */}
         <p className="mb-3 text-center font-mono text-2xl font-bold text-danger">
           {RAILWAY_TOLLS.tgvShare}%{" "}
-          <span className="text-sm text-slate-300">{t("tgvShare")}</span>
+          <span className="text-sm text-blanc">{t("tgvShare")}</span>
         </p>
 
         {/* Key figures */}
@@ -41,7 +41,7 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
             <p className="font-mono text-lg font-bold text-warning">
               {RAILWAY_TOLLS.terShare}%
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("terShare")}
             </p>
           </div>
@@ -49,7 +49,7 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
             <p className="font-mono text-lg font-bold text-danger">
               &gt;{RAILWAY_TOLLS.totalRevenue}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("totalRevenue")}
             </p>
           </div>
@@ -60,20 +60,20 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
           <p className="font-mono text-lg font-bold text-danger">
             +{RAILWAY_TOLLS.annualIncrease}%
           </p>
-          <p className="font-mono text-[10px] text-muted">
+          <p className="font-mono text-[10px] text-blanc">
             {t("annualIncrease")}
           </p>
         </div>
 
-        <p className="mt-2 font-mono text-xs text-muted">
+        <p className="mt-2 font-mono text-xs text-blanc">
           {t("sncfNote", { revenue: RAILWAY_TOLLS.groupRevenue })}
         </p>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

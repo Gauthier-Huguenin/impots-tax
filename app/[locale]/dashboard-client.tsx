@@ -179,8 +179,8 @@ export function DashboardClient() {
       <div className="mx-auto max-w-7xl px-4 py-6">
         {/* Direct Taxes */}
         <section id="direct-taxes" className="scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-danger">
-            <span className="inline-block h-3 w-0.5 bg-danger" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-danger" />
             {t("directTaxes")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -193,8 +193,8 @@ export function DashboardClient() {
 
         {/* Indirect Taxes */}
         <section id="indirect-taxes" className="mt-8 scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-warning">
-            <span className="inline-block h-3 w-0.5 bg-warning" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-warning" />
             {t("indirectTaxes")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -208,8 +208,8 @@ export function DashboardClient() {
 
         {/* Income & Welfare */}
         <section id="income-welfare" className="mt-8 scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-favorable">
-            <span className="inline-block h-3 w-0.5 bg-favorable" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-favorable" />
             {t("incomeWelfare")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -223,8 +223,8 @@ export function DashboardClient() {
 
         {/* Real Estate */}
         <section id="real-estate" className="mt-8 scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-blanc">
-            <span className="inline-block h-3 w-0.5 bg-blanc" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-blanc" />
             {t("realEstate")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -235,8 +235,8 @@ export function DashboardClient() {
 
         {/* Wealth Transfer */}
         <section id="wealth-transfer" className="mt-8 scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-danger">
-            <span className="inline-block h-3 w-0.5 bg-danger" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-danger" />
             {t("wealthTransfer")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -247,8 +247,8 @@ export function DashboardClient() {
 
         {/* Infrastructure */}
         <section id="infrastructure" className="mt-8 scroll-mt-28">
-          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-muted">
-            <span className="inline-block h-3 w-0.5 bg-muted" />
+          <h3 className="mb-6 flex items-center gap-3 font-display text-sm font-black uppercase tracking-wider text-blanc sm:text-base">
+            <span className="inline-block h-4 w-1 bg-muted" />
             {t("infrastructure")}
           </h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">

@@ -13,42 +13,42 @@ export function BehavioralTaxDetail() {
   return (
     <>
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
 
       {/* Tobacco breakdown */}
       <section className="mb-10">
-        <h2 className="mb-2 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-2 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("tobaccoTitle")}
         </h2>
-        <p className="mb-2 font-mono text-xs text-muted">{t("tobaccoPMP")}</p>
+        <p className="mb-2 font-mono text-xs text-blanc">{t("tobaccoPMP")}</p>
         <p className="mb-6 font-mono text-xs text-warning">{t("tobaccoTarget")}</p>
 
         <div className="overflow-x-auto rounded border border-gray-800">
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-blanc">
                   {t("component")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("amount")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("percent")}
                 </th>
               </tr>
@@ -56,13 +56,13 @@ export function BehavioralTaxDetail() {
             <tbody>
               {TOBACCO_BREAKDOWN.map((component) => (
                 <tr key={component.key} className="border-b border-gray-800/50">
-                  <td className={`px-4 py-3 ${component.isTax ? "text-danger" : "text-gray-300"}`}>
+                  <td className={`px-4 py-3 ${component.isTax ? "text-danger" : "text-blanc"}`}>
                     {t(component.key as "accise")}
                   </td>
-                  <td className={`px-4 py-3 text-right ${component.isTax ? "text-danger" : "text-gray-300"}`}>
+                  <td className={`px-4 py-3 text-right ${component.isTax ? "text-danger" : "text-blanc"}`}>
                     {component.amount.toFixed(2)} \u20ac
                   </td>
-                  <td className={`px-4 py-3 text-right ${component.isTax ? "text-danger" : "text-gray-300"}`}>
+                  <td className={`px-4 py-3 text-right ${component.isTax ? "text-danger" : "text-blanc"}`}>
                     ~{component.percent}%
                   </td>
                 </tr>
@@ -92,7 +92,7 @@ export function BehavioralTaxDetail() {
             />
           ))}
         </div>
-        <div className="mt-2 flex justify-between font-mono text-xs text-muted">
+        <div className="mt-2 flex justify-between font-mono text-xs text-blanc">
           <span>{TOBACCO_PACK_PRICE} \u20ac</span>
           <span>~{TOBACCO_TAX_PERCENT}% taxes</span>
         </div>
@@ -100,10 +100,10 @@ export function BehavioralTaxDetail() {
 
       {/* Accise detail */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("acciseDetailTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-slate-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-danger">&#9656;</span> {t("acciseProportional")}
           </li>
@@ -121,36 +121,36 @@ export function BehavioralTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-warning">
           {t("evolutionTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("evolutionDesc")}
         </p>
       </section>
 
       {/* Alcohol */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("alcoholTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-slate-300 italic">
+        <p className="font-mono text-sm leading-relaxed text-blanc italic">
           {t("alcoholDesc")}
         </p>
       </section>
 
       {/* Sugar tax */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("sugarTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-slate-300 italic">
+        <p className="font-mono text-sm leading-relaxed text-blanc italic">
           {t("sugarDesc")}
         </p>
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-muted">
+        <p className="font-mono text-xs text-blanc">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

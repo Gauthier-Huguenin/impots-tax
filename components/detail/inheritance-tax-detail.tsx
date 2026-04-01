@@ -23,30 +23,30 @@ export function InheritanceTaxDetail() {
   return (
     <>
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
 
       {/* Bracket table */}
       <section className="mb-10">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("bracketsTitle")}
         </h2>
-        <p className="mb-4 font-mono text-xs text-muted">
+        <p className="mb-4 font-mono text-xs text-blanc">
           {t("allowanceNote")}
         </p>
 
@@ -54,10 +54,10 @@ export function InheritanceTaxDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-blanc">
                   {t("bracket")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("rate")}
                 </th>
               </tr>
@@ -65,7 +65,7 @@ export function InheritanceTaxDetail() {
             <tbody>
               {INHERITANCE_BRACKETS.map((bracket, i) => (
                 <tr key={i} className="border-b border-gray-800/50">
-                  <td className="px-4 py-3 text-gray-300">
+                  <td className="px-4 py-3 text-blanc">
                     {formatAmount(bracket.min)} € — {bracket.max ? `${formatAmount(bracket.max)} €` : "∞"}
                   </td>
                   <td className={`px-4 py-3 text-right font-bold ${bracket.rate >= 40 ? "text-danger" : bracket.rate >= 20 ? "text-warning" : "text-favorable"}`}>
@@ -76,20 +76,20 @@ export function InheritanceTaxDetail() {
             </tbody>
           </table>
         </div>
-        <p className="mt-3 font-mono text-xs text-muted">
+        <p className="mt-3 font-mono text-xs text-blanc">
           {t("frozenNote")}
         </p>
       </section>
 
       {/* Other transfers */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("othersTitle")}
         </h2>
 
         <div className="mb-4">
           <h3 className="mb-2 font-mono text-sm font-bold text-warning">{t("siblingsTitle")}</h3>
-          <ul className="space-y-1 font-mono text-sm text-slate-300">
+          <ul className="space-y-1 font-mono text-sm text-blanc">
             <li className="flex items-start gap-2">
               <span className="text-warning">&#9658;</span> {t("siblingsAllowance")}
             </li>
@@ -104,7 +104,7 @@ export function InheritanceTaxDetail() {
 
         <div>
           <h3 className="mb-2 font-mono text-sm font-bold text-danger">{t("nonRelativeTitle")}</h3>
-          <p className="font-mono text-sm text-slate-300">
+          <p className="font-mono text-sm text-blanc">
             {t("nonRelativeDesc")}
           </p>
         </div>
@@ -112,10 +112,10 @@ export function InheritanceTaxDetail() {
 
       {/* Life insurance */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("lifeInsuranceTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-slate-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-favorable">&#9658;</span> {t("lifeInsuranceBefore70")}
           </li>
@@ -130,27 +130,27 @@ export function InheritanceTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-warning">
           {t("dutreilTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("dutreilDesc")}
         </p>
       </section>
 
       {/* International comparison */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("comparisonTitle")}
         </h2>
         <div className="overflow-x-auto rounded border border-gray-800">
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-blanc">
                   {t("comparisonCountry")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("comparisonRate")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("comparisonAllowance")}
                 </th>
               </tr>
@@ -164,7 +164,7 @@ export function InheritanceTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-danger">
           {t("statsTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-danger">&#9658;</span> {t("totalRevenue")}
           </li>
@@ -186,10 +186,10 @@ export function InheritanceTaxDetail() {
       <FaqSection title={t("faqTitle")} faqs={faqs} />
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-muted">
+        <p className="font-mono text-xs text-blanc">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -10,37 +10,37 @@ export function RailwayTollsDetail() {
   return (
     <>
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
 
       {/* System description */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("systemTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("systemDesc")}
         </p>
       </section>
 
       {/* Toll share in ticket */}
       <section className="mb-10">
-        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("shareTitle")}
         </h2>
 
@@ -48,21 +48,21 @@ export function RailwayTollsDetail() {
           <table className="w-full font-mono text-sm">
             <thead>
               <tr className="border-b border-gray-800 bg-[#0f1218]">
-                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-left text-xs uppercase tracking-wide text-blanc">
                   {t("trainType")}
                 </th>
-                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-muted">
+                <th className="px-4 py-3 text-right text-xs uppercase tracking-wide text-blanc">
                   {t("sharePercent")}
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-800/50">
-                <td className="px-4 py-3 text-gray-300">{t("tgv")}</td>
+                <td className="px-4 py-3 text-blanc">{t("tgv")}</td>
                 <td className="px-4 py-3 text-right text-danger">{RAILWAY_TOLLS.tgvShare}%</td>
               </tr>
               <tr className="border-b border-gray-800/50">
-                <td className="px-4 py-3 text-gray-300">{t("ter")}</td>
+                <td className="px-4 py-3 text-blanc">{t("ter")}</td>
                 <td className="px-4 py-3 text-right text-warning">{RAILWAY_TOLLS.terShare}%</td>
               </tr>
             </tbody>
@@ -72,7 +72,7 @@ export function RailwayTollsDetail() {
         {/* Visual bars */}
         <div className="mt-4 space-y-3">
           <div>
-            <div className="mb-1 flex justify-between font-mono text-xs text-muted">
+            <div className="mb-1 flex justify-between font-mono text-xs text-blanc">
               <span>TGV</span>
               <span>{RAILWAY_TOLLS.tgvShare}%</span>
             </div>
@@ -81,7 +81,7 @@ export function RailwayTollsDetail() {
             </div>
           </div>
           <div>
-            <div className="mb-1 flex justify-between font-mono text-xs text-muted">
+            <div className="mb-1 flex justify-between font-mono text-xs text-blanc">
               <span>TER</span>
               <span>{RAILWAY_TOLLS.terShare}%</span>
             </div>
@@ -97,7 +97,7 @@ export function RailwayTollsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-danger">
           {t("financialsTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-gray-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-danger">▸</span> {t("totalRevenue")}
           </li>
@@ -112,10 +112,10 @@ export function RailwayTollsDetail() {
 
       {/* Toll increases */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("increasesTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-slate-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-danger">▸</span> {t("increase2024")}
           </li>
@@ -136,7 +136,7 @@ export function RailwayTollsDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-warning">
           {t("vatTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-slate-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-warning">▸</span> {t("vatDomestic")}
           </li>
@@ -147,10 +147,10 @@ export function RailwayTollsDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-muted">
+        <p className="font-mono text-xs text-blanc">
           {td("sources")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -20,16 +20,16 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
       role="button"
       tabIndex={0}
       aria-label={t("title")}
-      className="group block cursor-pointer"
+      className="group flex flex-col cursor-pointer h-full"
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="flex flex-col flex-1 rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconGlobe className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
@@ -47,7 +47,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
                       ? "font-bold text-danger"
                       : isAverage
                         ? "text-blanc"
-                        : "text-slate-300"
+                        : "text-blanc"
                   }`}
                 >
                   {t(country.key as "france")}
@@ -72,7 +72,7 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
                       ? "text-danger"
                       : isAverage
                         ? "text-blanc"
-                        : "text-muted"
+                        : "text-blanc"
                   }`}
                 >
                   {formatPercent(country.taxToGdp)}
@@ -108,10 +108,10 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
         </p>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

@@ -12,26 +12,26 @@ export function ComparisonDetail() {
   return (
     <>
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
 
       {/* Ranking */}
       <section className="mb-10">
-        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("rankingTitle")}
         </h2>
 
@@ -47,8 +47,8 @@ export function ComparisonDetail() {
             const textColor = isFrance
               ? "text-danger"
               : isAverage
-                ? "text-slate-300"
-                : "text-gray-300";
+                ? "text-blanc"
+                : "text-blanc";
             const borderClass = isFrance
               ? "border-danger/30 bg-danger/5"
               : isAverage
@@ -107,10 +107,10 @@ export function ComparisonDetail() {
 
       {/* Analysis */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("analysisTitle")}
         </h2>
-        <div className="space-y-4 font-mono text-sm leading-relaxed text-gray-300">
+        <div className="space-y-4 font-mono text-sm leading-relaxed text-blanc">
           <p>{t("analysisP1")}</p>
           <p>{t("analysisP2")}</p>
           <p>{t("analysisP3")}</p>
@@ -118,10 +118,10 @@ export function ComparisonDetail() {
       </section>
 
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-muted">
+        <p className="font-mono text-xs text-blanc">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

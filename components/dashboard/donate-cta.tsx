@@ -11,7 +11,7 @@ export function DonateCta({ onOpenDetail }: DonateCtaProps) {
 
   return (
     <div
-      className="rounded border border-favorable/20 bg-panel p-5 sm:p-6 scanlines cursor-pointer transition-colors hover:border-favorable/40"
+      className="rounded border-2 border-blanc bg-panel p-5 sm:p-6 scanlines cursor-pointer transition-colors hover:border-blanc"
       onClick={onOpenDetail}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -27,7 +27,7 @@ export function DonateCta({ onOpenDetail }: DonateCtaProps) {
           <h3 className="font-display text-base font-bold uppercase tracking-wider text-favorable">
             {t("title")}
           </h3>
-          <p className="mt-1 font-mono text-xs text-muted">
+          <p className="mt-1 font-mono text-xs text-blanc">
             {t("desc")}
           </p>
         </div>

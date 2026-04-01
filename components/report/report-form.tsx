@@ -132,10 +132,10 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
           </svg>
         </div>
         <p className="font-mono text-sm text-favorable">{t("successTitle")}</p>
-        <p className="text-xs text-slate-300">{t("successDesc")}</p>
+        <p className="text-xs text-blanc">{t("successDesc")}</p>
         <button
           onClick={onClose}
-          className="mt-2 rounded border border-gray-700 px-4 py-1.5 font-mono text-xs text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
+          className="mt-2 rounded border border-gray-700 px-4 py-1.5 font-mono text-xs text-blanc transition-colors hover:border-gray-500 hover:text-white"
         >
           {t("close")}
         </button>
@@ -147,7 +147,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div>
         <h2 className="font-display text-lg font-bold uppercase tracking-wider text-white">{t("title")}</h2>
-        <p className="mt-1 text-xs font-light text-slate-300">{t("subtitle")}</p>
+        <p className="mt-1 text-xs font-light text-blanc">{t("subtitle")}</p>
       </div>
 
       {/* Type selector */}
@@ -160,7 +160,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
             className={`rounded border px-3 py-2 font-mono text-xs transition-colors ${
               reportType === type
                 ? "border-info/50 bg-info/10 text-info font-semibold"
-                : "border-gray-700 text-slate-300 font-medium hover:border-gray-500 hover:text-gray-200"
+                : "border-gray-700 text-blanc font-medium hover:border-gray-500 hover:text-blanc"
             }`}
           >
             {t(`type_${type}`)}
@@ -188,7 +188,7 @@ export function ReportForm({ onClose }: { onClose: () => void }) {
 
         {/* Email (always shown) */}
         <div className="flex flex-col gap-1">
-          <label className="font-mono text-xs font-medium text-gray-300">
+          <label className="font-mono text-xs font-medium text-blanc">
             {t("field_email")}
             <span className="ml-1 text-muted">{t("optional")}</span>
           </label>
@@ -248,7 +248,7 @@ function FieldInput({ field, value, onChange, label, placeholder, required, opti
 
   return (
     <div className="flex flex-col gap-1">
-      <label className="font-mono text-xs text-gray-300">
+      <label className="font-mono text-xs text-blanc">
         {label}
         {required && <span className="ml-1 text-danger">*</span>}
         {!required && <span className="ml-1 text-muted">{t("optional")}</span>}

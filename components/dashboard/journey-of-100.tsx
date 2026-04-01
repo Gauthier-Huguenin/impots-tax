@@ -19,7 +19,7 @@ export function JourneyOf100() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4">
-      <div className="relative overflow-hidden rounded border border-blanc/20 bg-panel p-5 sm:p-6 scanlines">
+      <div className="relative overflow-hidden rounded border-2 border-blanc bg-panel p-5 sm:p-6 scanlines">
         <div className="relative z-10">
           {/* Title */}
           <div className="mb-4 flex items-baseline justify-between gap-4">
@@ -27,7 +27,7 @@ export function JourneyOf100() {
               <IconEuro className="shrink-0" />
               {t("title")}
             </h2>
-            <span className="hidden font-mono text-xs font-light text-muted sm:inline sm:text-sm">
+            <span className="hidden font-mono text-xs font-light text-blanc sm:inline sm:text-sm">
               {t("source")}
             </span>
           </div>
@@ -48,7 +48,7 @@ export function JourneyOf100() {
             {SEGMENTS.map((s, i) => (
               <div key={s.key} className="flex items-center gap-2">
                 <span className={`inline-block h-3 w-3 shrink-0 rounded-sm ${s.color}`} />
-                <span className="font-mono text-sm text-slate-300">
+                <span className="font-mono text-sm text-blanc">
                   {i + 1}. {s.key === "remaining"
                     ? t("realPurchasingPower")
                     : t(s.key)}
@@ -67,25 +67,25 @@ export function JourneyOf100() {
           {/* 3 key numbers */}
           <div className="mt-4 flex items-center justify-around border-t border-gray-800 pt-4">
             <div className="text-center">
-              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-blanc sm:text-sm">
                 {t("employerPays")}
               </p>
               <p className="font-mono text-2xl font-extrabold text-blanc sm:text-3xl">
                 {formatEuro(employerCost)}
               </p>
             </div>
-            <div className="text-3xl text-muted sm:text-4xl">→</div>
+            <div className="text-3xl text-blanc sm:text-4xl">→</div>
             <div className="text-center">
-              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-blanc sm:text-sm">
                 {t("youReceive")}
               </p>
               <p className="font-mono text-2xl font-extrabold text-favorable sm:text-3xl">
                 {formatEuro(realPurchasingPower)}
               </p>
             </div>
-            <div className="text-3xl text-muted sm:text-4xl">→</div>
+            <div className="text-3xl text-blanc sm:text-4xl">→</div>
             <div className="text-center">
-              <p className="font-mono text-xs font-medium uppercase tracking-wide text-muted sm:text-sm">
+              <p className="font-mono text-xs font-medium uppercase tracking-wide text-blanc sm:text-sm">
                 {t("extractionRate")}
               </p>
               <p className="font-mono text-2xl font-black text-danger animate-glow sm:text-3xl">

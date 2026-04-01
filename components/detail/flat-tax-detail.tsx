@@ -20,20 +20,20 @@ export function FlatTaxDetail() {
     <>
       {/* Header */}
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-bold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
@@ -42,21 +42,21 @@ export function FlatTaxDetail() {
       <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* 2025 */}
         <div className="rounded border border-gray-800 bg-[#0f1218] p-6">
-          <h2 className="mb-4 font-display text-lg font-bold uppercase tracking-wider text-gray-100">
+          <h2 className="mb-4 font-display text-lg font-bold uppercase tracking-wider text-blanc">
             {t("rates2025Title")}
           </h2>
           <table className="w-full font-mono text-sm">
             <tbody>
               <tr className="border-b border-gray-800">
-                <td className="py-2 text-slate-300">{t("componentIR")}</td>
+                <td className="py-2 text-blanc">{t("componentIR")}</td>
                 <td className="py-2 text-right text-blanc">{FLAT_TAX_2025.ir}%</td>
               </tr>
               <tr className="border-b border-gray-800">
-                <td className="py-2 text-slate-300">{t("componentSocial")}</td>
+                <td className="py-2 text-blanc">{t("componentSocial")}</td>
                 <td className="py-2 text-right text-warning">{FLAT_TAX_2025.social}%</td>
               </tr>
               <tr>
-                <td className="py-2 font-bold text-gray-200">{t("componentTotal")}</td>
+                <td className="py-2 font-bold text-blanc">{t("componentTotal")}</td>
                 <td className="py-2 text-right text-2xl font-bold text-blanc">{FLAT_TAX_2025.total}%</td>
               </tr>
             </tbody>
@@ -71,15 +71,15 @@ export function FlatTaxDetail() {
           <table className="w-full font-mono text-sm">
             <tbody>
               <tr className="border-b border-gray-800">
-                <td className="py-2 text-slate-300">{t("componentIR")}</td>
+                <td className="py-2 text-blanc">{t("componentIR")}</td>
                 <td className="py-2 text-right text-blanc">{FLAT_TAX_2026.ir}%</td>
               </tr>
               <tr className="border-b border-gray-800">
-                <td className="py-2 text-slate-300">{t("componentSocial")}</td>
+                <td className="py-2 text-blanc">{t("componentSocial")}</td>
                 <td className="py-2 text-right text-danger">{FLAT_TAX_2026.social}%</td>
               </tr>
               <tr>
-                <td className="py-2 font-bold text-gray-200">{t("componentTotal")}</td>
+                <td className="py-2 font-bold text-blanc">{t("componentTotal")}</td>
                 <td className="py-2 text-right text-2xl font-bold text-danger">{FLAT_TAX_2026.total}%</td>
               </tr>
             </tbody>
@@ -92,17 +92,17 @@ export function FlatTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-danger">
           {t("changeTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("changeDesc")}
         </p>
       </section>
 
       {/* Scope */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("scopeTitle")}
         </h2>
-        <ul className="space-y-2 font-mono text-sm text-slate-300">
+        <ul className="space-y-2 font-mono text-sm text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-blanc">▸</span> {t("scopeDividends")}
           </li>
@@ -120,20 +120,20 @@ export function FlatTaxDetail() {
 
       {/* Exceptions */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("exceptionTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("exceptionDesc")}
         </p>
       </section>
 
       {/* Progressive scale option */}
-      <section className="mb-10 rounded border border-blanc/30 bg-blanc/5 p-6">
+      <section className="mb-10 rounded border-2 border-blanc bg-blanc/5 p-6">
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("optionTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("optionDesc")}
         </p>
       </section>
@@ -142,10 +142,10 @@ export function FlatTaxDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs text-muted">
+        <p className="font-mono text-xs text-blanc">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

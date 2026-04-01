@@ -47,12 +47,12 @@ export function MacroIndicators({ onOpenDetail }: MacroIndicatorsProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconGauge className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
@@ -69,7 +69,7 @@ export function MacroIndicators({ onOpenDetail }: MacroIndicatorsProps) {
               >
                 {ind.value}
               </p>
-              <p className="mt-1 font-mono text-xs text-muted">
+              <p className="mt-1 font-mono text-xs text-blanc">
                 {t(ind.key as "debtToGdp")}
               </p>
             </div>
@@ -77,10 +77,10 @@ export function MacroIndicators({ onOpenDetail }: MacroIndicatorsProps) {
         </div>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

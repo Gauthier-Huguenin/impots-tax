@@ -55,7 +55,7 @@ export function SectionNav({ sections }: SectionNavProps) {
               className={`shrink-0 rounded px-3 py-1.5 font-mono text-xs transition-colors ${
                 activeId === section.id
                   ? "bg-danger/15 text-danger"
-                  : "text-muted hover:bg-panel hover:text-slate-300"
+                  : "text-blanc hover:bg-panel hover:text-blanc"
               }`}
             >
               {section.label}

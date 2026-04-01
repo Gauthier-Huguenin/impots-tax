@@ -21,12 +21,12 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconBuilding className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
@@ -35,7 +35,7 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
             <p className="font-mono text-3xl font-bold text-danger">
               {formatPercent(CORPORATE_TAX.normalRate)}
             </p>
-            <p className="mt-1 font-mono text-xs text-slate-300">
+            <p className="mt-1 font-mono text-xs text-blanc">
               {t("normalRate")}
             </p>
           </div>
@@ -43,18 +43,18 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
             <p className="font-mono text-3xl font-bold text-warning">
               {formatPercent(CORPORATE_TAX.pmeRate)}
             </p>
-            <p className="mt-1 font-mono text-xs text-slate-300">
+            <p className="mt-1 font-mono text-xs text-blanc">
               {t("pmeRate")}
             </p>
           </div>
         </div>
 
-        <p className="mt-3 font-mono text-xs text-muted">
+        <p className="mt-3 font-mono text-xs text-blanc">
           {t("pmeCondition", {
             threshold: formatNumber(CORPORATE_TAX.pmeThreshold),
           })}
         </p>
-        <p className="mt-1 font-mono text-xs text-muted">
+        <p className="mt-1 font-mono text-xs text-blanc">
           {t("pmeRequirements")}
         </p>
 
@@ -63,10 +63,10 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
         </p>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>

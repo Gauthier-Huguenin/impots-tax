@@ -44,30 +44,30 @@ export function IncomeTaxDetail() {
     <>
       {/* Header */}
       <header className="mb-10">
-        <h1 className="font-display text-3xl font-extrabold uppercase tracking-wider text-gray-100 md:text-4xl">
+        <h1 className="font-display text-3xl font-extrabold uppercase tracking-wider text-blanc md:text-4xl">
           {t("title")}
         </h1>
         <p className="mt-2 font-mono text-sm font-medium uppercase tracking-wide text-warning">
           {t("subtitle")}
         </p>
-        <p className="mt-1 font-mono text-xs font-light text-muted">
+        <p className="mt-1 font-mono text-xs font-light text-blanc">
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("intro")}
         </p>
       </section>
 
       {/* Tax brackets */}
       <section className="mb-10">
-        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-6 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("bracketsTitle")}
         </h2>
-        <p className="mb-4 font-mono text-xs font-light text-muted">{t("perShare")}</p>
+        <p className="mb-4 font-mono text-xs font-light text-blanc">{t("perShare")}</p>
 
         <div className="space-y-3">
           {IR_BRACKETS.map((bracket, i) => (
@@ -77,10 +77,10 @@ export function IncomeTaxDetail() {
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex-1">
-                  <div className="font-mono text-xs font-medium uppercase tracking-wide text-muted">
+                  <div className="font-mono text-xs font-medium uppercase tracking-wide text-blanc">
                     {t("bracket", { number: i + 1 })} — {t(`bracketLabel${i}` as "bracketLabel0")}
                   </div>
-                  <div className="mt-1 font-mono text-sm text-gray-300">
+                  <div className="mt-1 font-mono text-sm text-blanc">
                     {t(`bracketRange${i}` as "bracketRange0")}
                   </div>
                 </div>
@@ -103,13 +103,13 @@ export function IncomeTaxDetail() {
 
       {/* Family quotient */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
-        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-gray-100">
+        <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-blanc">
           {t("quotientTitle")}
         </h2>
-        <p className="mb-4 font-mono text-sm leading-relaxed text-gray-300">
+        <p className="mb-4 font-mono text-sm leading-relaxed text-blanc">
           {t("quotientDesc")}
         </p>
-        <ul className="space-y-2 font-mono text-sm font-light text-slate-300">
+        <ul className="space-y-2 font-mono text-sm font-light text-blanc">
           <li className="flex items-start gap-2">
             <span className="text-blanc">▸</span> {t("quotientAdult")}
           </li>
@@ -130,14 +130,14 @@ export function IncomeTaxDetail() {
         <h2 className="mb-4 font-display text-xl font-bold uppercase tracking-wider text-danger">
           {t("cdhrTitle")}
         </h2>
-        <p className="font-mono text-sm leading-relaxed text-gray-300">
+        <p className="font-mono text-sm leading-relaxed text-blanc">
           {t("cdhrDesc")}
         </p>
       </section>
 
       {/* Indexation note */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-4">
-        <p className="font-mono text-xs font-light text-muted">
+        <p className="font-mono text-xs font-light text-blanc">
           {t("indexation")}
         </p>
       </section>
@@ -146,10 +146,10 @@ export function IncomeTaxDetail() {
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">
-        <p className="font-mono text-xs font-light text-muted">
+        <p className="font-mono text-xs font-light text-blanc">
           {td("source")} : {t("sourceText")}
         </p>
-        <p className="mt-1 font-mono text-xs font-light text-muted">
+        <p className="mt-1 font-mono text-xs font-light text-blanc">
           {td("lastUpdated", { date: "Mars 2026" })}
         </p>
       </footer>

@@ -26,12 +26,12 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
       onClick={onOpenDetail}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
     >
-      <div className="h-full rounded border border-gray-800 bg-panel p-5 transition-colors group-hover:border-blanc/30">
-        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-slate-300">
+      <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
+        <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">
           <IconHouse className="shrink-0" />
           {t("title")}
         </h2>
-        <p className="mb-4 mt-1 font-mono text-xs text-muted">
+        <p className="mb-4 mt-1 font-mono text-xs text-blanc">
           {t("subtitle")}
         </p>
 
@@ -41,7 +41,7 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
             <p className="font-mono text-lg font-bold text-danger">
               {PROPERTY_TAX.totalRevenue}
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("totalRevenue")}
             </p>
           </div>
@@ -49,7 +49,7 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
             <p className="font-mono text-lg font-bold text-warning">
               {PROPERTY_TAX.avgPerTaxpayer} €
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("avgPerTaxpayer")}
             </p>
           </div>
@@ -57,20 +57,20 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
             <p className="font-mono text-lg font-bold text-danger">
               +{PROPERTY_TAX.increase10Years}%
             </p>
-            <p className="font-mono text-[10px] text-muted">
+            <p className="font-mono text-[10px] text-blanc">
               {t("increase10Years")}
             </p>
           </div>
         </div>
 
         {/* City rates bar chart */}
-        <p className="mb-2 font-mono text-xs text-slate-300">
+        <p className="mb-2 font-mono text-xs text-blanc">
           {t("cityRates")}
         </p>
         <div className="space-y-1.5">
           {TOP_CITIES.map((city) => (
             <div key={city.key} className="flex items-center gap-2">
-              <span className="w-16 shrink-0 text-right font-mono text-xs text-slate-300">
+              <span className="w-16 shrink-0 text-right font-mono text-xs text-blanc">
                 {t(city.key as "paris")}
               </span>
               <div className="relative h-4 flex-1 overflow-hidden rounded-sm bg-background/50">
@@ -87,10 +87,10 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
         </div>
 
         <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
-          <span className="font-mono text-xs text-muted">
+          <span className="font-mono text-xs text-blanc">
             {t("source")}
           </span>
-          <span className="font-mono text-xs text-muted group-hover:text-blanc">
+          <span className="font-mono text-xs text-blanc group-hover:text-blanc">
             {t("details")}
           </span>
         </div>
