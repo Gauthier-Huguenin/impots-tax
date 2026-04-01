@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { SectionNav } from "@/components/dashboard/section-nav";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { TaxBrackets } from "@/components/dashboard/tax-brackets";
 import { CorporateTax } from "@/components/dashboard/corporate-tax";
 import { FlatTax } from "@/components/dashboard/flat-tax";
@@ -153,48 +156,116 @@ export function DashboardClient() {
 
   const DetailComponent = openModal ? MODAL_CONTENT[openModal] : null;
 
+  const t = useTranslations("sectionNav");
+
+  const sections = [
+    { id: "direct-taxes", label: t("directTaxes") },
+    { id: "indirect-taxes", label: t("indirectTaxes") },
+    { id: "income-welfare", label: t("incomeWelfare") },
+    { id: "real-estate", label: t("realEstate") },
+    { id: "wealth-transfer", label: t("wealthTransfer") },
+    { id: "infrastructure", label: t("infrastructure") },
+  ];
+
   return (
     <>
       {/* P1: Donate CTA right after hero */}
       <DonateHook onOpenDetail={open("donate")} />
 
+      {/* Section navigation */}
+      <SectionNav sections={sections} />
+
       {/* Dashboard grid */}
       <div className="mx-auto max-w-7xl px-4 py-6">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <TaxBrackets onOpenDetail={open("income-tax")} />
-          <OECDComparison onOpenDetail={open("comparison")} />
-          <CorporateTax onOpenDetail={open("corporate-tax")} />
-          <FlatTax onOpenDetail={open("flat-tax")} />
-
-          <div className="md:col-span-2">
-            <TVA onOpenDetail={open("vat")} />
+        {/* Direct Taxes */}
+        <section id="direct-taxes" className="scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-danger">
+            <span className="inline-block h-3 w-0.5 bg-danger" />
+            {t("directTaxes")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <TaxBrackets onOpenDetail={open("income-tax")} />
+            <OECDComparison onOpenDetail={open("comparison")} />
+            <CorporateTax onOpenDetail={open("corporate-tax")} />
+            <FlatTax onOpenDetail={open("flat-tax")} />
           </div>
+        </section>
 
-          <div className="md:col-span-2">
-            <SalaryCost onOpenDetail={open("salary-contributions")} />
+        {/* Indirect Taxes */}
+        <section id="indirect-taxes" className="mt-8 scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-warning">
+            <span className="inline-block h-3 w-0.5 bg-warning" />
+            {t("indirectTaxes")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="md:col-span-2">
+              <TVA onOpenDetail={open("vat")} />
+            </div>
+            <FuelTax onOpenDetail={open("fuel-tax")} />
+            <BehavioralTax onOpenDetail={open("behavioral-tax")} />
           </div>
+        </section>
 
-          <FuelTax onOpenDetail={open("fuel-tax")} />
-          <BehavioralTax onOpenDetail={open("behavioral-tax")} />
-          <WelfareSystem onOpenDetail={open("welfare-system")} />
-          <MacroIndicators onOpenDetail={open("indicators")} />
-
-          <PropertyTax onOpenDetail={open("property-tax")} />
-          <RentalTax onOpenDetail={open("rental-tax")} />
-          <InheritanceTax onOpenDetail={open("inheritance-tax")} />
-          <CapitalGains onOpenDetail={open("capital-gains")} />
-          <HighwayTolls onOpenDetail={open("highway-tolls")} />
-          <RailwayTolls onOpenDetail={open("railway-tolls")} />
-
-          <div className="md:col-span-2">
-            <Timeline />
+        {/* Income & Welfare */}
+        <section id="income-welfare" className="mt-8 scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-favorable">
+            <span className="inline-block h-3 w-0.5 bg-favorable" />
+            {t("incomeWelfare")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="md:col-span-2">
+              <SalaryCost onOpenDetail={open("salary-contributions")} />
+            </div>
+            <WelfareSystem onOpenDetail={open("welfare-system")} />
+            <MacroIndicators onOpenDetail={open("indicators")} />
           </div>
+        </section>
 
-          <div className="md:col-span-2">
-            <DonateCta onOpenDetail={open("donate")} />
+        {/* Real Estate */}
+        <section id="real-estate" className="mt-8 scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-blanc">
+            <span className="inline-block h-3 w-0.5 bg-blanc" />
+            {t("realEstate")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <PropertyTax onOpenDetail={open("property-tax")} />
+            <RentalTax onOpenDetail={open("rental-tax")} />
           </div>
+        </section>
+
+        {/* Wealth Transfer */}
+        <section id="wealth-transfer" className="mt-8 scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-danger">
+            <span className="inline-block h-3 w-0.5 bg-danger" />
+            {t("wealthTransfer")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <InheritanceTax onOpenDetail={open("inheritance-tax")} />
+            <CapitalGains onOpenDetail={open("capital-gains")} />
+          </div>
+        </section>
+
+        {/* Infrastructure */}
+        <section id="infrastructure" className="mt-8 scroll-mt-28">
+          <h3 className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-muted">
+            <span className="inline-block h-3 w-0.5 bg-muted" />
+            {t("infrastructure")}
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <HighwayTolls onOpenDetail={open("highway-tolls")} />
+            <RailwayTolls onOpenDetail={open("railway-tolls")} />
+          </div>
+        </section>
+
+        {/* Timeline & CTA */}
+        <div className="mt-8 grid grid-cols-1 gap-5">
+          <Timeline />
+          <DonateCta onOpenDetail={open("donate")} />
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <ScrollToTop label={t("backToTop")} />
 
       {/* Detail modal */}
       <DetailModal open={openModal !== null} onClose={close}>

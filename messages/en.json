@@ -1022,5 +1022,14 @@
       "copyToClipboard": "Copied!",
       "shareOgImage": "Generate image"
     }
+  },
+  "sectionNav": {
+    "directTaxes": "Direct Taxes",
+    "indirectTaxes": "Indirect Taxes",
+    "incomeWelfare": "Income & Welfare",
+    "realEstate": "Real Estate",
+    "wealthTransfer": "Wealth Transfer",
+    "infrastructure": "Infrastructure",
+    "backToTop": "Back to top"
   }
 }

@@ -1022,5 +1022,14 @@
       "copyToClipboard": "Copié!",
       "shareOgImage": "Générer image"
     }
+  },
+  "sectionNav": {
+    "directTaxes": "Impôts directs",
+    "indirectTaxes": "Taxes indirectes",
+    "incomeWelfare": "Revenus & Social",
+    "realEstate": "Immobilier",
+    "wealthTransfer": "Patrimoine",
+    "infrastructure": "Infrastructure",
+    "backToTop": "Haut de page"
   }
 }
