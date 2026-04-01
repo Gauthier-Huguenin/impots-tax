@@ -208,18 +208,14 @@
   },
   "timeline": {
     "title": "CHRONOLOGIE FISCALE",
-    "ir1914": "Création de l'impôt sur le revenu. Taux max : 2%. Mesure « temporaire » de guerre.",
-    "tip1928": "Création de la TIP (ancêtre de la TICPE).",
-    "secu1945": "Création de la Sécurité sociale. Début des cotisations sociales.",
-    "tva1954": "Invention de la TVA par Maurice Lauré. Taux initial : 16.85%.",
-    "csg1991": "Création de la CSG. Présentée comme « temporaire ». Taux initial : 1.1%.",
-    "crds1996": "Création de la CRDS pour rembourser la dette sociale. Toujours active 30 ans plus tard.",
-    "ame2000": "Création de l'AME.",
-    "tmi2012": "TMI porté à 45%. Tentative de « supertaxe » à 75%, censurée puis abandonnée.",
-    "pfu2018": "Création de la Flat Tax (PFU) à 30%. Suppression de l'ISF, remplacé par l'IFI.",
-    "carbon2019": "Gel de la taxe carbone à 44.60 €/t après le mouvement des Gilets Jaunes.",
-    "csg2025": "CSG : toujours à 9.2%. CRDS : toujours à 0.5%.",
-    "cdhr2026": "CDHR : minimum 20% d'imposition. Hausse CSG à 10.6% sur revenus financiers. Flat Tax : 31.4%."
+    "ir1914": "Impôt sur le revenu",
+    "secu1945": "Sécurité sociale",
+    "tva1954": "Taxe valeur ajoutée",
+    "csg1991": "Contribution sociale",
+    "crds1996": "Remboursement dette sociale",
+    "pfu2018": "Flat Tax (PFU)",
+    "carbon2019": "Taxe carbone",
+    "cdhr2026": "Minimum fiscal et hausse CSG"
   },
   "ticker": {
     "smic": "SMIC NET 2025 : {value}",
