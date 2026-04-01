@@ -24,14 +24,14 @@ export function DonateCta({ onOpenDetail }: DonateCtaProps) {
     >
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
         <div>
-          <h3 className="font-display text-base font-bold uppercase tracking-wider text-favorable">
+          <h3 className="font-display text-base font-bold uppercase tracking-wider text-blanc">
             {t("title")}
           </h3>
           <p className="mt-1 font-mono text-xs text-blanc">
             {t("desc")}
           </p>
         </div>
-        <span className="shrink-0 rounded border border-favorable/30 bg-favorable/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-favorable transition-all group-hover:bg-favorable/15">
+        <span className="shrink-0 rounded border border-blanc/20 bg-blanc/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-blanc transition-all group-hover:bg-blanc/10">
           {t("cta")}
         </span>
       </div>

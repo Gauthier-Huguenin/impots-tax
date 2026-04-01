@@ -38,7 +38,7 @@ export function RailwayTolls({ onOpenDetail }: RailwayTollsProps) {
         {/* Key figures */}
         <div className="mb-3 grid grid-cols-2 gap-2">
           <div className="rounded border border-gray-800 bg-background/50 p-2 text-center">
-            <p className="font-mono text-lg font-bold text-warning">
+            <p className="font-mono text-lg font-bold text-blanc">
               {RAILWAY_TOLLS.terShare}%
             </p>
             <p className="font-mono text-[10px] text-blanc">

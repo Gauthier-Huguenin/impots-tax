@@ -14,9 +14,9 @@ interface BehavioralTaxProps {
 
 const TOBACCO_COLORS: Record<string, string> = {
   accise: "bg-danger",
-  vat: "bg-warning",
-  retailer: "bg-gray-500",
-  manufacturer: "bg-gray-600",
+  vat: "bg-blue-500",
+  retailer: "bg-slate-600",
+  manufacturer: "bg-slate-700",
 };
 
 export function BehavioralTax({ onOpenDetail }: BehavioralTaxProps) {
@@ -81,7 +81,7 @@ export function BehavioralTax({ onOpenDetail }: BehavioralTaxProps) {
           ))}
         </div>
 
-        <p className="mt-3 font-mono text-xs text-warning">
+        <p className="mt-3 font-mono text-xs text-blanc/60">
           {t("priceEvolution")}
         </p>
 

@@ -46,7 +46,7 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
             </p>
           </div>
           <div>
-            <p className="font-mono text-lg font-bold text-warning">
+            <p className="font-mono text-lg font-bold text-blanc">
               {PROPERTY_TAX.avgPerTaxpayer} €
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -75,7 +75,7 @@ export function PropertyTax({ onOpenDetail }: PropertyTaxProps) {
               </span>
               <div className="relative h-4 flex-1 overflow-hidden rounded-sm bg-background/50">
                 <div
-                  className={`absolute inset-y-0 left-0 rounded-sm ${city.rate >= 50 ? "bg-danger" : city.rate >= 30 ? "bg-warning" : "bg-favorable"}`}
+                  className={`absolute inset-y-0 left-0 rounded-sm ${city.rate >= 50 ? "bg-danger" : city.rate >= 30 ? "bg-blue-500" : "bg-slate-600"}`}
                   style={{ width: `${(city.rate / MAX_RATE) * 100}%` }}
                 />
                 <span className="relative z-10 flex h-full items-center pl-1.5 font-mono text-[10px] font-bold text-white/90">

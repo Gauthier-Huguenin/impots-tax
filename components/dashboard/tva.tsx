@@ -10,9 +10,9 @@ interface TVAProps {
 
 const VAT_COLORS = [
   "text-danger",
-  "text-warning",
+  "text-blue-400",
   "text-blanc",
-  "text-favorable",
+  "text-slate-400",
 ];
 
 const VAT_KEYS = ["normal", "intermediate", "reduced", "superReduced"] as const;

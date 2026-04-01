@@ -33,13 +33,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
         <div className="grid grid-cols-2 gap-2">
           {/* RSA */}
           <div className="rounded border border-gray-800 bg-background/50 p-3">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
+            <p className="font-display text-xs font-bold uppercase tracking-wider text-blanc">
               {t("rsaTitle")}
             </p>
             <p className="font-mono text-[10px] text-blanc">
               {t("rsaDesc")}
             </p>
-            <p className="mt-1 font-mono text-lg font-bold text-favorable">
+            <p className="mt-1 font-mono text-lg font-bold text-blanc">
               {t("rsaAmount", { amount: formatNumber(WELFARE_DATA.rsa.amountSingle, 2) })}
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -49,13 +49,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
 
           {/* AAH */}
           <div className="rounded border border-gray-800 bg-background/50 p-3">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-favorable">
+            <p className="font-display text-xs font-bold uppercase tracking-wider text-blanc">
               {t("aahTitle")}
             </p>
             <p className="font-mono text-[10px] text-blanc">
               {t("aahDesc")}
             </p>
-            <p className="mt-1 font-mono text-lg font-bold text-favorable">
+            <p className="mt-1 font-mono text-lg font-bold text-blanc">
               {t("aahAmount", { amount: formatNumber(WELFARE_DATA.aah.amountMax, 2) })}
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -65,13 +65,13 @@ export function WelfareSystem({ onOpenDetail }: WelfareSystemProps) {
 
           {/* ARE */}
           <div className="rounded border border-gray-800 bg-background/50 p-3">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-warning">
+            <p className="font-display text-xs font-bold uppercase tracking-wider text-blanc">
               {t("areTitle")}
             </p>
             <p className="font-mono text-[10px] text-blanc">
               {t("areDesc")}
             </p>
-            <p className="mt-1 font-mono text-lg font-bold text-warning">
+            <p className="mt-1 font-mono text-lg font-bold text-blanc">
               {t("areCalc", { rate: WELFARE_DATA.are.calcRate })}
             </p>
             <p className="font-mono text-[10px] text-blanc">

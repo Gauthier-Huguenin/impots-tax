@@ -9,11 +9,11 @@ interface FuelTaxProps {
 }
 
 const FUEL_COLORS: Record<string, string> = {
-  crudeOil: "bg-gray-500",
-  distribution: "bg-gray-600",
+  crudeOil: "bg-slate-600",
+  distribution: "bg-slate-700",
   accise: "bg-danger",
-  vatProduct: "bg-warning",
-  vatAccise: "bg-red-800",
+  vatProduct: "bg-blue-500",
+  vatAccise: "bg-danger/60",
 };
 
 export function FuelTax({ onOpenDetail }: FuelTaxProps) {
@@ -78,7 +78,7 @@ export function FuelTax({ onOpenDetail }: FuelTaxProps) {
           ))}
         </div>
 
-        <p className="mt-3 font-mono text-xs text-warning">
+        <p className="mt-3 font-mono text-xs text-blanc/60">
           {t("taxOnTax")}
         </p>
 

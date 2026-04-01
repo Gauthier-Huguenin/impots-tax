@@ -58,11 +58,11 @@ export function CapitalGains({ onOpenDetail }: CapitalGainsProps) {
           <span className="font-mono text-xs text-blanc">vs</span>
 
           {/* PEA */}
-          <div className="rounded border border-favorable/30 bg-background/50 p-3 text-center">
+          <div className="rounded border border-blue-500/30 bg-background/50 p-3 text-center">
             <p className="font-mono text-xs text-blanc">
               {t("pea")}
             </p>
-            <p className="font-mono text-2xl font-bold text-favorable">
+            <p className="font-mono text-2xl font-bold text-blue-400">
               {CAPITAL_GAINS_PEA.social2026}%
             </p>
             <div className="mt-1 space-y-0.5 font-mono text-[10px] text-blanc">
@@ -77,7 +77,7 @@ export function CapitalGains({ onOpenDetail }: CapitalGainsProps) {
         </div>
 
         {/* Savings line */}
-        <p className="mb-3 text-center font-mono text-xs text-favorable">
+        <p className="mb-3 text-center font-mono text-xs text-blue-400">
           {t("savings", {
             amount: CAPITAL_GAINS_COMPARISON.savings.toLocaleString("fr-FR"),
             gain: CAPITAL_GAINS_COMPARISON.capitalGain.toLocaleString("fr-FR"),
@@ -91,7 +91,7 @@ export function CapitalGains({ onOpenDetail }: CapitalGainsProps) {
           </p>
           <div className="mt-1 flex items-center justify-between font-mono text-xs">
             <span className="text-blanc">{t("withholdingRate")}</span>
-            <span className="text-warning">
+            <span className="text-blanc">
               {US_DIVIDEND_TAX.withholdingRate}%
             </span>
           </div>

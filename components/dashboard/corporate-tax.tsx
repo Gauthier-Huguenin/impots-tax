@@ -39,8 +39,8 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
               {t("normalRate")}
             </p>
           </div>
-          <div className="rounded border border-warning/20 bg-background/50 p-3 text-center">
-            <p className="font-mono text-3xl font-bold text-warning">
+          <div className="rounded border border-blue-500/20 bg-background/50 p-3 text-center">
+            <p className="font-mono text-3xl font-bold text-blue-400">
               {formatPercent(CORPORATE_TAX.pmeRate)}
             </p>
             <p className="mt-1 font-mono text-xs text-blanc">
@@ -58,7 +58,7 @@ export function CorporateTax({ onOpenDetail }: CorporateTaxProps) {
           {t("pmeRequirements")}
         </p>
 
-        <p className="mt-2 font-mono text-xs text-warning">
+        <p className="mt-2 font-mono text-xs text-blanc/60">
           {t("surtax")}
         </p>
 

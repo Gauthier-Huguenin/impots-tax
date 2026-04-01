@@ -6,11 +6,11 @@ import { formatEuro, formatPercent } from "@/lib/format";
 import { IconEuro } from "@/components/ui/panel-icons";
 
 const SEGMENTS = [
-  { key: "employerContributions", amount: 23, color: "bg-tricolore-red" },
-  { key: "employeeContributions", amount: 11, color: "bg-red-700/80" },
-  { key: "incomeTax", amount: 9, color: "bg-red-500/70" },
-  { key: "vatOnSpending", amount: 9, color: "bg-red-400/60" },
-  { key: "remaining", amount: 48, color: "bg-favorable/70" },
+  { key: "employerContributions", amount: 23, color: "bg-danger" },
+  { key: "employeeContributions", amount: 11, color: "bg-danger/70" },
+  { key: "incomeTax", amount: 9, color: "bg-danger/50" },
+  { key: "vatOnSpending", amount: 9, color: "bg-blue-500/70" },
+  { key: "remaining", amount: 48, color: "bg-white/20" },
 ] as const;
 
 export function JourneyOf100() {
@@ -55,7 +55,7 @@ export function JourneyOf100() {
                 </span>
                 <span
                   className={`ml-auto font-mono text-sm font-semibold ${
-                    s.key === "remaining" ? "text-favorable" : "text-danger"
+                    s.key === "remaining" ? "text-blanc" : "text-danger"
                   }`}
                 >
                   {s.key === "remaining" ? "" : "−"}{formatEuro(s.amount)}
@@ -79,7 +79,7 @@ export function JourneyOf100() {
               <p className="font-mono text-xs font-medium uppercase tracking-wide text-blanc sm:text-sm">
                 {t("youReceive")}
               </p>
-              <p className="font-mono text-2xl font-extrabold text-favorable sm:text-3xl">
+              <p className="font-mono text-2xl font-extrabold text-blanc sm:text-3xl">
                 {formatEuro(realPurchasingPower)}
               </p>
             </div>
@@ -95,7 +95,7 @@ export function JourneyOf100() {
           </div>
 
           {/* USSR comparison */}
-          <p className="mt-3 text-center font-mono text-xs font-light text-warning/80 sm:text-sm">
+          <p className="mt-3 text-center font-mono text-xs font-light text-blanc/60 sm:text-sm">
             ☭ {t("ussrComparison", { ussrRate: USSR_COMPARISON.socialContributions, frRate: extractionRate })}
           </p>
         </div>

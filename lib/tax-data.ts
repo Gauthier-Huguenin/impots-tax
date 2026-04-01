@@ -408,49 +408,49 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     year: 1914,
     key: "ir1914",
-    color: "#00ff88",
+    color: "#ffffff",
     displayValue: "2%"
   },
   {
     year: 1945,
     key: "secu1945",
-    color: "#00d4ff",
+    color: "#3b82f6",
     displayValue: "Cotisations"
   },
   {
     year: 1954,
     key: "tva1954",
-    color: "#ffb020",
+    color: "#60a5fa",
     displayValue: "16.85%"
   },
   {
     year: 1991,
     key: "csg1991",
-    color: "#ff2d2d",
+    color: "#ef4444",
     displayValue: "9.2%"
   },
   {
     year: 1996,
     key: "crds1996",
-    color: "#ff9500",
+    color: "#f87171",
     displayValue: "0.5%"
   },
   {
     year: 2018,
     key: "pfu2018",
-    color: "#00ffff",
+    color: "#93c5fd",
     displayValue: "30%"
   },
   {
     year: 2019,
     key: "carbon2019",
-    color: "#9d4edd",
+    color: "#cbd5e1",
     displayValue: "44.60€/t"
   },
   {
     year: 2026,
     key: "cdhr2026",
-    color: "#ff2d2d",
+    color: "#ef4444",
     displayValue: "CSG+10.6%"
   },
 ];

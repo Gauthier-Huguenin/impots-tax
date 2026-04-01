@@ -46,7 +46,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             </p>
           </div>
           <div className="rounded border border-gray-800 bg-background/50 p-2 text-center">
-            <p className="font-mono text-lg font-bold text-favorable">
+            <p className="font-mono text-lg font-bold text-blanc">
               {(INHERITANCE_DATA.childAllowance / 1000).toFixed(0)}k €
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -54,7 +54,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             </p>
           </div>
           <div className="rounded border border-gray-800 bg-background/50 p-2 text-center">
-            <p className="font-mono text-lg font-bold text-favorable">
+            <p className="font-mono text-lg font-bold text-blanc">
               {INHERITANCE_DATA.successionsTaxed}%
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -62,7 +62,7 @@ export function InheritanceTax({ onOpenDetail }: InheritanceTaxProps) {
             </p>
           </div>
           <div className="rounded border border-gray-800 bg-background/50 p-2 text-center">
-            <p className="font-mono text-lg font-bold text-warning">
+            <p className="font-mono text-lg font-bold text-blanc">
               {INHERITANCE_DATA.totalRevenue}
             </p>
             <p className="font-mono text-[10px] text-blanc">

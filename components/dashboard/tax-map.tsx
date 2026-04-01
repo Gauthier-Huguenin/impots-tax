@@ -11,10 +11,10 @@ export const DEFAULT_ZOOM = 6;
 
 export const CATEGORY_COLORS: Record<TaxMapCategory, string> = {
   "rate-record": "#ef4444",
-  "brutal-hike": "#f97316",
-  "quirky-tax": "#a855f7",
-  "secondary-home": "#06b6d4",
-  "where-it-goes": "#22c55e",
+  "brutal-hike": "#f87171",
+  "quirky-tax": "#93c5fd",
+  "secondary-home": "#3b82f6",
+  "where-it-goes": "#ffffff",
 };
 
 const MAP_STYLES = `

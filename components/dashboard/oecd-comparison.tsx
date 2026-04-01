@@ -83,23 +83,23 @@ export function OECDComparison({ onOpenDetail }: OECDComparisonProps) {
         </div>
 
         {/* USSR reference line */}
-        <div className="mt-2 flex items-center gap-2 rounded border border-dashed border-warning/40 bg-warning/5 px-1 py-1">
-          <span className="w-24 shrink-0 text-right font-mono text-xs font-bold text-warning sm:w-32 sm:text-sm">
+        <div className="mt-2 flex items-center gap-2 rounded border border-dashed border-blanc/20 bg-blanc/5 px-1 py-1">
+          <span className="w-24 shrink-0 text-right font-mono text-xs font-bold text-blanc sm:w-32 sm:text-sm">
             ☭ {t("ussrLabel")}
           </span>
           <div className="flex-1">
             <div className="h-4 w-full overflow-hidden rounded-sm bg-gray-800/50 sm:h-5">
               <div
-                className="h-full bg-gradient-to-r from-warning/60 to-warning/30 border-r-2 border-dashed border-warning"
+                className="h-full bg-gradient-to-r from-blanc/30 to-blanc/10 border-r-2 border-dashed border-blanc/50"
                 style={{ width: `${USSR_WIDTH}%` }}
               />
             </div>
           </div>
-          <span className="w-12 shrink-0 font-mono text-xs font-bold text-warning sm:text-sm">
+          <span className="w-12 shrink-0 font-mono text-xs font-bold text-blanc sm:text-sm">
             ~{formatPercent(USSR_COMPARISON.taxToGdpPeak)}
           </span>
         </div>
-        <p className="mt-1 font-mono text-xs text-warning/70 italic">
+        <p className="mt-1 font-mono text-xs text-blanc/50 italic">
           {t("ussrNote")}
         </p>
 

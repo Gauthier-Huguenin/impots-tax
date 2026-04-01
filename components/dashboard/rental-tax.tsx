@@ -52,7 +52,7 @@ export function RentalTax({ onOpenDetail }: RentalTaxProps) {
                   <td className="px-2 py-1.5 text-blanc">
                     {t(regime.key as "unclassifiedTourism")}
                   </td>
-                  <td className="px-2 py-1.5 text-right text-warning">
+                  <td className="px-2 py-1.5 text-right text-blanc">
                     {regime.ceiling.toLocaleString("fr-FR")} €
                   </td>
                   <td className="px-2 py-1.5 text-right text-danger">
@@ -65,7 +65,7 @@ export function RentalTax({ onOpenDetail }: RentalTaxProps) {
         </div>
 
         {/* Before/after note */}
-        <p className="mt-3 font-mono text-xs text-warning">
+        <p className="mt-3 font-mono text-xs text-blanc">
           {t("depreciationNote")}
         </p>
 

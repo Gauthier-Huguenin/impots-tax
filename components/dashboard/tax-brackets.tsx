@@ -10,17 +10,17 @@ interface TaxBracketsProps {
 }
 
 const BRACKET_COLORS = [
-  "bg-favorable",
+  "bg-slate-600",
   "bg-blanc",
-  "bg-warning",
+  "bg-blue-500",
   "bg-danger/80",
   "bg-danger",
 ];
 
 const BRACKET_TEXT_COLORS = [
-  "text-favorable",
+  "text-slate-400",
   "text-blanc",
-  "text-warning",
+  "text-blue-400",
   "text-danger/80",
   "text-danger",
 ];
@@ -112,7 +112,7 @@ export function TaxBrackets({ onOpenDetail }: TaxBracketsProps) {
           </table>
         </div>
 
-        <p className="mt-3 font-mono text-xs text-warning">
+        <p className="mt-3 font-mono text-xs text-blanc/60">
           {t("cdhr")}
         </p>
 

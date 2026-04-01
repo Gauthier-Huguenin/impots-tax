@@ -57,7 +57,7 @@ export function ShareButton({
       {/* Clipboard copy button */}
       <button
         onClick={handleCopyToClipboard}
-        className="px-3 py-2 text-sm font-semibold bg-cyan-600 hover:bg-cyan-500 active:bg-cyan-700 text-white rounded transition-colors"
+        className="px-3 py-2 text-sm font-semibold bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded transition-colors"
         title={t('label')}
         aria-label={t('label')}
       >
@@ -68,7 +68,7 @@ export function ShareButton({
       {'share' in navigator && (
         <button
           onClick={handleNativeShare}
-          className="px-3 py-2 text-sm font-semibold bg-amber-600 hover:bg-amber-500 active:bg-amber-700 text-white rounded transition-colors"
+          className="px-3 py-2 text-sm font-semibold bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white rounded transition-colors"
           title={t('label')}
           aria-label={t('label')}
         >

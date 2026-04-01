@@ -40,7 +40,7 @@ export function HighwayTolls({ onOpenDetail }: HighwayTollsProps) {
             </p>
           </div>
           <div>
-            <p className="font-mono text-lg font-bold text-warning">
+            <p className="font-mono text-lg font-bold text-blanc">
               {HIGHWAY_TOLLS.totalProfits}
             </p>
             <p className="font-mono text-[10px] text-blanc">
@@ -70,7 +70,7 @@ export function HighwayTolls({ onOpenDetail }: HighwayTollsProps) {
               <span className="font-mono text-xs text-blanc">
                 {t(route.key as "parisLyon")}
               </span>
-              <span className="font-mono text-xs font-bold text-warning">
+              <span className="font-mono text-xs font-bold text-blanc">
                 {route.toll.toFixed(2)} €
               </span>
             </div>
