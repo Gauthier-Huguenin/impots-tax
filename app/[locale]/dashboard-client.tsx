@@ -89,6 +89,8 @@ const MODAL_CONTENT: Record<ModalSlug, React.ComponentType> = {
 
 const HASH_MODAL_MAP: Record<string, ModalSlug> = { donate: "donate" };
 
+let hashInitialized = false;
+
 export function DashboardClient() {
   const [openModal, setOpenModal] = useState<ModalSlug | null>(null);
   const scrollFired = useRef(new Set<number>());
@@ -116,8 +118,17 @@ export function DashboardClient() {
     }
   }, []);
 
+  // Initialize from hash on page load (only on first render)
   useEffect(() => {
-    checkHash();
+    if (!hashInitialized) {
+      hashInitialized = true;
+      checkHash();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Listen to hash changes
+  useEffect(() => {
     window.addEventListener("hashchange", checkHash);
     return () => window.removeEventListener("hashchange", checkHash);
   }, [checkHash]);

@@ -30,7 +30,7 @@ export function TimelineGanttModal({ isOpen, onClose }: TimelineGanttModalProps)
               {t("title")}
             </h2>
             <p className="mt-1 font-mono text-xs text-muted">
-              1914 → 2026 • Les jalons qui ont façonné l'extraction
+              1914 &rarr; 2026 • Les jalons qui ont façonné l&apos;extraction
             </p>
           </div>
           <button

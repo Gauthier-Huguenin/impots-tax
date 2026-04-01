@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { OECD_COMPARISON, FRANCE_OECD_DELTA, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
+import { OECD_COMPARISON, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
 
 export function ComparisonDetail() {
   const t = useTranslations("detailComparison");

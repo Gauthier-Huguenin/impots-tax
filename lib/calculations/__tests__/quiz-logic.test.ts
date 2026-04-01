@@ -12,7 +12,7 @@ function assert(condition: boolean, message: string) {
   }
 }
 
-function assertEqual(actual: any, expected: any, message: string) {
+function assertEqual<T>(actual: T, expected: T, message: string) {
   if (actual !== expected) {
     throw new Error(`Expected ${expected}, got ${actual}. ${message}`);
   }

@@ -31,7 +31,7 @@ export interface NetSalaryBreakdown {
  * @returns Tax amount in euros (rounded to nearest euro)
  */
 export function calculateIR(input: CalculateIRInput): number {
-  const { salaryBrut, parts, year } = input;
+  const { salaryBrut, parts } = input;
 
   // Get brackets for the requested year (currently only 2026 supported)
   const brackets = IR_BRACKETS;

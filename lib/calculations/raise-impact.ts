@@ -1,4 +1,4 @@
-import { calculateNetSalary, CalculateIRInput } from './tax-calculator';
+import { calculateNetSalary } from './tax-calculator';
 
 // ─── Types ───────────────────────────────────────────
 

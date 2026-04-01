@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { HIGHWAY_TOLLS, HIGHWAY_ROUTES, HIGHWAY_CONCESSIONS, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { HIGHWAY_ROUTES, HIGHWAY_CONCESSIONS, TAX_DATA_YEAR } from "@/lib/tax-data";
 
 export function HighwayTollsDetail() {
   const t = useTranslations("detailHighwayTolls");

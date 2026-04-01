@@ -51,16 +51,6 @@ export function ShareButton({
     }
   };
 
-  const handleGenerateImage = async () => {
-    try {
-      // Placeholder for OG image generation
-      // This would be expanded in future versions
-      console.log('Generate OG image for:', title);
-      onShare?.();
-    } catch (error) {
-      console.error('Failed to generate image:', error);
-    }
-  };
 
   return (
     <div className="flex items-center gap-2">

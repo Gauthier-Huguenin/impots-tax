@@ -1,0 +1,97 @@
+<h2>Chronologie Fiscale — 3 Approches Gantt</h2>
+<p class="subtitle">Quelle direction te plaît pour la nouvelle modale ?</p>
+
+<div class="cards">
+  <!-- Option A: Gantt classique horizontal -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0f1218; padding: 20px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff;">
+      <div style="margin-bottom: 15px; font-weight: bold; color: #00d4ff;">GANTT HORIZONTAL</div>
+
+      <!-- Mini Gantt bar representation -->
+      <div style="margin-bottom: 10px;">
+        <div style="color: #8b95a5; font-size: 11px; margin-bottom: 3px;">IR 1914</div>
+        <div style="background: #00ff88; height: 6px; width: 8%; border-radius: 2px;"></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="color: #8b95a5; font-size: 11px; margin-bottom: 3px;">SECU 1945</div>
+        <div style="background: #00d4ff; height: 6px; width: 35%; border-radius: 2px;"></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="color: #8b95a5; font-size: 11px; margin-bottom: 3px;">TVA 1954</div>
+        <div style="background: #ffb020; height: 6px; width: 52%; border-radius: 2px;"></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="color: #8b95a5; font-size: 11px; margin-bottom: 3px;">CSG 1991</div>
+        <div style="background: #ff2d2d; height: 6px; width: 81%; border-radius: 2px;"></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="color: #8b95a5; font-size: 11px; margin-bottom: 3px;">PFU 2018</div>
+        <div style="background: #ff2d2d; height: 6px; width: 98%; border-radius: 2px;"></div>
+      </div>
+      <div style="color: #8b95a5; font-size: 10px; margin-top: 12px;">← 1900 | 2026 →</div>
+    </div>
+    <div class="card-body">
+      <h3>Gantt Horizontal</h3>
+      <p>Barres de durée, vue temporelle linéaire, spans visuels</p>
+    </div>
+  </div>
+
+  <!-- Option B: Timeline verticale stylisée (tech style) -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0f1218; padding: 20px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff;">
+      <div style="margin-bottom: 15px; font-weight: bold; color: #00d4ff;">TIMELINE TECH</div>
+
+      <!-- Vertical timeline with milestones -->
+      <div style="border-left: 2px solid #00d4ff; padding-left: 15px; position: relative;">
+        <div style="margin-bottom: 12px;">
+          <div style="position: absolute; left: -8px; top: 2px; width: 12px; height: 12px; border: 2px solid #00ff88; border-radius: 50%; background: #0f1218;"></div>
+          <div style="color: #00ff88; font-weight: bold;">1914</div>
+          <div style="color: #8b95a5; font-size: 11px;">Impôt revenu</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="position: absolute; left: -8px; top: 38px; width: 12px; height: 12px; border: 2px solid #00d4ff; border-radius: 50%; background: #0f1218;"></div>
+          <div style="color: #00d4ff; font-weight: bold;">1945</div>
+          <div style="color: #8b95a5; font-size: 11px;">Sécurité sociale</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="position: absolute; left: -8px; top: 74px; width: 12px; height: 12px; border: 2px solid #ffb020; border-radius: 50%; background: #0f1218;"></div>
+          <div style="color: #ffb020; font-weight: bold;">1991</div>
+          <div style="color: #8b95a5; font-size: 11px;">CSG temporaire</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="position: absolute; left: -8px; top: 110px; width: 12px; height: 12px; border: 2px solid #ff2d2d; border-radius: 50%; background: #0f1218;"></div>
+          <div style="color: #ff2d2d; font-weight: bold;">2026</div>
+          <div style="color: #8b95a5; font-size: 11px;">CDHR + CSG ↑</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Timeline Verticale Tech</h3>
+      <p>Jalons colorés, connexions visuelles, style moderne</p>
+    </div>
+  </div>
+
+  <!-- Option C: Gantt historique (ère fiscale) -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0f1218; padding: 20px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff;">
+      <div style="margin-bottom: 15px; font-weight: bold; color: #00d4ff;">ÈRES FISCALES</div>
+
+      <!-- Historical eras as blocks -->
+      <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+        <div style="background: #00ff88; color: #000; padding: 6px 8px; border-radius: 3px; font-size: 11px; font-weight: bold;">1914-1944<br/><span style="font-weight: normal;">Guerre</span></div>
+        <div style="background: #00d4ff; color: #000; padding: 6px 8px; border-radius: 3px; font-size: 11px; font-weight: bold;">1945-1990<br/><span style="font-weight: normal;">Welfare</span></div>
+        <div style="background: #ffb020; color: #000; padding: 6px 8px; border-radius: 3px; font-size: 11px; font-weight: bold;">1991-2017<br/><span style="font-weight: normal;">Cotisations</span></div>
+        <div style="background: #ff2d2d; color: #fff; padding: 6px 8px; border-radius: 3px; font-size: 11px; font-weight: bold;">2018-2026<br/><span style="font-weight: normal;">Extraction max</span></div>
+      </div>
+
+      <div style="border-top: 1px solid #333; padding-top: 10px; font-size: 11px; color: #8b95a5;">
+        <div>• Chaque bloc = période d'une taxe majeure</div>
+        <div>• Couleur = impact fiscal croissant</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Ères Fiscales (Blocs Historiques)</h3>
+      <p>Périodes thématiques, visualisation par ère, contexte historique</p>
+    </div>
+  </div>
+</div>
