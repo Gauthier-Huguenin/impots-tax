@@ -22,6 +22,8 @@ export async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="@leploutos on X"
+            data-umami-event="outbound-click"
+            data-umami-event-url={siteConfig.social.x}
             className="flex items-center gap-1.5 text-blanc transition-colors hover:text-blanc"
           >
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden="true">
@@ -35,6 +37,8 @@ export async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            data-umami-event="outbound-click"
+            data-umami-event-url={siteConfig.social.github}
             className="flex items-center gap-1.5 text-blanc transition-colors hover:text-blanc"
           >
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden="true">

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import type { TaxMapCategory } from "@/lib/tax-map-data";
 import { TAX_MAP_DATA } from "@/lib/tax-map-data";
 import { CATEGORY_COLORS } from "@/components/dashboard/tax-map";
+import { umamiTrack } from "@/lib/analytics";
 
 const CATEGORY_KEYS: TaxMapCategory[] = [
   "rate-record",
@@ -118,9 +119,13 @@ export function TaxMapClient() {
     setActiveCategories((prev) => {
       const next = new Set(prev);
       if (next.has(cat)) {
-        if (next.size > 1) next.delete(cat);
+        if (next.size > 1) {
+          next.delete(cat);
+          umamiTrack("map-filter", { category: cat, action: "hide" });
+        }
       } else {
         next.add(cat);
+        umamiTrack("map-filter", { category: cat, action: "show" });
       }
       return next;
     });

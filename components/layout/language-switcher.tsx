@@ -17,6 +17,8 @@ export function LanguageSwitcher() {
     <div className="flex items-center gap-1 text-xs">
       <button
         onClick={() => switchLocale("fr")}
+        data-umami-event="language-switch"
+        data-umami-event-to="fr"
         className={`px-2 py-1 font-mono uppercase tracking-wider transition-colors ${
           locale === "fr"
             ? "bg-info/20 text-info border border-info/50"
@@ -27,6 +29,8 @@ export function LanguageSwitcher() {
       </button>
       <button
         onClick={() => switchLocale("en")}
+        data-umami-event="language-switch"
+        data-umami-event-to="en"
         className={`px-2 py-1 font-mono uppercase tracking-wider transition-colors ${
           locale === "en"
             ? "bg-info/20 text-info border border-info/50"

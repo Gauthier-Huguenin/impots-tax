@@ -83,6 +83,8 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="@leploutos on X"
+            data-umami-event="outbound-click"
+            data-umami-event-url={siteConfig.social.x}
             className="text-blanc transition-colors hover:text-blanc"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
@@ -96,6 +98,8 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Star on GitHub"
+            data-umami-event="outbound-click"
+            data-umami-event-url={siteConfig.social.github}
             className="hidden items-center gap-1.5 rounded-full border border-gray-600 bg-white/5 px-3 py-1 text-xs font-medium text-blanc transition-all hover:border-gray-400 hover:bg-white/10 hover:text-white sm:flex"
           >
             <svg viewBox="0 0 16 16" className="h-4 w-4 fill-current" aria-hidden="true">

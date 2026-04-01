@@ -6,6 +6,7 @@ import { TaxMapClient } from "@/components/dashboard/tax-map-client";
 import { Ticker } from "@/components/dashboard/ticker";
 import { Footer } from "@/components/layout/footer";
 import { DashboardClient } from "@/app/[locale]/dashboard-client";
+import { SectionObserver } from "@/components/analytics/section-observer";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -37,11 +38,15 @@ export default async function HomePage({ params }: PageProps) {
       <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
-        <div className="relative mx-auto max-w-7xl px-4 pt-6">
+        <SectionObserver section="tax-map" className="relative z-0 mx-auto max-w-7xl px-4 pt-6">
           <TaxMapClient />
-        </div>
-        <JourneyOf100 />
-        <DashboardClient />
+        </SectionObserver>
+        <SectionObserver section="journey-of-100">
+          <JourneyOf100 />
+        </SectionObserver>
+        <SectionObserver section="dashboard-panels">
+          <DashboardClient />
+        </SectionObserver>
       </main>
 
       {/* Ticker */}

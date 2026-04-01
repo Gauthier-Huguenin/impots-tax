@@ -5,6 +5,7 @@ import { useEffect, useRef, useCallback, type MutableRefObject } from "react";
 import { useLocale } from "next-intl";
 import type { TaxMapCategory } from "@/lib/tax-map-data";
 import { TAX_MAP_DATA } from "@/lib/tax-map-data";
+import { umamiTrack } from "@/lib/analytics";
 
 export const DEFAULT_CENTER: [number, number] = [46.6, 2.8];
 export const DEFAULT_ZOOM = 6;
@@ -206,6 +207,9 @@ export function TaxMapLeaflet({ height, interactive = true, activeCategories, re
         const marker = L.marker([point.lat, point.lng], { icon });
         if (interactive) {
           marker.bindPopup(buildPopup(point), { maxWidth: 340, minWidth: 280 });
+          marker.on("click", () => {
+            umamiTrack("map-marker-click", { city: point.city, category: point.category });
+          });
         }
 
         markersRef.current.set(point.id, marker);
