@@ -20,7 +20,7 @@ import { CapitalGains } from "@/components/dashboard/capital-gains";
 import { HighwayTolls } from "@/components/dashboard/highway-tolls";
 import { RailwayTolls } from "@/components/dashboard/railway-tolls";
 import { OECDComparison } from "@/components/dashboard/oecd-comparison";
-import { Timeline } from "@/components/dashboard/timeline";
+import { TimelinePanel } from "@/components/dashboard/timeline-panel";
 import { DetailModal } from "@/components/ui/detail-modal";
 import { IncomeTaxDetail } from "@/components/detail/income-tax-detail";
 import { CorporateTaxDetail } from "@/components/detail/corporate-tax-detail";
@@ -259,7 +259,7 @@ export function DashboardClient() {
 
         {/* Timeline & CTA */}
         <div className="mt-8 grid grid-cols-1 gap-5">
-          <Timeline />
+          <TimelinePanel />
           <DonateCta onOpenDetail={open("donate")} />
         </div>
       </div>
