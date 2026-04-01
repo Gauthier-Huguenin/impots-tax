@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/layout/header";
 import { ThreatLevel } from "@/components/dashboard/threat-level";
 import { JourneyOf100 } from "@/components/dashboard/journey-of-100";
+import { TaxMapClient } from "@/components/dashboard/tax-map-client";
 import { Ticker } from "@/components/dashboard/ticker";
 import { Footer } from "@/components/layout/footer";
 import { DashboardClient } from "@/app/[locale]/dashboard-client";
@@ -23,7 +24,7 @@ export default async function HomePage({ params }: PageProps) {
         Skip to content
       </a>
       {/* Sticky tricolore + header */}
-      <div className="sticky top-0 z-50">
+      <div className="sticky top-0 z-[200]">
         <div className="flex h-1">
           <div className="flex-1 bg-tricolore-blue" />
           <div className="flex-1 bg-white" />
@@ -36,6 +37,9 @@ export default async function HomePage({ params }: PageProps) {
       <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
+        <div className="relative isolate mx-auto max-w-7xl px-4 pt-6">
+          <TaxMapClient />
+        </div>
         <JourneyOf100 />
         <DashboardClient />
       </main>
