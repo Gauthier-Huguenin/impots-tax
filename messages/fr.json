@@ -4,7 +4,7 @@
     "description": "Tableau de bord satirique des impôts et taxes en France. Données réelles, présentation dramatique."
   },
   "header": {
-    "title": "FRENCH TAX THREAT MONITOR",
+    "title": "FRENCH TAX MONITOR",
     "monitoring": "SURVEILLANCE ACTIVE",
     "dataYear": "DONNÉES {year}",
     "donate": "SOUTENIR"

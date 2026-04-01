@@ -55,9 +55,9 @@ export function Header() {
             alt="impots.tax"
             width={32}
             height={32}
-            className="h-8 w-8"
+            className="h-8 w-8 invert"
           />
-          <span className="font-display text-lg font-black uppercase tracking-widest text-danger sm:text-xl md:text-2xl">
+          <span className="font-display text-lg font-black uppercase tracking-widest text-blanc sm:text-xl md:text-2xl">
             {t("title")}
           </span>
         </Link>
