@@ -28,6 +28,13 @@
  * modal:        200ms — modal enter transitions
  */
 
+/* Leaflet controls below sticky header (z-[1000]) */
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control-container {
+  z-index: 400 !important;
+}
+
 /* Pulsing dot animation */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
