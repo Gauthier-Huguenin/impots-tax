@@ -222,8 +222,8 @@ The visual identity is a dark "command center" dashboard:
 - **Text color hierarchy** (WCAG AA compliant on dark backgrounds):
   - **Primary** (`text-white` / `text-blanc`): Main titles, key numbers, important content
   - **Secondary** (`text-slate-300`): Labels, descriptions, legend items, panel subtitles
-  - **Tertiary** (`text-gray-500`): Sources, metadata, timestamps, decorative text
-  - Never use `text-gray-400`, `text-gray-600`, or `text-gray-700` for text — they are banned for contrast reasons
+  - **Tertiary** (`text-muted`): Sources, metadata, timestamps, decorative text. Custom token (#8b95a5) defined in globals.css, ensures WCAG AA contrast (~4.8:1 on panel background).
+  - Never use `text-gray-400`, `text-gray-500`, `text-gray-600`, or `text-gray-700` for text — they are banned (gray-500 fails WCAG AA on dark backgrounds, others are too low contrast)
 
 ### French Identity (without impersonation)
 

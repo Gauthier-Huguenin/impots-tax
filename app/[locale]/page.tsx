@@ -16,6 +16,12 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-panel focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:text-blanc focus:outline focus:outline-2 focus:outline-danger"
+      >
+        Skip to content
+      </a>
       {/* Sticky tricolore + header */}
       <div className="sticky top-0 z-50">
         <div className="flex h-1">
@@ -27,7 +33,7 @@ export default async function HomePage({ params }: PageProps) {
       </div>
 
       {/* Main content */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
         <JourneyOf100 />
