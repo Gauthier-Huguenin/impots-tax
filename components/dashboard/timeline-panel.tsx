@@ -75,8 +75,8 @@ export function TimelinePanel() {
           ))}
         </div>
 
-        <p className="mt-4 font-mono text-xs text-blanc/70 text-center">
-          ↓ Cliquez pour tous les 8 événements
+        <p className="mt-4 text-right font-display text-sm font-bold text-warning">
+          {t("details")}
         </p>
       </div>
 

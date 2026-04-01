@@ -208,6 +208,7 @@
   },
   "timeline": {
     "title": "CHRONOLOGIE FISCALE",
+    "details": "DÉTAILS ▸",
     "ir1914": "Impôt sur le revenu",
     "secu1945": "Sécurité sociale",
     "tva1954": "Taxe valeur ajoutée",

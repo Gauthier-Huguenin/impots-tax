@@ -208,6 +208,7 @@
   },
   "timeline": {
     "title": "FISCAL TIMELINE",
+    "details": "DETAILS ▸",
     "ir1914": "Income tax",
     "secu1945": "Social security",
     "tva1954": "Value added tax",
