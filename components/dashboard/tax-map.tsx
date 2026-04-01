@@ -14,6 +14,7 @@ export const CATEGORY_COLORS: Record<TaxMapCategory, string> = {
   "brutal-hike": "#f97316",
   "quirky-tax": "#a855f7",
   "secondary-home": "#06b6d4",
+  "where-it-goes": "#22c55e",
 };
 
 const MAP_STYLES = `

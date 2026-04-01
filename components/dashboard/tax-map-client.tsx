@@ -12,6 +12,7 @@ const CATEGORY_KEYS: TaxMapCategory[] = [
   "brutal-hike",
   "quirky-tax",
   "secondary-home",
+  "where-it-goes",
 ];
 
 const TaxMapLeaflet = dynamic(
