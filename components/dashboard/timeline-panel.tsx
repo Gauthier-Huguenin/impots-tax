@@ -9,13 +9,13 @@ export function TimelinePanel() {
   return (
     <>
       <div
-        className="rounded border-2 border-blanc bg-[--color-panel] p-5 cursor-pointer hover:border-blanc/80 transition-colors"
+        className="rounded border-2 border-blanc bg-panel p-5 cursor-pointer hover:border-blanc/80 transition-colors"
         onClick={() => setIsModalOpen(true)}
       >
         <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc">
           CHRONOLOGIE FISCALE
         </h2>
-        <p className="mt-2 font-mono text-xs text-[--color-muted]">
+        <p className="mt-2 font-mono text-xs text-blanc/70">
           Cliquez pour voir la chronologie complète
         </p>
       </div>
