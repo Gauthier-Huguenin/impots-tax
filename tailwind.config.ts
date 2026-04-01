@@ -19,8 +19,8 @@ const config: Config = {
         blanc: "#e2e8f0",
       },
       fontFamily: {
-        mono: ["JetBrains Mono", "Share Tech Mono", "monospace"],
-        display: ["Oswald", "sans-serif"],
+        mono: ["Inter", "sans-serif"],
+        display: ["Inter", "sans-serif"],
       },
     },
   },

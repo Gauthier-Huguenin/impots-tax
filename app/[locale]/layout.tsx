@@ -3,23 +3,18 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { JetBrains_Mono, Oswald } from "next/font/google";
+import { Inter } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
 import "@/styles/globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-inter",
   display: "swap",
-});
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 interface LocaleLayoutProps {
@@ -62,7 +57,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={typedLocale}
-      className={`${jetbrainsMono.variable} ${oswald.variable}`}
+      className={inter.variable}
     >
       <body className="bg-background text-gray-100 font-mono antialiased">
         <script

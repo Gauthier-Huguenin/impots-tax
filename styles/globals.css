@@ -13,8 +13,8 @@
   --color-blanc: #e2e8f0;
   --color-muted: #8b95a5;
 
-  --font-mono: var(--font-mono), "JetBrains Mono", "Share Tech Mono", monospace;
-  --font-display: var(--font-display), "Oswald", sans-serif;
+  --font-mono: var(--font-inter), "Inter", sans-serif;
+  --font-display: var(--font-inter), "Inter", sans-serif;
 }
 
 /*
