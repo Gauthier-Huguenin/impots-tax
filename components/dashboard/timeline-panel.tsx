@@ -75,9 +75,14 @@ export function TimelinePanel() {
           ))}
         </div>
 
-        <p className="mt-4 text-right font-display text-sm font-bold text-warning">
-          {t("details")}
-        </p>
+        <div className="mt-4 flex items-center justify-between border-t border-gray-800 pt-3">
+          <span className="font-mono text-xs text-blanc/60">
+            {t("source")}
+          </span>
+          <span className="font-mono text-xs text-blanc">
+            {t("details")}
+          </span>
+        </div>
       </div>
 
       <TimelineGanttModal
