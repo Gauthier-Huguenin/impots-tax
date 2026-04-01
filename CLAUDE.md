@@ -170,6 +170,11 @@ npm run type-check   # TypeScript check (tsc --noEmit)
 - **Animations**: Pure CSS `@keyframes` in `globals.css`. GPU-accelerated only (transform, opacity). No Framer Motion.
 - **Comments**: Minimal — prefer self-documenting code.
 
+## Modal Patterns
+
+- **TimelinePanel Gantt Modal**: The `TimelinePanel` component (`components/dashboard/timeline-panel.tsx`) opens a fullscreen Gantt chart modal on click. This is a reusable pattern: dashboard panels can open modals with rich, interactive content. The modal is triggered by clicking the panel header and closed via the close button.
+- **Timeline Events Data**: `TIMELINE_EVENTS` in `lib/tax-data.ts` defines historical tax events (1914-2026) with `color` and `displayValue` properties for Gantt rendering. Events are sourced and dated according to tax data rules.
+
 ## i18n Rules
 
 - Translation files: `messages/fr.json` and `messages/en.json`
