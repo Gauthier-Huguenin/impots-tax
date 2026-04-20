@@ -92,11 +92,11 @@ La France a inventé la TVA en 1954 (Maurice Lauré). Le taux normal a été de 
 
 ## 5. Cotisations sociales (salariés, secteur privé) — 2025
 
-Source: URSSAF barème 2025, CAPEB tableau 2025, Cleiss.fr, CCI
+Source: URSSAF barème 2025/2026, CAPEB tableau 2025, Cleiss.fr, CCI
 
-Plafond mensuel SS (PMSS): 3 925 €
-Plafond annuel SS (PASS): 47 100 €
-SMIC mensuel brut: 1 801.80 € (11.88 €/h)
+Plafond mensuel SS (PMSS): 4 005 € (2026 — +2% vs 2025 3 925 €) — source: URSSAF
+Plafond annuel SS (PASS): 48 060 € (2026) — source: URSSAF
+SMIC mensuel brut: 1 823.03 € / 12.02 €/h (depuis 1er janv. 2026, +1.18%) — source: info.gouv.fr
 
 ### Cotisations principales (salaire ≤ 2.5 SMIC)
 
@@ -351,9 +351,9 @@ Ratio dette/PIB: ~112%.
 Déficit budgétaire 2025: ~5.8% du PIB (estimation). Objectif 2026: retour sous les 5%.
 
 ### Autres indicateurs
-- SMIC net 2025: 1 426.30 €/mois
+- SMIC net 2026: ~1 444 €/mois (source: info.gouv.fr, depuis 1er janv. 2026)
 - Salaire médian net privé 2024: ~2 190 €/mois (source INSEE)
-- Plafond SS mensuel 2025: 3 925 €
+- Plafond SS mensuel 2026: 4 005 € (source: URSSAF)
 
 ---
 

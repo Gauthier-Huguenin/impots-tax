@@ -2,7 +2,7 @@
 // Every number must have a source and year annotation.
 
 export const TAX_DATA_YEAR = 2025;
-export const DATA_LAST_UPDATED = "2026-03";
+export const DATA_LAST_UPDATED = "2026-04";
 
 // ─── Interfaces ───────────────────────────────────────────────
 
@@ -66,8 +66,8 @@ export const JOURNEY_SUMMARY = {
 // Sources: see docs/tax-data-2025.md sections 5, 4, 9
 
 export const TICKER_DATA = {
-  smicNet: "1 426 €", // SMIC net 2025 — source: INSEE
-  plafondSS: "3 925 €", // PMSS 2025 — source: URSSAF
+  smicNet: "1 444 €", // SMIC net 2026 — source: info.gouv.fr (1er janv. 2026)
+  plafondSS: "4 005 €", // PMSS 2026 — source: URSSAF (1er janv. 2026)
   tvaNormale: "20%", // TVA taux normal — source: impots.gouv.fr
   csg: "9.2%", // CSG rate 2025 — source: URSSAF
   publicDebt: "3 228 Mds €", // Estimation fin 2024 — source: INSEE
@@ -615,10 +615,10 @@ export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 21,
-    question: "Quel est le plafond mensuel (PMSS) pour les cotisations salariales en 2025 ?",
-    options: ["3 500€", "3 800€", "3 925€", "4 100€"],
+    question: "Quel est le plafond mensuel (PMSS) pour les cotisations salariales en 2026 ?",
+    options: ["3 800€", "3 925€", "4 005€", "4 200€"],
     correctIndex: 2,
-    explanation: "Le plafond mensuel de sécurité sociale (PMSS) 2025 est 3 925€. Source: URSSAF",
+    explanation: "Le plafond mensuel de sécurité sociale (PMSS) 2026 est 4 005€. Source: URSSAF",
   },
   {
     id: 22,
