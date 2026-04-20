@@ -233,8 +233,8 @@
     "irTop": "TMI MAX : {value}"
   },
   "donateHook": {
-    "hook": "28% prélevé sur chaque euro encaissé en tant qu'indépendant BNC. Sans les files d'attente pour le pain, mais avec la déclaration URSSAF trimestrielle.",
-    "detail": "Ce moniteur est maintenu par un indépendant. Même sur votre don, l'État prend sa part.",
+    "hook": "Même votre don est imposé.",
+    "detail": "28 % partent à l'État avant que j'en voie un centime.",
     "cta": "Voir la preuve ▸"
   },
   "dashboardDonate": {

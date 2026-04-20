@@ -233,8 +233,8 @@
     "irTop": "TOP MARGINAL RATE: {value}"
   },
   "donateHook": {
-    "hook": "28% extracted on every euro earned as a French self-employed professional (BNC). No bread lines, but quarterly URSSAF filings instead.",
-    "detail": "This monitor is maintained by a self-employed professional. Even on your donation, the State takes its cut.",
+    "hook": "Even your donation gets taxed.",
+    "detail": "28% goes to the State before I see a cent.",
     "cta": "See the proof ▸"
   },
   "dashboardDonate": {
