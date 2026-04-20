@@ -6,26 +6,26 @@ import { FaqSection } from "@/components/detail/faq-section";
 import type { FaqItem } from "@/lib/seo";
 
 const BRACKET_COLORS = [
+  "text-slate-400",
   "text-favorable",
-  "text-blanc",
   "text-warning",
-  "text-danger",
+  "text-orange-400",
   "text-danger",
 ];
 
 const BRACKET_BG = [
+  "bg-slate-600/10 border-slate-600/30",
   "bg-favorable/10 border-favorable/30",
-  "bg-blanc/10 border-blanc/30",
   "bg-warning/10 border-warning/30",
-  "bg-danger/10 border-danger/30",
+  "bg-orange-500/10 border-orange-500/30",
   "bg-danger/10 border-danger/30",
 ];
 
 const BRACKET_BAR = [
+  "bg-slate-600",
   "bg-favorable",
-  "bg-blanc",
   "bg-warning",
-  "bg-danger",
+  "bg-orange-500",
   "bg-danger",
 ];
 
@@ -91,7 +91,7 @@ export function IncomeTaxDetail() {
                       style={{ width: `${(bracket.rate / 45) * 100}%` }}
                     />
                   </div>
-                  <span className={`font-mono text-2xl font-black ${BRACKET_COLORS[i]}`}>
+                  <span className={`font-mono text-2xl font-black ${BRACKET_COLORS[i]} ${i === 4 ? "animate-glow" : ""}`}>
                     {bracket.rate}%
                   </span>
                 </div>

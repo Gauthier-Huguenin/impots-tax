@@ -11,17 +11,17 @@ interface TaxBracketsProps {
 
 const BRACKET_COLORS = [
   "bg-slate-600",
-  "bg-blanc",
-  "bg-blue-500",
-  "bg-danger/80",
+  "bg-favorable",
+  "bg-warning",
+  "bg-orange-500",
   "bg-danger",
 ];
 
 const BRACKET_TEXT_COLORS = [
   "text-slate-400",
-  "text-blanc",
-  "text-blue-400",
-  "text-danger/80",
+  "text-favorable",
+  "text-warning",
+  "text-orange-400",
   "text-danger",
 ];
 
