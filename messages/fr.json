@@ -239,7 +239,7 @@
   },
   "dashboardDonate": {
     "title": "SOUTENIR LE MONITEUR",
-    "desc": "Ce tableau de bord est maintenu par un freelance. Même sur votre don, l'État prélève 26.2%. Mais si vous voulez quand même…",
+    "desc": "Ce tableau de bord est maintenu par un freelance. Même sur votre don, l'État prélève 26,9 %. Mais si vous voulez quand même…",
     "cta": "Voir le rapport fiscal de votre don ▸"
   },
   "footer": {
@@ -264,9 +264,11 @@
     "stepRevenue": "Chiffre d'affaires déclaré",
     "stepRevenueDesc": "Ce que l'URSSAF considère comme mon « revenu »",
     "stepUrssaf": "Cotisations URSSAF",
-    "stepUrssafDesc": "22% du CA — maladie, retraite, CSG, CRDS",
-    "stepIR": "Impôt sur le revenu",
-    "stepIRDesc": "4.2% — versement libératoire freelance",
+    "stepUrssafDesc": "25,6 % du CA — BNC régime général (maladie, retraite, CSG, CRDS…)",
+    "stepIR": "Versement libératoire IR",
+    "stepIRDesc": "2,2 % — impôt sur le revenu BNC (versement libératoire)",
+    "stepCFP": "Formation professionnelle",
+    "stepCFPDesc": "0,2 % — contribution à la formation professionnelle (CFP)",
     "stepNet": "Ce que je reçois",
     "stepNetDesc": "Merci (sincèrement)",
     "summaryYouGive": "Vous donnez",
@@ -275,14 +277,14 @@
     "summaryIGet": "Je reçois",
     "summaryPercent": "du don original",
     "verdictTitle": "VERDICT",
-    "verdictDesc": "Sur vos 10 €, l'État prélève 2.51 € en cotisations et impôts. Stripe prend 0.40 €. Il me reste 7.09 €. En France, même la générosité est imposable. L'État n'a rien produit, rien créé, rien ajouté — mais il prend sa part. Comme d'habitude.",
+    "verdictDesc": "Sur vos 10 €, l'État prélève 2,69 € en cotisations et impôts. Stripe prend 0,40 €. Il me reste 6,91 €. En France, même la générosité est imposable. L'État n'a rien produit, rien créé, rien ajouté — mais il prend sa part. Comme d'habitude.",
     "ctaTitle": "MALGRÉ TOUT, SOUTENIR LE PROJET",
     "ctaDesc": "Si, après avoir vu ce que l'État prélève, vous souhaitez quand même soutenir ce projet — voici le bouton. L'État vous remercie d'avance.",
     "ctaButton": "Donner (l'État approuve)",
     "ctaNote": "Paiement sécurisé via Stripe. Montant libre.",
     "microEntrepreneurTitle": "POURQUOI CES PRÉLÈVEMENTS ?",
-    "microEntrepreneurDesc": "En tant que freelance, je suis soumis au régime simplifié : 22% de cotisations sociales sur le chiffre d'affaires (pas sur le bénéfice — sur le CA, même si j'ai des frais). Plus 4.2% d'impôt sur le revenu via le versement libératoire. Total : 26.2% de chaque euro encaissé part directement à l'État, avant que je ne puisse en dépenser un centime.",
-    "source": "URSSAF barème freelance 2025, taux versement libératoire BIC/BNC"
+    "microEntrepreneurDesc": "En tant que freelance en activité libérale (BNC), je suis soumis au régime micro-social : 25,6 % de cotisations sociales sur le chiffre d'affaires encaissé (pas sur le bénéfice, sur le CA brut, même si j'ai des frais). S'y ajoutent 2,2 % d'impôt sur le revenu via le versement libératoire, et 0,2 % de contribution à la formation professionnelle. Total : 28 % de chaque euro encaissé part à l'État avant que je ne puisse en dépenser un centime. Les cotisations sociales ouvrent des droits (retraite, maladie), l'impôt non.",
+    "source": "URSSAF barème micro-entrepreneur BNC 2026 (25,6 %), versement libératoire BNC 2,2 %, CFP 0,2 % — sources : autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {
     "title": "TAXE FONCIÈRE",

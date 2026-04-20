@@ -239,7 +239,7 @@
   },
   "dashboardDonate": {
     "title": "FUND THE MONITOR",
-    "desc": "This dashboard is maintained by a freelancer. Even on your donation, the State takes 26.2%. But if you still want to…",
+    "desc": "This dashboard is maintained by a freelancer. Even on your donation, the State takes 26.9%. But if you still want to…",
     "cta": "See the fiscal report on your donation ▸"
   },
   "footer": {
@@ -264,9 +264,11 @@
     "stepRevenue": "Declared revenue",
     "stepRevenueDesc": "What URSSAF considers my 'income'",
     "stepUrssaf": "URSSAF contributions",
-    "stepUrssafDesc": "22% of revenue — health, pension, CSG, CRDS",
-    "stepIR": "Income tax",
-    "stepIRDesc": "4.2% — freelancer flat withholding",
+    "stepUrssafDesc": "25.6% of revenue — BNC general scheme (health, pension, CSG, CRDS…)",
+    "stepIR": "Flat-rate income tax",
+    "stepIRDesc": "2.2% — micro-entrepreneur flat tax option (BNC)",
+    "stepCFP": "Vocational training",
+    "stepCFPDesc": "0.2% — vocational training contribution (CFP)",
     "stepNet": "What I receive",
     "stepNetDesc": "Thank you (sincerely)",
     "summaryYouGive": "You give",
@@ -275,14 +277,14 @@
     "summaryIGet": "I receive",
     "summaryPercent": "of the original donation",
     "verdictTitle": "VERDICT",
-    "verdictDesc": "Out of your €10, the State takes €2.51 in contributions and taxes. Stripe takes €0.40. I'm left with €7.09. In France, even generosity is taxable. The State produced nothing, created nothing, added nothing — but it takes its share. As always.",
+    "verdictDesc": "Out of your €10, the State takes €2.69 in contributions and taxes. Stripe takes €0.40. I'm left with €6.91. In France, even generosity is taxable. The State produced nothing, created nothing, added nothing — but it takes its share. As always.",
     "ctaTitle": "DESPITE ALL THIS, SUPPORT THE PROJECT",
     "ctaDesc": "If, after seeing what the State extracts, you still want to support this project — here's the button. The State thanks you in advance.",
     "ctaButton": "Donate (State-approved)",
     "ctaNote": "Secure payment via Stripe. Any amount.",
     "microEntrepreneurTitle": "WHY THESE DEDUCTIONS?",
-    "microEntrepreneurDesc": "As a freelancer, I'm under the simplified regime: 22% social contributions on revenue (not profit — on revenue, even if I have expenses). Plus 4.2% income tax via flat-rate withholding. Total: 26.2% of every euro collected goes straight to the State, before I can spend a single cent.",
-    "source": "URSSAF freelancer schedule 2025, flat-rate withholding BIC/BNC"
+    "microEntrepreneurDesc": "As a freelancer in a liberal profession (BNC category), I'm under the micro-social scheme: 25.6% social contributions on gross revenue (not profit — on revenue, even if I have expenses). Add 2.2% income tax via the flat-rate option, and 0.2% vocational training contribution (CFP). Total: 28% of every euro collected goes to the State before I can spend a single cent. Social contributions do open entitlements (pension, health coverage); income tax does not.",
+    "source": "URSSAF micro-entrepreneur BNC schedule 2026 (25.6%), flat-rate income tax BNC 2.2%, CFP 0.2% — sources: autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {
     "title": "PROPERTY TAX",

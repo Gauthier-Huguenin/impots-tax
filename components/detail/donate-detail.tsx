@@ -9,9 +9,10 @@ const BREAKDOWN_STEPS = [
   { key: "stepDonation", amount: "10.00 €", className: "text-favorable" },
   { key: "stepStripe", amount: "-0.40 €", className: "text-blanc" },
   { key: "stepRevenue", amount: "9.60 €", className: "text-blanc" },
-  { key: "stepUrssaf", amount: "-2.11 €", className: "text-danger" },
-  { key: "stepIR", amount: "-0.40 €", className: "text-warning" },
-  { key: "stepNet", amount: "7.09 €", className: "text-favorable font-bold" },
+  { key: "stepUrssaf", amount: "-2.46 €", className: "text-danger" },
+  { key: "stepIR", amount: "-0.21 €", className: "text-warning" },
+  { key: "stepCFP", amount: "-0.02 €", className: "text-warning" },
+  { key: "stepNet", amount: "6.91 €", className: "text-favorable font-bold" },
 ];
 
 export function DonateDetail() {
@@ -88,10 +89,10 @@ export function DonateDetail() {
             {t("summaryStateGets")}
           </p>
           <p className="mt-1 font-mono text-xl font-extrabold text-danger">
-            2.51 €
+            2.69 €
           </p>
           <p className="mt-0.5 font-mono text-xs font-light text-blanc">
-            25.1% {t("summaryPercent")}
+            26.9% {t("summaryPercent")}
           </p>
         </div>
         <div className="rounded border-2 border-blanc bg-panel p-4 text-center">
@@ -110,10 +111,10 @@ export function DonateDetail() {
             {t("summaryIGet")}
           </p>
           <p className="mt-1 font-mono text-xl font-extrabold text-favorable">
-            7.09 €
+            6.91 €
           </p>
           <p className="mt-0.5 font-mono text-xs font-light text-blanc">
-            70.9% {t("summaryPercent")}
+            69.1% {t("summaryPercent")}
           </p>
         </div>
       </div>
@@ -123,15 +124,15 @@ export function DonateDetail() {
         <div className="flex h-8">
           <div
             className="flex items-center justify-center bg-favorable/80 text-xs font-bold text-background"
-            style={{ width: "70.9%" }}
+            style={{ width: "69.1%" }}
           >
-            70.9%
+            69.1%
           </div>
           <div
             className="flex items-center justify-center bg-danger/80 text-xs font-bold text-white"
-            style={{ width: "25.1%" }}
+            style={{ width: "26.9%" }}
           >
-            25.1%
+            26.9%
           </div>
           <div
             className="flex items-center justify-center bg-gray-600 text-xs font-bold text-white"
