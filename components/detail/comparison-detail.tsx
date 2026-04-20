@@ -42,17 +42,17 @@ export function ComparisonDetail() {
             const barColor = isFrance
               ? "bg-danger"
               : isAverage
-                ? "bg-gray-500"
-                : "bg-favorable";
+                ? "bg-favorable"
+                : "bg-gray-600";
             const textColor = isFrance
               ? "text-danger"
               : isAverage
-                ? "text-blanc"
+                ? "text-favorable"
                 : "text-blanc";
             const borderClass = isFrance
               ? "border-danger/30 bg-danger/5"
               : isAverage
-                ? "border-gray-700 bg-gray-800/30"
+                ? "border-favorable/30 bg-favorable/5"
                 : "border-gray-800/50 bg-transparent";
 
             return (
@@ -80,23 +80,23 @@ export function ComparisonDetail() {
         </div>
 
         {/* USSR reference */}
-        <div className="mt-4 flex items-center gap-4 rounded border border-dashed border-warning/40 bg-warning/5 p-3">
-          <div className="w-28 shrink-0 font-mono text-sm font-bold text-warning truncate">
+        <div className="mt-4 flex items-center gap-4 rounded border border-dashed border-danger/40 bg-danger/5 p-3">
+          <div className="w-28 shrink-0 font-mono text-sm font-bold text-danger truncate">
             ☭ {t("ussrLabel")}
           </div>
           <div className="flex-1">
             <div className="h-4 w-full overflow-hidden rounded-full bg-gray-800">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-warning/80 to-warning/40 border-r-2 border-dashed border-warning"
+                className="h-full rounded-full bg-gradient-to-r from-danger/80 to-danger/40 border-r-2 border-dashed border-danger"
                 style={{ width: `${(USSR_COMPARISON.taxToGdpPeak / maxTaxToGdp) * 100}%` }}
               />
             </div>
           </div>
-          <div className="w-16 shrink-0 text-right font-mono text-sm font-bold text-warning">
+          <div className="w-16 shrink-0 text-right font-mono text-sm font-bold text-danger">
             ~{USSR_COMPARISON.taxToGdpPeak}%
           </div>
         </div>
-        <p className="mt-2 font-mono text-xs text-warning/70 italic">
+        <p className="mt-2 font-mono text-xs text-danger/60 italic">
           {t("ussrNote")}
         </p>
 
@@ -122,7 +122,7 @@ export function ComparisonDetail() {
           {td("source")} : {t("sourceText")}
         </p>
         <p className="mt-1 font-mono text-xs text-blanc">
-          {td("lastUpdated", { date: "Mars 2026" })}
+          {td("lastUpdated", { date: "Avril 2026" })}
         </p>
       </footer>
     </>
