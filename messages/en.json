@@ -191,8 +191,8 @@
     "mexico": "Mexico",
     "franceDelta": "+{delta} pts above OECD average",
     "ussrLabel": "USSR (peak)",
-    "ussrNote": "France 46.1% > USSR ~43% — the Republic outperforms the Supreme Soviet",
-    "source": "OECD Revenue Statistics 2024",
+    "ussrNote": "France 43.5% > USSR ~43% — the Republic barely outperforms the Supreme Soviet (margin: 0.5 pt)",
+    "source": "OECD Revenue Statistics 2025",
     "details": "DETAILS ▸"
   },
   "keyIndicators": {
@@ -907,10 +907,10 @@
   },
   "detailComparison": {
     "metaTitle": "International Comparison — Tax-to-GDP OECD Ranking | impots.tax",
-    "metaDescription": "France #1 worldwide with 46.1% tax-to-GDP. +12.6 points above OECD average. Full ranking of 14 countries.",
+    "metaDescription": "France #2 worldwide with 43.5% tax-to-GDP. +9.4 points above OECD average. Full ranking of 14 countries.",
     "title": "INTERNATIONAL COMPARISON",
     "subtitle": "INTELLIGENCE REPORT — OECD Extraction Rate Rankings",
-    "intro": "France holds the #1 global position in tax pressure according to the OECD, with a tax-to-GDP ratio of 46.1%. That's 12.6 points above the OECD average (33.5%). For perspective: France extracts proportionally more than Sweden (41.3%), a country synonymous with a massive welfare state. The French extraction rate even exceeds historical estimates of the Soviet peak.",
+    "intro": "France has surrendered the global #1 spot to Denmark (45.2%), but firmly holds second place with a tax-to-GDP ratio of 43.5%. That's 9.4 points above the OECD average (34.1%). For perspective: France extracts proportionally more than Sweden (41.4%), a country synonymous with a massive welfare state. The French extraction rate still barely exceeds historical estimates of the Soviet peak.",
     "rankingTitle": "RANKING — TAX-TO-GDP RATIO",
     "country": "Country",
     "taxToGdp": "Tax/GDP",
@@ -928,14 +928,14 @@
     "usa": "United States",
     "switzerland": "Switzerland",
     "mexico": "Mexico",
-    "franceDelta": "France: +12.6 points above OECD average",
+    "franceDelta": "France: +9.4 points above OECD average",
     "ussrLabel": "USSR (estimated peak 1980-1991)",
-    "ussrNote": "France's tax-to-GDP ratio (46.1%) exceeds the estimated Soviet peak (~43%). France extracts more than the USSR — but with cheese and 5 weeks of vacation.",
+    "ussrNote": "France's tax-to-GDP ratio (43.5%) still — barely — exceeds the estimated Soviet peak (~43%). Margin of freedom: 0.5 points. France extracts almost as much as the USSR — but with cheese and 5 weeks of vacation.",
     "analysisTitle": "ANALYSIS",
-    "analysisP1": "France collects 46.1% of its GDP in taxes and contributions, placing it ahead of Denmark (43.4%) and Belgium (42.9%). The gap with the United States (27.7%) is 18.4 points — nearly double.",
-    "analysisP2": "Switzerland, a neighboring country, collects only 27.6% of its GDP. A French person crossing the border literally enters a different fiscal world.",
-    "analysisP3": "Mexico (17.7%) shows it's possible to run a state with less than 20% in levies. The results are… different.",
-    "sourceText": "OECD Revenue Statistics 2024"
+    "analysisP1": "France collects 43.5% of its GDP in taxes and contributions, placing it behind Denmark (45.2%) but ahead of Austria (43.4%) and Belgium (42.6%). The gap with the United States (25.6%) is 17.9 points — nearly double.",
+    "analysisP2": "Switzerland, a neighboring country, collects only 27.2% of its GDP. A French person crossing the border literally enters a different fiscal world.",
+    "analysisP3": "Mexico (18.3%) shows it's possible to run a state with less than 20% in levies. The results are… different.",
+    "sourceText": "OECD Revenue Statistics 2025"
   },
   "detailIndicators": {
     "metaTitle": "Macro Indicators — Debt, Deficit, Public Spending | impots.tax",

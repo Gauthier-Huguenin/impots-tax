@@ -204,26 +204,28 @@ export const WELFARE_DATA = {
 };
 
 // ─── Section 9: OECD comparison ─────────────────────────────
-// Source: OECD Revenue Statistics 2024
+// Source: OECD Revenue Statistics 2025 (données 2024 préliminaires)
+// https://www.oecd.org/en/publications/2025/12/revenue-statistics-2025_07ca0a8e.html
+// Note: Japan 2024 data not yet available — 2023 figure used (33.7%)
 
 export const OECD_COMPARISON: OECDCountry[] = [
-  { key: "france", taxToGdp: 46.1 },
-  { key: "denmark", taxToGdp: 43.4 },
-  { key: "belgium", taxToGdp: 42.9 },
-  { key: "austria", taxToGdp: 42.7 },
-  { key: "italy", taxToGdp: 42.1 },
-  { key: "sweden", taxToGdp: 41.3 },
-  { key: "germany", taxToGdp: 37.6 },
-  { key: "uk", taxToGdp: 35.3 },
-  { key: "oecdAverage", taxToGdp: 33.5, isAverage: true },
-  { key: "canada", taxToGdp: 33.2 },
-  { key: "japan", taxToGdp: 33.2 },
-  { key: "usa", taxToGdp: 27.7 },
-  { key: "switzerland", taxToGdp: 27.6 },
-  { key: "mexico", taxToGdp: 17.7 },
+  { key: "denmark", taxToGdp: 45.2 },
+  { key: "france", taxToGdp: 43.5 },
+  { key: "austria", taxToGdp: 43.4 },
+  { key: "italy", taxToGdp: 42.8 },
+  { key: "belgium", taxToGdp: 42.6 },
+  { key: "sweden", taxToGdp: 41.4 },
+  { key: "germany", taxToGdp: 38.0 },
+  { key: "canada", taxToGdp: 34.9 },
+  { key: "uk", taxToGdp: 34.4 },
+  { key: "oecdAverage", taxToGdp: 34.1, isAverage: true },
+  { key: "japan", taxToGdp: 33.7 },
+  { key: "switzerland", taxToGdp: 27.2 },
+  { key: "usa", taxToGdp: 25.6 },
+  { key: "mexico", taxToGdp: 18.3 },
 ];
 
-export const FRANCE_OECD_DELTA = 12.6; // points above OECD average
+export const FRANCE_OECD_DELTA = 9.4; // points above OECD average
 
 // ─── USSR historical comparison ─────────────────────────────
 // Sources: NBER Working Papers, IMF retrospectives, World Bank Soviet studies

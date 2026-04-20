@@ -191,8 +191,8 @@
     "mexico": "Mexique",
     "franceDelta": "+{delta} pts au-dessus de la moyenne OCDE",
     "ussrLabel": "URSS (pic)",
-    "ussrNote": "France 46.1% > URSS ~43% — la République dépasse le Soviet suprême",
-    "source": "OCDE Revenue Statistics 2024",
+    "ussrNote": "France 43.5% > URSS ~43% — la République frôle le Soviet suprême (marge : 0.5 pt)",
+    "source": "OCDE Revenue Statistics 2025",
     "details": "DÉTAILS ▸"
   },
   "keyIndicators": {
@@ -907,10 +907,10 @@
   },
   "detailComparison": {
     "metaTitle": "Comparaison internationale — Ratio taxes/PIB OCDE | impots.tax",
-    "metaDescription": "La France №1 mondial avec 46.1% de taxes/PIB. +12.6 points au-dessus de la moyenne OCDE. Classement complet de 14 pays.",
+    "metaDescription": "La France №2 mondial avec 43.5% de taxes/PIB. +9.4 points au-dessus de la moyenne OCDE. Classement complet de 14 pays.",
     "title": "COMPARAISON INTERNATIONALE",
     "subtitle": "RAPPORT DE RENSEIGNEMENT — Classement OCDE des taux d'extraction",
-    "intro": "La France occupe la première place mondiale en pression fiscale selon l'OCDE, avec un ratio taxes/PIB de 46.1%. C'est 12.6 points au-dessus de la moyenne OCDE (33.5%). Pour mettre en perspective : la France prélève proportionnellement plus que la Suède (41.3%), pays pourtant associé à un État-providence massif. Le taux d'extraction français dépasse même les estimations historiques du pic soviétique.",
+    "intro": "La France a cédé le titre de championne mondiale de la pression fiscale au Danemark (45.2%), mais reste solidement en deuxième position avec un ratio taxes/PIB de 43.5%. C'est 9.4 points au-dessus de la moyenne OCDE (34.1%). Pour mettre en perspective : la France prélève proportionnellement plus que la Suède (41.4%), pays pourtant associé à un État-providence massif. Le taux d'extraction français frôle encore les estimations historiques du pic soviétique.",
     "rankingTitle": "CLASSEMENT — RATIO TAXES/PIB",
     "country": "Pays",
     "taxToGdp": "Taxes/PIB",
@@ -928,14 +928,14 @@
     "usa": "États-Unis",
     "switzerland": "Suisse",
     "mexico": "Mexique",
-    "franceDelta": "France : +12.6 points au-dessus de la moyenne OCDE",
+    "franceDelta": "France : +9.4 points au-dessus de la moyenne OCDE",
     "ussrLabel": "URSS (pic estimé 1980-1991)",
-    "ussrNote": "Le taux d'extraction fiscale français (46.1%) dépasse les estimations du pic soviétique (~43%). La France prélève plus que l'URSS — mais avec du fromage et des RTT.",
+    "ussrNote": "Le taux d'extraction fiscale français (43.5%) dépasse encore — de justesse — les estimations du pic soviétique (~43%). Marge de liberté : 0.5 point. La France prélève (presque) autant que l'URSS — mais avec du fromage et des RTT.",
     "analysisTitle": "ANALYSE",
-    "analysisP1": "La France prélève 46.1% de son PIB en taxes et cotisations, ce qui la place devant le Danemark (43.4%) et la Belgique (42.9%). L'écart avec les États-Unis (27.7%) est de 18.4 points — presque le double.",
-    "analysisP2": "La Suisse, pays limitrophe, ne prélève que 27.6% de son PIB. Un Français qui traverse la frontière change littéralement de monde fiscal.",
-    "analysisP3": "Le Mexique (17.7%) montre qu'il est possible de faire fonctionner un État avec moins de 20% de prélèvements. Les résultats sont… différents.",
-    "sourceText": "OCDE Revenue Statistics 2024"
+    "analysisP1": "La France prélève 43.5% de son PIB en taxes et cotisations, ce qui la place derrière le Danemark (45.2%) mais devant l'Autriche (43.4%) et la Belgique (42.6%). L'écart avec les États-Unis (25.6%) est de 17.9 points — presque le double.",
+    "analysisP2": "La Suisse, pays limitrophe, ne prélève que 27.2% de son PIB. Un Français qui traverse la frontière change littéralement de monde fiscal.",
+    "analysisP3": "Le Mexique (18.3%) montre qu'il est possible de faire fonctionner un État avec moins de 20% de prélèvements. Les résultats sont… différents.",
+    "sourceText": "OCDE Revenue Statistics 2025"
   },
   "detailIndicators": {
     "metaTitle": "Indicateurs macro — Dette, déficit, dépenses publiques | impots.tax",
