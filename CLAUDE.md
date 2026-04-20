@@ -224,6 +224,7 @@ The visual identity is a dark "command center" dashboard:
 - **Accent colors**: Red (#ff2d2d) for danger/high tax, Amber (#ffb020) for warning, Cyan (#00d4ff) for info, Green (#00ff88) for low/favorable
 - **Typography**: Monospace for data (JetBrains Mono or Share Tech Mono), condensed sans-serif for titles (Oswald)
 - **Effects**: Subtle scanlines overlay, pulsing borders on critical elements, scrolling ticker
+- **Tax escalation color palette** (used consistently across all rate/bracket visualizations): `bg-slate-600` (0 % / neutral) → `bg-favorable` (low rate / green) → `bg-warning` (moderate / amber) → `bg-orange-500` (high) → `bg-danger` (maximum, with `animate-glow`). Text equivalents: `text-slate-400` → `text-favorable` → `text-warning` → `text-orange-400` → `text-danger`. Reference implementation: `components/dashboard/tax-brackets.tsx` and `components/detail/income-tax-detail.tsx`.
 - **Text color hierarchy** (WCAG AA compliant on dark backgrounds):
   - **Primary** (`text-white` / `text-blanc`): Main titles, key numbers, important content
   - **Secondary** (`text-slate-300`): Labels, descriptions, legend items, panel subtitles
