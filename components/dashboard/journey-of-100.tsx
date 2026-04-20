@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { JOURNEY_SUMMARY, USSR_COMPARISON } from "@/lib/tax-data";
 import { formatEuro, formatPercent } from "@/lib/format";
@@ -7,15 +8,18 @@ import { IconEuro } from "@/components/ui/panel-icons";
 
 const SEGMENTS = [
   { key: "employerContributions", amount: 23, color: "bg-danger" },
-  { key: "employeeContributions", amount: 11, color: "bg-danger/70" },
-  { key: "incomeTax", amount: 9, color: "bg-danger/50" },
-  { key: "vatOnSpending", amount: 9, color: "bg-blue-500/70" },
-  { key: "remaining", amount: 48, color: "bg-white/20" },
+  { key: "employeeContributions", amount: 11, color: "bg-warning" },
+  { key: "incomeTax", amount: 9, color: "bg-orange-500" },
+  { key: "vatOnSpending", amount: 9, color: "bg-blue-500" },
+  { key: "remaining", amount: 48, color: "bg-slate-600" },
 ] as const;
+
+type SegmentKey = (typeof SEGMENTS)[number]["key"];
 
 export function JourneyOf100() {
   const t = useTranslations("journeyOf100");
   const { employerCost, realPurchasingPower, extractionRate } = JOURNEY_SUMMARY;
+  const [hoveredKey, setHoveredKey] = useState<SegmentKey | null>(null);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4">
@@ -32,30 +36,64 @@ export function JourneyOf100() {
             </span>
           </div>
 
-          {/* Stacked bar — purely visual, no text inside */}
+          {/* Stacked bar */}
           <div className="flex h-10 w-full gap-px overflow-hidden rounded sm:h-12">
             {SEGMENTS.map((s) => (
               <div
                 key={s.key}
-                className={`h-full ${s.color}`}
+                className={`relative h-full cursor-pointer transition-opacity duration-150 ${s.color} ${
+                  hoveredKey !== null && hoveredKey !== s.key ? "opacity-30" : "opacity-100"
+                }`}
                 style={{ width: `${s.amount}%` }}
-              />
+                onMouseEnter={() => setHoveredKey(s.key)}
+                onMouseLeave={() => setHoveredKey(null)}
+              >
+                <span className="absolute inset-0 flex items-center justify-center select-none font-mono text-xs font-bold text-white/90 drop-shadow-sm">
+                  {s.amount}%
+                </span>
+              </div>
             ))}
           </div>
 
-          {/* Legend — each item matches its bar segment */}
-          <div className="mt-3 grid grid-cols-1 gap-y-3 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-2">
+          {/* Legend */}
+          <div className="mt-3 grid grid-cols-1 gap-y-1 sm:grid-cols-2 sm:gap-x-6">
             {SEGMENTS.map((s, i) => (
-              <div key={s.key} className="flex items-center gap-2">
-                <span className={`inline-block h-3 w-3 shrink-0 rounded-sm ${s.color}`} />
-                <span className="font-mono text-sm text-blanc">
-                  {i + 1}. {s.key === "remaining"
-                    ? t("realPurchasingPower")
-                    : t(s.key)}
+              <div
+                key={s.key}
+                className={`flex cursor-pointer items-center gap-2 rounded px-2 py-1 transition-colors duration-150 ${
+                  hoveredKey === s.key ? "bg-white/10" : ""
+                }`}
+                onMouseEnter={() => setHoveredKey(s.key)}
+                onMouseLeave={() => setHoveredKey(null)}
+              >
+                <span
+                  className={`inline-block h-3 w-3 shrink-0 rounded-sm transition-opacity duration-150 ${s.color} ${
+                    hoveredKey !== null && hoveredKey !== s.key ? "opacity-30" : ""
+                  }`}
+                />
+                <span
+                  className={`font-mono text-sm transition-colors duration-150 ${
+                    hoveredKey === s.key
+                      ? "text-white"
+                      : hoveredKey !== null
+                        ? "text-blanc/40"
+                        : "text-blanc"
+                  }`}
+                >
+                  {i + 1}.{" "}
+                  {s.key === "remaining" ? t("realPurchasingPower") : t(s.key)}
                 </span>
                 <span
-                  className={`ml-auto font-mono text-sm font-semibold ${
-                    s.key === "remaining" ? "text-blanc" : "text-danger"
+                  className={`ml-auto font-mono text-sm font-semibold transition-colors duration-150 ${
+                    s.key === "remaining"
+                      ? hoveredKey === s.key
+                        ? "text-white"
+                        : hoveredKey !== null
+                          ? "text-blanc/40"
+                          : "text-blanc"
+                      : hoveredKey !== null && hoveredKey !== s.key
+                        ? "text-danger/40"
+                        : "text-danger"
                   }`}
                 >
                   {s.key === "remaining" ? "" : "−"}{formatEuro(s.amount)}
