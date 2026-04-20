@@ -234,12 +234,12 @@
   },
   "donateHook": {
     "hook": "52% extracted by the State.",
-    "detail": "This monitor is run by a freelancer — even on your donation, the State takes its cut.",
+    "detail": "This monitor is run by an independent contractor — even on your donation, the State takes its cut.",
     "cta": "See the proof ▸"
   },
   "dashboardDonate": {
     "title": "FUND THE MONITOR",
-    "desc": "This dashboard is maintained by a freelancer. Even on your donation, the State takes 26.9%. But if you still want to…",
+    "desc": "This dashboard is maintained by an independent contractor. Even on your donation, the State takes 26.9%. But if you still want to…",
     "cta": "See the fiscal report on your donation ▸"
   },
   "footer": {
@@ -252,7 +252,7 @@
     "metaDescription": "Support impots.tax. Even on your donation, the State takes its cut. Here's the proof in real time.",
     "title": "DONATE",
     "subtitle": "FISCAL IMPACT REPORT ON CITIZEN GENEROSITY",
-    "intro": "I'm a freelancer. Which means even your generosity is subject to fiscal extraction. Here's what actually happens when you give me €10. Spoiler: the State is the primary beneficiary.",
+    "intro": "I'm an independent contractor. Which means even your generosity is subject to fiscal extraction. Here's what actually happens when you give me €10. Spoiler: the State is the primary beneficiary.",
     "breakdownTitle": "BREAKDOWN OF YOUR €10 DONATION",
     "step": "Step",
     "amount": "Amount",
@@ -283,7 +283,7 @@
     "ctaButton": "Donate (State-approved)",
     "ctaNote": "Secure payment via Stripe. Any amount.",
     "microEntrepreneurTitle": "WHY THESE DEDUCTIONS?",
-    "microEntrepreneurDesc": "As a freelancer in a liberal profession (BNC category), I'm under the micro-social scheme: 25.6% social contributions on gross revenue (not profit — on revenue, even if I have expenses). Add 2.2% income tax via the flat-rate option, and 0.2% vocational training contribution (CFP). Total: 28% of every euro collected goes to the State before I can spend a single cent. Social contributions do open entitlements (pension, health coverage); income tax does not.",
+    "microEntrepreneurDesc": "As an independent contractor in a liberal profession (BNC category), I'm under the micro-social scheme: 25.6% social contributions on gross revenue (not profit — on revenue, even if I have expenses). Add 2.2% income tax via the flat-rate option, and 0.2% vocational training contribution (CFP). Total: 28% of every euro collected goes to the State before I can spend a single cent. Social contributions do open entitlements (pension, health coverage); income tax does not.",
     "source": "URSSAF micro-entrepreneur BNC schedule 2026 (25.6%), flat-rate income tax BNC 2.2%, CFP 0.2% — sources: autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {

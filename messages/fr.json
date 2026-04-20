@@ -234,12 +234,12 @@
   },
   "donateHook": {
     "hook": "52% prélevé par l'État.",
-    "detail": "Ce moniteur est maintenu par un freelance — même sur votre don, l'État prend sa part.",
+    "detail": "Ce moniteur est maintenu par un indépendant — même sur votre don, l'État prend sa part.",
     "cta": "Voir la preuve ▸"
   },
   "dashboardDonate": {
     "title": "SOUTENIR LE MONITEUR",
-    "desc": "Ce tableau de bord est maintenu par un freelance. Même sur votre don, l'État prélève 26,9 %. Mais si vous voulez quand même…",
+    "desc": "Ce tableau de bord est maintenu par un indépendant. Même sur votre don, l'État prélève 26,9 %. Mais si vous voulez quand même…",
     "cta": "Voir le rapport fiscal de votre don ▸"
   },
   "footer": {
@@ -252,7 +252,7 @@
     "metaDescription": "Soutenez impots.tax. Même sur votre don, l'État prélève sa part. Voici la preuve en temps réel.",
     "title": "FAIRE UN DON",
     "subtitle": "RAPPORT D'IMPACT FISCAL SUR LA GÉNÉROSITÉ CITOYENNE",
-    "intro": "Je suis freelance. Ce qui signifie que même votre générosité est soumise à l'extraction fiscale. Voici ce qui se passe réellement quand vous me donnez 10 €. Spoiler : l'État est le premier bénéficiaire.",
+    "intro": "Je suis indépendant. Ce qui signifie que même votre générosité est soumise à l'extraction fiscale. Voici ce qui se passe réellement quand vous me donnez 10 €. Spoiler : l'État est le premier bénéficiaire.",
     "breakdownTitle": "DÉCOMPOSITION DE VOTRE DON DE 10 €",
     "step": "Étape",
     "amount": "Montant",
@@ -283,7 +283,7 @@
     "ctaButton": "Donner (l'État approuve)",
     "ctaNote": "Paiement sécurisé via Stripe. Montant libre.",
     "microEntrepreneurTitle": "POURQUOI CES PRÉLÈVEMENTS ?",
-    "microEntrepreneurDesc": "En tant que freelance en activité libérale (BNC), je suis soumis au régime micro-social : 25,6 % de cotisations sociales sur le chiffre d'affaires encaissé (pas sur le bénéfice, sur le CA brut, même si j'ai des frais). S'y ajoutent 2,2 % d'impôt sur le revenu via le versement libératoire, et 0,2 % de contribution à la formation professionnelle. Total : 28 % de chaque euro encaissé part à l'État avant que je ne puisse en dépenser un centime. Les cotisations sociales ouvrent des droits (retraite, maladie), l'impôt non.",
+    "microEntrepreneurDesc": "En tant qu'indépendant en activité libérale (BNC), je suis soumis au régime micro-social : 25,6 % de cotisations sociales sur le chiffre d'affaires encaissé (pas sur le bénéfice, sur le CA brut, même si j'ai des frais). S'y ajoutent 2,2 % d'impôt sur le revenu via le versement libératoire, et 0,2 % de contribution à la formation professionnelle. Total : 28 % de chaque euro encaissé part à l'État avant que je ne puisse en dépenser un centime. Les cotisations sociales ouvrent des droits (retraite, maladie), l'impôt non.",
     "source": "URSSAF barème micro-entrepreneur BNC 2026 (25,6 %), versement libératoire BNC 2,2 %, CFP 0,2 % — sources : autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {
