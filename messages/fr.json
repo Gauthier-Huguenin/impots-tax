@@ -233,8 +233,8 @@
     "irTop": "TMI MAX : {value}"
   },
   "donateHook": {
-    "hook": "52% prélevé par l'État.",
-    "detail": "Ce moniteur est maintenu par un indépendant — même sur votre don, l'État prend sa part.",
+    "hook": "28% prélevé sur chaque euro encaissé en tant qu'indépendant BNC. Sans les files d'attente pour le pain, mais avec la déclaration URSSAF trimestrielle.",
+    "detail": "Ce moniteur est maintenu par un indépendant. Même sur votre don, l'État prend sa part.",
     "cta": "Voir la preuve ▸"
   },
   "dashboardDonate": {
@@ -283,7 +283,7 @@
     "ctaButton": "Donner (l'État approuve)",
     "ctaNote": "Paiement sécurisé via Stripe. Montant libre.",
     "microEntrepreneurTitle": "POURQUOI CES PRÉLÈVEMENTS ?",
-    "microEntrepreneurDesc": "En tant qu'indépendant en activité libérale (BNC), je suis soumis au régime micro-social : 25,6 % de cotisations sociales sur le chiffre d'affaires encaissé (pas sur le bénéfice, sur le CA brut, même si j'ai des frais). S'y ajoutent 2,2 % d'impôt sur le revenu via le versement libératoire, et 0,2 % de contribution à la formation professionnelle. Total : 28 % de chaque euro encaissé part à l'État avant que je ne puisse en dépenser un centime. Les cotisations sociales ouvrent des droits (retraite, maladie), l'impôt non.",
+    "microEntrepreneurDesc": "En tant qu'indépendant en activité libérale (BNC), je suis soumis au régime micro-social : 25,6 % de cotisations sociales sur le chiffre d'affaires encaissé (pas sur le bénéfice, sur le CA brut, même si j'ai des frais). S'y ajoutent 2,2 % d'impôt sur le revenu via le versement libératoire, et 0,2 % de contribution à la formation professionnelle. Total : 28 % de chaque euro encaissé part à l'État avant que je ne puisse en dépenser un centime. Les cotisations sociales ouvrent des droits (retraite, maladie), l'impôt non. Note : le taux de 28 % est calculé sur le chiffre d'affaires encaissé après commission Stripe (9,60 €) ; rapporté au don brut de 10 €, cela représente 26,9 %.",
     "source": "URSSAF barème micro-entrepreneur BNC 2026 (25,6 %), versement libératoire BNC 2,2 %, CFP 0,2 % — sources : autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {

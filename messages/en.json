@@ -233,8 +233,8 @@
     "irTop": "TOP MARGINAL RATE: {value}"
   },
   "donateHook": {
-    "hook": "52% extracted by the State.",
-    "detail": "This monitor is run by an independent contractor — even on your donation, the State takes its cut.",
+    "hook": "28% extracted on every euro earned as a French self-employed professional (BNC). No bread lines, but quarterly URSSAF filings instead.",
+    "detail": "This monitor is maintained by a self-employed professional. Even on your donation, the State takes its cut.",
     "cta": "See the proof ▸"
   },
   "dashboardDonate": {
@@ -283,7 +283,7 @@
     "ctaButton": "Donate (State-approved)",
     "ctaNote": "Secure payment via Stripe. Any amount.",
     "microEntrepreneurTitle": "WHY THESE DEDUCTIONS?",
-    "microEntrepreneurDesc": "As an independent contractor in a liberal profession (BNC category), I'm under the micro-social scheme: 25.6% social contributions on gross revenue (not profit — on revenue, even if I have expenses). Add 2.2% income tax via the flat-rate option, and 0.2% vocational training contribution (CFP). Total: 28% of every euro collected goes to the State before I can spend a single cent. Social contributions do open entitlements (pension, health coverage); income tax does not.",
+    "microEntrepreneurDesc": "As an independent contractor in a liberal profession (BNC category), I'm under the micro-social scheme: 25.6% social contributions on gross revenue (not profit — on revenue, even if I have expenses). Add 2.2% income tax via the flat-rate option, and 0.2% vocational training contribution (CFP). Total: 28% of every euro collected goes to the State before I can spend a single cent. Social contributions do open entitlements (pension, health coverage); income tax does not. Note: the 28% rate is calculated on revenue after Stripe fees (€9.60); relative to the gross donation of €10, this represents 26.9%.",
     "source": "URSSAF micro-entrepreneur BNC schedule 2026 (25.6%), flat-rate income tax BNC 2.2%, CFP 0.2% — sources: autoentrepreneur.urssaf.fr, entreprendre.service-public.gouv.fr"
   },
   "propertyTax": {
