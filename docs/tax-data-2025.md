@@ -85,8 +85,8 @@ Source: impots.gouv.fr, economie.gouv.fr
 |---|---|
 | 20% | Taux normal (majorité des biens et services) |
 | 10% | Taux intermédiaire (restauration, transport, travaux rénovation, médicaments non remboursables) |
-| 5.5% | Taux réduit (alimentation, livres, énergie, équipements handicapés, spectacles vivants) |
-| 2.1% | Taux super-réduit (presse, médicaments remboursables, redevance TV) |
+| 5.5% | Taux réduit (alimentation, livres, protections hygiéniques, chaleur renouvelable, équipements handicapés, spectacles vivants). Les abonnements de gaz et d'électricité relèvent du taux normal de 20% depuis le 1er août 2025. |
+| 2.1% | Taux particulier (presse, médicaments remboursables, premières représentations de certains spectacles, certains animaux vivants de boucherie) |
 
 La France a inventé la TVA en 1954 (Maurice Lauré). Le taux normal a été de 16.85% à l'origine.
 

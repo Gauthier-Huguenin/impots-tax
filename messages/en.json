@@ -700,9 +700,9 @@
     "rateIntermediate": "Intermediate rate — 10%",
     "rateIntermediateDesc": "Restaurants, passenger transport, energy renovation work, non-reimbursed medication, camping, museums.",
     "rateReduced": "Reduced rate — 5.5%",
-    "rateReducedDesc": "Food (except alcohol, confectionery, caviar), books, energy (gas, electricity), equipment for disabled persons, live performances.",
+    "rateReducedDesc": "Food (except alcohol, confectionery, caviar), books, sanitary protection products, renewable heat, disability equipment, live performances.",
     "rateSuperReduced": "Super-reduced rate — 2.1%",
-    "rateSuperReducedDesc": "Print and online press, medications reimbursed by Social Security, TV license fee (public broadcasting contribution).",
+    "rateSuperReducedDesc": "Print and online press, medications reimbursed by Social Security, first performances of certain shows, some live butcher's animals.",
     "historyTitle": "HISTORY",
     "historyDesc": "VAT was invented in France in 1954 by Maurice Lauré, a finance inspector. The initial rate was 16.85%. Today, the standard rate is 20%. The State decided 16.85% wasn't round enough — or profitable enough.",
     "mechanismTitle": "MECHANISM",
@@ -710,13 +710,13 @@
     "sourceText": "impots.gouv.fr, economie.gouv.fr",
     "faqTitle": "FREQUENTLY ASKED QUESTIONS — VAT",
     "faqQ1": "What are the VAT rates in France?",
-    "faqA1": "Four rates: 20% standard (most goods and services), 10% intermediate (restaurants, transport, renovations), 5.5% reduced (food, books, energy), and 2.1% super-reduced (press, reimbursable medicine). Because one rate would be too simple.",
+    "faqA1": "As of April 24, 2026, metropolitan France applies four VAT rates: 20% standard (most goods and services), 10% intermediate (restaurants, transport, renovation work, non-reimbursed medicines), 5.5% reduced (food, books, sanitary protection products, disability equipment, renewable heat, live performances), and 2.1% special rate (press, reimbursable medicines, first performances of certain shows). Since August 1, 2025, gas and electricity subscriptions are no longer taxed at 5.5%; they fall under the standard 20% rate.",
     "faqQ2": "Who invented VAT?",
     "faqA2": "Maurice Lauré, a French tax inspector, in 1954. The initial rate was 16.85%. Now used by over 170 countries, VAT is arguably France's most successful export — more widely adopted than wine, cheese, or existential philosophy.",
     "faqQ3": "Why is VAT considered the perfect tax?",
     "faqA3": "It's invisible (built into prices), collected at every production stage, nearly impossible to evade, and the consumer pays 100% without ever seeing a bill from the government. The State gets paid before you even reach the checkout counter.",
     "faqQ4": "Which products have the reduced 5.5% rate?",
-    "faqA4": "Basic food (excluding alcohol, confectionery, and caviar — yes, they specifically excluded caviar), books, residential energy (gas, electricity), disability equipment, and live performances. Everything else gets the full 20% treatment."
+    "faqA4": "The 5.5% reduced rate applies notably to basic food (excluding alcohol, confectionery, and caviar), books, feminine sanitary protection products, disability equipment, heat produced from renewable energy, and live performances. Since August 1, 2025, gas and electricity subscriptions are taxed at the standard 20% rate."
   },
   "detailFuelTax": {
     "metaTitle": "Fuel Taxes — Excise Duty, TICPE, VAT | impots.tax",
