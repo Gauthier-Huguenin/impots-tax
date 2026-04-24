@@ -133,17 +133,17 @@ Total extraction rate: ~52% (€100 employer base → €48 purchasing power).
 
 ## 6. Fuel Tax
 
-Source: UFIP Énergies & Mobilités, Fipeco (February 2026 data)
+Source: French Customs, prix-carburants.gouv.fr, Roole Data (April 24, 2026 data)
 
-### SP95 gasoline price breakdown (~€1.71/liter)
+### SP95-E10 gasoline price breakdown (~€1.983/liter)
 | Component | Amount | % of price |
 |---|---|---|
-| Crude oil + refining | ~€0.48 | ~28% |
-| Distribution + margin | ~€0.21 | ~12% |
-| Excise tax (ex-TICPE) | ~€0.67 | ~39% |
-| VAT on product | ~€0.15 | ~9% |
-| VAT on excise tax | ~€0.13 | ~8% |
-| **Total taxes** | **~€0.95** | **~55%** |
+| Crude oil + refining | ~€0.68 | ~34% |
+| Distribution + margin | ~€0.30 | ~15% |
+| Excise tax (ex-TICPE) | ~€0.67 | ~34% |
+| VAT on product | ~€0.20 | ~10% |
+| VAT on excise tax | ~€0.13 | ~7% |
+| **Total taxes** | **~€1.00** | **~50%** |
 
 Key point: VAT is applied ON TOP of the excise tax. It's a tax on a tax.
 

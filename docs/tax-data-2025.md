@@ -144,23 +144,24 @@ Source: Estimation basée sur salaire médian net ~2 400 €/mois, TMI 30%. Les 
 
 ## 6. Taxes sur le carburant
 
-Source: UFIP Énergies & Mobilités, Fipeco, Connaissance des Énergies, CNEWS (données février-mars 2026)
+Source: Douanes (BOD DetT janvier 2026), prix-carburants.gouv.fr, Roole Data (prix moyens relevés le 24 avril 2026 à 8h00), Connaissance des Énergies
 
 ### Accise sur les énergies (ex-TICPE) — 2026
 | Carburant | Accise par litre |
 |---|---|
-| SP95 / SP95-E10 | 0.67 € |
+| SP95-E10 | 0.670 € |
+| SP95-E5 / SP98 | 0.690 € |
 | Gazole | 0.608 € |
 
-### Décomposition du prix d'un litre de SP95 (~1.71 €, février 2026)
+### Décomposition du prix d'un litre de SP95-E10 (~1.983 €, 24 avril 2026)
 | Composante | Montant | % du prix |
 |---|---|---|
-| Pétrole brut + raffinage | ~0.48 € | ~28% |
-| Distribution + marge | ~0.21 € | ~12% |
-| Accise (ex-TICPE) | ~0.67 € | ~39% |
-| TVA sur produit | ~0.15 € | ~9% |
-| TVA sur accise | ~0.13 € | ~8% |
-| **Total taxes** | **~0.95 €** | **~55%** |
+| Pétrole brut + raffinage | ~0.68 € | ~34% |
+| Distribution + marge | ~0.30 € | ~15% |
+| Accise (ex-TICPE) | ~0.67 € | ~34% |
+| TVA sur produit | ~0.20 € | ~10% |
+| TVA sur accise | ~0.13 € | ~7% |
+| **Total taxes** | **~1.00 €** | **~50%** |
 
 Point clé: la TVA s'applique SUR l'accise. C'est une taxe sur une taxe.
 

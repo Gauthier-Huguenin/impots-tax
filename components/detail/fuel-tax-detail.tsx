@@ -136,7 +136,7 @@ export function FuelTaxDetail() {
           {td("sources")} : {t("sourceText")}
         </p>
         <p className="mt-1 font-mono text-xs text-blanc">
-          {td("lastUpdated", { date: "Mars 2026" })}
+          {td("lastUpdated", { date: "24 avril 2026" })}
         </p>
       </footer>
     </>

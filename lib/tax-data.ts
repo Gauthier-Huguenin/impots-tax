@@ -153,20 +153,20 @@ export const SOCIAL_CONTRIBUTIONS_TOTALS = {
   total: 52, // ~52% — source: URSSAF
 };
 
-// ─── Section 6: Fuel tax (SP95, février 2026) ───────────────
-// Source: UFIP Énergies & Mobilités, Fipeco, Connaissance des Énergies
+// ─── Section 6: Fuel tax (SP95-E10, 24 avril 2026) ──────────
+// Sources: Douanes BOD DetT janvier 2026, Roole Data / prix-carburants.gouv.fr
 
-export const FUEL_PRICE = 1.71; // €/L SP95, février 2026
+export const FUEL_PRICE = 1.983; // €/L SP95-E10, moyenne nationale au 24 avril 2026
 
 export const FUEL_BREAKDOWN: BreakdownComponent[] = [
-  { key: "crudeOil", amount: 0.48, percent: 28, isTax: false },
-  { key: "distribution", amount: 0.21, percent: 12, isTax: false },
-  { key: "accise", amount: 0.67, percent: 39, isTax: true },
-  { key: "vatProduct", amount: 0.15, percent: 9, isTax: true },
-  { key: "vatAccise", amount: 0.13, percent: 8, isTax: true },
+  { key: "crudeOil", amount: 0.68, percent: 34, isTax: false },
+  { key: "distribution", amount: 0.30, percent: 15, isTax: false },
+  { key: "accise", amount: 0.67, percent: 34, isTax: true },
+  { key: "vatProduct", amount: 0.20, percent: 10, isTax: true },
+  { key: "vatAccise", amount: 0.13, percent: 7, isTax: true },
 ];
 
-export const FUEL_TAX_PERCENT = 55; // ~55% du prix est taxes
+export const FUEL_TAX_PERCENT = 50; // ~50.5% du prix est taxes
 
 // ─── Section 7: Behavioral taxes (tobacco) ──────────────────
 // Source: Douanes, Revue des Tabacs, Smoking.fr
@@ -504,9 +504,9 @@ export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
   {
     id: 4,
     question: "Quel pourcentage du prix d'un litre d'essence est constitué de taxes ?",
-    options: ["35%", "45%", "55%", "65%"],
+    options: ["35%", "45%", "50%", "65%"],
     correctIndex: 2,
-    explanation: "Environ 55% du prix du carburant est composé de taxes (accise + TVA). Source: UFIP 2026",
+    explanation: "Au 24 avril 2026, environ 50% du prix du SP95-E10 est composé de taxes (accise + TVA). Sources: Douanes, Roole Data",
   },
   {
     id: 5,

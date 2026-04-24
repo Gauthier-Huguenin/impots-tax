@@ -123,7 +123,7 @@
   },
   "fuelTax": {
     "title": "FUEL TAXES",
-    "subtitle": "Price breakdown — SP95 unleaded",
+    "subtitle": "Price breakdown — SP95-E10",
     "pricePerLiter": "Price per liter: €{price}",
     "crudeOil": "Crude oil + refining",
     "distribution": "Distribution + margin",
@@ -132,7 +132,7 @@
     "vatAccise": "VAT on excise duty",
     "totalTaxes": "TOTAL TAXES",
     "taxOnTax": "VAT is levied on the excise duty: a tax on a tax.",
-    "source": "UFIP, February 2026 data",
+    "source": "Customs, Roole Data, 2026-04-24",
     "details": "DETAILS ▸"
   },
   "behavioralTax": {
@@ -720,11 +720,11 @@
   },
   "detailFuelTax": {
     "metaTitle": "Fuel Taxes — Excise Duty, TICPE, VAT | impots.tax",
-    "metaDescription": "55% of gasoline price is taxes. Excise duty, VAT on excise (tax on tax). Complete SP95 price breakdown.",
+    "metaDescription": "About 50% of the SP95-E10 price is taxes. Excise duty, VAT on excise duty (tax on tax). Complete breakdown as of April 24, 2026.",
     "title": "FUEL TAXES",
-    "subtitle": "EXTRACTION COST ANALYSIS — SP95 Unleaded, February 2026",
-    "intro": "When you fill up your tank, you think you're buying gasoline. In reality, you're mostly funding the State. Out of every liter of SP95 at €1.71, about €0.95 goes to taxes. And the best part: VAT is applied ON TOP of the excise duty. Yes, it's a tax on a tax. France invented VAT, and it stops at nothing to apply it.",
-    "breakdownTitle": "PRICE BREAKDOWN — SP95 (~€1.71/L)",
+    "subtitle": "EXTRACTION COST ANALYSIS — SP95-E10, April 24, 2026",
+    "intro": "When you fill up your tank, you think you're buying gasoline. In reality, you're also funding the State. Out of every liter of SP95-E10 at €1.983, about €1.00 goes to taxes. And the best part: VAT is applied ON TOP of the excise duty. Yes, it's a tax on a tax. France invented VAT, and it stops at nothing to apply it.",
+    "breakdownTitle": "PRICE BREAKDOWN — SP95-E10 (~€1.983/L)",
     "component": "Component",
     "amount": "Amount",
     "percent": "% of price",
@@ -737,11 +737,11 @@
     "taxOnTaxTitle": "THE TAX ON A TAX",
     "taxOnTaxDesc": "The 20% VAT applies to the pre-VAT price, which includes the excise duty. Concretely, you pay VAT on the excise duty: ~€0.13 per liter of tax on a tax. It's perfectly legal, perfectly absurd, and perfectly French.",
     "acciseTitle": "ENERGY EXCISE DUTY (ex-TICPE) — 2026",
-    "acciseSP95": "SP95 / SP95-E10: €0.67/L",
+    "acciseSP95": "SP95-E10: €0.670/L; SP95-E5 / SP98: €0.690/L",
     "acciseGazole": "Diesel: €0.608/L",
     "carbonTitle": "CARBON COMPONENT",
     "carbonDesc": "The carbon tax has been frozen at €44.60 per ton of CO2 since 2018, following the Yellow Vests movement. It was supposed to reach €100/ton by 2030. The government preferred to avoid another episode of roundabout democracy.",
-    "sourceText": "UFIP Énergies & Mobilités, Fipeco, Connaissance des Énergies, CNEWS (February-March 2026 data)"
+    "sourceText": "French Customs (BOD DetT January 2026), prix-carburants.gouv.fr, Roole Data (average prices recorded on April 24, 2026 at 8:00), Connaissance des Énergies"
   },
   "detailBehavioralTax": {
     "metaTitle": "Behavioral Taxes — Tobacco, Alcohol, Sugar | impots.tax",

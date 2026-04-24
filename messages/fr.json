@@ -123,7 +123,7 @@
   },
   "fuelTax": {
     "title": "TAXES CARBURANT",
-    "subtitle": "Décomposition du prix — SP95",
+    "subtitle": "Décomposition du prix — SP95-E10",
     "pricePerLiter": "Prix au litre : {price} €",
     "crudeOil": "Pétrole brut + raffinage",
     "distribution": "Distribution + marge",
@@ -132,7 +132,7 @@
     "vatAccise": "TVA sur accise",
     "totalTaxes": "TOTAL TAXES",
     "taxOnTax": "La TVA s'applique sur l'accise : une taxe sur une taxe.",
-    "source": "UFIP, données février 2026",
+    "source": "Douanes, Roole Data, 24/04/2026",
     "details": "DÉTAILS ▸"
   },
   "behavioralTax": {
@@ -720,11 +720,11 @@
   },
   "detailFuelTax": {
     "metaTitle": "Taxes sur le carburant — Accise, TICPE, TVA | impots.tax",
-    "metaDescription": "55% du prix de l'essence est constitué de taxes. Accise, TVA sur l'accise (taxe sur taxe). Décomposition complète du prix du SP95.",
+    "metaDescription": "Environ 50% du prix du SP95-E10 est constitué de taxes. Accise, TVA sur l'accise (taxe sur taxe). Décomposition complète au 24 avril 2026.",
     "title": "TAXES CARBURANT",
-    "subtitle": "RAPPORT D'ANALYSE DU COÛT D'EXTRACTION — SP95, février 2026",
-    "intro": "Quand vous faites le plein, vous pensez acheter de l'essence. En réalité, vous financez principalement l'État. Sur chaque litre de SP95 à 1.71 €, environ 0.95 € part en taxes. Et le meilleur : la TVA s'applique SUR l'accise. Oui, c'est une taxe sur une taxe. La France a inventé la TVA, et elle ne recule devant rien pour l'appliquer.",
-    "breakdownTitle": "DÉCOMPOSITION DU PRIX — SP95 (~1.71 €/L)",
+    "subtitle": "RAPPORT D'ANALYSE DU COÛT D'EXTRACTION — SP95-E10, 24 avril 2026",
+    "intro": "Quand vous faites le plein, vous pensez acheter de l'essence. En réalité, vous financez aussi l'État. Sur chaque litre de SP95-E10 à 1.983 €, environ 1.00 € part en taxes. Et le meilleur : la TVA s'applique SUR l'accise. Oui, c'est une taxe sur une taxe. La France a inventé la TVA, et elle ne recule devant rien pour l'appliquer.",
+    "breakdownTitle": "DÉCOMPOSITION DU PRIX — SP95-E10 (~1.983 €/L)",
     "component": "Composante",
     "amount": "Montant",
     "percent": "% du prix",
@@ -737,11 +737,11 @@
     "taxOnTaxTitle": "LA TAXE SUR LA TAXE",
     "taxOnTaxDesc": "La TVA (20%) s'applique sur le prix hors TVA, qui inclut l'accise. Concrètement, vous payez de la TVA sur l'accise : ~0.13 € par litre de taxe sur une taxe. C'est parfaitement légal, parfaitement absurde, et parfaitement français.",
     "acciseTitle": "ACCISE SUR LES ÉNERGIES (ex-TICPE) — 2026",
-    "acciseSP95": "SP95 / SP95-E10 : 0.67 €/L",
+    "acciseSP95": "SP95-E10 : 0.670 €/L ; SP95-E5 / SP98 : 0.690 €/L",
     "acciseGazole": "Gazole : 0.608 €/L",
     "carbonTitle": "COMPOSANTE CARBONE",
     "carbonDesc": "La taxe carbone a été gelée à 44.60 €/tonne de CO2 depuis 2018, suite au mouvement des Gilets Jaunes. Elle devait atteindre 100 €/t en 2030. Le gouvernement a préféré éviter un nouvel épisode de démocratie directe sur les ronds-points.",
-    "sourceText": "UFIP Énergies & Mobilités, Fipeco, Connaissance des Énergies, CNEWS (données février-mars 2026)"
+    "sourceText": "Douanes (BOD DetT janvier 2026), prix-carburants.gouv.fr, Roole Data (prix moyens relevés le 24 avril 2026 à 8h00), Connaissance des Énergies"
   },
   "detailBehavioralTax": {
     "metaTitle": "Taxes comportementales — Tabac, alcool, sucre | impots.tax",

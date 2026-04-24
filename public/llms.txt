@@ -8,7 +8,7 @@
 - For every €100 an employer pays, a median worker keeps only ~€48 in real purchasing power (extraction rate: 52%)
 - VAT was invented in France in 1954
 - ~82% of the price of a pack of cigarettes is taxes
-- ~55% of the price of a liter of gasoline is taxes (including a tax on a tax: VAT applied on top of the excise tax)
+- ~50% of the price of a liter of SP95-E10 gasoline is taxes (including a tax on a tax: VAT applied on top of the excise tax)
 - Inheritance tax reaches 60% for non-relatives
 
 ## Site pages
