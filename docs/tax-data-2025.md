@@ -172,26 +172,26 @@ Composante carbone: gelée à 44.60 €/tonne CO2 depuis 2018 (mouvement gilets 
 ## 7. Taxes comportementales (tabac, alcool, sucre)
 
 ### Tabac — 2025/2026
-Source: Douanes, Revue des Tabacs, Smoking.fr
+Source: Douanes, arrêté du 24 décembre 2025, arrêté du 26 janvier 2026, BOFiP
 
 Prix moyen pondéré (PMP) 2025: 12.54 € / paquet de 20 cigarettes.
-Objectif 2026: tous les paquets ≥ 13 €.
+Au 1er janvier 2026, la Douane illustre encore un bas de marché à 11.50 € et un premium à 13.50 € : l'objectif politique de 13 € n'est pas un plancher universel constaté.
 
-Accise cigarettes 2025:
+Accise cigarettes 2026:
 - Part proportionnelle: 55% du prix de vente
-- Part spécifique: 72.70 € pour 1000 unités (3.635 € par paquet de 20) — tarif 2026, source: Douanes circulaire 22 décembre 2025
-- Minimum de perception: 378.80 € pour 1000 unités (2026)
+- Part spécifique: 73.30 € pour 1000 unités (1.466 € par paquet de 20)
+- Minimum de perception: 381.90 € pour 1000 unités (7.638 € par paquet de 20)
 
-Décomposition d'un paquet à 13 € (estimation 2025-2026):
+Décomposition d'un paquet à 13 € (référence 2026):
 | Composante | Montant | % |
 |---|---|---|
-| Accise (proportionnelle + spécifique) | ~8.50 € | ~65% |
+| Accise (proportionnelle + spécifique) | ~8.62 € | ~66% |
 | TVA (16.67% en dedans) | ~2.17 € | ~17% |
 | Remise buraliste | ~1.34 € | ~10% |
-| Marge fabricant | ~0.99 € | ~8% |
-| **Total taxes** | **~10.67 €** | **~82%** |
+| Marge fabricant | ~0.88 € | ~7% |
+| **Total taxes** | **~10.78 €** | **~83%** |
 
-Évolution: le prix du paquet est passé de ~1.50 € (1990) à ~13 € (2025), soit +766% en 35 ans.
+Évolution: le prix du paquet est passé de ~1.50 € (1990) à ~13 € (2026), soit environ +766%.
 
 ### Alcool — 2025/2026
 Source: Douanes (BOD N°7614), Eurotax, Eurofiscalis, Klac, FGVB, Service-Public.fr
@@ -203,25 +203,26 @@ La fiscalité sur l'alcool en France repose sur trois couches : l'accise (droits
 | Catégorie | Tarif 2026 | Unité |
 |---|---|---|
 | Spiritueux (> 18° vol.) | 1 932.42 € | par hectolitre d'alcool pur (hlap) |
-| Produits intermédiaires (VDN, VDL) | ~200 € | par hlap |
-| Bières > 2.8° vol. | 8.24 € | par hectolitre |
-| Bières ≤ 2.8° vol. et petites brasseries | 4.12 € | par hectolitre |
+| Produits intermédiaires (VDN, VDL) | 52.39 € | par hectolitre |
+| Autres produits intermédiaires | 209.53 € | par hectolitre |
+| Bières > 2.8° vol. | 8.24 € | par hl/degré |
+| Bières ≤ 2.8° vol. et petites brasseries | 4.12 € | par hl/degré |
 | Vins tranquilles | 4.19 € | par hectolitre |
 | Vins mousseux | 10.38 € | par hectolitre |
-| Cidres, poirés, hydromels | 1.40 € | par hectolitre |
+| Cidres, poirés, hydromels | 1.46 € | par hectolitre |
 
 Augmentation annuelle plafonnée à 1.75% (indexation inflation).
 
 #### Cotisation Sécurité sociale (> 18° vol.)
-Tarif 2025 : 609.80 €/hlap.
+Tarif 2026 : 620.47 €/hlap.
 S'ajoute à l'accise pour les spiritueux.
 
 #### Exemple : bouteille de whisky 70cl à 40°
 | Composante | Montant |
 |---|---|
 | Accise | 0.70 × 0.40 × 19.3242 = 5.41 € |
-| Cotisation SS | 0.70 × 0.40 × 6.098 = 1.71 € |
-| Sous-total taxes spécifiques | 7.12 € |
+| Cotisation SS | 0.70 × 0.40 × 6.2047 = 1.74 € |
+| Sous-total taxes spécifiques | 7.15 € |
 | + TVA 20% sur le tout | variable |
 
 Sur une bouteille de whisky à ~25€, les taxes (accise + cotisation SS + TVA) représentent environ 40-45% du prix final.
@@ -233,21 +234,21 @@ Source: LFSS 2025 (art. 31), Bofip, Service-Public.fr, Boursorama
 
 Réforme majeure au 1er mars 2025 : simplification de 15 paliers à 3 paliers.
 
-#### Barème 2025 (depuis le 1er mars)
+#### Barème 2026
 
 | Sucre ajouté par hectolitre | Taxe par hectolitre |
 |---|---|
-| < 5 kg | 4 € |
-| 5 à 8 kg | 21 € |
-| > 8 kg | 35 € |
+| < 5 kg | 4.07 € |
+| 5 à 8 kg | 21.38 € |
+| > 8 kg | 35.63 € |
 
-Édulcorants de synthèse (boissons light) : 3.50 €/hl en 2025, 4.50 €/hl au 1er janvier 2026.
+Édulcorants de synthèse (boissons light) : 4.50 €/hl jusqu'à 120 mg/L et 6 €/hl au-delà depuis le 1er janvier 2026.
 
 Si un produit contient à la fois sucres ajoutés et édulcorants, les deux taxes s'appliquent.
 
 #### Impact concret
-Un Coca-Cola classique (~100g de sucre/L, soit >8kg/hl) : taxe de 35€/hl = 0.35€/litre.
-Un thé glacé (~30g/L, soit ~3kg/hl) : taxe de 4€/hl = 0.04€/litre.
+Un Coca-Cola classique (~100g de sucre/L, soit >8kg/hl) : taxe de 35.63€/hl = 0.356€/litre.
+Un thé glacé (~30g/L, soit ~3kg/hl) : taxe de 4.07€/hl = 0.041€/litre.
 
 Prix du Coca-Cola 1.75L : passé de ~2€ à ~2.30€ après la réforme (+10%).
 Recettes annuelles de la taxe soda : ~443 M€ (2023).

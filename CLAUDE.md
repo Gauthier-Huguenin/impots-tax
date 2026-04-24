@@ -31,7 +31,7 @@ This is the largest, most visual panel. It's what hooks people in.
 3. **Flat Tax / PFU** — Capital gains, dividends, crypto (30% → 31.4% in 2026)
 4. **TVA** — Value added tax (20% / 10% / 5.5% / 2.1%)
 5. **Taxes carburant** — Fuel tax breakdown (~55% of pump price is taxes)
-6. **Taxes comportementales** — Tobacco (~82% taxes), alcohol, sugar
+6. **Taxes comportementales** — Tobacco (~83% taxes on a €13 pack), alcohol, sugar
 7. **Salaires & Cotisations** — Complete salary breakdown:
    - Employee contributions (CSG, CRDS, pension, etc.)
    - Employer contributions (health, family, unemployment, etc.)

@@ -154,18 +154,18 @@ Carbon component: frozen at €44.60/tonne CO₂ since 2018 (Yellow Vests moveme
 ## 7. Behavioral Taxes
 
 ### Tobacco — 2025/2026
-Source: French Customs, Revue des Tabacs
+Source: French Customs, BOFiP
 
 Breakdown of a €13 pack:
 | Component | Amount | % |
 |---|---|---|
-| Excise (proportional + specific) | ~€8.50 | ~65% |
+| Excise (proportional + specific) | ~€8.62 | ~66% |
 | VAT (16.67% inclusive) | ~€2.17 | ~17% |
 | Retailer commission | ~€1.34 | ~10% |
-| Manufacturer margin | ~€0.99 | ~8% |
-| **Total taxes** | **~€10.67** | **~82%** |
+| Manufacturer margin | ~€0.88 | ~7% |
+| **Total taxes** | **~€10.78** | **~83%** |
 
-Evolution: pack price went from ~€1.50 (1990) to ~€13 (2025), a +766% increase in 35 years.
+Evolution: pack price went from ~€1.50 (1990) to ~€13 (2026), about a +766% increase.
 
 ### Alcohol — 2025/2026
 Source: French Customs (BOD N°7614)
@@ -173,19 +173,22 @@ Source: French Customs (BOD N°7614)
 | Category | Excise 2026 |
 |---|---|
 | Spirits (> 18° vol.) | €1,932.42/hlap |
-| Beer > 2.8° vol. | €8.24/hl |
+| Social Security contribution on spirits | €620.47/hlap |
+| Beer > 2.8° vol. | €8.24/hl/degree |
 | Still wine | €4.19/hl |
 
 Wine is very lightly taxed in France (~€0.03/bottle vs ~€349/hl in the UK). The French wine lobby is historically very powerful.
 
 ### Sugar Tax — 2025/2026
-Source: LFSS 2025
+Source: LFSS 2025, BOFiP 2026
 
 | Added sugar per hectoliter | Tax per hectoliter |
 |---|---|
-| < 5 kg | €4 |
-| 5 to 8 kg | €21 |
-| > 8 kg | €35 |
+| < 5 kg | €4.07 |
+| 5 to 8 kg | €21.38 |
+| > 8 kg | €35.63 |
+
+Synthetic sweeteners: €4.50/hl up to 120 mg/L, €6/hl above 120 mg/L.
 
 ---
 

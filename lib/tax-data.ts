@@ -169,18 +169,18 @@ export const FUEL_BREAKDOWN: BreakdownComponent[] = [
 export const FUEL_TAX_PERCENT = 50; // ~50.5% du prix est taxes
 
 // ─── Section 7: Behavioral taxes (tobacco) ──────────────────
-// Source: Douanes, Revue des Tabacs, Smoking.fr
+// Source: Douanes, arrêté du 24 décembre 2025, BOFiP
 
-export const TOBACCO_PACK_PRICE = 13; // € par paquet de 20 cigarettes (objectif 2026)
+export const TOBACCO_PACK_PRICE = 13; // € par paquet de 20 cigarettes (référence 2026)
 
 export const TOBACCO_BREAKDOWN: BreakdownComponent[] = [
-  { key: "accise", amount: 8.5, percent: 65, isTax: true },
+  { key: "accise", amount: 8.62, percent: 66, isTax: true },
   { key: "vat", amount: 2.17, percent: 17, isTax: true },
   { key: "retailer", amount: 1.34, percent: 10, isTax: false },
-  { key: "manufacturer", amount: 0.99, percent: 8, isTax: false },
+  { key: "manufacturer", amount: 0.88, percent: 7, isTax: false },
 ];
 
-export const TOBACCO_TAX_PERCENT = 82; // ~82% du prix est taxes
+export const TOBACCO_TAX_PERCENT = 83; // ~83% du prix est taxes
 
 // ─── Section 8: Welfare system ──────────────────────────────
 // Sources: aide-sociale.fr, Service-Public.fr, France Travail, Sénat
@@ -546,9 +546,9 @@ export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
   {
     id: 10,
     question: "Quel pourcentage du prix d'une cigarette représente les taxes ?",
-    options: ["65%", "70%", "75%", "82%"],
+    options: ["65%", "70%", "75%", "83%"],
     correctIndex: 3,
-    explanation: "Environ 82% du prix d'une cigarette est constitué de taxes (accise + TVA). Source: Douanes 2025",
+    explanation: "Environ 83% du prix d'un paquet à 13 € est constitué de taxes (accise + TVA). Source: Douanes 2026",
   },
   {
     id: 11,
