@@ -106,12 +106,12 @@ export const CORPORATE_TAX = {
 };
 
 // ─── Section 3: Flat Tax / PFU ──────────────────────────────
-// Source: LFSS 2026, Ramify.fr, Shine.fr
+// Sources: impots.gouv.fr (updated Apr. 2026), LFSS 2026
 
 export const FLAT_TAX_2025 = {
   ir: 12.8, // IR forfaitaire
-  social: 17.2, // Prélèvements sociaux
-  total: 30, // Total PFU
+  social: 17.2, // Ancien taux / produits 2025 prélevés à l'encaissement
+  total: 30, // Ancien total PFU
 };
 
 export const FLAT_TAX_2026 = {
@@ -538,10 +538,10 @@ export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 9,
-    question: "Quel est le nouveau taux de flat tax (PFU) en 2026 ?",
+    question: "Quel est le taux de droit commun du PFU au 24 avril 2026 ?",
     options: ["29%", "30%", "31%", "31.4%"],
     correctIndex: 3,
-    explanation: "La flat tax PFU passe de 30% en 2025 à 31.4% en 2026 (augmentation CSG). Source: LFSS 2026",
+    explanation: "Le PFU de droit commun est de 31.4% : 12.8% d'IR et 18.6% de prélèvements sociaux. Certains produits restent toutefois à 17.2% de prélèvements sociaux. Source: impots.gouv.fr, LFSS 2026",
   },
   {
     id: 10,

@@ -16,7 +16,7 @@
 - [Dashboard](https://impots.tax): Overview of all tax modules with the "Journey of €100" as hero panel
 - [Income Tax](https://impots.tax/income-tax): Progressive brackets 2026 (0% to 45%), new CDHR minimum tax
 - [Corporate Tax](https://impots.tax/corporate-tax): Standard rate 25%, SME rate 15%
-- [Flat Tax / PFU](https://impots.tax/flat-tax): Flat tax 30% → 31.4% in 2026
+- [Flat Tax / PFU](https://impots.tax/flat-tax): PFU 31.4% as of April 24, 2026 for covered financial income; product-specific 17.2% exceptions remain
 - [VAT](https://impots.tax/vat): 4 rates (20%, 10%, 5.5%, 2.1%)
 - [Fuel Tax](https://impots.tax/fuel-tax): SP95 price breakdown, excise tax, VAT on excise
 - [Behavioral Taxes](https://impots.tax/behavioral-tax): Tobacco (~82% tax), alcohol, sugar

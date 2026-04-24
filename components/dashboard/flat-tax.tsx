@@ -71,7 +71,7 @@ export function FlatTax({ onOpenDetail }: FlatTaxProps) {
         </div>
 
         <p className="mt-3 text-center font-mono text-xs text-blanc/60">
-          ↑ +1.4% — {t("change")}
+          ↑ +1.4 pt — {t("change")}
         </p>
         <p className="mt-1 font-mono text-xs text-blanc">
           {t("appliesTo")}

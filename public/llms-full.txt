@@ -55,16 +55,16 @@ Status on April 24, 2026: the SME reduced-rate threshold remains listed at €42
 
 ## 3. Flat Tax / PFU (Prélèvement Forfaitaire Unique)
 
-Source: Ramify.fr, Shine.fr, Service-Public.fr, LFSS 2026
+Source: impots.gouv.fr (investment income, securities capital gains, crypto-assets), LFSS 2026
 
-### 2025 Income (filed in 2026)
+### Previous rate / 2025 products withheld when paid
 | Component | Rate |
 |---|---|
 | Flat income tax | 12.8% |
 | Social levies | 17.2% |
 | **Total PFU** | **30%** |
 
-### 2026 Income (filed in 2027) — CHANGE
+### Rate updated April 24, 2026 — covered financial income
 | Component | Rate |
 |---|---|
 | Flat income tax | 12.8% |
@@ -73,7 +73,7 @@ Source: Ramify.fr, Shine.fr, Service-Public.fr, LFSS 2026
 
 Applies to: dividends, interest, capital gains on securities, crypto gains (exemption threshold: €305/year in disposals).
 
-Progressive scale option: available annually (box 2OP). Beneficial if marginal rate ≤ 11%. For dividends, 40% allowance applies only under progressive scale.
+Progressive scale option: available through box 2OP for investment income and securities gains; the choice is global. From 2026, impots.gouv.fr says the irrevocable character of this option has been removed. Beneficial if marginal rate ≤ 11%. For dividends, 40% allowance applies only under progressive scale. For crypto-assets, the progressive-scale option uses box 3CN and is independent from 2OP.
 
 ---
 
@@ -329,7 +329,7 @@ Source: Service-Public.fr, France-USA tax treaty
 
 | Account type | Capital gains tax | Ceiling |
 |---|---|---|
-| CTO (brokerage, flat tax) | 30% (2025) / 31.4% (2026) | Unlimited |
+| CTO (brokerage, flat tax) | 31.4% ordinary PFU as of April 24, 2026; 30% remains for product-specific 17.2% exceptions and most 2025 products withheld when paid | Unlimited |
 | PEA (tax-advantaged, after 5 years) | 17.2% (2025) / 18.6% (2026) | €150,000 |
 
 On €10,000 invested for 10 years (+8%/year): PEA saves ~€1,500 in taxes vs CTO.

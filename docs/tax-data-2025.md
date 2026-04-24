@@ -53,27 +53,27 @@ Nota au 24 avril 2026: le seuil du taux réduit PME reste affiché à 42 500 €
 
 ## 3. Flat Tax / PFU (Prélèvement Forfaitaire Unique)
 
-Source: Ramify.fr, Shine.fr, Service-Public.fr, Loi n°2025-1403 (LFSS 2026)
+Source: impots.gouv.fr (revenus mobiliers, plus-values mobilières, actifs numériques), Loi n°2025-1403 (LFSS 2026)
 
-### Revenus 2025 (déclarés en 2026)
+### Ancien taux / produits 2025 prélevés à l'encaissement
 | Composante | Taux |
 |---|---|
 | IR forfaitaire | 12.8% |
 | Prélèvements sociaux | 17.2% |
 | **Total PFU** | **30%** |
 
-### Revenus 2026 (déclarés en 2027) — CHANGEMENT
+### Taux à jour au 24 avril 2026 — revenus financiers concernés
 | Composante | Taux |
 |---|---|
 | IR forfaitaire | 12.8% |
 | Prélèvements sociaux | 18.6% (hausse CSG de 9.2% à 10.6%) |
 | **Total PFU** | **31.4%** |
 
-Exception: Certains produits restent à 17.2% de prélèvements sociaux (assurance-vie, PEL/CEL, PEP), soit un PFU total de 30%.
+Exception: certains produits restent à 17.2% de prélèvements sociaux (produits d'assurance-vie et contrats de capitalisation avec valeur de rachat, CEL ouverts jusqu'au 31/12/2017, PEL ouverts jusqu'au 31/12/2017 pendant leurs 12 premières années, PEP exonérés). Les contrats rente-survie et épargne handicap sont à 18.6%.
 
 S'applique à: dividendes, intérêts, plus-values mobilières (actions, obligations, fonds), plus-values crypto (dès conversion en euros, seuil d'exonération: 305 €/an de cessions).
 
-Option barème progressif: possible chaque année (case 2OP), choix global et irrévocable pour l'année. Avantage si TMI ≤ 11%. Pour les dividendes, abattement de 40% applicable uniquement au barème.
+Option barème progressif: possible via la case 2OP pour les revenus de capitaux mobiliers et plus-values mobilières, choix global. A compter de 2026, impots.gouv.fr indique que le caractère irrévocable de cette option est supprimé. Avantage si TMI ≤ 11%. Pour les dividendes, abattement de 40% applicable uniquement au barème. Pour les crypto-actifs, l'option barème est en case 3CN et indépendante de 2OP.
 
 ---
 
