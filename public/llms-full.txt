@@ -43,11 +43,13 @@ SME reduced rate conditions:
 - Fully paid-up share capital
 - ≥ 75% held by individuals
 
-Social contribution on corporate tax: 3.3% for companies with revenue > €7.63M and tax > €763,000.
+Social contribution on corporate tax: 3.3% for companies with revenue > €7.63M and corporate tax > €763,000.
 
-Exceptional surcharge 2025-2026 (large companies): 20.6% between €1B and €3B revenue, 41.2% above. Source: Finance Law 2025, extended to 2026.
+Exceptional surcharge for large companies:
+- 2025: 20.6% between €1B and €3B revenue, 41.2% above.
+- 2026: threshold raised to €1.5B revenue; 20.6% between €1.5B and €3B, 41.2% above. 2026 base: average corporate tax due for 2025 and 2026, with a 98% advance payment alongside the final corporate tax instalment.
 
-Note: Finance Law 2026 raised the reduced rate threshold from €42,500 to €100,000, effective January 1, 2026.
+Status on April 24, 2026: the SME reduced-rate threshold remains listed at €42,500 by Service-Public. The proposed increase to €100,000 does not appear in the up-to-date official sources consulted.
 
 ---
 

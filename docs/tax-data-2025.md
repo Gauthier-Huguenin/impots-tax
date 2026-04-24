@@ -29,7 +29,7 @@ Plafond avantage QF: 1 807 € par demi-part (2026).
 
 ## 2. Impôt sur les sociétés (IS) — 2025/2026
 
-Source: economie.gouv.fr, entreprendre.service-public.fr, compta-online.com
+Source: economie.gouv.fr, entreprendre.service-public.fr, Loi de finances 2026
 
 | Taux | Condition |
 |---|---|
@@ -43,9 +43,11 @@ Conditions taux réduit PME:
 
 Contribution sociale sur l'IS: 3.3% pour les entreprises dont CA HT > 7.63 M€ et IS > 763 000 €.
 
-Contribution exceptionnelle 2025-2026 (grandes entreprises): 20.6% entre 1 et 3 Mds€ de CA, 41.2% au-delà. Source: Loi de finances 2025, prorogée en 2026.
+Contribution exceptionnelle grandes entreprises:
+- 2025: 20.6% entre 1 et 3 Mds€ de CA, 41.2% au-delà.
+- 2026: seuil relevé à 1.5 Md€ de CA; 20.6% entre 1.5 et 3 Mds€, 41.2% au-delà. Assiette 2026: moyenne de l'IS dû en 2025 et 2026, avec acompte de 98% au dernier acompte d'IS.
 
-Nota: La loi de finances 2026 a relevé le seuil du taux réduit de 42 500 € à 100 000 €. Applicable aux exercices ouverts à compter du 1er janvier 2026. Source: amendement n°I-2531, adopté et promulgué le 19 février 2026.
+Nota au 24 avril 2026: le seuil du taux réduit PME reste affiché à 42 500 € par Service-Public. La hausse envisagée à 100 000 € n'apparaît pas dans les sources officielles à jour consultées.
 
 ---
 

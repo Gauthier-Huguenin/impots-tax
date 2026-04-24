@@ -71,7 +71,7 @@
     "pmeRate": "SME rate",
     "pmeCondition": "On first €{threshold} of profit",
     "pmeRequirements": "Revenue ≤ €10M, fully paid-up capital, ≥ 75% individual shareholders",
-    "surtax": "Exceptional surcharge for large companies: +20.6% to +41.2%",
+    "surtax": "2026 exceptional surcharge: +20.6% to +41.2% from €1.5B revenue",
     "source": "economie.gouv.fr",
     "details": "DETAILS ▸"
   },
@@ -647,13 +647,13 @@
     "socialContributionTitle": "SOCIAL CONTRIBUTION ON IS",
     "socialContributionDesc": "A 3.3% surcharge for companies with revenue exceeding €7.63M and IS exceeding €763,000. Because one corporate tax wasn't enough.",
     "exceptionalTitle": "EXCEPTIONAL CONTRIBUTION 2025-2026",
-    "exceptionalDesc": "For large companies, an 'exceptional' (but renewed) contribution:",
-    "exceptionalRate1": "+20.6% between €1B and €3B in revenue",
-    "exceptionalRate2": "+41.2% above €3B in revenue",
-    "exceptionalNote": "Source: Loi de finances 2025, extended to 2026.",
-    "pendingTitle": "PENDING",
-    "pendingDesc": "The 2026 budget bill planned to raise the reduced rate threshold from €42,500 to €100,000, but this has not yet been enacted.",
-    "sourceText": "economie.gouv.fr, entreprendre.service-public.fr, compta-online.com"
+    "exceptionalDesc": "For large companies, an 'exceptional' contribution renewed in 2026 with a higher entry threshold:",
+    "exceptionalRate1": "2025: +20.6% from €1B to €3B revenue; +41.2% above",
+    "exceptionalRate2": "2026: +20.6% from €1.5B to €3B revenue; +41.2% above",
+    "exceptionalNote": "2026 base: average corporate tax due for 2025 and 2026, with a 98% advance payment alongside the final corporate tax instalment.",
+    "pendingTitle": "STATUS ON APRIL 24, 2026",
+    "pendingDesc": "The SME reduced-rate threshold remains listed at €42,500 by Service-Public. The proposed increase to €100,000 does not appear in the up-to-date official sources consulted.",
+    "sourceText": "economie.gouv.fr, entreprendre.service-public.fr, Finance Law 2026"
   },
   "detailFlatTax": {
     "metaTitle": "Flat Tax / PFU — Flat-Rate Withholding | impots.tax",

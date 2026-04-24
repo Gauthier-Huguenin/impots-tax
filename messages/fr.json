@@ -71,7 +71,7 @@
     "pmeRate": "Taux PME",
     "pmeCondition": "Sur les premiers {threshold} € de bénéfice",
     "pmeRequirements": "CA HT ≤ 10 M€, capital libéré, ≥ 75% personnes physiques",
-    "surtax": "Contribution exceptionnelle grandes entreprises : +20.6% à +41.2%",
+    "surtax": "Contribution exceptionnelle 2026 : +20.6% à +41.2% dès 1.5 Md€ de CA",
     "source": "economie.gouv.fr",
     "details": "DÉTAILS ▸"
   },
@@ -647,13 +647,13 @@
     "socialContributionTitle": "CONTRIBUTION SOCIALE SUR L'IS",
     "socialContributionDesc": "Une surtaxe de 3.3% pour les entreprises dont le CA HT dépasse 7.63 M€ et l'IS excède 763 000 €. Parce qu'un seul impôt sur les sociétés ne suffisait pas.",
     "exceptionalTitle": "CONTRIBUTION EXCEPTIONNELLE 2025-2026",
-    "exceptionalDesc": "Pour les grandes entreprises, une contribution « exceptionnelle » (mais reconduite) :",
-    "exceptionalRate1": "+20.6% entre 1 et 3 Mds € de CA",
-    "exceptionalRate2": "+41.2% au-delà de 3 Mds € de CA",
-    "exceptionalNote": "Source : Loi de finances 2025, prorogée en 2026.",
-    "pendingTitle": "EN ATTENTE",
-    "pendingDesc": "Le PLF 2026 prévoyait de relever le seuil du taux réduit de 42 500 € à 100 000 €, mais ce n'est pas encore promulgué à date.",
-    "sourceText": "economie.gouv.fr, entreprendre.service-public.fr, compta-online.com"
+    "exceptionalDesc": "Pour les grandes entreprises, une contribution « exceptionnelle » reconduite en 2026, avec un seuil d'entrée relevé :",
+    "exceptionalRate1": "2025 : +20.6% entre 1 et 3 Mds € de CA ; +41.2% au-delà",
+    "exceptionalRate2": "2026 : +20.6% entre 1.5 et 3 Mds € de CA ; +41.2% au-delà",
+    "exceptionalNote": "Assiette 2026 : moyenne de l'IS dû sur 2025 et 2026, avec acompte de 98% au dernier acompte d'IS.",
+    "pendingTitle": "ÉTAT AU 24 AVRIL 2026",
+    "pendingDesc": "Le seuil du taux réduit PME reste affiché à 42 500 € par Service-Public. La hausse envisagée à 100 000 € n'apparaît pas dans les sources officielles à jour consultées.",
+    "sourceText": "economie.gouv.fr, entreprendre.service-public.fr, Loi de finances 2026"
   },
   "detailFlatTax": {
     "metaTitle": "Flat Tax / PFU — Prélèvement forfaitaire unique | impots.tax",

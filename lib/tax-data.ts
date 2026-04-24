@@ -98,6 +98,11 @@ export const CORPORATE_TAX = {
   pmeThreshold: 42500, // Premiers 42 500€ de bénéfice
   pmeMaxCA: 10_000_000, // CA HT ≤ 10 M€
   socialContribution: 3.3, // Pour IS > 763 000€
+  exceptionalThreshold2026: 1_500_000_000, // CA ≥ 1,5 Md€ en 2026
+  exceptionalThreshold2025: 1_000_000_000, // CA ≥ 1 Md€ en 2025
+  exceptionalHighThreshold: 3_000_000_000, // Seuil du taux majoré
+  exceptionalRate: 20.6,
+  exceptionalHighRate: 41.2,
 };
 
 // ─── Section 3: Flat Tax / PFU ──────────────────────────────
@@ -672,4 +677,3 @@ export const GUESS_THE_TAX_QUESTIONS: QuizQuestion[] = [
     explanation: "Les impôts directs (IR, IS, taxe foncière) représentent environ 50-55% des recettes fiscales. Source: LFI 2025",
   },
 ];
-
