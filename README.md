@@ -62,12 +62,15 @@ The Dockerfile uses a multi-stage build with `node:22-alpine` and Next.js standa
 app/[locale]/             # i18n pages (FR default, EN prefixed)
   page.tsx                # Main dashboard
   [module]/page.tsx       # Detail pages (income-tax, vat, flat-tax, ...)
+app/og/[locale]/[slug]/   # Dynamic Open Graph image cards
 components/
   dashboard/              # Dashboard panels
   detail/                 # Detail page components
   ui/                     # Shared primitives (Panel, GaugeCircle, DataTable, ...)
 lib/
   tax-data.ts             # Centralized fiscal data (sourced, dated)
+  og-images.tsx           # Shared OG image data and renderer
+  seo.ts                  # Metadata, canonicals, hreflang, social images
   i18n/                   # Routing & locale config
 messages/                 # fr.json, en.json
 docs/

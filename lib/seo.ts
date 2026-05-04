@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
 import { locales, defaultLocale, type Locale } from "@/lib/i18n/config";
+import {
+  buildOgImageAlt,
+  getOgImageSlugFromPath,
+  OG_IMAGE_SIZE,
+} from "@/lib/og-images";
 
 export function buildUrl(path: string, locale: Locale): string {
   const prefix = locale === defaultLocale ? "" : `/${locale}`;
@@ -91,11 +96,13 @@ export function buildSeoMetadata({
   }
   languages["x-default"] = buildUrl(path, defaultLocale);
 
+  const ogSlug = getOgImageSlugFromPath(path);
+  const ogImageUrl = `${siteConfig.url}/og/${locale}/${ogSlug}`;
   const ogImage = {
-    url: `${siteConfig.url}/og-image.png`,
-    width: 1200,
-    height: 630,
-    alt: title,
+    url: ogImageUrl,
+    width: OG_IMAGE_SIZE.width,
+    height: OG_IMAGE_SIZE.height,
+    alt: buildOgImageAlt(ogSlug, locale),
   };
 
   return {
