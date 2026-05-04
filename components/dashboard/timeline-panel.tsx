@@ -20,9 +20,18 @@ export function TimelinePanel() {
       <div
         className="rounded border-2 border-blanc bg-panel p-5 cursor-pointer hover:border-blanc/80 transition-colors"
         onClick={() => setIsModalOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setIsModalOpen(true);
+          }
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label={t("openLabel")}
       >
         <h2 className="font-display text-base font-bold uppercase tracking-widest text-blanc mb-4">
-          CHRONOLOGIE FISCALE
+          {t("title")}
         </h2>
 
         {/* Mini Gantt preview */}

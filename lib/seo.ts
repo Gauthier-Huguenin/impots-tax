@@ -71,6 +71,7 @@ export function buildSeoMetadata({
   };
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title,
     description,
     manifest: "/site.webmanifest",

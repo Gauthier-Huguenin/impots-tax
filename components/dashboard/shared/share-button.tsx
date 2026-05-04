@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export interface ShareButtonProps {
   title: string;
@@ -16,22 +16,38 @@ export function ShareButton({
   url,
   onShare,
 }: ShareButtonProps) {
-  const t = useTranslations('interactiveCalculators.shareButton');
+  const t = useTranslations("interactiveCalculators.shareButton");
   const [feedback, setFeedback] = useState<string | null>(null);
+  const [canNativeShare, setCanNativeShare] = useState(false);
+  const feedbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setCanNativeShare(typeof navigator !== "undefined" && "share" in navigator);
+    });
+    return () => {
+      cancelAnimationFrame(frame);
+      if (feedbackTimerRef.current) {
+        clearTimeout(feedbackTimerRef.current);
+      }
+    };
+  }, []);
 
   const handleCopyToClipboard = async () => {
     try {
       const shareUrl = url || window.location.href;
-      const text = `${title}${description ? ` — ${description}` : ''}\n\n${shareUrl}`;
+      const text = `${title}${description ? `, ${description}` : ""}\n\n${shareUrl}`;
 
       await navigator.clipboard.writeText(text);
-      setFeedback(t('copyToClipboard'));
+      setFeedback(t("copyToClipboard"));
       onShare?.();
 
-      // Clear feedback after 2 seconds
-      setTimeout(() => setFeedback(null), 2000);
+      if (feedbackTimerRef.current) {
+        clearTimeout(feedbackTimerRef.current);
+      }
+      feedbackTimerRef.current = setTimeout(() => setFeedback(null), 2000);
     } catch (error) {
-      console.error('Failed to copy to clipboard:', error);
+      console.error("Failed to copy to clipboard:", error);
     }
   };
 
@@ -46,8 +62,7 @@ export function ShareButton({
       });
       onShare?.();
     } catch (error) {
-      // User cancelled share or error occurred
-      console.error('Share failed:', error);
+      console.error("Share failed:", error);
     }
   };
 
@@ -58,21 +73,21 @@ export function ShareButton({
       <button
         onClick={handleCopyToClipboard}
         className="px-3 py-2 text-sm font-semibold bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded transition-colors"
-        title={t('label')}
-        aria-label={t('label')}
+        title={t("label")}
+        aria-label={t("label")}
       >
-        {feedback || t('label')}
+        {feedback || t("label")}
       </button>
 
       {/* Native share button (mobile) */}
-      {'share' in navigator && (
+      {canNativeShare && (
         <button
           onClick={handleNativeShare}
           className="px-3 py-2 text-sm font-semibold bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white rounded transition-colors"
-          title={t('label')}
-          aria-label={t('label')}
+          title={t("label")}
+          aria-label={t("label")}
         >
-          {t('label')}
+          {t("label")}
         </button>
       )}
 
@@ -80,10 +95,10 @@ export function ShareButton({
       {/* <button
         onClick={handleGenerateImage}
         className="px-3 py-2 text-sm font-semibold bg-amber-600 hover:bg-amber-500 active:bg-amber-700 text-white rounded transition-colors"
-        title={t('shareOgImage')}
-        aria-label={t('shareOgImage')}
+        title={t("shareOgImage")}
+        aria-label={t("shareOgImage")}
       >
-        {t('shareOgImage')}
+        {t("shareOgImage")}
       </button> */}
     </div>
   );

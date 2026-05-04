@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import dynamic from "next/dynamic";
+import { useState, useEffect, useCallback, useRef, useMemo, type ComponentType } from "react";
 import { useTranslations } from "next-intl";
 import { SectionNav } from "@/components/dashboard/section-nav";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
@@ -22,23 +23,6 @@ import { RailwayTolls } from "@/components/dashboard/railway-tolls";
 import { OECDComparison } from "@/components/dashboard/oecd-comparison";
 import { TimelinePanel } from "@/components/dashboard/timeline-panel";
 import { DetailModal } from "@/components/ui/detail-modal";
-import { IncomeTaxDetail } from "@/components/detail/income-tax-detail";
-import { CorporateTaxDetail } from "@/components/detail/corporate-tax-detail";
-import { FlatTaxDetail } from "@/components/detail/flat-tax-detail";
-import { VatDetail } from "@/components/detail/vat-detail";
-import { SalaryContributionsDetail } from "@/components/detail/salary-contributions-detail";
-import { FuelTaxDetail } from "@/components/detail/fuel-tax-detail";
-import { BehavioralTaxDetail } from "@/components/detail/behavioral-tax-detail";
-import { WelfareSystemDetail } from "@/components/detail/welfare-system-detail";
-import { IndicatorsDetail } from "@/components/detail/indicators-detail";
-import { PropertyTaxDetail } from "@/components/detail/property-tax-detail";
-import { RentalTaxDetail } from "@/components/detail/rental-tax-detail";
-import { InheritanceTaxDetail } from "@/components/detail/inheritance-tax-detail";
-import { CapitalGainsDetail } from "@/components/detail/capital-gains-detail";
-import { HighwayTollsDetail } from "@/components/detail/highway-tolls-detail";
-import { RailwayTollsDetail } from "@/components/detail/railway-tolls-detail";
-import { ComparisonDetail } from "@/components/detail/comparison-detail";
-import { DonateDetail } from "@/components/detail/donate-detail";
 import { DonateCta } from "@/components/dashboard/donate-cta";
 import { DonateHook } from "@/components/dashboard/donate-hook";
 import {
@@ -67,65 +51,133 @@ type ModalSlug =
   | "comparison"
   | "donate";
 
-const MODAL_CONTENT: Record<ModalSlug, React.ComponentType> = {
-  "income-tax": IncomeTaxDetail,
-  "corporate-tax": CorporateTaxDetail,
-  "flat-tax": FlatTaxDetail,
-  "vat": VatDetail,
-  "salary-contributions": SalaryContributionsDetail,
-  "fuel-tax": FuelTaxDetail,
-  "behavioral-tax": BehavioralTaxDetail,
-  "welfare-system": WelfareSystemDetail,
-  "indicators": IndicatorsDetail,
-  "property-tax": PropertyTaxDetail,
-  "rental-tax": RentalTaxDetail,
-  "inheritance-tax": InheritanceTaxDetail,
-  "capital-gains": CapitalGainsDetail,
-  "highway-tolls": HighwayTollsDetail,
-  "railway-tolls": RailwayTollsDetail,
-  "comparison": ComparisonDetail,
-  "donate": DonateDetail,
+function ModalFallback() {
+  return (
+    <div
+      className="my-8 h-64 animate-pulse rounded border border-gray-800 bg-background/50"
+      aria-hidden="true"
+    />
+  );
+}
+
+const MODAL_CONTENT: Record<ModalSlug, ComponentType> = {
+  "income-tax": dynamic(
+    () => import("@/components/detail/income-tax-detail").then((m) => m.IncomeTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "corporate-tax": dynamic(
+    () => import("@/components/detail/corporate-tax-detail").then((m) => m.CorporateTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "flat-tax": dynamic(
+    () => import("@/components/detail/flat-tax-detail").then((m) => m.FlatTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "vat": dynamic(
+    () => import("@/components/detail/vat-detail").then((m) => m.VatDetail),
+    { loading: ModalFallback },
+  ),
+  "salary-contributions": dynamic(
+    () => import("@/components/detail/salary-contributions-detail").then((m) => m.SalaryContributionsDetail),
+    { loading: ModalFallback },
+  ),
+  "fuel-tax": dynamic(
+    () => import("@/components/detail/fuel-tax-detail").then((m) => m.FuelTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "behavioral-tax": dynamic(
+    () => import("@/components/detail/behavioral-tax-detail").then((m) => m.BehavioralTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "welfare-system": dynamic(
+    () => import("@/components/detail/welfare-system-detail").then((m) => m.WelfareSystemDetail),
+    { loading: ModalFallback },
+  ),
+  "indicators": dynamic(
+    () => import("@/components/detail/indicators-detail").then((m) => m.IndicatorsDetail),
+    { loading: ModalFallback },
+  ),
+  "property-tax": dynamic(
+    () => import("@/components/detail/property-tax-detail").then((m) => m.PropertyTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "rental-tax": dynamic(
+    () => import("@/components/detail/rental-tax-detail").then((m) => m.RentalTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "inheritance-tax": dynamic(
+    () => import("@/components/detail/inheritance-tax-detail").then((m) => m.InheritanceTaxDetail),
+    { loading: ModalFallback },
+  ),
+  "capital-gains": dynamic(
+    () => import("@/components/detail/capital-gains-detail").then((m) => m.CapitalGainsDetail),
+    { loading: ModalFallback },
+  ),
+  "highway-tolls": dynamic(
+    () => import("@/components/detail/highway-tolls-detail").then((m) => m.HighwayTollsDetail),
+    { loading: ModalFallback },
+  ),
+  "railway-tolls": dynamic(
+    () => import("@/components/detail/railway-tolls-detail").then((m) => m.RailwayTollsDetail),
+    { loading: ModalFallback },
+  ),
+  "comparison": dynamic(
+    () => import("@/components/detail/comparison-detail").then((m) => m.ComparisonDetail),
+    { loading: ModalFallback },
+  ),
+  "donate": dynamic(
+    () => import("@/components/detail/donate-detail").then((m) => m.DonateDetail),
+    { loading: ModalFallback },
+  ),
 };
 
 const HASH_MODAL_MAP: Record<string, ModalSlug> = { donate: "donate" };
-
-let hashInitialized = false;
 
 export function DashboardClient() {
   const [openModal, setOpenModal] = useState<ModalSlug | null>(null);
   const scrollFired = useRef(new Set<number>());
   const timeFired = useRef(new Set<number>());
+  const lastHashModalRef = useRef<string | null>(null);
 
-  const open = (slug: ModalSlug) => () => {
+  const open = useCallback((slug: ModalSlug) => () => {
     trackPanelClick(slug);
     if (slug === "donate") trackDonateOpen("panel");
     setOpenModal(slug);
-  };
+  }, []);
 
-  const close = () => {
+  const close = useCallback(() => {
     setOpenModal(null);
     if (window.location.hash) {
-      history.replaceState(null, "", window.location.pathname);
+      const url = new URL(window.location.href);
+      url.hash = "";
+      window.history.replaceState(null, "", `${url.pathname}${url.search}`);
     }
-  };
+    lastHashModalRef.current = null;
+  }, []);
 
   const checkHash = useCallback(() => {
     const hash = window.location.hash.slice(1);
     const slug = HASH_MODAL_MAP[hash];
-    if (slug) {
-      if (slug === "donate") trackDonateOpen("hash");
-      setOpenModal(slug);
+    if (!slug) {
+      if (lastHashModalRef.current) {
+        lastHashModalRef.current = null;
+        setOpenModal(null);
+      }
+      return;
     }
+
+    if (lastHashModalRef.current !== hash) {
+      if (slug === "donate") trackDonateOpen("hash");
+      lastHashModalRef.current = hash;
+    }
+    setOpenModal(slug);
   }, []);
 
-  // Initialize from hash on page load (only on first render)
+  // Initialize from hash on every mount so navigation back to /#donate opens reliably.
   useEffect(() => {
-    if (!hashInitialized) {
-      hashInitialized = true;
-      checkHash();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const frame = requestAnimationFrame(checkHash);
+    return () => cancelAnimationFrame(frame);
+  }, [checkHash]);
 
   // Listen to hash changes
   useEffect(() => {
@@ -168,14 +220,17 @@ export function DashboardClient() {
 
   const t = useTranslations("sectionNav");
 
-  const sections = [
-    { id: "direct-taxes", label: t("directTaxes") },
-    { id: "indirect-taxes", label: t("indirectTaxes") },
-    { id: "income-welfare", label: t("incomeWelfare") },
-    { id: "real-estate", label: t("realEstate") },
-    { id: "wealth-transfer", label: t("wealthTransfer") },
-    { id: "infrastructure", label: t("infrastructure") },
-  ];
+  const sections = useMemo(
+    () => [
+      { id: "direct-taxes", label: t("directTaxes") },
+      { id: "indirect-taxes", label: t("indirectTaxes") },
+      { id: "income-welfare", label: t("incomeWelfare") },
+      { id: "real-estate", label: t("realEstate") },
+      { id: "wealth-transfer", label: t("wealthTransfer") },
+      { id: "infrastructure", label: t("infrastructure") },
+    ],
+    [t],
+  );
 
   return (
     <>

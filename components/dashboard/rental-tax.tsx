@@ -18,7 +18,7 @@ export function RentalTax({ onOpenDetail }: RentalTaxProps) {
       aria-label={t("title")}
       className="group block cursor-pointer"
       onClick={onOpenDetail}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpenDetail?.(); }}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenDetail?.(); } }}
     >
       <div className="h-full rounded border-2 border-blanc bg-panel p-5 transition-colors group-hover:border-blanc">
         <h2 className="flex items-center gap-2 font-display text-base font-bold uppercase tracking-widest text-blanc">

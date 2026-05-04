@@ -208,6 +208,9 @@
   },
   "timeline": {
     "title": "CHRONOLOGIE FISCALE",
+    "subtitle": "1914 → 2026 · Jalons de l'extraction",
+    "openLabel": "Ouvrir la chronologie fiscale détaillée",
+    "closeLabel": "Fermer la chronologie fiscale",
     "source": "Loi de finances & directives EU",
     "details": "DÉTAILS ▸",
     "ir1914": "Impôt sur le revenu",
@@ -1044,6 +1047,7 @@
     "cat_secondary-home": "Résidence secondaire",
     "cat_where-it-goes": "Où va l'argent",
     "expandLabel": "Agrandir la carte",
+    "closeLabel": "Fermer la carte",
     "resetLabel": "Revenir à la vue initiale"
   }
 }
