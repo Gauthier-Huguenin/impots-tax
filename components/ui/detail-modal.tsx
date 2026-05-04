@@ -20,15 +20,17 @@ export function DetailModal({ open, onClose, children }: DetailModalProps) {
   );
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-      document.addEventListener("keydown", handleKeyDown);
-      contentRef.current?.focus();
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+
+    const frame = requestAnimationFrame(() => contentRef.current?.focus());
+
     return () => {
-      document.body.style.overflow = "";
+      cancelAnimationFrame(frame);
+      document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open, handleKeyDown]);
@@ -40,7 +42,7 @@ export function DetailModal({ open, onClose, children }: DetailModalProps) {
       ref={overlayRef}
       className="fixed inset-0 z-[1100] flex items-end justify-center sm:items-center"
     >
-      {/* Backdrop — clicking it closes the modal */}
+      {/* Backdrop, clicking it closes the modal */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-modal-backdrop"
         onClick={onClose}

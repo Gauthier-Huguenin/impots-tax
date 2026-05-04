@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/navigation";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { DonateLink } from "@/components/layout/donate-link";
 import { siteConfig } from "@/lib/config";
-import { trackDonateOpen } from "@/lib/analytics";
 
 export function Header() {
   const t = useTranslations("header");
@@ -97,17 +97,13 @@ export function Header() {
           </a>
 
           {/* Donate */}
-          <button
-            onClick={() => {
-              trackDonateOpen("header");
-              window.location.hash = "donate";
-              window.dispatchEvent(new HashChangeEvent("hashchange"));
-            }}
-            className="hidden items-center gap-1.5 rounded-full border border-gray-600 bg-white/5 px-3 py-1 text-xs font-semibold text-blanc transition-all hover:border-favorable/50 hover:bg-favorable/10 hover:text-favorable sm:flex cursor-pointer"
+          <DonateLink
+            source="header"
+            className="hidden items-center gap-1.5 rounded-full border border-gray-600 bg-white/5 px-3 py-1 text-xs font-semibold text-blanc transition-all hover:border-favorable/50 hover:bg-favorable/10 hover:text-favorable sm:flex"
           >
             <span className="text-sm leading-none" aria-hidden="true">$</span>
             {t("donate")}
-          </button>
+          </DonateLink>
 
           {/* Language toggle */}
           <LanguageSwitcher />

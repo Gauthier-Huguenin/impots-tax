@@ -208,6 +208,9 @@
   },
   "timeline": {
     "title": "FISCAL TIMELINE",
+    "subtitle": "1914 → 2026 · Extraction milestones",
+    "openLabel": "Open the detailed fiscal timeline",
+    "closeLabel": "Close the fiscal timeline",
     "source": "Loi de finances & EU directives",
     "details": "DETAILS ▸",
     "ir1914": "Income tax",
@@ -1044,6 +1047,7 @@
     "cat_secondary-home": "Second Home",
     "cat_where-it-goes": "Where It Goes",
     "expandLabel": "Expand map",
+    "closeLabel": "Close map",
     "resetLabel": "Reset view"
   }
 }

@@ -3,6 +3,7 @@
 import "leaflet/dist/leaflet.css";
 import { useEffect, useRef, useCallback, type MutableRefObject } from "react";
 import { useLocale } from "next-intl";
+import type { Map as LeafletMap, Marker } from "leaflet";
 import type { TaxMapCategory } from "@/lib/tax-map-data";
 import { TAX_MAP_DATA } from "@/lib/tax-map-data";
 import { umamiTrack } from "@/lib/analytics";
@@ -85,7 +86,7 @@ const MAP_STYLES = `
   }
 `;
 
-// Global flag — styles are shared across all instances
+// Global flag, styles are shared across all instances.
 let mapStylesInjected = false;
 
 interface TaxMapLeafletProps {
@@ -98,15 +99,14 @@ interface TaxMapLeafletProps {
 export function TaxMapLeaflet({ height, interactive = true, activeCategories, resetViewRef }: TaxMapLeafletProps) {
   const locale = useLocale();
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<unknown>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const markersRef = useRef<Map<string, any>>(new Map());
+  const mapInstanceRef = useRef<LeafletMap | null>(null);
+  const markersRef = useRef<Map<string, Marker>>(new Map());
 
-  // Stable ref for activeCategories so initMap reads current value at add-time
+  // Stable ref for activeCategories so initMap reads the current value at add-time.
   const activeCategoriesRef = useRef(activeCategories);
   useEffect(() => {
     activeCategoriesRef.current = activeCategories;
-  });
+  }, [activeCategories]);
 
   const buildPopup = useCallback((point: (typeof TAX_MAP_DATA)[0]) => {
     const color = CATEGORY_COLORS[point.category];
@@ -145,9 +145,13 @@ export function TaxMapLeaflet({ height, interactive = true, activeCategories, re
 
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
+    let cancelled = false;
+    let frameId: number | null = null;
+    const markers = markersRef.current;
 
     const initMap = async () => {
       const L = (await import("leaflet")).default;
+      if (cancelled || !mapRef.current || mapInstanceRef.current) return;
 
       if (!mapStylesInjected) {
         mapStylesInjected = true;
@@ -155,8 +159,6 @@ export function TaxMapLeaflet({ height, interactive = true, activeCategories, re
         styleEl.textContent = MAP_STYLES;
         document.head.appendChild(styleEl);
       }
-
-      if (!mapRef.current) return;
 
       const map = L.map(mapRef.current, {
         center: DEFAULT_CENTER,
@@ -212,43 +214,44 @@ export function TaxMapLeaflet({ height, interactive = true, activeCategories, re
           });
         }
 
-        markersRef.current.set(point.id, marker);
+        markers.set(point.id, marker);
         if (currentCategories.has(point.category)) {
           marker.addTo(map);
         }
       });
     };
 
-    initMap().then(() => {
-      requestAnimationFrame(() => {
-        if (mapInstanceRef.current) {
-          (mapInstanceRef.current as { invalidateSize: () => void }).invalidateSize();
-        }
+    void initMap().then(() => {
+      if (cancelled) return;
+      frameId = requestAnimationFrame(() => {
+        mapInstanceRef.current?.invalidateSize();
       });
     });
 
     return () => {
-      if (mapInstanceRef.current) {
-        (mapInstanceRef.current as { remove: () => void }).remove();
-        mapInstanceRef.current = null;
-        markersRef.current.clear();
-        // Clear resetViewRef so stale instance is not called after unmount
-        if (resetViewRef) {
-          resetViewRef.current = null;
-        }
+      cancelled = true;
+      if (frameId !== null) {
+        cancelAnimationFrame(frameId);
+      }
+      const map = mapInstanceRef.current;
+      mapInstanceRef.current = null;
+      markers.clear();
+      map?.remove();
+      if (resetViewRef) {
+        resetViewRef.current = null;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [buildPopup, interactive, resetViewRef]);
 
   // Update marker visibility when activeCategories changes
   useEffect(() => {
-    if (!mapInstanceRef.current) return;
+    const map = mapInstanceRef.current;
+    if (!map) return;
     TAX_MAP_DATA.forEach((point) => {
       const marker = markersRef.current.get(point.id);
       if (!marker) return;
       if (activeCategories.has(point.category)) {
-        marker.addTo(mapInstanceRef.current);
+        marker.addTo(map);
       } else {
         marker.remove();
       }

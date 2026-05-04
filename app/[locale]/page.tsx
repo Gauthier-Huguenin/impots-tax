@@ -38,11 +38,11 @@ export default async function HomePage({ params }: PageProps) {
       <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
-        <SectionObserver section="tax-map" className="relative z-0 mx-auto max-w-7xl px-4 pt-6">
-          <TaxMapClient />
-        </SectionObserver>
         <SectionObserver section="journey-of-100">
           <JourneyOf100 />
+        </SectionObserver>
+        <SectionObserver section="tax-map" className="relative z-0 mx-auto max-w-7xl px-4 pt-6">
+          <TaxMapClient />
         </SectionObserver>
         <SectionObserver section="dashboard-panels">
           <DashboardClient />

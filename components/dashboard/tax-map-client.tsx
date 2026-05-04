@@ -68,6 +68,7 @@ function Legend({ legendOpen, onToggle, activeCategories, onToggleCategory, lege
                 <button
                   key={cat}
                   onClick={() => onToggleCategory(cat)}
+                  aria-pressed={active}
                   className={`flex w-full items-center gap-2 rounded px-1 py-0.5 text-[11px] transition-opacity ${active ? "opacity-100" : "opacity-40"} hover:opacity-90`}
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
@@ -139,12 +140,15 @@ export function TaxMapClient() {
 
   useEffect(() => {
     if (!fullscreen) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeFullscreen(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeFullscreen();
+    };
+    const previousOverflow = document.body.style.overflow;
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [fullscreen, closeFullscreen]);
 
@@ -159,7 +163,7 @@ export function TaxMapClient() {
 
   return (
     <>
-      {/* ── Preview panel ── */}
+      {/* Preview panel */}
       <div className="rounded border-2 border-blanc bg-panel overflow-hidden">
         <div className="flex items-start justify-between gap-4 px-5 pt-4 pb-3">
           <div>
@@ -177,7 +181,7 @@ export function TaxMapClient() {
           </div>
         </div>
 
-        {/* Map hidden (not unmounted) when fullscreen is open — avoids z-index bleed */}
+        {/* Map hidden when fullscreen is open, avoids z-index bleed without remounting. */}
         <div className={`relative ${fullscreen ? "invisible" : ""}`}>
           <TaxMapLeaflet
             height="clamp(400px, 50vw, 580px)"
@@ -207,7 +211,7 @@ export function TaxMapClient() {
         </div>
       </div>
 
-      {/* ── Fullscreen modal ── */}
+      {/* Fullscreen modal */}
       {fullscreen && (
         <div
           className="fixed inset-0 z-[9999] flex flex-col bg-background"
@@ -232,7 +236,7 @@ export function TaxMapClient() {
               </div>
               <button
                 onClick={closeFullscreen}
-                aria-label="Fermer"
+                aria-label={t("closeLabel")}
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-[#1e2a3a] text-muted transition-colors hover:border-blanc/30 hover:text-blanc"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
