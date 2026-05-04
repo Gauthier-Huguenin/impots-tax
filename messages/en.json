@@ -1,7 +1,11 @@
 {
   "metadata": {
-    "title": "impots.tax — Fiscal Command Center",
-    "description": "Satirical dashboard of French taxes and levies. Real data, dramatic presentation."
+    "title": "French Tax Monitor: France Tax Rates 2026 | impots.tax",
+    "description": "Official-source data on France tax rates, income tax brackets, flat tax, VAT, welfare benefits, debt and public spending."
+  },
+  "homeSeo": {
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "France tax rates in 2026 include income tax brackets from 0% to 45%, a 31.4% PFU flat tax for covered financial income, VAT rates of 20%, 10%, 5.5% and 2.1%, and total tax pressure near the top of the OECD."
   },
   "header": {
     "title": "FRENCH TAX MONITOR",
@@ -391,6 +395,7 @@
     "breadcrumbHome": "Dashboard",
     "source": "Source",
     "sources": "Sources",
+    "relatedReports": "RELATED REPORTS",
     "lastUpdated": "Last updated: {date}",
     "dataYear": "Data {year}",
     "perYear": "/year",
@@ -594,12 +599,14 @@
     "sourceText": "SNCF Réseau, ART, economiematin.fr, Senate (PLF 2026)"
   },
   "detailIncomeTax": {
-    "metaTitle": "Income Tax — 2026 Brackets | impots.tax",
-    "metaDescription": "France's progressive income tax brackets 2026 (2025 income). 5 escalation stages, from 0% to 45%. Official data, satirical framing.",
-    "title": "INCOME TAX",
+    "metaTitle": "France Income Tax Brackets 2026: 0% to 45% | impots.tax",
+    "metaDescription": "France income tax brackets for 2026 on 2025 income: 0%, 11%, 30%, 41% and 45% by tax share. Official-source data, satirical framing.",
+    "title": "FRANCE INCOME TAX BRACKETS 2026",
     "subtitle": "FISCAL ESCALATION REPORT — 2026 Brackets (2025 income)",
     "intro": "The French income tax is a progressive tax with brackets. Each bracket is another escalation level in state extraction. The schedule is indexed to inflation (+0.9% in 2026), meaning the State politely adjusts the starting point before extracting exactly as much as before.",
-    "bracketsTitle": "TAX BRACKETS",
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "France has five income tax brackets in 2026 for 2025 income: 0% up to €11,600, 11% from €11,601 to €29,579, 30% from €29,580 to €84,577, 41% from €84,578 to €181,917, and 45% above €181,917 per tax share.",
+    "bracketsTitle": "FRANCE TAX BRACKETS 2026",
     "bracket": "Bracket {number}",
     "bracketRange0": "Up to €11,600",
     "bracketRange1": "€11,601 to €29,579",
@@ -630,7 +637,13 @@
     "faqQ3": "What is the CDHR in 2026?",
     "faqA3": "The Differential Contribution on High Incomes (CDHR) is a brand-new minimum 20% effective tax rate targeting the wealthiest households. If your optimization strategies bring you below 20%, France adds a top-up to make sure you pay your 'fair share.'",
     "faqQ4": "What is the average income tax rate in France?",
-    "faqA4": "It depends entirely on income. At the median net salary of ~€2,190/month, the effective rate is around 13% via withholding. But the marginal rate can reach 45% — and with the new CDHR, even aggressive optimization won't bring the effective rate below 20%."
+    "faqA4": "It depends entirely on income. At the median net salary of ~€2,190/month, the effective rate is around 13% via withholding. But the marginal rate can reach 45% — and with the new CDHR, even aggressive optimization won't bring the effective rate below 20%.",
+    "relatedFlatTaxTitle": "France Flat Tax 2026",
+    "relatedFlatTaxDesc": "PFU rate, dividends, capital gains, crypto and the 31.4% update.",
+    "relatedSalaryTitle": "Salary Contributions",
+    "relatedSalaryDesc": "The employer cost, gross salary, net salary and social contribution breakdown.",
+    "relatedComparisonTitle": "International Comparison",
+    "relatedComparisonDesc": "France against OECD peers on total tax pressure."
   },
   "detailCorporateTax": {
     "metaTitle": "Corporate Tax — IS 2025-2026 | impots.tax",
@@ -659,11 +672,13 @@
     "sourceText": "economie.gouv.fr, entreprendre.service-public.fr, Finance Law 2026"
   },
   "detailFlatTax": {
-    "metaTitle": "Flat Tax / PFU — Flat-Rate Withholding | impots.tax",
-    "metaDescription": "Flat Tax/PFU 31.4% as of April 24, 2026 for covered financial income: 12.8% income tax + 18.6% social levies.",
-    "title": "FLAT TAX / PFU",
+    "metaTitle": "France Flat Tax 2026: PFU Rate 31.4% | impots.tax",
+    "metaDescription": "France flat tax and PFU rate in 2026: 31.4% for covered financial income, with 12.8% income tax and 18.6% social levies.",
+    "title": "FRANCE FLAT TAX / PFU 2026",
     "subtitle": "FLAT-RATE WITHHOLDING TAX REPORT",
     "intro": "The Prélèvement Forfaitaire Unique (PFU), known as the 'Flat Tax', was created in 2018 to simplify capital taxation. One rate, one operation. It was beautiful. It was simple. Which is why the State decided to complicate it in 2026 by increasing the CSG on investment income.",
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "France's ordinary PFU flat tax rate is 31.4% in 2026 for covered financial income: 12.8% income tax plus 18.6% social levies. The previous 30% total can still apply to some products and 2025 withholdings.",
     "rates2025Title": "PREVIOUS RATE / 2025 PRODUCTS WITHHELD",
     "rates2026Title": "RATE UPDATED APRIL 24, 2026",
     "componentIR": "Flat income tax",
@@ -689,14 +704,22 @@
     "faqQ3": "Does the flat tax apply to cryptocurrency?",
     "faqA3": "Yes. Private crypto-asset gains are taxed at the 31.4% PFU as of April 24, 2026: 12.8% income tax + 18.6% social levies. The progressive-scale option is made through box 3CN and is independent from the 2OP option for investment income.",
     "faqQ4": "Why is the flat tax increasing in 2026?",
-    "faqA4": "The CSG (social contribution) on financial income rises from 9.2% to 10.6%, pushing total social levies from 17.2% to 18.6%. The income tax portion stays at 12.8%. So the 'Flat Tax' goes from 30% to 31.4% — because 30% apparently wasn't enough."
+    "faqA4": "The CSG (social contribution) on financial income rises from 9.2% to 10.6%, pushing total social levies from 17.2% to 18.6%. The income tax portion stays at 12.8%. So the 'Flat Tax' goes from 30% to 31.4% — because 30% apparently wasn't enough.",
+    "relatedCapitalGainsTitle": "Capital Gains Outside PEA",
+    "relatedCapitalGainsDesc": "CTO vs PEA, S&P 500 investing and the cost of the French tax wrapper.",
+    "relatedIncomeTaxTitle": "Income Tax Brackets",
+    "relatedIncomeTaxDesc": "The 2026 progressive scale for 2025 income.",
+    "relatedVatTitle": "VAT Rates",
+    "relatedVatDesc": "France's 20%, 10%, 5.5% and 2.1% VAT rates."
   },
   "detailVat": {
-    "metaTitle": "VAT — Value Added Tax | impots.tax",
-    "metaDescription": "France's 4 VAT rates: 20%, 10%, 5.5%, 2.1%. Invented in France in 1954. The most discreet and efficient tax ever created.",
-    "title": "VAT",
+    "metaTitle": "France VAT Rates 2026: 20%, 10%, 5.5%, 2.1% | impots.tax",
+    "metaDescription": "France VAT rates in 2026: 20%, 10%, 5.5% and 2.1%. What each rate covers, how VAT works and why it is so efficient.",
+    "title": "FRANCE VAT RATES 2026",
     "subtitle": "REPORT ON THE MOST EFFICIENT FISCAL WEAPON EVER INVENTED",
     "intro": "The Value Added Tax is France's most exported fiscal invention. Created in 1954 by Maurice Lauré, it is now used by over 170 countries. Its genius: it's invisible. You pay it with every purchase without ever seeing it. The perfect tax according to the State — the one you don't notice.",
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "France applies four main VAT rates in 2026: 20% standard, 10% intermediate, 5.5% reduced and 2.1% special. Most goods and services fall under the standard 20% rate.",
     "ratesTitle": "THE 4 VAT RATES",
     "rateNormal": "Standard rate — 20%",
     "rateNormalDesc": "The majority of goods and services. Electronics, clothing, professional services, alcohol… everything that doesn't qualify for an exception.",
@@ -719,7 +742,13 @@
     "faqQ3": "Why is VAT considered the perfect tax?",
     "faqA3": "It's invisible (built into prices), collected at every production stage, nearly impossible to evade, and the consumer pays 100% without ever seeing a bill from the government. The State gets paid before you even reach the checkout counter.",
     "faqQ4": "Which products have the reduced 5.5% rate?",
-    "faqA4": "The 5.5% reduced rate applies notably to basic food (excluding alcohol, confectionery, and caviar), books, feminine sanitary protection products, disability equipment, heat produced from renewable energy, and live performances. Since August 1, 2025, gas and electricity subscriptions are taxed at the standard 20% rate."
+    "faqA4": "The 5.5% reduced rate applies notably to basic food (excluding alcohol, confectionery, and caviar), books, feminine sanitary protection products, disability equipment, heat produced from renewable energy, and live performances. Since August 1, 2025, gas and electricity subscriptions are taxed at the standard 20% rate.",
+    "relatedFuelTaxTitle": "Fuel Taxes",
+    "relatedFuelTaxDesc": "The SP95-E10 breakdown, excise duty and VAT applied on top.",
+    "relatedBehavioralTaxTitle": "Behavioral Taxes",
+    "relatedBehavioralTaxDesc": "Tobacco, alcohol and sugar taxes with the actual tax share.",
+    "relatedComparisonTitle": "International Comparison",
+    "relatedComparisonDesc": "How France's total tax pressure compares with OECD countries."
   },
   "detailFuelTax": {
     "metaTitle": "Fuel Taxes — Excise Duty, TICPE, VAT | impots.tax",
@@ -846,11 +875,13 @@
     "faqA4": "CSG (9.2%): created in 1991 as a 'temporary' 1.1% levy. Still here 35 years later, now 8× higher. CRDS (0.5%): created in 1996 to repay social debt. The debt grew, the tax stayed. In France, nothing is more permanent than a temporary tax."
   },
   "detailWelfareSystem": {
-    "metaTitle": "French Welfare System — RSA, AAH, ARE, AME | impots.tax",
-    "metaDescription": "RSA €646/month, AAH €1,033/month, ARE ~57% of salary, AME €1.386B. Conditions, amounts, beneficiaries. Official data.",
-    "title": "WELFARE SYSTEM",
+    "metaTitle": "French Welfare Benefits: RSA, AAH, ARE, AME | impots.tax",
+    "metaDescription": "French welfare benefits explained: RSA €646/month, AAH €1,033/month, ARE unemployment benefits and AME healthcare budget.",
+    "title": "FRENCH WELFARE BENEFITS 2025",
     "subtitle": "NATIONAL SAFETY NET REPORT — 2025",
     "intro": "The French welfare system is one of the most generous in the world. It is also one of the most expensive. Here is the detail of four major programs: RSA, AAH, ARE, and AME. Every euro collected through social contributions funds — among other things — these benefits.",
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "Major French welfare benefits include RSA at €646.52/month for a single person, AAH up to €1,033.32/month, ARE unemployment benefits at about 57% of reference salary and AME healthcare support with a €1.386B budget.",
     "rsaTitle": "RSA — MINIMUM INCOME (ACTIVE SOLIDARITY)",
     "rsaDesc": "The RSA is the guaranteed minimum income for people with no or very low income. Created in 2009 to replace the RMI, it is the last safety net of the French social system.",
     "rsaAmountsTitle": "MONTHLY AMOUNTS (April 2025)",
@@ -906,7 +937,22 @@
     "ameHospital": "Hospital: 60.8%",
     "ameCityCare": "Outpatient care: 26.5%",
     "amePharmacy": "Pharmacy: 12.7%",
-    "sourceText": "aide-sociale.fr, Service-Public.fr, monparcourshandicap.gouv.fr, handicap.fr, France Travail, Senate (Delahaye report), Boursorama, LDH, OID"
+    "sourceText": "aide-sociale.fr, Service-Public.fr, monparcourshandicap.gouv.fr, handicap.fr, France Travail, Senate (Delahaye report), Boursorama, LDH, OID",
+    "faqTitle": "FREQUENTLY ASKED QUESTIONS — FRENCH WELFARE",
+    "faqQ1": "How much is RSA in France?",
+    "faqA1": "The RSA is €646.52 per month for a single person from April 2025. The amount rises with household composition: €969.78 for a couple without children and €1,357.69 for a couple with two children.",
+    "faqQ2": "How much is AAH in France?",
+    "faqA2": "The AAH disability allowance can reach €1,033.32 per month at the full rate, with no income. It applies to people with a disability rate of at least 80%, or 50% to 79% with a substantial employment restriction.",
+    "faqQ3": "How are French unemployment benefits calculated?",
+    "faqA3": "ARE unemployment benefits are roughly 57% of the daily reference wage, or 40.4% plus €12.95 per day when that is more favorable. Eligibility generally requires at least six months of work.",
+    "faqQ4": "What is AME in France?",
+    "faqA4": "AME is healthcare support for undocumented immigrants who have lived in France for more than three months and meet income conditions. The 2024 actual spending figure used here is €1.386B.",
+    "relatedSalaryTitle": "Salary Contributions",
+    "relatedSalaryDesc": "The payroll charges that fund much of the French welfare system.",
+    "relatedIndicatorsTitle": "Macro Indicators",
+    "relatedIndicatorsDesc": "Debt, deficit and public spending behind the fiscal dashboard.",
+    "relatedComparisonTitle": "International Comparison",
+    "relatedComparisonDesc": "France's tax pressure against OECD peers."
   },
   "detailComparison": {
     "metaTitle": "International Comparison — Tax-to-GDP OECD Ranking | impots.tax",
@@ -941,11 +987,13 @@
     "sourceText": "OECD Revenue Statistics 2025"
   },
   "detailIndicators": {
-    "metaTitle": "Macro Indicators — Debt, Deficit, Public Spending | impots.tax",
-    "metaDescription": "Public debt €3,228B (112% of GDP), spending 56.5% of GDP, deficit -5.4%. The numbers that sum up the situation.",
-    "title": "MACRO INDICATORS",
+    "metaTitle": "France Debt, Deficit & Public Spending 2025 | impots.tax",
+    "metaDescription": "France macro indicators: public debt €3,228B, debt at 112% of GDP, public spending 56.5% of GDP and deficit -5.4%.",
+    "title": "FRANCE DEBT & DEFICIT 2025",
     "subtitle": "GENERAL SITUATION REPORT — France, 2024-2025",
     "intro": "Here are the numbers that sum up France's financial situation. A debt exceeding €3,200 billion, public spending among the highest in the world, and a deficit that won't close. These indicators are the result of decades of fiscal policy — the very policy this dashboard documents.",
+    "quickAnswerTitle": "QUICK ANSWER",
+    "quickAnswer": "France's public debt is about €3,228B, around 112% of GDP. Public spending is about 56.5% of GDP and the deficit is around -5.4%, despite one of the highest tax burdens in the OECD.",
     "debtTitle": "PUBLIC DEBT",
     "debtAmount": "~€3,228B (end of 2024 estimate)",
     "debtRatio": "Debt-to-GDP ratio: ~112%",
@@ -964,7 +1012,22 @@
     "plafondSS": "Monthly SS ceiling 2026: €4,005",
     "summaryTitle": "SUMMARY",
     "summaryDesc": "France is the country that collects the most taxes in the world (46.1% of GDP), spends the most (~56.5% of GDP), and despite all that, keeps accumulating more debt (112% of GDP). The equation only works thanks to borrowing capacity — as long as markets keep lending.",
-    "sourceText": "INSEE, Eurostat — 2024-2025 estimates"
+    "sourceText": "INSEE, Eurostat — 2024-2025 estimates",
+    "faqTitle": "FREQUENTLY ASKED QUESTIONS — FRANCE MACRO INDICATORS",
+    "faqQ1": "What is France's public debt?",
+    "faqA1": "France's public debt is about €3,228B, estimated around 112% of GDP. That means the State owes roughly €1.12 for every euro of annual output.",
+    "faqQ2": "What is France's public spending as a share of GDP?",
+    "faqA2": "French public spending is estimated at about 56.5% of GDP, one of the highest levels in the OECD.",
+    "faqQ3": "What is France's budget deficit?",
+    "faqA3": "The deficit figure used here is around -5.4% of GDP. Even with record tax pressure, spending still exceeds revenue.",
+    "faqQ4": "Why does France still borrow with such high taxes?",
+    "faqA4": "Because public spending remains higher than public revenue. High taxes reduce the gap, but they do not close it when spending stays above receipts.",
+    "relatedComparisonTitle": "International Comparison",
+    "relatedComparisonDesc": "France against OECD countries on total tax pressure.",
+    "relatedWelfareTitle": "French Welfare Benefits",
+    "relatedWelfareDesc": "RSA, AAH, ARE and AME as major spending-side programs.",
+    "relatedSalaryTitle": "Salary Contributions",
+    "relatedSalaryDesc": "The labor-cost extraction that funds social insurance."
   },
   "report": {
     "button": "Report a problem",

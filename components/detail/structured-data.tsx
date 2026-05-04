@@ -1,4 +1,9 @@
-import { buildBreadcrumbJsonLd, buildFaqJsonLd, type FaqItem } from "@/lib/seo";
+import {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+  buildWebPageJsonLd,
+  type FaqItem,
+} from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 interface StructuredDataProps {
@@ -6,6 +11,7 @@ interface StructuredDataProps {
   pageTitle: string;
   pagePath: string;
   homeLabel: string;
+  description?: string;
   faqs?: FaqItem[];
 }
 
@@ -14,6 +20,7 @@ export function StructuredData({
   pageTitle,
   pagePath,
   homeLabel,
+  description,
   faqs,
 }: StructuredDataProps) {
   const breadcrumb = buildBreadcrumbJsonLd(
@@ -23,9 +30,23 @@ export function StructuredData({
     ],
     locale,
   );
+  const webPage = description
+    ? buildWebPageJsonLd({
+        title: pageTitle,
+        description,
+        path: pagePath,
+        locale,
+      })
+    : null;
 
   return (
     <>
+      {webPage && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}

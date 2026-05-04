@@ -44,6 +44,7 @@ export default async function FlatTaxPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/flat-tax"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
         faqs={faqs}
       />
       <div className="sticky top-0 z-50">

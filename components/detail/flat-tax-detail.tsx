@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl";
 import { FLAT_TAX_2025, FLAT_TAX_2026, TAX_DATA_YEAR } from "@/lib/tax-data";
 import { FaqSection } from "@/components/detail/faq-section";
+import { QuickAnswer } from "@/components/detail/quick-answer";
+import { RelatedReports, type RelatedReport } from "@/components/detail/related-reports";
 import type { FaqItem } from "@/lib/seo";
 
 export function FlatTaxDetail() {
@@ -14,6 +16,23 @@ export function FlatTaxDetail() {
     { question: t("faqQ2"), answer: t("faqA2") },
     { question: t("faqQ3"), answer: t("faqA3") },
     { question: t("faqQ4"), answer: t("faqA4") },
+  ];
+  const relatedReports: RelatedReport[] = [
+    {
+      href: "/capital-gains",
+      title: t("relatedCapitalGainsTitle"),
+      description: t("relatedCapitalGainsDesc"),
+    },
+    {
+      href: "/income-tax",
+      title: t("relatedIncomeTaxTitle"),
+      description: t("relatedIncomeTaxDesc"),
+    },
+    {
+      href: "/vat",
+      title: t("relatedVatTitle"),
+      description: t("relatedVatDesc"),
+    },
   ];
 
   return (
@@ -30,6 +49,8 @@ export function FlatTaxDetail() {
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
+
+      <QuickAnswer title={t("quickAnswerTitle")} answer={t("quickAnswer")} />
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
@@ -139,6 +160,8 @@ export function FlatTaxDetail() {
       </section>
 
       <FaqSection title={t("faqTitle")} faqs={faqs} />
+
+      <RelatedReports title={td("relatedReports")} reports={relatedReports} />
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">

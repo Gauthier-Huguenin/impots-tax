@@ -36,6 +36,7 @@ export default async function CorporateTaxPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/corporate-tax"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
       />
       <div className="sticky top-0 z-50">
         <div className="flex h-1">

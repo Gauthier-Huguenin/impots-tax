@@ -44,6 +44,7 @@ export default async function IncomeTaxPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/income-tax"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
         faqs={faqs}
       />
       <div className="sticky top-0 z-50">

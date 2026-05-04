@@ -2,10 +2,37 @@
 
 import { useTranslations } from "next-intl";
 import { MACRO_INDICATORS, TAX_DATA_YEAR, USSR_COMPARISON } from "@/lib/tax-data";
+import { FaqSection } from "@/components/detail/faq-section";
+import { QuickAnswer } from "@/components/detail/quick-answer";
+import { RelatedReports, type RelatedReport } from "@/components/detail/related-reports";
+import type { FaqItem } from "@/lib/seo";
 
 export function IndicatorsDetail() {
   const t = useTranslations("detailIndicators");
   const td = useTranslations("detail");
+  const faqs: FaqItem[] = [
+    { question: t("faqQ1"), answer: t("faqA1") },
+    { question: t("faqQ2"), answer: t("faqA2") },
+    { question: t("faqQ3"), answer: t("faqA3") },
+    { question: t("faqQ4"), answer: t("faqA4") },
+  ];
+  const relatedReports: RelatedReport[] = [
+    {
+      href: "/comparison",
+      title: t("relatedComparisonTitle"),
+      description: t("relatedComparisonDesc"),
+    },
+    {
+      href: "/welfare-system",
+      title: t("relatedWelfareTitle"),
+      description: t("relatedWelfareDesc"),
+    },
+    {
+      href: "/salary-contributions",
+      title: t("relatedSalaryTitle"),
+      description: t("relatedSalaryDesc"),
+    },
+  ];
 
   return (
     <>
@@ -20,6 +47,8 @@ export function IndicatorsDetail() {
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
+
+      <QuickAnswer title={t("quickAnswerTitle")} answer={t("quickAnswer")} />
 
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
         <p className="font-mono text-sm leading-relaxed text-blanc">
@@ -130,6 +159,10 @@ export function IndicatorsDetail() {
           {t("summaryDesc")}
         </p>
       </section>
+
+      <FaqSection title={t("faqTitle")} faqs={faqs} />
+
+      <RelatedReports title={td("relatedReports")} reports={relatedReports} />
 
       <footer className="border-t border-gray-800 pt-4">
         <p className="font-mono text-xs text-blanc">

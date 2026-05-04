@@ -3,6 +3,10 @@
     "title": "impots.tax — Centre de Commandement Fiscal",
     "description": "Tableau de bord satirique des impôts et taxes en France. Données réelles, présentation dramatique."
   },
+  "homeSeo": {
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "Les taux d'imposition français en 2026 incluent un barème d'impôt sur le revenu de 0% à 45%, une Flat Tax/PFU à 31.4% pour les revenus financiers concernés, des taux de TVA à 20%, 10%, 5.5% et 2.1%, et une pression fiscale parmi les plus élevées de l'OCDE."
+  },
   "header": {
     "title": "FRENCH TAX MONITOR",
     "monitoring": "SURVEILLANCE ACTIVE",
@@ -391,6 +395,7 @@
     "breadcrumbHome": "Dashboard",
     "source": "Source",
     "sources": "Sources",
+    "relatedReports": "RAPPORTS LIÉS",
     "lastUpdated": "Dernière mise à jour : {date}",
     "dataYear": "Données {year}",
     "perYear": "/an",
@@ -599,6 +604,8 @@
     "title": "IMPÔT SUR LE REVENU",
     "subtitle": "RAPPORT D'ESCALADE FISCALE — Barème 2026 (revenus 2025)",
     "intro": "L'impôt sur le revenu français est un impôt progressif par tranches. Chaque tranche est un niveau d'escalade supplémentaire dans l'extraction étatique. Le barème est indexé sur l'inflation (+0.9% en 2026), ce qui signifie que l'État ajuste poliment le point de départ avant de prélever exactement autant qu'avant.",
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "Le barème français de l'impôt sur le revenu 2026 sur les revenus 2025 compte cinq tranches par part fiscale : 0% jusqu'à 11 600 €, 11% de 11 601 € à 29 579 €, 30% de 29 580 € à 84 577 €, 41% de 84 578 € à 181 917 €, puis 45% au-delà.",
     "bracketsTitle": "TRANCHES D'IMPOSITION",
     "bracket": "Tranche {number}",
     "bracketRange0": "Jusqu'à 11 600 €",
@@ -630,7 +637,13 @@
     "faqQ3": "Qu'est-ce que la CDHR en 2026 ?",
     "faqA3": "La Contribution Différentielle sur les Hauts Revenus (CDHR) est une nouveauté 2026 qui garantit un taux d'imposition effectif minimum de 20% pour les foyers les plus aisés. Elle vise les contribuables qui, grâce à l'optimisation fiscale (niches, revenus du capital), parviennent à afficher un taux effectif inférieur à 20% malgré des revenus élevés. L'État a décidé que l'optimisation fiscale avait des limites — les siennes.",
     "faqQ4": "Quel est le taux d'imposition moyen en France ?",
-    "faqA4": "Le taux marginal d'imposition (TMI) le plus courant est 30%, mais le taux effectif est bien plus bas. Pour un salaire médian net de ~2 190 €/mois, le taux effectif d'IR se situe autour de 7-10%. Seuls les foyers au-delà de ~84 577 € par part atteignent les tranches à 41% et 45%. Au total, l'IR ne représente qu'une fraction du prélèvement total — les cotisations sociales (~52%) sont le vrai poste de ponction."
+    "faqA4": "Le taux marginal d'imposition (TMI) le plus courant est 30%, mais le taux effectif est bien plus bas. Pour un salaire médian net de ~2 190 €/mois, le taux effectif d'IR se situe autour de 7-10%. Seuls les foyers au-delà de ~84 577 € par part atteignent les tranches à 41% et 45%. Au total, l'IR ne représente qu'une fraction du prélèvement total — les cotisations sociales (~52%) sont le vrai poste de ponction.",
+    "relatedFlatTaxTitle": "Flat Tax 2026",
+    "relatedFlatTaxDesc": "PFU, dividendes, plus-values, crypto et passage à 31.4%.",
+    "relatedSalaryTitle": "Salaires & cotisations",
+    "relatedSalaryDesc": "Le coût employeur, le brut, le net et les prélèvements sociaux.",
+    "relatedComparisonTitle": "Comparaison internationale",
+    "relatedComparisonDesc": "La pression fiscale française face aux pays de l'OCDE."
   },
   "detailCorporateTax": {
     "metaTitle": "Impôt sur les sociétés — IS 2025-2026 | impots.tax",
@@ -664,6 +677,8 @@
     "title": "FLAT TAX / PFU",
     "subtitle": "RAPPORT SUR LE PRÉLÈVEMENT FORFAITAIRE UNIQUE",
     "intro": "Le Prélèvement Forfaitaire Unique (PFU), dit « Flat Tax », a été créé en 2018 pour simplifier la taxation du capital. Un taux unique, une seule opération. C'était beau. C'était simple. C'est pourquoi l'État a décidé de le compliquer dès 2026 en augmentant la CSG sur les revenus financiers.",
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "Le PFU ordinaire, ou Flat Tax, est de 31.4% en France en 2026 pour les revenus financiers concernés : 12.8% d'impôt sur le revenu et 18.6% de prélèvements sociaux. L'ancien total de 30% reste pertinent pour certains produits et prélèvements 2025.",
     "rates2025Title": "ANCIEN TAUX / PRODUITS 2025 PRÉLEVÉS",
     "rates2026Title": "TAUX À JOUR AU 24 AVRIL 2026",
     "componentIR": "IR forfaitaire",
@@ -689,7 +704,13 @@
     "faqQ3": "La flat tax s'applique-t-elle aux crypto-monnaies ?",
     "faqA3": "Oui. Les plus-values sur actifs numériques réalisées dans le cadre du patrimoine privé sont soumises au PFU de 31.4% au 24 avril 2026 : 12.8% d'impôt + 18.6% de prélèvements sociaux. L'option pour le barème progressif se fait via la case 3CN et elle est indépendante de l'option 2OP des revenus de capitaux mobiliers.",
     "faqQ4": "Pourquoi la flat tax augmente en 2026 ?",
-    "faqA4": "La loi de financement de la Sécurité sociale 2026 (LFSS, loi n°2025-1403) relève la CSG sur les revenus du capital de 9.2% à 10.6%, soit +1.4 point. Cela porte les prélèvements sociaux de 17.2% à 18.6%, et donc le PFU total de 30% à 31.4%. La part IR (12.8%) reste inchangée. La « Flat Tax » — censée être simple et stable — aura donc augmenté de 4.7% en moins d'une décennie d'existence."
+    "faqA4": "La loi de financement de la Sécurité sociale 2026 (LFSS, loi n°2025-1403) relève la CSG sur les revenus du capital de 9.2% à 10.6%, soit +1.4 point. Cela porte les prélèvements sociaux de 17.2% à 18.6%, et donc le PFU total de 30% à 31.4%. La part IR (12.8%) reste inchangée. La « Flat Tax » — censée être simple et stable — aura donc augmenté de 4.7% en moins d'une décennie d'existence.",
+    "relatedCapitalGainsTitle": "Plus-values hors PEA",
+    "relatedCapitalGainsDesc": "CTO vs PEA, S&P 500 et coût fiscal de l'enveloppe française.",
+    "relatedIncomeTaxTitle": "Barème IR",
+    "relatedIncomeTaxDesc": "Le barème progressif 2026 sur les revenus 2025.",
+    "relatedVatTitle": "Taux de TVA",
+    "relatedVatDesc": "Les taux français à 20%, 10%, 5.5% et 2.1%."
   },
   "detailVat": {
     "metaTitle": "TVA — Taxe sur la Valeur Ajoutée | impots.tax",
@@ -697,6 +718,8 @@
     "title": "TVA",
     "subtitle": "RAPPORT SUR L'ARME FISCALE LA PLUS EFFICACE JAMAIS INVENTÉE",
     "intro": "La Taxe sur la Valeur Ajoutée est l'invention fiscale française la plus exportée au monde. Créée en 1954 par Maurice Lauré, elle est aujourd'hui utilisée par plus de 170 pays. Son génie : elle est invisible. Vous la payez à chaque achat sans jamais la voir. L'impôt parfait selon l'État — celui que vous ne remarquez pas.",
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "La France applique quatre principaux taux de TVA en 2026 : 20% pour le taux normal, 10% pour le taux intermédiaire, 5.5% pour le taux réduit et 2.1% pour le taux particulier. La plupart des biens et services relèvent du taux normal à 20%.",
     "ratesTitle": "LES 4 TAUX DE TVA",
     "rateNormal": "Taux normal — 20%",
     "rateNormalDesc": "La majorité des biens et services. Électronique, vêtements, services professionnels, alcool… tout ce qui ne bénéficie pas d'une exception.",
@@ -719,7 +742,13 @@
     "faqQ3": "Pourquoi la TVA est-elle considérée comme l'impôt parfait ?",
     "faqA3": "Du point de vue de l'État, la TVA est un chef-d'œuvre : elle est invisible (intégrée au prix, le consommateur ne la « voit » pas), collectée à chaque étape de la chaîne (fabrication, distribution, vente), quasi-impossible à frauder (chaque maillon vérifie l'autre via le mécanisme de TVA déductible/collectée), et supportée intégralement par le consommateur final. C'est un impôt sur la consommation, pas sur la production — ce qui le rend indolore pour les entreprises et invisible pour les citoyens.",
     "faqQ4": "Quels produits bénéficient du taux réduit de 5.5% ?",
-    "faqA4": "Le taux réduit de 5.5% s'applique notamment aux produits alimentaires (sauf alcool, confiseries et caviar), aux livres (papier et numériques), aux produits de protection hygiénique féminine, aux équipements pour personnes handicapées, à la fourniture de chaleur produite à partir d'énergies renouvelables, et aux spectacles vivants. Attention : depuis le 1er août 2025, les abonnements de gaz et d'électricité sont passés au taux normal de 20%."
+    "faqA4": "Le taux réduit de 5.5% s'applique notamment aux produits alimentaires (sauf alcool, confiseries et caviar), aux livres (papier et numériques), aux produits de protection hygiénique féminine, aux équipements pour personnes handicapées, à la fourniture de chaleur produite à partir d'énergies renouvelables, et aux spectacles vivants. Attention : depuis le 1er août 2025, les abonnements de gaz et d'électricité sont passés au taux normal de 20%.",
+    "relatedFuelTaxTitle": "Taxes carburant",
+    "relatedFuelTaxDesc": "SP95-E10, accise et TVA appliquée sur l'accise.",
+    "relatedBehavioralTaxTitle": "Taxes comportementales",
+    "relatedBehavioralTaxDesc": "Tabac, alcool, sucre et part réelle des taxes.",
+    "relatedComparisonTitle": "Comparaison internationale",
+    "relatedComparisonDesc": "La pression fiscale française face aux pays de l'OCDE."
   },
   "detailFuelTax": {
     "metaTitle": "Taxes sur le carburant — Accise, TICPE, TVA | impots.tax",
@@ -851,6 +880,8 @@
     "title": "SYSTÈME SOCIAL",
     "subtitle": "RAPPORT SUR LE FILET DE SÉCURITÉ NATIONALE — 2025",
     "intro": "Le système social français est l'un des plus généreux au monde. Il est aussi l'un des plus coûteux. Voici le détail de quatre dispositifs majeurs : RSA, AAH, ARE et AME. Chaque euro prélevé dans les cotisations sociales finance — entre autres — ces prestations.",
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "Les grandes prestations sociales françaises incluent le RSA à 646.52 €/mois pour une personne seule, l'AAH jusqu'à 1 033.32 €/mois, l'ARE autour de 57% du salaire de référence et l'AME avec 1.386 Md € de dépenses réelles 2024.",
     "rsaTitle": "RSA — REVENU DE SOLIDARITÉ ACTIVE",
     "rsaDesc": "Le RSA est le revenu minimum garanti pour les personnes sans ressources ou à très faibles revenus. Créé en 2009 pour remplacer le RMI, il constitue le dernier filet de sécurité du système social français.",
     "rsaAmountsTitle": "MONTANTS MENSUELS (avril 2025)",
@@ -906,7 +937,22 @@
     "ameHospital": "Hospitalier : 60.8%",
     "ameCityCare": "Soins de ville : 26.5%",
     "amePharmacy": "Pharmacie : 12.7%",
-    "sourceText": "aide-sociale.fr, Service-Public.fr, monparcourshandicap.gouv.fr, handicap.fr, France Travail, Sénat (rapport Delahaye), Boursorama, LDH, OID"
+    "sourceText": "aide-sociale.fr, Service-Public.fr, monparcourshandicap.gouv.fr, handicap.fr, France Travail, Sénat (rapport Delahaye), Boursorama, LDH, OID",
+    "faqTitle": "QUESTIONS FRÉQUENTES — SYSTÈME SOCIAL",
+    "faqQ1": "Quel est le montant du RSA en France ?",
+    "faqA1": "Le RSA est de 646.52 € par mois pour une personne seule depuis avril 2025. Le montant augmente selon la composition du foyer : 969.78 € pour un couple sans enfant et 1 357.69 € pour un couple avec deux enfants.",
+    "faqQ2": "Quel est le montant de l'AAH en France ?",
+    "faqA2": "L'AAH peut atteindre 1 033.32 € par mois à taux plein, sans revenus. Elle concerne les personnes avec un taux d'incapacité d'au moins 80%, ou entre 50% et 79% avec restriction substantielle d'accès à l'emploi.",
+    "faqQ3": "Comment est calculée l'allocation chômage ARE ?",
+    "faqA3": "L'ARE représente environ 57% du salaire journalier de référence, ou 40.4% plus 12.95 € par jour si ce calcul est plus favorable. L'éligibilité demande généralement au moins six mois de travail.",
+    "faqQ4": "Qu'est-ce que l'AME en France ?",
+    "faqA4": "L'AME est une aide médicale destinée aux étrangers en situation irrégulière résidant en France depuis plus de trois mois et remplissant des conditions de ressources. Le chiffre de dépenses réelles 2024 retenu ici est 1.386 Md €.",
+    "relatedSalaryTitle": "Salaires & cotisations",
+    "relatedSalaryDesc": "Les prélèvements sur le travail qui financent une partie du système social.",
+    "relatedIndicatorsTitle": "Indicateurs macro",
+    "relatedIndicatorsDesc": "Dette, déficit et dépenses publiques derrière le tableau de bord.",
+    "relatedComparisonTitle": "Comparaison internationale",
+    "relatedComparisonDesc": "La pression fiscale française face aux pays de l'OCDE."
   },
   "detailComparison": {
     "metaTitle": "Comparaison internationale — Ratio taxes/PIB OCDE | impots.tax",
@@ -946,6 +992,8 @@
     "title": "INDICATEURS MACRO",
     "subtitle": "RAPPORT DE SITUATION GÉNÉRALE — France, 2024-2025",
     "intro": "Voici les chiffres qui résument la situation financière de la France. Une dette qui dépasse 3 200 milliards d'euros, des dépenses publiques parmi les plus élevées au monde, et un déficit qui ne se résorbe pas. Ces indicateurs sont le résultat de décennies de politique fiscale — celle-là même que ce tableau de bord documente.",
+    "quickAnswerTitle": "RÉPONSE COURTE",
+    "quickAnswer": "La dette publique française est d'environ 3 228 Mds €, soit environ 112% du PIB. Les dépenses publiques représentent environ 56.5% du PIB et le déficit environ -5.4%, malgré une pression fiscale parmi les plus élevées de l'OCDE.",
     "debtTitle": "DETTE PUBLIQUE",
     "debtAmount": "~3 228 Mds € (estimation fin 2024)",
     "debtRatio": "Ratio dette/PIB : ~112%",
@@ -964,7 +1012,22 @@
     "plafondSS": "Plafond SS mensuel 2026 : 4 005 €",
     "summaryTitle": "SYNTHÈSE",
     "summaryDesc": "La France est le pays qui prélève le plus de taxes au monde (46.1% du PIB), qui dépense le plus (~56.5% du PIB), et qui malgré cela accumule toujours plus de dette (112% du PIB). L'équation ne tient que grâce à la capacité d'emprunt — tant que les marchés continuent de prêter.",
-    "sourceText": "INSEE, Eurostat — estimations 2024-2025"
+    "sourceText": "INSEE, Eurostat — estimations 2024-2025",
+    "faqTitle": "QUESTIONS FRÉQUENTES — INDICATEURS MACRO",
+    "faqQ1": "Quel est le montant de la dette publique française ?",
+    "faqA1": "La dette publique française est d'environ 3 228 Mds €, soit environ 112% du PIB. Autrement dit, l'État doit environ 1.12 € pour chaque euro de richesse annuelle produite.",
+    "faqQ2": "Quel est le niveau des dépenses publiques en France ?",
+    "faqA2": "Les dépenses publiques françaises sont estimées à environ 56.5% du PIB, parmi les niveaux les plus élevés de l'OCDE.",
+    "faqQ3": "Quel est le déficit public de la France ?",
+    "faqA3": "Le déficit retenu ici est d'environ -5.4% du PIB. Même avec une pression fiscale record, les dépenses restent supérieures aux recettes.",
+    "faqQ4": "Pourquoi la France emprunte-t-elle encore avec autant d'impôts ?",
+    "faqA4": "Parce que les dépenses publiques restent supérieures aux recettes publiques. Les impôts élevés réduisent l'écart, mais ne le ferment pas lorsque les dépenses dépassent les prélèvements.",
+    "relatedComparisonTitle": "Comparaison internationale",
+    "relatedComparisonDesc": "La France face aux pays de l'OCDE sur la pression fiscale totale.",
+    "relatedWelfareTitle": "Système social français",
+    "relatedWelfareDesc": "RSA, AAH, ARE et AME parmi les grands postes sociaux.",
+    "relatedSalaryTitle": "Salaires & cotisations",
+    "relatedSalaryDesc": "Le coût du travail et les cotisations qui financent l'assurance sociale."
   },
   "report": {
     "button": "Signaler un problème",

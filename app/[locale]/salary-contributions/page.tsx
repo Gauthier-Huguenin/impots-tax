@@ -45,6 +45,7 @@ export default async function SalaryContributionsPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/salary-contributions"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
         faqs={faqs}
       />
       <div className="sticky top-0 z-50">
