@@ -36,6 +36,7 @@ export default async function CapitalGainsPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/capital-gains"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
       />
       <div className="sticky top-0 z-50">
         <div className="flex h-1">

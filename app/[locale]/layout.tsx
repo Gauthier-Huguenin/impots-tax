@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Script from "next/script";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Inter } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
@@ -53,6 +53,7 @@ export default async function LocaleLayout({
   }
 
   const typedLocale = locale as Locale;
+  setRequestLocale(typedLocale);
 
   return (
     <html

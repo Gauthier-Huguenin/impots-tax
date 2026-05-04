@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/config";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 
 // lastModified: update this date when content changes significantly
-const CONTENT_LAST_MODIFIED = new Date("2026-04-01");
+const CONTENT_LAST_MODIFIED = new Date("2026-05-04");
 
 const routes: Array<{ path: string; priority?: number; changeFrequency?: "weekly" | "monthly" }> = [
   { path: "", priority: 1, changeFrequency: "weekly" },

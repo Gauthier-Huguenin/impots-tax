@@ -43,6 +43,34 @@ export function buildFaqJsonLd(faqs: FaqItem[]) {
   };
 }
 
+export function buildWebPageJsonLd({
+  title,
+  description,
+  path,
+  locale,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  locale: Locale;
+}) {
+  const url = buildUrl(path, locale);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "impots.tax",
+      url: siteConfig.url,
+    },
+    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+  };
+}
+
 interface SeoMetadataOptions {
   title: string;
   description: string;

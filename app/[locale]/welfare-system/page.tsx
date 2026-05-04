@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/lib/i18n/config";
 import { buildSeoMetadata } from "@/lib/seo";
 import { StructuredData } from "@/components/detail/structured-data";
+import type { FaqItem } from "@/lib/seo";
 import { Breadcrumb } from "@/components/detail/breadcrumb";
 import { WelfareSystemDetail } from "@/components/detail/welfare-system-detail";
 import { Header } from "@/components/layout/header";
@@ -28,6 +29,12 @@ export default async function WelfareSystemPage({ params }: PageProps) {
   const t = await getTranslations({ locale, namespace: "detailWelfareSystem" });
   const td = await getTranslations({ locale, namespace: "detail" });
   const typedLocale = locale as Locale;
+  const faqs: FaqItem[] = [
+    { question: t("faqQ1"), answer: t("faqA1") },
+    { question: t("faqQ2"), answer: t("faqA2") },
+    { question: t("faqQ3"), answer: t("faqA3") },
+    { question: t("faqQ4"), answer: t("faqA4") },
+  ];
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -36,6 +43,8 @@ export default async function WelfareSystemPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/welfare-system"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
+        faqs={faqs}
       />
       <div className="sticky top-0 z-50">
         <div className="flex h-1">

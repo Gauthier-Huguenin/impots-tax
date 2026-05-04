@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl";
 import { VAT_RATES, TAX_DATA_YEAR } from "@/lib/tax-data";
 import { FaqSection } from "@/components/detail/faq-section";
+import { QuickAnswer } from "@/components/detail/quick-answer";
+import { RelatedReports, type RelatedReport } from "@/components/detail/related-reports";
 import type { FaqItem } from "@/lib/seo";
 
 const RATE_KEYS = ["rateNormal", "rateIntermediate", "rateReduced", "rateSuperReduced"] as const;
@@ -25,6 +27,23 @@ export function VatDetail() {
     { question: t("faqQ3"), answer: t("faqA3") },
     { question: t("faqQ4"), answer: t("faqA4") },
   ];
+  const relatedReports: RelatedReport[] = [
+    {
+      href: "/fuel-tax",
+      title: t("relatedFuelTaxTitle"),
+      description: t("relatedFuelTaxDesc"),
+    },
+    {
+      href: "/behavioral-tax",
+      title: t("relatedBehavioralTaxTitle"),
+      description: t("relatedBehavioralTaxDesc"),
+    },
+    {
+      href: "/comparison",
+      title: t("relatedComparisonTitle"),
+      description: t("relatedComparisonDesc"),
+    },
+  ];
 
   return (
     <>
@@ -40,6 +59,8 @@ export function VatDetail() {
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
+
+      <QuickAnswer title={t("quickAnswerTitle")} answer={t("quickAnswer")} />
 
       {/* Intro */}
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
@@ -95,6 +116,8 @@ export function VatDetail() {
       </section>
 
       <FaqSection title={t("faqTitle")} faqs={faqs} />
+
+      <RelatedReports title={td("relatedReports")} reports={relatedReports} />
 
       {/* Source */}
       <footer className="border-t border-gray-800 pt-4">

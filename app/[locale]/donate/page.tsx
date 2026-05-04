@@ -36,6 +36,7 @@ export default async function DonatePage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/donate"
         homeLabel="impots.tax"
+        description={t("metaDescription")}
       />
 
       <div className="sticky top-0 z-50">

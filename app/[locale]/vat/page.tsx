@@ -44,6 +44,7 @@ export default async function VatPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/vat"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
         faqs={faqs}
       />
       <div className="sticky top-0 z-50">

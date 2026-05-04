@@ -2,6 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import { WELFARE_DATA, TAX_DATA_YEAR } from "@/lib/tax-data";
+import { FaqSection } from "@/components/detail/faq-section";
+import { QuickAnswer } from "@/components/detail/quick-answer";
+import { RelatedReports, type RelatedReport } from "@/components/detail/related-reports";
+import type { FaqItem } from "@/lib/seo";
 
 const RSA_AMOUNTS = [
   { key: "rsaSingle", amount: "646.52 \u20ac" },
@@ -15,6 +19,29 @@ const RSA_AMOUNTS = [
 export function WelfareSystemDetail() {
   const t = useTranslations("detailWelfareSystem");
   const td = useTranslations("detail");
+  const faqs: FaqItem[] = [
+    { question: t("faqQ1"), answer: t("faqA1") },
+    { question: t("faqQ2"), answer: t("faqA2") },
+    { question: t("faqQ3"), answer: t("faqA3") },
+    { question: t("faqQ4"), answer: t("faqA4") },
+  ];
+  const relatedReports: RelatedReport[] = [
+    {
+      href: "/salary-contributions",
+      title: t("relatedSalaryTitle"),
+      description: t("relatedSalaryDesc"),
+    },
+    {
+      href: "/indicators",
+      title: t("relatedIndicatorsTitle"),
+      description: t("relatedIndicatorsDesc"),
+    },
+    {
+      href: "/comparison",
+      title: t("relatedComparisonTitle"),
+      description: t("relatedComparisonDesc"),
+    },
+  ];
 
   return (
     <>
@@ -29,6 +56,8 @@ export function WelfareSystemDetail() {
           {td("dataYear", { year: TAX_DATA_YEAR })}
         </p>
       </header>
+
+      <QuickAnswer title={t("quickAnswerTitle")} answer={t("quickAnswer")} />
 
       <section className="mb-10 rounded border border-gray-800 bg-[#0f1218] p-6">
         <p className="font-mono text-sm leading-relaxed text-blanc">
@@ -239,6 +268,10 @@ export function WelfareSystemDetail() {
           </div>
         </div>
       </section>
+
+      <FaqSection title={t("faqTitle")} faqs={faqs} />
+
+      <RelatedReports title={td("relatedReports")} reports={relatedReports} />
 
       <footer className="border-t border-gray-800 pt-4">
         <p className="font-mono text-xs text-blanc">

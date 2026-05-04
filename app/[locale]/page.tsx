@@ -7,6 +7,7 @@ import { Ticker } from "@/components/dashboard/ticker";
 import { Footer } from "@/components/layout/footer";
 import { DashboardClient } from "@/app/[locale]/dashboard-client";
 import { SectionObserver } from "@/components/analytics/section-observer";
+import { QuickAnswer } from "@/components/detail/quick-answer";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -15,6 +16,7 @@ interface PageProps {
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "header" });
+  const seo = await getTranslations({ locale, namespace: "homeSeo" });
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -38,6 +40,9 @@ export default async function HomePage({ params }: PageProps) {
       <main id="main-content" className="flex-1">
         <h1 className="sr-only">{t("title")}</h1>
         <ThreatLevel />
+        <div className="mx-auto max-w-7xl px-4 pt-6">
+          <QuickAnswer title={seo("quickAnswerTitle")} answer={seo("quickAnswer")} />
+        </div>
         <SectionObserver section="journey-of-100">
           <JourneyOf100 />
         </SectionObserver>

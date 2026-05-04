@@ -44,6 +44,7 @@ export default async function InheritanceTaxPage({ params }: PageProps) {
         pageTitle={t("title")}
         pagePath="/inheritance-tax"
         homeLabel={td("backToDashboard")}
+        description={t("metaDescription")}
         faqs={faqs}
       />
       <div className="sticky top-0 z-50">
