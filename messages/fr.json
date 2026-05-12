@@ -11,6 +11,7 @@
     "title": "FRENCH TAX MONITOR",
     "monitoring": "SURVEILLANCE ACTIVE",
     "dataYear": "DONNÉES {year}",
+    "blog": "BLOG",
     "donate": "SOUTENIR"
   },
   "threatLevel": {
@@ -252,7 +253,23 @@
   "footer": {
     "disclaimer": "Données issues de sources officielles (OCDE, INSEE, URSSAF, DGFiP, Loi de finances). Présentation satirique.",
     "copyright": "© {year} impots.tax",
+    "blog": "Blog",
     "donate": "Soutenir le moniteur"
+  },
+  "blog": {
+    "metaTitle": "Blog fiscal français — impots.tax",
+    "metaDescription": "Analyses SEO sourcées sur les impôts français, les cotisations, la TVA et la fiscalité du capital.",
+    "title": "BLOG FISCAL",
+    "subtitle": "NOTES DE RENSEIGNEMENT SUR L'EXTRACTION FRANÇAISE",
+    "intro": "Articles courts, sourcés et conçus pour capter les requêtes que le Code général des impôts laisse en état de choc.",
+    "latest": "DERNIERS RAPPORTS",
+    "readArticle": "Lire le rapport",
+    "published": "Publié le {date}",
+    "updated": "Mis à jour le {date}",
+    "readingTime": "{time} de lecture",
+    "sources": "SOURCES",
+    "relatedModules": "MODULES LIÉS",
+    "backToBlog": "Retour au blog"
   },
   "donate": {
     "metaTitle": "Faire un don — impots.tax",

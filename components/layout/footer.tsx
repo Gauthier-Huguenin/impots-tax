@@ -1,10 +1,15 @@
 import { getTranslations } from "next-intl/server";
+import NextLink from "next/link";
 import { siteConfig } from "@/lib/config";
 import { ReportButton } from "@/components/report/report-modal";
 import { DonateLink } from "@/components/layout/donate-link";
+import { getLocale } from "next-intl/server";
+import { localePath } from "@/lib/url";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function Footer() {
   const t = await getTranslations("footer");
+  const locale = (await getLocale()) as Locale;
   const year = new Date().getFullYear();
 
   return (
@@ -27,6 +32,13 @@ export async function Footer() {
             </svg>
             <span>GitHub</span>
           </a>
+
+          <NextLink
+            href={localePath("/blog", locale)}
+            className="font-mono text-slate-300 transition-colors hover:text-blanc"
+          >
+            {t("blog")}
+          </NextLink>
 
           <ReportButton />
 

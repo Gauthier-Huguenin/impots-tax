@@ -1,0 +1,62 @@
+export const metadata = {
+  slug: "cout-employeur-salaire-net",
+  title: "Employer cost vs net salary: France's €100 fiscal journey",
+  description: "From €230 of employer cost to €108 of real purchasing power: employer contributions, employee contributions, income tax and VAT.",
+  publishedAt: "2026-05-12",
+  updatedAt: "2026-05-12",
+  category: "Payroll",
+  tags: ["employer cost", "net salary", "social contributions", "VAT"],
+  readingTime: "6 min",
+  relatedModules: ["salary-contributions", "income-tax", "vat"],
+  sources: [
+    "docs/tax-data-2025.md, section 5",
+    "URSSAF schedule 2025/2026",
+    "CAPEB 2025 table",
+    "Cleiss.fr",
+    "CCI"
+  ]
+};
+
+# Employer cost vs net salary: France's €100 fiscal journey
+
+The French payslip is a machine that converts a visible employer cost into residual purchasing power for the employee. In this site's educational estimate, reaching about €108 of real purchasing power requires the company to spend roughly €230.
+
+## The full path
+
+| Step | Approximate amount | Meaning |
+|---|---:|---|
+| Total employer cost | €230 | What the company spends |
+| Employer contributions | -€54 | URSSAF, unemployment, supplementary pension |
+| Gross salary | €176 | The amount shown on the payslip |
+| Employee contributions | -€26 | CSG, CRDS, pension, old age |
+| Net before income tax | €150 | Before withholding tax |
+| Income tax | -€20 | 30% marginal rate assumption, effective rate around 13% |
+| Net after income tax | €130 | Money available |
+| VAT on spending | -€22 | Average 20% consumption tax |
+| Real purchasing power | €108 | What the €230 really buys |
+
+The dashboard's normalized version starts from a €100 employer base and ends at €48 of real purchasing power. Both readings tell the same story: between the company and the shopping basket, the State shows up repeatedly.
+
+## Why gross salary is not the full story
+
+Gross salary is a useful administrative convention, not the real cost of labor. Employer contributions exist before the gross amount even appears on the payslip. In the site's reference data, they represent about 32% of gross salary.
+
+On the employee side, major contributions include CSG at 9.2% on 98.25% of gross pay, CRDS at 0.5%, capped old-age pension at 6.90%, uncapped old-age pension at 0.40% and AGIRC-ARRCO tier 1 at 3.15%.
+
+## The final layer: VAT
+
+Net salary after income tax is still not tax-free purchasing power. When it is spent, VAT returns. The standard rate is 20%, with reduced rates at 10%, 5.5% and 2.1% depending on the product.
+
+In the €100 net journey estimate, VAT takes back about €22 on spending. The money survived contributions and income tax. It still had to survive checkout.
+
+## Read next
+
+The [salary contributions module](/en/salary-contributions) details the payroll lines. The [income tax module](/en/income-tax) explains the bracket schedule that applies after net-before-tax income. The [VAT module](/en/vat) shows the rates applied to consumption.
+
+## Sources
+
+- `docs/tax-data-2025.md`, section 5.
+- URSSAF schedule 2025/2026.
+- CAPEB 2025 table.
+- Cleiss.fr.
+- CCI.

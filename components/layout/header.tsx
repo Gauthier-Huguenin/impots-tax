@@ -78,6 +78,13 @@ export function Header() {
           </div>
 
           {/* GitHub Star */}
+          <Link
+            href="/blog"
+            className="hidden font-mono text-xs font-semibold uppercase tracking-wider text-slate-300 transition-colors hover:text-blanc md:inline"
+          >
+            {t("blog")}
+          </Link>
+
           <a
             href={siteConfig.social.github}
             target="_blank"

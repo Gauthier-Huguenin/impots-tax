@@ -1,0 +1,62 @@
+export const metadata = {
+  slug: "cout-employeur-salaire-net",
+  title: "Coût employeur, salaire net: le parcours fiscal de 100 €",
+  description: "De 230 € de coût employeur à 108 € de pouvoir d'achat réel: cotisations patronales, cotisations salariales, IR et TVA.",
+  publishedAt: "2026-05-12",
+  updatedAt: "2026-05-12",
+  category: "Salaires",
+  tags: ["coût employeur", "salaire net", "cotisations sociales", "TVA"],
+  readingTime: "6 min",
+  relatedModules: ["salary-contributions", "income-tax", "vat"],
+  sources: [
+    "docs/tax-data-2025.md, section 5",
+    "URSSAF barème 2025/2026",
+    "CAPEB tableau 2025",
+    "Cleiss.fr",
+    "CCI"
+  ]
+};
+
+# Coût employeur, salaire net: le parcours fiscal de 100 €
+
+Le bulletin de paie français est une machine à transformer un coût visible pour l'entreprise en pouvoir d'achat résiduel pour le salarié. Dans l'estimation pédagogique du site, pour obtenir environ 108 € de pouvoir d'achat réel, l'entreprise débourse environ 230 €.
+
+## Le trajet complet
+
+| Etape | Montant approximatif | Ce que cela signifie |
+|---|---:|---|
+| Coût total employeur | 230 € | Ce que l'entreprise débourse |
+| Cotisations employeur | -54 € | URSSAF, chômage, retraite complémentaire |
+| Salaire brut | 176 € | Montant affiché sur la fiche de paie |
+| Cotisations salariales | -26 € | CSG, CRDS, retraite, vieillesse |
+| Net avant impôt | 150 € | Avant prélèvement à la source |
+| Impôt sur le revenu | -20 € | Hypothèse TMI 30%, taux effectif autour de 13% |
+| Net après impôt | 130 € | Argent disponible |
+| TVA sur dépenses | -22 € | Taux moyen 20% sur la consommation |
+| Pouvoir d'achat réel | 108 € | Ce que les 230 € achètent vraiment |
+
+La version normalisée du dashboard part d'une base de 100 € côté employeur et aboutit à 48 € de pouvoir d'achat réel. Les deux lectures racontent la même chose: entre l'entreprise et le panier de consommation, l'Etat passe plusieurs fois à la caisse.
+
+## Pourquoi le brut ne raconte pas toute l'histoire
+
+Le salaire brut est une convention administrative utile, pas le coût réel du travail. Les cotisations employeur existent avant même que le brut apparaisse sur la fiche de paie. Dans les données du site, elles représentent environ 32% du salaire brut pour le cas de référence.
+
+Côté salarié, les cotisations principales comprennent notamment la CSG à 9.2% sur 98.25% du brut, la CRDS à 0.5%, la vieillesse plafonnée à 6.90%, la vieillesse déplafonnée à 0.40% et l'AGIRC-ARRCO tranche 1 à 3.15%.
+
+## Le dernier étage: la TVA
+
+Le salaire net après impôt n'est pas encore du pouvoir d'achat net de fiscalité. Quand il est dépensé, la TVA revient. Le taux normal est de 20%, avec des taux réduits à 10%, 5.5% et 2.1% selon les produits.
+
+Dans l'estimation du parcours de 100 € net, la TVA reprend environ 22 € sur les dépenses. L'argent avait survécu aux cotisations et à l'impôt sur le revenu. Il lui restait encore l'épreuve du ticket de caisse.
+
+## A lire ensuite
+
+Le module [Salaires & cotisations](/salary-contributions) détaille les lignes de prélèvement. Le module [Impôt sur le revenu](/income-tax) explique le barème qui intervient après le net avant impôt. Le module [TVA](/vat) montre les taux appliqués à la consommation.
+
+## Sources
+
+- `docs/tax-data-2025.md`, section 5.
+- URSSAF barème 2025/2026.
+- CAPEB tableau 2025.
+- Cleiss.fr.
+- CCI.

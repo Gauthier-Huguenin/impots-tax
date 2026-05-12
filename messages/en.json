@@ -11,6 +11,7 @@
     "title": "FRENCH TAX MONITOR",
     "monitoring": "MONITORING ACTIVE",
     "dataYear": "DATA {year}",
+    "blog": "BLOG",
     "donate": "DONATE"
   },
   "threatLevel": {
@@ -252,7 +253,23 @@
   "footer": {
     "disclaimer": "Data from official sources (OECD, INSEE, URSSAF, DGFiP, Loi de finances). Satirical presentation.",
     "copyright": "© {year} impots.tax",
+    "blog": "Blog",
     "donate": "Fund the monitor"
+  },
+  "blog": {
+    "metaTitle": "French Tax Blog — impots.tax",
+    "metaDescription": "Sourced SEO analysis on French taxes, social contributions, VAT and capital taxation.",
+    "title": "FISCAL BLOG",
+    "subtitle": "INTELLIGENCE NOTES ON FRENCH EXTRACTION",
+    "intro": "Short, sourced articles built to capture the searches that the French tax code leaves behind.",
+    "latest": "LATEST REPORTS",
+    "readArticle": "Read report",
+    "published": "Published {date}",
+    "updated": "Updated {date}",
+    "readingTime": "{time} read",
+    "sources": "SOURCES",
+    "relatedModules": "RELATED MODULES",
+    "backToBlog": "Back to blog"
   },
   "donate": {
     "metaTitle": "Donate — impots.tax",

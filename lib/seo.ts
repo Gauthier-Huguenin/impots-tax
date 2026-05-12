@@ -83,6 +83,12 @@ interface SeoMetadataOptions {
   path: string;
 }
 
+interface ArticleSeoMetadataOptions extends SeoMetadataOptions {
+  publishedTime: string;
+  modifiedTime: string;
+  tags: string[];
+}
+
 export function buildSeoMetadata({
   title,
   description,
@@ -114,6 +120,9 @@ export function buildSeoMetadata({
     alternates: {
       canonical,
       languages,
+      types: {
+        "application/rss+xml": `${siteConfig.url}/feed.xml`,
+      },
     },
     openGraph: {
       title,
@@ -130,6 +139,29 @@ export function buildSeoMetadata({
       description,
       creator: "@leploutos",
       images: [ogImage.url],
+    },
+  };
+}
+
+export function buildArticleSeoMetadata({
+  title,
+  description,
+  locale,
+  path,
+  publishedTime,
+  modifiedTime,
+  tags,
+}: ArticleSeoMetadataOptions): Metadata {
+  const metadata = buildSeoMetadata({ title, description, locale, path });
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime,
+      modifiedTime,
+      tags,
     },
   };
 }

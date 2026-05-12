@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const securityHeaders = [
@@ -12,6 +13,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   headers: async () => [
     {
       source: "/(.*)",
@@ -28,5 +30,6 @@ const nextConfig: NextConfig = {
 };
 
 const withNextIntl = createNextIntlPlugin("./lib/i18n/request.ts");
+const withMDX = createMDX({});
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(withMDX(nextConfig));
