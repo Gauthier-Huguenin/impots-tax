@@ -12,6 +12,7 @@ Données réelles. Présentation dramatique. Chaque nombre est vrai — c'est ç
 
 - **The Journey of 100€** — From employer cost (~230€) to real purchasing power (~108€): the full extraction path, visualized
 - **18 tax modules** — Income tax, corporate tax, flat tax, VAT, fuel taxes, behavioral taxes, salary contributions, welfare system, property tax, rental tax, inheritance, capital gains, highway & railway tolls, OECD comparison, macro indicators
+- **SEO blog** — Static bilingual MDX articles under `/blog` and `/en/blog`, with RSS, sitemap entries and article structured data
 - **Every number is sourced** — Official data from Loi de finances, URSSAF, OECD, INSEE, DGFiP
 - **Bilingual** — French (default) and English (`/en/`)
 - **Dark mode only** — Command center aesthetic with scanlines, pulsing alerts, and scrolling tickers
@@ -63,6 +64,7 @@ app/[locale]/             # i18n pages (FR default, EN prefixed)
   page.tsx                # Main dashboard
   [module]/page.tsx       # Detail pages (income-tax, vat, flat-tax, ...)
 app/og/[locale]/[slug]/   # Dynamic Open Graph image cards
+content/blog/             # Bilingual MDX blog articles (fr/en, shared slugs)
 components/
   dashboard/              # Dashboard panels
   detail/                 # Detail page components
@@ -76,6 +78,19 @@ messages/                 # fr.json, en.json
 docs/
   tax-data-2025.md        # Source of truth for all fiscal data
 ```
+
+## Blog Workflow
+
+Blog posts live in `content/blog/fr` and `content/blog/en`. Slugs are shared across both locales and registered in `lib/blog.ts`.
+
+Each MDX file exports a `metadata` object with:
+
+- `slug`, `title`, `description`
+- `publishedAt`, `updatedAt`
+- `category`, `tags`, `readingTime`
+- `relatedModules`, `sources`
+
+All article figures must come from `docs/tax-data-2025.md` or be explicitly sourced in the article. The blog index is available at `/blog` and `/en/blog`; the RSS feed is `/feed.xml`.
 
 ## Data Sources
 
